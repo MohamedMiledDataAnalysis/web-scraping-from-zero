@@ -1,0 +1,6 @@
+                       name  price        day
+            27-inch Monitor 329.19 2027-03-13
+                  Air Fryer  30.17 2027-03-03
+Noise-Cancelling Headphones 100.85 2027-03-02
+             Office Printer  19.90 2027-03-14
+                Smart Watch 315.89 2027-03-02

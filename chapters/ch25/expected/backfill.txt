@@ -1,0 +1,8 @@
+70 rows from 5 requests
+                                min     max
+name                                       
+27-inch Monitor              361.10  393.89
+Air Fryer                     30.57   37.01
+Noise-Cancelling Headphones   92.11  117.30
+Office Printer                20.01   23.59
+Smart Watch                  316.60  335.33

@@ -1,0 +1,6 @@
+ id                        name  target
+  3             27-inch Monitor  330.00
+  7 Noise-Cancelling Headphones  100.00
+  9                 Smart Watch  316.00
+ 14              Office Printer   19.95
+ 19                   Air Fryer   30.50
