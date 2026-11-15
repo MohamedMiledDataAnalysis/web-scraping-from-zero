@@ -19,4 +19,5 @@ for a in soup.select("#file-list a"):
         with open(path, "wb") as f:
             for chunk in r.iter_content(chunk_size=64 * 1024):
                 f.write(chunk)
-    print(f"{path.name:<30} {kind:<70} {path.stat().st_size:>6} bytes")
+    size = path.stat().st_size
+    print(f"{path.name:<28} {size:>6} bytes  {kind[:34]}")

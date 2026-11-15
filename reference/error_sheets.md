@@ -1,10 +1,10 @@
-# Error fiches
+# Error sheets
 
-Each fiche starts from **what you see**, the last line of the error or the symptom. It names the scraping step that failed (fetch, parse, extract, save), lists the causes from the most frequent, and gives the fix. Then the loop: *Is it solved?* If not, *tell me what you see*: the fiche sends you to the next check.
+Each sheet starts from **what you see**, the last line of the error or the symptom. It names the scraping step that failed (fetch, parse, extract, save), lists the causes from the most frequent, and gives the fix. Then the loop: *Is it solved?* If not, *tell me what you see*: the sheet sends you to the next check.
 
-How to use them: copy the **last line** of your error, find it in the list below, and follow the fiche from the top.
+How to use them: copy the **last line** of your error, find it in the list below, and follow the sheet from the top.
 
-| What you see | Fiche |
+| What you see | Sheet |
 |---|---|
 | `ConnectionError ... Connection refused` | 1 |
 | `ModuleNotFoundError: No module named ...` | 2 |
@@ -20,11 +20,11 @@ How to use them: copy the **last line** of your error, find it in the list below
 | My numbers are wrong or read as text | 12 |
 | `KeyError` | 13 |
 | `JSONDecodeError` | 14 |
-| Playwright or Selenium `TimeoutError` | 15 |
+| Playwright `TimeoutError`, Selenium `TimeoutException` | 15 |
 | Sent back to the login page | 16 |
 | Scrapy finishes with 0 items | 17 |
 
-## Fiche 1. ConnectionError: Connection refused
+## Sheet 1. ConnectionError: Connection refused
 
 **Step:** fetch. Nothing answered at that address.
 
@@ -34,7 +34,7 @@ How to use them: copy the **last line** of your error, find it in the list below
 
 **Is it solved?** Run `python chapters/ch06/examples/health_check.py`: every line starts with 200. Still refused? Tell me what you see: if the browser opens the page and Python does not, check for a proxy at your workplace, and try from home or from Codespaces.
 
-## Fiche 2. ModuleNotFoundError: No module named ...
+## Sheet 2. ModuleNotFoundError: No module named ...
 
 **Step:** before everything. Python cannot find a package.
 
@@ -46,7 +46,7 @@ How to use them: copy the **last line** of your error, find it in the list below
 
 **Is it solved?** `python check_setup.py` lists every package with a version. Still missing? Tell me what you see: `python -c "import sys; print(sys.executable)"` prints which Python runs; it must be inside `.venv`.
 
-## Fiche 3. 403 Forbidden
+## Sheet 3. 403 Forbidden
 
 **Step:** fetch. The site refused you.
 
@@ -57,7 +57,7 @@ How to use them: copy the **last line** of your error, find it in the list below
 
 **Is it solved?** The status is 200 with your named User-Agent. Still 403 with a correct User-Agent and no login needed? The site does not want robots: use an official route (API, download, a request to the owner).
 
-## Fiche 4. 404 Not Found
+## Sheet 4. 404 Not Found
 
 **Step:** fetch. The page does not exist.
 
@@ -67,7 +67,7 @@ How to use them: copy the **last line** of your error, find it in the list below
 
 **Is it solved?** The same address opens in your browser. Still 404 in Python but not in the browser? Tell me what you see: compare `response.url` (after redirects) with the browser's address bar.
 
-## Fiche 5. 429 Too Many Requests
+## Sheet 5. 429 Too Many Requests
 
 **Step:** fetch. You go too fast.
 
@@ -77,17 +77,17 @@ How to use them: copy the **last line** of your error, find it in the list below
 
 **Is it solved?** A full run with no 429. Still 429 at your new speed? The limit may be per hour or per day: read the API's documentation or the site's terms, and spread the work over time.
 
-## Fiche 6. Timeout, ReadTimeout
+## Sheet 6. Timeout, ReadTimeout
 
 **Step:** fetch. The site did not answer in time.
 
 1. **The site is slow** right now: retry with backoff (Chapter 20).
 2. **Your timeout is too short** for this page: 10 to 30 seconds for real sites.
-3. **The site is overloaded** (perhaps by scrapers): slow down, try later.
+3. **The site is overloaded**: slow down, try later.
 
 **Is it solved?** Most pages succeed after one retry. Every page times out? Tell me what you see: open the page in your browser; if it is slow there too, the site has a problem; come back later.
 
-## Fiche 7. SSL: CERTIFICATE_VERIFY_FAILED
+## Sheet 7. SSL: CERTIFICATE_VERIFY_FAILED
 
 **Step:** fetch, on `https` addresses.
 
@@ -97,39 +97,39 @@ How to use them: copy the **last line** of your error, find it in the list below
 
 Never "fix" it with `verify=False` in a scraper you keep: it removes the protection that tells you you are talking to the real site.
 
-## Fiche 8. AttributeError: 'NoneType' object has no attribute 'text'
+## Sheet 8. AttributeError: 'NoneType' object has no attribute 'text'
 
 **Step:** extract. `find` or `select_one` found nothing, returned `None`, and you called `.text` on it.
 
 1. **The element is missing on this card** (a product without price): check for `None` first (Chapter 9, `text_or_none`).
 2. **The selector is wrong**: test it in the Elements panel with Ctrl+F (Chapter 10). A missing dot (`price` instead of `.price`) is the classic one.
 3. **The page is not the one you think**: an error page, a login page, a cookie banner. Print `response.status_code` and `soup.title`.
-4. **The element is added by JavaScript**: go to fiche 9.
+4. **The element is added by JavaScript**: go to sheet 9.
 
 **Is it solved?** The program runs through every card, and missing values appear as `None` in your table. Still failing on every card? Print `card.prettify()[:500]` for the first card and compare it with your selector.
 
-## Fiche 9. Empty results, no error
+## Sheet 9. Empty results, no error
 
-**Step:** fetch or extract. The most dangerous fiche: nothing tells you anything is wrong.
+**Step:** fetch or extract. The most dangerous sheet: nothing tells you anything is wrong.
 
 1. **The data comes from JavaScript**: Ctrl+U then Ctrl+F for a value you see on screen. Not in the source? Look in the Network panel, filter *Fetch/XHR*, for a hidden API (Chapter 15), or use Playwright (Chapter 16).
-2. **The selector does not match**: count first, `print(len(soup.select(...)))`; test in the Elements panel.
-3. **You received a different page**: consent page, login page, error page with status 200. Save the HTML and open it in your browser: `Path("debug.html").write_text(response.text)`.
+2. **The selector does not match**: count first, `print(len(soup.select(...)))`; test in the Elements panel. A selector copied from the browser that contains `tbody` matches the DOM, not the source: remove `tbody` (Chapter 10).
+3. **You received a different page**: consent page, login page, error page with status 200. Save the HTML and open it in your browser: `Path("debug.html").write_text(response.text, encoding="utf-8")`.
 4. **robots.txt forbids it** (Scrapy, `PoliteClient`): read the log.
 
 **Is it solved?** Your checks (Chapter 20) pass: the count matches what the site announces. Still empty? Tell me what you see: compare the saved `debug.html` with what your browser shows; the difference is your answer.
 
-## Fiche 10. IndexError: list index out of range
+## Sheet 10. IndexError: list index out of range
 
 **Step:** extract. You took item `[n]` of a list that is shorter, usually empty.
 
-1. **The selector found nothing**: fiche 9.
+1. **The selector found nothing**: sheet 9.
 2. **`split` gave fewer pieces than expected**: print the text with `repr()`; the separator may be a different character (an en dash `–`, not a hyphen `-`).
 3. **A table row has fewer cells**: header rows have `th`, not `td`.
 
 **Is it solved?** Print `len()` before every `[n]`. Use `[0]` only after checking the list is not empty, or `select_one` instead of `select(...)[0]`.
 
-## Fiche 11. Garbled characters, UnicodeDecodeError
+## Sheet 11. Garbled characters, UnicodeDecodeError
 
 **Step:** fetch or save. Bytes read with the wrong encoding.
 
@@ -140,7 +140,7 @@ Never "fix" it with `verify=False` in a scraper you keep: it removes the protect
 
 **Is it solved?** Accents and currency signs look right in the file. Still wrong? Tell me what you see: `open(path, "rb").read(20)` shows the raw bytes; compare with the table of section 19.3.
 
-## Fiche 12. My numbers are wrong or read as text
+## Sheet 12. My numbers are wrong or read as text
 
 **Step:** extract or save.
 
@@ -152,7 +152,7 @@ Never "fix" it with `verify=False` in a scraper you keep: it removes the protect
 
 **Is it solved?** `df.dtypes` shows numbers, and a total you compute by hand matches.
 
-## Fiche 13. KeyError
+## Sheet 13. KeyError
 
 **Step:** extract.
 
@@ -161,7 +161,7 @@ Never "fix" it with `verify=False` in a scraper you keep: it removes the protect
 3. **A DataFrame column name is different**: print `list(df.columns)` and copy the name; watch for spaces and capitals.
 4. **An API answer has another shape**: print `json.dumps(data, indent=2)[:1000]`; the key may be nested deeper, or the answer is an error.
 
-## Fiche 14. JSONDecodeError
+## Sheet 14. JSONDecodeError
 
 **Step:** fetch. You called `.json()` on something that is not JSON.
 
@@ -171,7 +171,7 @@ Never "fix" it with `verify=False` in a scraper you keep: it removes the protect
 
 **Is it solved?** `r.headers["Content-Type"]` says `application/json`, and `.json()` works.
 
-## Fiche 15. Playwright or Selenium TimeoutError
+## Sheet 15. Playwright TimeoutError, Selenium TimeoutException
 
 **Step:** fetch or extract, in a browser.
 
@@ -182,7 +182,7 @@ Never "fix" it with `verify=False` in a scraper you keep: it removes the protect
 
 **Is it solved?** Run with a visible browser (`headless=False, slow_mo=500`) and watch where it stops.
 
-## Fiche 16. Sent back to the login page
+## Sheet 16. Sent back to the login page
 
 **Step:** fetch, after a login.
 
@@ -194,12 +194,12 @@ Never "fix" it with `verify=False` in a scraper you keep: it removes the protect
 
 **Is it solved?** A members-only element (`#user-name`) is on the page.
 
-## Fiche 17. Scrapy finishes with 0 items
+## Sheet 17. Scrapy finishes with 0 items
 
 **Step:** any. Read Scrapy's log with `LOG_LEVEL = "INFO"`.
 
 1. **`Forbidden by robots.txt`**: the start address is disallowed for your User-Agent.
-2. **`Connection refused`**: fiche 1.
+2. **`Connection refused`**: sheet 1.
 3. **`Crawled (200)` but no items**: your selectors do not match; test them in `scrapy shell "URL"`, Scrapy's interactive console.
 4. **`Filtered duplicate request`**: all your requests point to addresses already visited.
 5. **Your pipeline drops everything**: look for `Dropped:` lines.

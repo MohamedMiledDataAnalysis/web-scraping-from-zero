@@ -6,6 +6,5 @@ Expected output: chapters/ch16/expected/ex1_js_pages.txt
 Solution: chapters/ch16/solutions/ex1_js_pages.py
 """
 from playwright.sync_api import sync_playwright
-texts, authors = [], []
 
 # Your code here

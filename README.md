@@ -58,7 +58,7 @@ Chapter 0 of the book walks through every step with what you should see and the 
 | 3 Dynamic and protected sites | 14 Official APIs · 15 Hidden APIs · 16 Playwright · 17 Selenium · 18 Forms and logins · 19 Files and PDF tables · 20 Robust and polite scrapers |
 | 4 Scaling and automating | 21 Scrapy · 22 Scheduling, history and email alerts |
 | 5 Projects | 23 Book catalogue, four methods · 24 Job tracker · 25 Price monitor · 26 Capstone |
-| 6 Reference | Error fiches · cheat sheets · legal checklist · glossary |
+| 6 Reference | Error sheets · cheat sheets · legal checklist · glossary |
 
 Run every program **from this folder** (the repository's root), for example
 `python chapters/ch09/examples/find.py`, with the Practice Ground running.

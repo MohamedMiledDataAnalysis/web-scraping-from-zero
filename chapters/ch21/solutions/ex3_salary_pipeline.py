@@ -18,21 +18,21 @@ class JobsSpider(scrapy.Spider):
 
 
 class HighSalaryPipeline:
-    def process_item(self, item, spider):
+    def process_item(self, item):
         if item["salary_max"] < 50000:
             raise DropItem("salary too low")
         return item
 
 
 class CountPipeline:
-    def open_spider(self, spider):
+    def open_spider(self):
         self.count = 0
 
-    def process_item(self, item, spider):
+    def process_item(self, item):
         self.count += 1
         return item
 
-    def close_spider(self, spider):
+    def close_spider(self):
         print(self.count, "jobs with a maximum salary of £50,000 or more")
 
 

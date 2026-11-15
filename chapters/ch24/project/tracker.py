@@ -34,8 +34,9 @@ def collect_list(day, query):
     """Every job for one search word on one day: {id: summary}."""
     found, page = {}, 1
     while True:
-        url = f"{BASE}?q={query}&day={day}&page={page}"
-        soup = BeautifulSoup(client.get(url).text, "html.parser")
+        params = {"q": query, "day": day, "page": page}
+        r = client.get(BASE, params=params)
+        soup = BeautifulSoup(r.text, "html.parser")
         for li in soup.select("li.job"):
             low, high = li.select_one("p.salary").text.split("–")
             found[int(li["data-id"])] = {
@@ -93,7 +94,7 @@ def update_db(day, jobs):
         db.executemany(
             "UPDATE jobs SET last_seen = MAX(last_seen, ?) WHERE id = ?",
             [(day, i) for i in jobs if i in known],
-        )  # see MAX below
+        )  # MAX: see section 24.2
     return new_ids
 
 

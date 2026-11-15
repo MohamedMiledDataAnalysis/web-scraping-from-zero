@@ -27,7 +27,7 @@ soup = BeautifulSoup(html, "html.parser")          # or "lxml"
 soup.find("div", class_="quote")                   # first or None
 soup.find_all("a", href=True)                      # list
 soup.find(id="x"); soup.find("div", attrs={"data-id": "3"})
-soup.select("article.card p.price")                # list
+soup.select("article.book-card p.price")           # list
 soup.select_one("li.next a")                       # first or None
 tag.get_text(" ", strip=True); tag["href"]; tag.get("href")
 tag["class"]                                       # a list
@@ -41,18 +41,18 @@ soup.find("script", type="application/ld+json").string
 | CSS | XPath | Means |
 |---|---|---|
 | `p` | `//p` | every `p` |
-| `.price` | `//*[contains(@class, "price")]` | class |
+| `.price` | `//*[contains(concat(" ", normalize-space(@class), " "), " price ")]` | class (`contains(@class, "price")` also matches `price-old`) |
 | `#main` | `//*[@id="main"]` | id |
 | `a[href]` | `//a[@href]` | has the attribute |
 | `a[href^="/q/"]` | `//a[starts-with(@href, "/q/")]` | starts with |
 | `a[href*="x"]` | `//a[contains(@href, "x")]` | contains |
 | `div p` | `//div//p` | descendant |
 | `ul > li` | `//ul/li` | child |
-| `th + td` | `//th/following-sibling::td[1]` | next sibling |
-| `li:nth-of-type(2)` | `//li[2]` | second |
-| `div:has(.x)` | `//div[.//*[contains(@class,"x")]]` | contains an element |
-| `:-soup-contains("Price")` | `//*[contains(text(), "Price")]` | text |
-| (none) | `//p/..`, `//p/ancestor::div` | parent, ancestor |
+| `th + td` | `//th/following-sibling::*[1][self::td]` | next sibling |
+| `li:nth-of-type(2)` | `//li[2]` | second `li` among its siblings |
+| `div:has(.x)` | `//div[.//*[contains(concat(" ", normalize-space(@class), " "), " x ")]]` | contains an element |
+| `th:-soup-contains("Price")` | `//th[contains(., "Price")]` | text, children included |
+| (only with `:has()`) | `//p/..`, `//p/ancestor::div[1]` | parent, nearest ancestor |
 
 Scrapy adds `::text` and `::attr(name)` to CSS: `response.css("a::attr(href)").getall()`.
 
@@ -68,7 +68,7 @@ Scrapy adds `::text` and `::attr(name)` to CSS: `response.css("a::attr(href)").g
 | Menu | `page.select_option(sel, v)` | `Select(el).select_by_value(v)` |
 | Wait | automatic; `wait_for_selector` | `WebDriverWait(d, 10).until(EC...)` |
 | Scroll | `page.mouse.wheel(0, 20000)` | `execute_script("window.scrollTo(...)")` |
-| Catch JSON | `page.on("response", f)` | not built in |
+| Catch JSON | `page.on("response", f)` | no simple built-in equivalent |
 | HTML | `page.content()` | `driver.page_source` |
 | Close | `browser.close()` | `driver.quit()` |
 
@@ -77,28 +77,33 @@ Scrapy adds `::text` and `::attr(name)` to CSS: `response.css("a::attr(href)").g
 ```python
 import pandas as pd
 from io import StringIO
-pd.read_html(StringIO(html), attrs={"id": "t"}, thousands=",", na_values=["n/a"])
+pd.read_html(
+    StringIO(html), attrs={"id": "t"}, thousands=",", na_values=["n/a"]
+)
 df = pd.DataFrame(records); df.shape; df.dtypes; df.isna().sum()
-df["price"] = df["price_text"].str.replace("£", "").str.replace(",", "").astype(float)
+text = df["price_text"].str.replace("£", "").str.replace(",", "")
+df["price"] = text.astype(float)
 pd.read_csv(path, sep=";", decimal=",", thousands=".", encoding="utf-8")
 pd.read_excel(path, sheet_name=None, header=None)      # look first
 pd.json_normalize(api_records)
 pd.to_datetime(s, format="%d/%m/%Y", errors="coerce")
 df.drop_duplicates(subset="url"); df.dropna(subset=["title"])
 df.groupby("category")["price"].agg(["count", "mean"])
-df.to_csv(p, index=False); df.to_excel(p, index=False); df.to_sql("t", db)
+df.to_csv(p, index=False); df.to_excel(p, index=False)
+df.to_sql("t", db, if_exists="append", index=False)
+# if_exists: default "fail"; "replace" drops the table
 ```
 
 ## Regular expressions
 
-| Pattern | Matches |
-|---|---|
-| `\d+` | a number |
-| `[\d,]+(\.\d+)?` | a number with thousands commas and decimals |
-| `\s+` | spaces, tabs, line breaks |
-| `£\s*([\d,.]+)` | a pound amount, captured |
-| `\((\d+) available\)` | the number in *(19 available)* |
-| `\d{4}-\d{2}-\d{2}` | an ISO date |
-| `var data = (\[.*?\]);` | a JSON array in a script (with `re.DOTALL`) |
+```text
+\d+                                  a number
+\d+(?:,\d{3})*(?:\.\d+)?             number with thousands commas, decimals
+\s+                                  spaces, tabs, line breaks
+£\s*(\d+(?:,\d{3})*(?:\.\d+)?)       a pound amount, captured
+\((\d+) available\)                  the number in "(19 available)"
+\d{4}-\d{2}-\d{2}                    ISO date shape (values not checked)
+var data = (\[.*?\]);                JSON array in a script (re.DOTALL)
+```
 
-`re.search(p, text).group(1)`, `re.findall(p, text)`, `re.sub(p, new, text)`; always `r"..."`.
+`re.search(p, text).group(1)`, `re.findall(p, text)`, `re.sub(p, new, text)`; always `r"..."`. With `findall`, a pattern with `( )` returns only the captured part (a tuple when there are several groups); use `(?: )` for groups you do not want back.

@@ -13,6 +13,5 @@ from collections import Counter
 from pathlib import Path
 sys.path.insert(0, "chapters/ch24/project")
 import tracker  # noqa: E402
-tracker.DB = "output/ch24/count.db"
 
 # Your code here

@@ -5,4 +5,6 @@ r"""Exercise 2.1 (easy).
 Expected output: chapters/ch02/expected/ex1_clean.txt
 Solution: chapters/ch02/solutions/ex1_clean.py
 """
+raw = "  Out of stock \n"
+
 # Your code here

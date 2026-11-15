@@ -9,6 +9,5 @@ import time
 from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
-url, pages, quotes = "http://localhost:8000/quotes/", 0, 0
 
 # Your code here

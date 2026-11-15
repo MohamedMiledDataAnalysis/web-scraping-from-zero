@@ -1,6 +1,6 @@
 # The legal and polite checklist
 
-Answer every line, in writing, with the date, before the first request of a new project. Keep a copy of the terms and robots.txt you read.
+Answer every line, in writing, with the date, before the first request of a new project. Keep a copy of the terms and robots.txt you read. This checklist explains good practice. It is not legal advice; for commercial projects or personal data, consult a lawyer who knows the law of your country.
 
 **Before**
 
@@ -26,5 +26,3 @@ Answer every line, in writing, with the date, before the first request of a new 
 14. Store personal data only if lawful, and protect it; delete what I do not need.
 15. Credit the sources as their licences require; republish only what I am allowed to.
 16. If the owner asks me to stop, stop.
-
-This checklist explains good practice. It is not legal advice; for commercial projects or personal data, consult a lawyer who knows the law of your country.

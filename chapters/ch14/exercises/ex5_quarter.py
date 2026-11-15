@@ -10,7 +10,6 @@ from urllib.parse import urljoin
 import pandas as pd
 import requests
 BASE = "http://localhost:8000"
-session.headers["X-API-Key"] = "pg-demo-2027"
 limited = 0
 
 # Your code here

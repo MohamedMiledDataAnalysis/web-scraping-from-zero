@@ -10,6 +10,5 @@ from collections import Counter
 from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
-url, cities = "http://localhost:8000/jobs/", []
 
 # Your code here

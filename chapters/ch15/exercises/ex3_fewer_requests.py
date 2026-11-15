@@ -9,6 +9,5 @@ import time
 import pandas as pd
 import requests
 url = "http://localhost:8000/shop/api/products"
-products, page, pages, calls = [], 1, 1, 0
 
 # Your code here

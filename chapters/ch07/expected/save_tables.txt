@@ -1,3 +1,3 @@
-    Planet  Mean distance from the Sun (million km)  Diameter (km)  Orbital period (days)
-6   Uranus                                   2867.0          51118                30589.0
-7  Neptune                                   4515.0          49528                59800.0
+    Planet  Distance (million km)  Diameter (km)  Orbital period (days)
+6   Uranus                 2867.0          51118                30589.0
+7  Neptune                 4515.0          49528                59800.0

@@ -21,7 +21,7 @@ class JobsSpider(scrapy.Spider):
 
 
 class CleanPipeline:
-    def process_item(self, item, spider):
+    def process_item(self, item):
         low, high = item.pop("salary").split("–")
         item["salary_min"] = int(low.strip(" £").replace(",", ""))
         item["salary_max"] = int(high.strip(" £").replace(",", ""))
@@ -30,21 +30,21 @@ class CleanPipeline:
 
 
 class RemotePipeline:
-    def process_item(self, item, spider):
+    def process_item(self, item):
         if item["city"] == "Remote":
             raise DropItem(f"remote job {item['id']}")
         return item
 
 
 class CountPipeline:
-    def open_spider(self, spider):
+    def open_spider(self):
         self.count = 0
 
-    def process_item(self, item, spider):
+    def process_item(self, item):
         self.count += 1
         return item
 
-    def close_spider(self, spider):
+    def close_spider(self):
         print(f"{self.count} jobs kept")
 
 

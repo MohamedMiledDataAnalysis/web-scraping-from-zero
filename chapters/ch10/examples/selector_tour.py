@@ -11,7 +11,7 @@ print(library.select_one("ul.pager > li.next > a")["href"])
 
 quotes = BeautifulSoup(session.get("http://localhost:8000/quotes/",
                                    timeout=10).text, "html.parser")
-tags = {a.text for a in quotes.select('a[href^="/quotes/tag/"]')}
+tags = {a.text for a in quotes.select('.quote a[href^="/quotes/tag/"]')}
 print(len(tags), "different tags on page 1")
 
 book = BeautifulSoup(session.get(

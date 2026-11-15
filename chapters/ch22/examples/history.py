@@ -23,23 +23,27 @@ def save_day(db_path, day, jobs):
 
 
 def compare(db_path, day):
-    """New and removed jobs between `day` and the previous day."""
+    """New and removed jobs between `day` and the previous stored day."""
     with sqlite3.connect(db_path) as db:
         days = [
             r[0]
             for r in db.execute(
                 "SELECT DISTINCT day FROM jobs WHERE day < ? "
-            "ORDER BY day DESC LIMIT 1",
+                "ORDER BY day DESC LIMIT 1",
                 (day,),
             )
         ]
         today = pd.read_sql(
-            "SELECT * FROM jobs WHERE day = ?", db, params=(day,)
+            "SELECT * FROM jobs WHERE day = ? ORDER BY id",
+            db,
+            params=(day,),
         )
         if not days:
             return today, today.iloc[0:0]
         before = pd.read_sql(
-            "SELECT * FROM jobs WHERE day = ?", db, params=(days[0],)
+            "SELECT * FROM jobs WHERE day = ? ORDER BY id",
+            db,
+            params=(days[0],),
         )
     new = today[~today["id"].isin(before["id"])]
     removed = before[~before["id"].isin(today["id"])]

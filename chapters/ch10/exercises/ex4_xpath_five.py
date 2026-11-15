@@ -1,6 +1,6 @@
-r"""Exercise 10.5 (harder).
+r"""Exercise 10.4 (medium).
 
-    With one XPath expression, print the authors of the quotes of page 1 that have the tag `work`.
+    Rewrite exercise 10.1 with XPath and lxml. Expected output: the same as exercise 10.1.
 
 Expected output: chapters/ch10/expected/ex4_xpath_five.txt
 Solution: chapters/ch10/solutions/ex4_xpath_five.py

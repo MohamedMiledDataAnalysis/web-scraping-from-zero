@@ -12,6 +12,8 @@
 
 **Cache.** A saved copy of a downloaded page, used instead of downloading it again. Chapter 8.
 
+**Class.** A name in an element's `class` attribute; one element can have several: `class="star-rating Three"`. Chapter 4.
+
 **Cookie.** A small value a website asks your client to send back with every request; it keeps you logged in. Chapter 18.
 
 **Crawl.** Visiting many pages by following links.
@@ -26,13 +28,17 @@
 
 **DataFrame.** pandas' table: rows, named columns, one type per column. Chapter 7.
 
+**Data attribute.** An attribute whose name starts with `data-`, holding a value for the page's JavaScript: `data-id="17"`. Chapter 4.
+
 **Data dictionary.** A document listing a dataset's columns, types, units and sources. Chapter 26.
 
 **Database right.** In the UK and the EU, the protection of a database that needed substantial investment. Chapter 5.
 
 **Developer tools.** The browser's panels for inspecting a page: Elements, Network, Console. Chapter 4.
 
-**DOM.** The tree the browser builds from the HTML, after JavaScript has changed it. Chapter 4.
+**DOM.** The tree the browser builds from the HTML: repaired and completed by the browser, then changed by JavaScript. Chapter 4.
+
+**Element.** An opening tag, its content and its closing tag: `<p class="price">£26.93</p>`. Chapter 4.
 
 **Encoding.** The rule that turns bytes into characters: UTF-8, UTF-16, ISO-8859-1. Chapters 8 and 19.
 
@@ -51,6 +57,8 @@
 **HTML.** The language of web pages: tags, attributes and text, nested in a tree.
 
 **HTTP.** The protocol of requests and responses between clients and websites.
+
+**id.** An attribute naming one unique element of the page: `id="description"`. Chapter 4.
 
 **Idempotent.** Giving the same result when run twice; required for scheduled jobs. Chapter 22.
 
@@ -82,7 +90,7 @@
 
 **Rate limit.** The maximum number of requests a site or API accepts in a period. Chapters 14 and 20.
 
-**Regular expression.** A pattern for text: `\d+`, `[\d,]+`. Chapter 13.
+**Regular expression.** A pattern for text: `\d+`, `[\d,]+`. Chapters 7 and 13.
 
 **Relative link.** A link that gives only part of the address; completed with `urljoin`. Chapter 4.
 
@@ -100,11 +108,11 @@
 
 **Spider.** A Scrapy class that says where to start and what to extract. Chapter 21.
 
-**SQLite.** A database in one file, built into Python. Chapters 13 and 22.
+**SQLite.** A database in one file, built into Python. Chapters 13, 22, 24 and 25.
 
 **Status code.** The three-digit number of a response: 200, 301, 404, 429, 503. Chapter 4.
 
-**Tag.** An HTML element's name between angle brackets: `<p>`, `<a>`, `<table>`.
+**Tag.** The markup that opens or closes an element: `<p>`, `</p>`. Chapter 4.
 
 **Terms of use.** A website's conditions; they can forbid robots and reuse. Chapter 5.
 
@@ -117,3 +125,7 @@
 **Virtual environment.** A private copy of Python for one project, in `.venv`. Chapter 0.
 
 **XPath.** A language for finding elements, strong on text and ancestors. Chapter 10.
+
+```{=latex}
+\setcounter{secnumdepth}{1}
+```
