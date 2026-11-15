@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Open API{% endblock %}
+{% block content %}
+<h1>Practice Ground Open Data API</h1>
+<p>Daily weather observations from five invented stations. Every request needs an API key.</p>
+<p>Your key: <code id="api-key">{{ key }}</code>. Send it in the <code>X-API-Key</code> header.</p>
+<p>Limit: 10 requests per 10 seconds. Above the limit you receive status 429 and a <code>Retry-After</code> header.</p>
+<h2>Endpoints</h2>
+<table class="data-table">
+  <tr><th>Address</th><th>Parameters</th><th>Returns</th></tr>
+  <tr><td><code>/api/v1/stations</code></td><td><code>country</code> (optional: UK or FR)</td><td>The list of stations</td></tr>
+  <tr><td><code>/api/v1/observations</code></td><td><code>station</code> (required), <code>start</code>, <code>end</code> (dates such as 2027-01-31), <code>page</code></td><td>10 days per page, with a <code>next</code> link</td></tr>
+</table>
+<h2>Licence</h2><p>Invented data. Free to reuse; credit “Practice Ground Open Data”.</p>
+{% endblock %}

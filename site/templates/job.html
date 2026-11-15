@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ job.title }}{% endblock %}
+{% block content %}
+<article class="job-detail" data-id="{{ job.id }}">
+  <h1>{{ job.level }} {{ job.title }}</h1>
+  <dl>
+    <dt>Company</dt><dd class="company">{{ job.company }}</dd>
+    <dt>Location</dt><dd class="location">{{ job.city }}</dd>
+    <dt>Salary</dt><dd class="salary">£{{ '{:,}'.format(job.salary_min) }} – £{{ '{:,}'.format(job.salary_max) }}</dd>
+    <dt>Skills</dt><dd class="skills">{{ job.skills|join(', ') }}</dd>
+    <dt>Posted</dt><dd class="posted">{{ job.posted }}</dd>
+  </dl>
+</article>
+{% endblock %}

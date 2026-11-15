@@ -1,0 +1,3 @@
+/quotes/ True
+/admin/ False
+/private/notes.html False

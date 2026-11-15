@@ -1,0 +1,11 @@
+# Practice Ground robots.txt
+User-agent: *
+Disallow: /private/
+Disallow: /admin/
+Crawl-delay: 1
+
+User-agent: BadBot
+Disallow: /
+
+Sitemap: http://localhost:8000/sitemap.xml
+

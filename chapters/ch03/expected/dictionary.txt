@@ -1,0 +1,4 @@
+The Broken Forest
+53.86
+{'title': 'The Broken Forest', 'author': 'Nadia Kowal', 'price': 24.99, 'rating': 3, 'in_stock': True}
+['title', 'author', 'price', 'rating', 'in_stock']

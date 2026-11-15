@@ -1,0 +1,2 @@
+http://localhost:8000/quotes/ -> 10 quotes in the source
+http://localhost:8000/quotes/js/ -> 0 quotes in the source

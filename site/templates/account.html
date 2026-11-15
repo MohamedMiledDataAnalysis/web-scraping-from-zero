@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Your account{% endblock %}
+{% block content %}
+<h1>Welcome back, <span id="user-name">{{ user }}</span></h1>
+<p><a href="/account/orders.csv">Download my orders (CSV)</a> · <a href="/account/logout">Log out</a></p>
+<table class="data-table" id="orders">
+  <thead><tr><th>Order</th><th>Date</th><th>Item</th><th>Total</th><th>Status</th></tr></thead>
+  <tbody>{% for o in orders %}
+    <tr><td>{{ o.number }}</td><td>{{ o.date }}</td><td>{{ o.item }}</td><td>£{{ '%.2f'|format(o.total) }}</td><td>{{ o.status }}</td></tr>{% endfor %}
+  </tbody>
+</table>
+{% endblock %}

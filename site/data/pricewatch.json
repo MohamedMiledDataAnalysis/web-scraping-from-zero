@@ -1,0 +1,122 @@
+[
+ {
+  "id": 1,
+  "name": "Wireless Mouse",
+  "base": 413.57,
+  "seed": 374162
+ },
+ {
+  "id": 2,
+  "name": "Mechanical Keyboard",
+  "base": 246.58,
+  "seed": 705727
+ },
+ {
+  "id": 3,
+  "name": "27-inch Monitor",
+  "base": 360.64,
+  "seed": 736277
+ },
+ {
+  "id": 4,
+  "name": "USB-C Hub",
+  "base": 49.42,
+  "seed": 829857
+ },
+ {
+  "id": 5,
+  "name": "Webcam HD",
+  "base": 417.06,
+  "seed": 720787
+ },
+ {
+  "id": 6,
+  "name": "Laptop Stand",
+  "base": 190.02,
+  "seed": 360040
+ },
+ {
+  "id": 7,
+  "name": "Noise-Cancelling Headphones",
+  "base": 120.78,
+  "seed": 837318
+ },
+ {
+  "id": 8,
+  "name": "External SSD 1TB",
+  "base": 80.5,
+  "seed": 263870
+ },
+ {
+  "id": 9,
+  "name": "Smart Watch",
+  "base": 348.23,
+  "seed": 547615
+ },
+ {
+  "id": 10,
+  "name": "E-reader",
+  "base": 233.84,
+  "seed": 810146
+ },
+ {
+  "id": 11,
+  "name": "Bluetooth Speaker",
+  "base": 90.1,
+  "seed": 83448
+ },
+ {
+  "id": 12,
+  "name": "Graphics Tablet",
+  "base": 387.06,
+  "seed": 655502
+ },
+ {
+  "id": 13,
+  "name": "Desk Chair",
+  "base": 44.83,
+  "seed": 300661
+ },
+ {
+  "id": 14,
+  "name": "Office Printer",
+  "base": 22.07,
+  "seed": 565230
+ },
+ {
+  "id": 15,
+  "name": "Router Wi-Fi 7",
+  "base": 165.19,
+  "seed": 952275
+ },
+ {
+  "id": 16,
+  "name": "Portable Charger",
+  "base": 303.06,
+  "seed": 135269
+ },
+ {
+  "id": 17,
+  "name": "Action Camera",
+  "base": 327.41,
+  "seed": 21774
+ },
+ {
+  "id": 18,
+  "name": "Robot Vacuum",
+  "base": 83.12,
+  "seed": 78557
+ },
+ {
+  "id": 19,
+  "name": "Air Fryer",
+  "base": 39.66,
+  "seed": 218118
+ },
+ {
+  "id": 20,
+  "name": "Espresso Machine",
+  "base": 398.62,
+  "seed": 43714
+ }
+]

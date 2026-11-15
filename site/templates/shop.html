@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Shop{% endblock %}
+{% block content %}
+<h1>Gadget Shop</h1>
+<div class="shop-controls">
+  <label for="category">Category</label>
+  <select id="category"><option value="">All</option>{% for c in cats %}<option value="{{ c }}">{{ c }}</option>{% endfor %}</select>
+  <label for="sort">Sort by</label>
+  <select id="sort"><option value="id">Newest</option><option value="price">Price</option><option value="rating">Rating</option></select>
+</div>
+<p id="status">Loading products...</p>
+<div id="products" class="product-grid"></div>
+<div id="end-marker"></div>
+<script src="/static/shop.js"></script>
+{% endblock %}

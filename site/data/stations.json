@@ -1,0 +1,37 @@
+[
+ {
+  "id": "LON",
+  "name": "London Riverside",
+  "country": "UK",
+  "lat": 51.5,
+  "lon": -0.12
+ },
+ {
+  "id": "MAN",
+  "name": "Manchester Hill",
+  "country": "UK",
+  "lat": 53.48,
+  "lon": -2.24
+ },
+ {
+  "id": "EDI",
+  "name": "Edinburgh Port",
+  "country": "UK",
+  "lat": 55.95,
+  "lon": -3.19
+ },
+ {
+  "id": "PAR",
+  "name": "Paris Canal",
+  "country": "FR",
+  "lat": 48.86,
+  "lon": 2.35
+ },
+ {
+  "id": "LYO",
+  "name": "Lyon Confluence",
+  "country": "FR",
+  "lat": 45.76,
+  "lon": 4.83
+ }
+]

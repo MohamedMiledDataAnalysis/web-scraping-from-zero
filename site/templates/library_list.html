@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}{{ heading }}{% endblock %}
+{% block content %}
+<div class="library">
+<aside class="categories">
+  <h2>Categories</h2>
+  <ul>
+  {% for slug, name in cats %}<li><a href="/library/category/{{ slug }}/">{{ name }}</a></li>
+  {% endfor %}</ul>
+</aside>
+<section>
+  <h1>{{ heading }}</h1>
+  <p class="result-count"><strong>{{ total }}</strong> results, page <strong>{{ page }}</strong> of <strong>{{ pages }}</strong>.</p>
+  <div class="book-grid">
+  {% for b in books %}
+    <article class="book-card" data-id="{{ b.id }}">
+      <h3><a href="{% if base == '/library/' %}book/{% else %}/library/book/{% endif %}{{ b.slug }}.html" title="{{ b.title }}">{{ b.title if b.title|length <= 28 else b.title[:25] ~ '...' }}</a></h3>
+      <p class="author">by {{ b.author }}</p>
+      <p class="star-rating {{ rating_words[b.rating - 1] }}" aria-label="{{ b.rating }} stars">{{ '★' * b.rating }}{{ '☆' * (5 - b.rating) }}</p>
+      <p class="price">£{{ '%.2f'|format(b.price) }}</p>
+      {% if b.stock %}<p class="availability in-stock">In stock</p>{% else %}<p class="availability out-of-stock">Out of stock</p>{% endif %}
+    </article>
+  {% endfor %}
+  </div>
+  <ul class="pager">
+    {% if page > 1 %}<li class="previous"><a href="{% if page == 2 and base != '/library/' %}{{ base }}{% else %}page-{{ page - 1 }}.html{% endif %}">previous</a></li>{% endif %}
+    <li class="current">Page {{ page }} of {{ pages }}</li>
+    {% if page < pages %}<li class="next"><a href="page-{{ page + 1 }}.html">next</a></li>{% endif %}
+  </ul>
+</section>
+</div>
+{% endblock %}

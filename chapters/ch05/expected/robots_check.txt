@@ -1,0 +1,6 @@
+/library/        allowed: True
+/private/        allowed: False
+/admin/login     allowed: False
+/jobs/           allowed: True
+Crawl-delay: 1
+BadBot on /library/: False

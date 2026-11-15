@@ -1,0 +1,2 @@
+{'title': 'The Broken Forest', 'author': 'Nadia Kowal', 'price': '26.93'}
+<class 'str'>

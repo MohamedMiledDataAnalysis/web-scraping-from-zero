@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}{{ item.name }}{% endblock %}
+{% block content %}
+<h1 class="name">{{ item.name }}</h1>
+<p class="price">£{{ '%.2f'|format(price) }}</p>
+<h2>Last 14 days</h2>
+<table class="data-table" id="history">
+  <tr><th>Date</th><th>Price</th></tr>
+  {% for h in history %}<tr><td>{{ h.date }}</td><td>£{{ '%.2f'|format(h.price) }}</td></tr>{% endfor %}
+</table>
+{% endblock %}

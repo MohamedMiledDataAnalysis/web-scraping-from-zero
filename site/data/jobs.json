@@ -1,0 +1,6402 @@
+[
+ {
+  "id": 1001,
+  "title": "Python Developer",
+  "level": "Mid-level",
+  "company": "Northbridge Bank",
+  "city": "London",
+  "salary_min": 52000,
+  "salary_max": 70000,
+  "skills": [
+   "Qlik Sense",
+   "R",
+   "Tableau"
+  ],
+  "offset": -58,
+  "lifetime": 30
+ },
+ {
+  "id": 1002,
+  "title": "Python Developer",
+  "level": "Junior",
+  "company": "Meridian Retail",
+  "city": "Edinburgh",
+  "salary_min": 34000,
+  "salary_max": 43000,
+  "skills": [
+   "Git",
+   "SQL",
+   "Tableau"
+  ],
+  "offset": 101,
+  "lifetime": 21
+ },
+ {
+  "id": 1003,
+  "title": "Structured Finance Analyst",
+  "level": "Senior",
+  "company": "Northbridge Bank",
+  "city": "Edinburgh",
+  "salary_min": 69000,
+  "salary_max": 85000,
+  "skills": [
+   "Power BI",
+   "R",
+   "VBA"
+  ],
+  "offset": -28,
+  "lifetime": 19
+ },
+ {
+  "id": 1004,
+  "title": "Data Analyst",
+  "level": "Mid-level",
+  "company": "Kestrel Insurance",
+  "city": "Lyon",
+  "salary_min": 56000,
+  "salary_max": 69000,
+  "skills": [
+   "AWS",
+   "Python",
+   "SQL"
+  ],
+  "offset": -2,
+  "lifetime": 26
+ },
+ {
+  "id": 1005,
+  "title": "Data Scientist",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "Edinburgh",
+  "salary_min": 35000,
+  "salary_max": 45000,
+  "skills": [
+   "Docker",
+   "R",
+   "Tableau"
+  ],
+  "offset": 42,
+  "lifetime": 15
+ },
+ {
+  "id": 1006,
+  "title": "Data Scientist",
+  "level": "Junior",
+  "company": "Copperfield Energy",
+  "city": "Remote",
+  "salary_min": 31000,
+  "salary_max": 37000,
+  "skills": [
+   "Docker",
+   "Power BI",
+   "PySpark"
+  ],
+  "offset": 83,
+  "lifetime": 40
+ },
+ {
+  "id": 1007,
+  "title": "Web Developer",
+  "level": "Senior",
+  "company": "Lumen Health",
+  "city": "Manchester",
+  "salary_min": 67000,
+  "salary_max": 75000,
+  "skills": [
+   "Python",
+   "R",
+   "Tableau"
+  ],
+  "offset": -20,
+  "lifetime": 14
+ },
+ {
+  "id": 1008,
+  "title": "Structured Finance Analyst",
+  "level": "Senior",
+  "company": "Atlas Tutors",
+  "city": "Manchester",
+  "salary_min": 67000,
+  "salary_max": 78000,
+  "skills": [
+   "Docker",
+   "R",
+   "VBA"
+  ],
+  "offset": -41,
+  "lifetime": 11
+ },
+ {
+  "id": 1009,
+  "title": "Web Developer",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "Lyon",
+  "salary_min": 32000,
+  "salary_max": 52000,
+  "skills": [
+   "Qlik Sense",
+   "R",
+   "VBA"
+  ],
+  "offset": 33,
+  "lifetime": 32
+ },
+ {
+  "id": 1010,
+  "title": "Operations Analyst",
+  "level": "Mid-level",
+  "company": "Sable Media",
+  "city": "Lyon",
+  "salary_min": 56000,
+  "salary_max": 63000,
+  "skills": [
+   "Docker",
+   "PySpark",
+   "VBA"
+  ],
+  "offset": 0,
+  "lifetime": 16
+ },
+ {
+  "id": 1011,
+  "title": "BI Developer",
+  "level": "Mid-level",
+  "company": "Riverside Logistics",
+  "city": "London",
+  "salary_min": 56000,
+  "salary_max": 63000,
+  "skills": [
+   "Excel",
+   "Power BI",
+   "Tableau"
+  ],
+  "offset": 75,
+  "lifetime": 22
+ },
+ {
+  "id": 1012,
+  "title": "Data Scientist",
+  "level": "Senior",
+  "company": "Copperfield Energy",
+  "city": "London",
+  "salary_min": 75000,
+  "salary_max": 93000,
+  "skills": [
+   "AWS",
+   "Excel",
+   "Qlik Sense"
+  ],
+  "offset": 69,
+  "lifetime": 32
+ },
+ {
+  "id": 1013,
+  "title": "Structured Finance Analyst",
+  "level": "Junior",
+  "company": "Northbridge Bank",
+  "city": "Paris",
+  "salary_min": 36000,
+  "salary_max": 47000,
+  "skills": [
+   "Docker",
+   "Python",
+   "Tableau"
+  ],
+  "offset": 109,
+  "lifetime": 14
+ },
+ {
+  "id": 1014,
+  "title": "Reporting Analyst",
+  "level": "Mid-level",
+  "company": "Atlas Tutors",
+  "city": "Edinburgh",
+  "salary_min": 52000,
+  "salary_max": 67000,
+  "skills": [
+   "Docker",
+   "Power BI",
+   "Python"
+  ],
+  "offset": 7,
+  "lifetime": 26
+ },
+ {
+  "id": 1015,
+  "title": "Data Analyst",
+  "level": "Senior",
+  "company": "Riverside Logistics",
+  "city": "Remote",
+  "salary_min": 75000,
+  "salary_max": 80000,
+  "skills": [
+   "Docker",
+   "PySpark",
+   "VBA"
+  ],
+  "offset": 28,
+  "lifetime": 40
+ },
+ {
+  "id": 1016,
+  "title": "Data Analyst",
+  "level": "Senior",
+  "company": "Riverside Logistics",
+  "city": "Leeds",
+  "salary_min": 72000,
+  "salary_max": 90000,
+  "skills": [
+   "PySpark",
+   "Python",
+   "Qlik Sense"
+  ],
+  "offset": 33,
+  "lifetime": 16
+ },
+ {
+  "id": 1017,
+  "title": "Business Analyst",
+  "level": "Mid-level",
+  "company": "Meridian Retail",
+  "city": "Leeds",
+  "salary_min": 54000,
+  "salary_max": 64000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "VBA"
+  ],
+  "offset": -9,
+  "lifetime": 11
+ },
+ {
+  "id": 1018,
+  "title": "Junior Data Engineer",
+  "level": "Mid-level",
+  "company": "Sable Media",
+  "city": "Manchester",
+  "salary_min": 52000,
+  "salary_max": 62000,
+  "skills": [
+   "PySpark",
+   "R",
+   "SQL"
+  ],
+  "offset": 58,
+  "lifetime": 19
+ },
+ {
+  "id": 1019,
+  "title": "Web Developer",
+  "level": "Mid-level",
+  "company": "Sable Media",
+  "city": "Remote",
+  "salary_min": 45000,
+  "salary_max": 60000,
+  "skills": [
+   "Git",
+   "R",
+   "SQL"
+  ],
+  "offset": 27,
+  "lifetime": 14
+ },
+ {
+  "id": 1020,
+  "title": "QA Tester",
+  "level": "Senior",
+  "company": "Copperfield Energy",
+  "city": "London",
+  "salary_min": 65000,
+  "salary_max": 79000,
+  "skills": [
+   "Docker",
+   "Git",
+   "Python"
+  ],
+  "offset": 97,
+  "lifetime": 21
+ },
+ {
+  "id": 1021,
+  "title": "Python Developer",
+  "level": "Junior",
+  "company": "Sable Media",
+  "city": "Lyon",
+  "salary_min": 37000,
+  "salary_max": 53000,
+  "skills": [
+   "Git",
+   "SQL",
+   "Tableau"
+  ],
+  "offset": 32,
+  "lifetime": 39
+ },
+ {
+  "id": 1022,
+  "title": "Junior Data Engineer",
+  "level": "Junior",
+  "company": "Riverside Logistics",
+  "city": "Lyon",
+  "salary_min": 42000,
+  "salary_max": 60000,
+  "skills": [
+   "PySpark",
+   "R",
+   "Tableau"
+  ],
+  "offset": -16,
+  "lifetime": 36
+ },
+ {
+  "id": 1023,
+  "title": "Data Scientist",
+  "level": "Junior",
+  "company": "Kestrel Insurance",
+  "city": "Remote",
+  "salary_min": 32000,
+  "salary_max": 41000,
+  "skills": [
+   "Excel",
+   "PySpark",
+   "VBA"
+  ],
+  "offset": 51,
+  "lifetime": 29
+ },
+ {
+  "id": 1024,
+  "title": "Business Analyst",
+  "level": "Junior",
+  "company": "Copperfield Energy",
+  "city": "Edinburgh",
+  "salary_min": 37000,
+  "salary_max": 57000,
+  "skills": [
+   "Excel",
+   "R",
+   "Tableau"
+  ],
+  "offset": 113,
+  "lifetime": 32
+ },
+ {
+  "id": 1025,
+  "title": "Python Developer",
+  "level": "Mid-level",
+  "company": "Harbour Analytics",
+  "city": "Paris",
+  "salary_min": 48000,
+  "salary_max": 57000,
+  "skills": [
+   "Git",
+   "Power BI",
+   "VBA"
+  ],
+  "offset": 111,
+  "lifetime": 36
+ },
+ {
+  "id": 1026,
+  "title": "Data Scientist",
+  "level": "Mid-level",
+  "company": "Atlas Tutors",
+  "city": "Manchester",
+  "salary_min": 49000,
+  "salary_max": 55000,
+  "skills": [
+   "Qlik Sense",
+   "R",
+   "SQL"
+  ],
+  "offset": -33,
+  "lifetime": 32
+ },
+ {
+  "id": 1027,
+  "title": "Junior Data Engineer",
+  "level": "Mid-level",
+  "company": "Kestrel Insurance",
+  "city": "Edinburgh",
+  "salary_min": 50000,
+  "salary_max": 63000,
+  "skills": [
+   "Docker",
+   "PySpark",
+   "Tableau"
+  ],
+  "offset": 37,
+  "lifetime": 28
+ },
+ {
+  "id": 1028,
+  "title": "Operations Analyst",
+  "level": "Mid-level",
+  "company": "Meridian Retail",
+  "city": "London",
+  "salary_min": 52000,
+  "salary_max": 72000,
+  "skills": [
+   "AWS",
+   "Qlik Sense",
+   "VBA"
+  ],
+  "offset": 75,
+  "lifetime": 31
+ },
+ {
+  "id": 1029,
+  "title": "QA Tester",
+  "level": "Mid-level",
+  "company": "Northbridge Bank",
+  "city": "Paris",
+  "salary_min": 47000,
+  "salary_max": 65000,
+  "skills": [
+   "Git",
+   "SQL",
+   "Tableau"
+  ],
+  "offset": -39,
+  "lifetime": 34
+ },
+ {
+  "id": 1030,
+  "title": "Web Developer",
+  "level": "Senior",
+  "company": "Atlas Tutors",
+  "city": "Paris",
+  "salary_min": 67000,
+  "salary_max": 72000,
+  "skills": [
+   "Power BI",
+   "SQL",
+   "VBA"
+  ],
+  "offset": -50,
+  "lifetime": 35
+ },
+ {
+  "id": 1031,
+  "title": "Python Developer",
+  "level": "Junior",
+  "company": "Riverside Logistics",
+  "city": "Remote",
+  "salary_min": 35000,
+  "salary_max": 40000,
+  "skills": [
+   "Git",
+   "Qlik Sense",
+   "VBA"
+  ],
+  "offset": 59,
+  "lifetime": 20
+ },
+ {
+  "id": 1032,
+  "title": "BI Developer",
+  "level": "Senior",
+  "company": "Harbour Analytics",
+  "city": "Lyon",
+  "salary_min": 75000,
+  "salary_max": 87000,
+  "skills": [
+   "Git",
+   "R",
+   "SQL"
+  ],
+  "offset": 49,
+  "lifetime": 38
+ },
+ {
+  "id": 1033,
+  "title": "Operations Analyst",
+  "level": "Senior",
+  "company": "Lumen Health",
+  "city": "Edinburgh",
+  "salary_min": 65000,
+  "salary_max": 82000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "Qlik Sense"
+  ],
+  "offset": -47,
+  "lifetime": 18
+ },
+ {
+  "id": 1034,
+  "title": "Data Scientist",
+  "level": "Mid-level",
+  "company": "Meridian Retail",
+  "city": "Lyon",
+  "salary_min": 50000,
+  "salary_max": 64000,
+  "skills": [
+   "Excel",
+   "Power BI",
+   "SQL"
+  ],
+  "offset": -9,
+  "lifetime": 32
+ },
+ {
+  "id": 1035,
+  "title": "Operations Analyst",
+  "level": "Senior",
+  "company": "Riverside Logistics",
+  "city": "Paris",
+  "salary_min": 73000,
+  "salary_max": 81000,
+  "skills": [
+   "Excel",
+   "PySpark",
+   "VBA"
+  ],
+  "offset": -43,
+  "lifetime": 23
+ },
+ {
+  "id": 1036,
+  "title": "Web Developer",
+  "level": "Mid-level",
+  "company": "Lumen Health",
+  "city": "London",
+  "salary_min": 54000,
+  "salary_max": 70000,
+  "skills": [
+   "AWS",
+   "Python",
+   "SQL"
+  ],
+  "offset": 62,
+  "lifetime": 36
+ },
+ {
+  "id": 1037,
+  "title": "Operations Analyst",
+  "level": "Mid-level",
+  "company": "Harbour Analytics",
+  "city": "Lyon",
+  "salary_min": 55000,
+  "salary_max": 66000,
+  "skills": [
+   "R",
+   "SQL",
+   "VBA"
+  ],
+  "offset": 2,
+  "lifetime": 28
+ },
+ {
+  "id": 1038,
+  "title": "Structured Finance Analyst",
+  "level": "Junior",
+  "company": "Kestrel Insurance",
+  "city": "Manchester",
+  "salary_min": 37000,
+  "salary_max": 50000,
+  "skills": [
+   "Docker",
+   "R",
+   "SQL"
+  ],
+  "offset": 87,
+  "lifetime": 30
+ },
+ {
+  "id": 1039,
+  "title": "BI Developer",
+  "level": "Junior",
+  "company": "Kestrel Insurance",
+  "city": "Lyon",
+  "salary_min": 35000,
+  "salary_max": 53000,
+  "skills": [
+   "Git",
+   "Python",
+   "Tableau"
+  ],
+  "offset": 109,
+  "lifetime": 15
+ },
+ {
+  "id": 1040,
+  "title": "Data Analyst",
+  "level": "Senior",
+  "company": "Riverside Logistics",
+  "city": "Lyon",
+  "salary_min": 72000,
+  "salary_max": 77000,
+  "skills": [
+   "AWS",
+   "Power BI",
+   "Tableau"
+  ],
+  "offset": 61,
+  "lifetime": 26
+ },
+ {
+  "id": 1041,
+  "title": "Junior Data Engineer",
+  "level": "Junior",
+  "company": "Lumen Health",
+  "city": "Remote",
+  "salary_min": 34000,
+  "salary_max": 49000,
+  "skills": [
+   "Power BI",
+   "PySpark",
+   "R"
+  ],
+  "offset": -54,
+  "lifetime": 36
+ },
+ {
+  "id": 1042,
+  "title": "Data Scientist",
+  "level": "Mid-level",
+  "company": "Copperfield Energy",
+  "city": "Remote",
+  "salary_min": 57000,
+  "salary_max": 74000,
+  "skills": [
+   "Git",
+   "Tableau",
+   "VBA"
+  ],
+  "offset": -4,
+  "lifetime": 25
+ },
+ {
+  "id": 1043,
+  "title": "Data Scientist",
+  "level": "Mid-level",
+  "company": "Copperfield Energy",
+  "city": "Remote",
+  "salary_min": 51000,
+  "salary_max": 57000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "R"
+  ],
+  "offset": -49,
+  "lifetime": 17
+ },
+ {
+  "id": 1044,
+  "title": "Credit Risk Analyst",
+  "level": "Mid-level",
+  "company": "Northbridge Bank",
+  "city": "Remote",
+  "salary_min": 55000,
+  "salary_max": 75000,
+  "skills": [
+   "Docker",
+   "Power BI",
+   "VBA"
+  ],
+  "offset": 86,
+  "lifetime": 20
+ },
+ {
+  "id": 1045,
+  "title": "Web Developer",
+  "level": "Mid-level",
+  "company": "Harbour Analytics",
+  "city": "Edinburgh",
+  "salary_min": 47000,
+  "salary_max": 54000,
+  "skills": [
+   "PySpark",
+   "Tableau",
+   "VBA"
+  ],
+  "offset": 98,
+  "lifetime": 25
+ },
+ {
+  "id": 1046,
+  "title": "Data Scientist",
+  "level": "Senior",
+  "company": "Sable Media",
+  "city": "Edinburgh",
+  "salary_min": 71000,
+  "salary_max": 89000,
+  "skills": [
+   "Docker",
+   "SQL",
+   "VBA"
+  ],
+  "offset": 117,
+  "lifetime": 36
+ },
+ {
+  "id": 1047,
+  "title": "Data Scientist",
+  "level": "Mid-level",
+  "company": "Meridian Retail",
+  "city": "Leeds",
+  "salary_min": 49000,
+  "salary_max": 57000,
+  "skills": [
+   "AWS",
+   "Git",
+   "Power BI"
+  ],
+  "offset": -47,
+  "lifetime": 34
+ },
+ {
+  "id": 1048,
+  "title": "Web Developer",
+  "level": "Mid-level",
+  "company": "Riverside Logistics",
+  "city": "Edinburgh",
+  "salary_min": 57000,
+  "salary_max": 68000,
+  "skills": [
+   "AWS",
+   "Qlik Sense",
+   "VBA"
+  ],
+  "offset": -28,
+  "lifetime": 27
+ },
+ {
+  "id": 1049,
+  "title": "QA Tester",
+  "level": "Mid-level",
+  "company": "Kestrel Insurance",
+  "city": "Edinburgh",
+  "salary_min": 52000,
+  "salary_max": 70000,
+  "skills": [
+   "Docker",
+   "Git",
+   "Python"
+  ],
+  "offset": 4,
+  "lifetime": 13
+ },
+ {
+  "id": 1050,
+  "title": "Python Developer",
+  "level": "Junior",
+  "company": "Lumen Health",
+  "city": "Leeds",
+  "salary_min": 42000,
+  "salary_max": 56000,
+  "skills": [
+   "Git",
+   "Power BI",
+   "Python"
+  ],
+  "offset": 64,
+  "lifetime": 40
+ },
+ {
+  "id": 1051,
+  "title": "Web Developer",
+  "level": "Senior",
+  "company": "Lumen Health",
+  "city": "London",
+  "salary_min": 70000,
+  "salary_max": 86000,
+  "skills": [
+   "Power BI",
+   "Tableau",
+   "VBA"
+  ],
+  "offset": 60,
+  "lifetime": 22
+ },
+ {
+  "id": 1052,
+  "title": "Business Analyst",
+  "level": "Junior",
+  "company": "Riverside Logistics",
+  "city": "Paris",
+  "salary_min": 31000,
+  "salary_max": 49000,
+  "skills": [
+   "Docker",
+   "Power BI",
+   "SQL"
+  ],
+  "offset": 113,
+  "lifetime": 19
+ },
+ {
+  "id": 1053,
+  "title": "Credit Risk Analyst",
+  "level": "Senior",
+  "company": "Northbridge Bank",
+  "city": "Lyon",
+  "salary_min": 74000,
+  "salary_max": 84000,
+  "skills": [
+   "AWS",
+   "Power BI",
+   "Qlik Sense"
+  ],
+  "offset": 80,
+  "lifetime": 25
+ },
+ {
+  "id": 1054,
+  "title": "Data Analyst",
+  "level": "Junior",
+  "company": "Copperfield Energy",
+  "city": "Lyon",
+  "salary_min": 33000,
+  "salary_max": 39000,
+  "skills": [
+   "Git",
+   "PySpark",
+   "Python"
+  ],
+  "offset": 49,
+  "lifetime": 11
+ },
+ {
+  "id": 1055,
+  "title": "QA Tester",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "Manchester",
+  "salary_min": 32000,
+  "salary_max": 51000,
+  "skills": [
+   "AWS",
+   "Docker",
+   "Qlik Sense"
+  ],
+  "offset": 5,
+  "lifetime": 12
+ },
+ {
+  "id": 1056,
+  "title": "BI Developer",
+  "level": "Junior",
+  "company": "Meridian Retail",
+  "city": "London",
+  "salary_min": 32000,
+  "salary_max": 38000,
+  "skills": [
+   "Docker",
+   "Git",
+   "Qlik Sense"
+  ],
+  "offset": 1,
+  "lifetime": 32
+ },
+ {
+  "id": 1057,
+  "title": "Web Developer",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "Remote",
+  "salary_min": 38000,
+  "salary_max": 44000,
+  "skills": [
+   "R",
+   "SQL",
+   "Tableau"
+  ],
+  "offset": 59,
+  "lifetime": 15
+ },
+ {
+  "id": 1058,
+  "title": "Python Developer",
+  "level": "Mid-level",
+  "company": "Riverside Logistics",
+  "city": "Lyon",
+  "salary_min": 48000,
+  "salary_max": 56000,
+  "skills": [
+   "Excel",
+   "Power BI",
+   "R"
+  ],
+  "offset": 94,
+  "lifetime": 11
+ },
+ {
+  "id": 1059,
+  "title": "Structured Finance Analyst",
+  "level": "Senior",
+  "company": "Atlas Tutors",
+  "city": "Leeds",
+  "salary_min": 65000,
+  "salary_max": 74000,
+  "skills": [
+   "AWS",
+   "Docker",
+   "Python"
+  ],
+  "offset": 28,
+  "lifetime": 39
+ },
+ {
+  "id": 1060,
+  "title": "Junior Data Engineer",
+  "level": "Senior",
+  "company": "Kestrel Insurance",
+  "city": "Remote",
+  "salary_min": 76000,
+  "salary_max": 87000,
+  "skills": [
+   "AWS",
+   "Excel",
+   "PySpark"
+  ],
+  "offset": 120,
+  "lifetime": 18
+ },
+ {
+  "id": 1061,
+  "title": "Operations Analyst",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "London",
+  "salary_min": 41000,
+  "salary_max": 60000,
+  "skills": [
+   "AWS",
+   "Excel",
+   "Git"
+  ],
+  "offset": 87,
+  "lifetime": 31
+ },
+ {
+  "id": 1062,
+  "title": "Junior Data Engineer",
+  "level": "Mid-level",
+  "company": "Kestrel Insurance",
+  "city": "Lyon",
+  "salary_min": 56000,
+  "salary_max": 76000,
+  "skills": [
+   "Docker",
+   "Qlik Sense",
+   "R"
+  ],
+  "offset": -3,
+  "lifetime": 26
+ },
+ {
+  "id": 1063,
+  "title": "Business Analyst",
+  "level": "Junior",
+  "company": "Kestrel Insurance",
+  "city": "Leeds",
+  "salary_min": 30000,
+  "salary_max": 50000,
+  "skills": [
+   "Qlik Sense",
+   "SQL",
+   "Tableau"
+  ],
+  "offset": 5,
+  "lifetime": 17
+ },
+ {
+  "id": 1064,
+  "title": "Business Analyst",
+  "level": "Mid-level",
+  "company": "Northbridge Bank",
+  "city": "Edinburgh",
+  "salary_min": 56000,
+  "salary_max": 65000,
+  "skills": [
+   "PySpark",
+   "Python",
+   "Tableau"
+  ],
+  "offset": 6,
+  "lifetime": 37
+ },
+ {
+  "id": 1065,
+  "title": "Operations Analyst",
+  "level": "Mid-level",
+  "company": "Meridian Retail",
+  "city": "Lyon",
+  "salary_min": 48000,
+  "salary_max": 67000,
+  "skills": [
+   "Docker",
+   "Tableau",
+   "VBA"
+  ],
+  "offset": 19,
+  "lifetime": 34
+ },
+ {
+  "id": 1066,
+  "title": "Operations Analyst",
+  "level": "Junior",
+  "company": "Northbridge Bank",
+  "city": "Leeds",
+  "salary_min": 41000,
+  "salary_max": 50000,
+  "skills": [
+   "Docker",
+   "R",
+   "Tableau"
+  ],
+  "offset": 44,
+  "lifetime": 30
+ },
+ {
+  "id": 1067,
+  "title": "Business Analyst",
+  "level": "Mid-level",
+  "company": "Atlas Tutors",
+  "city": "Edinburgh",
+  "salary_min": 48000,
+  "salary_max": 55000,
+  "skills": [
+   "Excel",
+   "Power BI",
+   "Qlik Sense"
+  ],
+  "offset": 102,
+  "lifetime": 11
+ },
+ {
+  "id": 1068,
+  "title": "Data Scientist",
+  "level": "Senior",
+  "company": "Harbour Analytics",
+  "city": "Leeds",
+  "salary_min": 76000,
+  "salary_max": 90000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "Qlik Sense"
+  ],
+  "offset": 74,
+  "lifetime": 10
+ },
+ {
+  "id": 1069,
+  "title": "Data Scientist",
+  "level": "Senior",
+  "company": "Kestrel Insurance",
+  "city": "Leeds",
+  "salary_min": 71000,
+  "salary_max": 79000,
+  "skills": [
+   "Excel",
+   "Python",
+   "Qlik Sense"
+  ],
+  "offset": 16,
+  "lifetime": 17
+ },
+ {
+  "id": 1070,
+  "title": "Python Developer",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "Edinburgh",
+  "salary_min": 41000,
+  "salary_max": 56000,
+  "skills": [
+   "Excel",
+   "Git",
+   "VBA"
+  ],
+  "offset": -27,
+  "lifetime": 35
+ },
+ {
+  "id": 1071,
+  "title": "Business Analyst",
+  "level": "Senior",
+  "company": "Meridian Retail",
+  "city": "London",
+  "salary_min": 76000,
+  "salary_max": 91000,
+  "skills": [
+   "Power BI",
+   "SQL",
+   "Tableau"
+  ],
+  "offset": 62,
+  "lifetime": 34
+ },
+ {
+  "id": 1072,
+  "title": "Python Developer",
+  "level": "Junior",
+  "company": "Riverside Logistics",
+  "city": "Edinburgh",
+  "salary_min": 41000,
+  "salary_max": 60000,
+  "skills": [
+   "Docker",
+   "Python",
+   "Qlik Sense"
+  ],
+  "offset": -42,
+  "lifetime": 30
+ },
+ {
+  "id": 1073,
+  "title": "Data Analyst",
+  "level": "Mid-level",
+  "company": "Atlas Tutors",
+  "city": "Lyon",
+  "salary_min": 54000,
+  "salary_max": 72000,
+  "skills": [
+   "Excel",
+   "PySpark",
+   "Tableau"
+  ],
+  "offset": 110,
+  "lifetime": 26
+ },
+ {
+  "id": 1074,
+  "title": "Structured Finance Analyst",
+  "level": "Mid-level",
+  "company": "Copperfield Energy",
+  "city": "Edinburgh",
+  "salary_min": 45000,
+  "salary_max": 55000,
+  "skills": [
+   "PySpark",
+   "Tableau",
+   "VBA"
+  ],
+  "offset": -15,
+  "lifetime": 12
+ },
+ {
+  "id": 1075,
+  "title": "Reporting Analyst",
+  "level": "Junior",
+  "company": "Northbridge Bank",
+  "city": "Leeds",
+  "salary_min": 31000,
+  "salary_max": 41000,
+  "skills": [
+   "Excel",
+   "Git",
+   "VBA"
+  ],
+  "offset": -41,
+  "lifetime": 21
+ },
+ {
+  "id": 1076,
+  "title": "Structured Finance Analyst",
+  "level": "Senior",
+  "company": "Sable Media",
+  "city": "Leeds",
+  "salary_min": 71000,
+  "salary_max": 76000,
+  "skills": [
+   "AWS",
+   "Python",
+   "R"
+  ],
+  "offset": 5,
+  "lifetime": 16
+ },
+ {
+  "id": 1077,
+  "title": "Python Developer",
+  "level": "Junior",
+  "company": "Kestrel Insurance",
+  "city": "Leeds",
+  "salary_min": 37000,
+  "salary_max": 47000,
+  "skills": [
+   "Git",
+   "Qlik Sense",
+   "VBA"
+  ],
+  "offset": -50,
+  "lifetime": 18
+ },
+ {
+  "id": 1078,
+  "title": "Structured Finance Analyst",
+  "level": "Junior",
+  "company": "Sable Media",
+  "city": "Lyon",
+  "salary_min": 31000,
+  "salary_max": 47000,
+  "skills": [
+   "Power BI",
+   "Python",
+   "Tableau"
+  ],
+  "offset": -25,
+  "lifetime": 22
+ },
+ {
+  "id": 1079,
+  "title": "Credit Risk Analyst",
+  "level": "Junior",
+  "company": "Meridian Retail",
+  "city": "Paris",
+  "salary_min": 34000,
+  "salary_max": 51000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "SQL"
+  ],
+  "offset": 28,
+  "lifetime": 21
+ },
+ {
+  "id": 1080,
+  "title": "Junior Data Engineer",
+  "level": "Senior",
+  "company": "Harbour Analytics",
+  "city": "Paris",
+  "salary_min": 65000,
+  "salary_max": 84000,
+  "skills": [
+   "Excel",
+   "Power BI",
+   "Python"
+  ],
+  "offset": 31,
+  "lifetime": 28
+ },
+ {
+  "id": 1081,
+  "title": "Data Scientist",
+  "level": "Mid-level",
+  "company": "Meridian Retail",
+  "city": "Remote",
+  "salary_min": 53000,
+  "salary_max": 69000,
+  "skills": [
+   "R",
+   "SQL",
+   "Tableau"
+  ],
+  "offset": -11,
+  "lifetime": 11
+ },
+ {
+  "id": 1082,
+  "title": "Reporting Analyst",
+  "level": "Mid-level",
+  "company": "Meridian Retail",
+  "city": "Remote",
+  "salary_min": 55000,
+  "salary_max": 62000,
+  "skills": [
+   "Power BI",
+   "PySpark",
+   "VBA"
+  ],
+  "offset": 77,
+  "lifetime": 34
+ },
+ {
+  "id": 1083,
+  "title": "Python Developer",
+  "level": "Junior",
+  "company": "Kestrel Insurance",
+  "city": "Lyon",
+  "salary_min": 36000,
+  "salary_max": 50000,
+  "skills": [
+   "Excel",
+   "PySpark",
+   "Python"
+  ],
+  "offset": 59,
+  "lifetime": 39
+ },
+ {
+  "id": 1084,
+  "title": "Reporting Analyst",
+  "level": "Mid-level",
+  "company": "Kestrel Insurance",
+  "city": "Manchester",
+  "salary_min": 47000,
+  "salary_max": 54000,
+  "skills": [
+   "Excel",
+   "Python",
+   "SQL"
+  ],
+  "offset": 63,
+  "lifetime": 16
+ },
+ {
+  "id": 1085,
+  "title": "Web Developer",
+  "level": "Senior",
+  "company": "Riverside Logistics",
+  "city": "London",
+  "salary_min": 68000,
+  "salary_max": 73000,
+  "skills": [
+   "AWS",
+   "Git",
+   "Power BI"
+  ],
+  "offset": 45,
+  "lifetime": 21
+ },
+ {
+  "id": 1086,
+  "title": "Python Developer",
+  "level": "Junior",
+  "company": "Copperfield Energy",
+  "city": "Edinburgh",
+  "salary_min": 39000,
+  "salary_max": 47000,
+  "skills": [
+   "Docker",
+   "Qlik Sense",
+   "SQL"
+  ],
+  "offset": 107,
+  "lifetime": 33
+ },
+ {
+  "id": 1087,
+  "title": "Operations Analyst",
+  "level": "Mid-level",
+  "company": "Copperfield Energy",
+  "city": "Manchester",
+  "salary_min": 54000,
+  "salary_max": 62000,
+  "skills": [
+   "Docker",
+   "Power BI",
+   "Qlik Sense"
+  ],
+  "offset": 55,
+  "lifetime": 10
+ },
+ {
+  "id": 1088,
+  "title": "BI Developer",
+  "level": "Junior",
+  "company": "Meridian Retail",
+  "city": "Paris",
+  "salary_min": 41000,
+  "salary_max": 51000,
+  "skills": [
+   "PySpark",
+   "R",
+   "SQL"
+  ],
+  "offset": -45,
+  "lifetime": 39
+ },
+ {
+  "id": 1089,
+  "title": "Data Scientist",
+  "level": "Junior",
+  "company": "Northbridge Bank",
+  "city": "London",
+  "salary_min": 41000,
+  "salary_max": 56000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "VBA"
+  ],
+  "offset": -31,
+  "lifetime": 12
+ },
+ {
+  "id": 1090,
+  "title": "QA Tester",
+  "level": "Junior",
+  "company": "Sable Media",
+  "city": "Lyon",
+  "salary_min": 34000,
+  "salary_max": 41000,
+  "skills": [
+   "AWS",
+   "Python",
+   "SQL"
+  ],
+  "offset": 19,
+  "lifetime": 33
+ },
+ {
+  "id": 1091,
+  "title": "BI Developer",
+  "level": "Mid-level",
+  "company": "Lumen Health",
+  "city": "Lyon",
+  "salary_min": 50000,
+  "salary_max": 65000,
+  "skills": [
+   "Excel",
+   "R",
+   "VBA"
+  ],
+  "offset": 44,
+  "lifetime": 34
+ },
+ {
+  "id": 1092,
+  "title": "Data Scientist",
+  "level": "Mid-level",
+  "company": "Kestrel Insurance",
+  "city": "Paris",
+  "salary_min": 57000,
+  "salary_max": 72000,
+  "skills": [
+   "Power BI",
+   "PySpark",
+   "R"
+  ],
+  "offset": -43,
+  "lifetime": 28
+ },
+ {
+  "id": 1093,
+  "title": "Structured Finance Analyst",
+  "level": "Mid-level",
+  "company": "Harbour Analytics",
+  "city": "Lyon",
+  "salary_min": 49000,
+  "salary_max": 62000,
+  "skills": [
+   "Python",
+   "SQL",
+   "Tableau"
+  ],
+  "offset": -58,
+  "lifetime": 16
+ },
+ {
+  "id": 1094,
+  "title": "Business Analyst",
+  "level": "Senior",
+  "company": "Atlas Tutors",
+  "city": "Remote",
+  "salary_min": 67000,
+  "salary_max": 74000,
+  "skills": [
+   "AWS",
+   "R",
+   "Tableau"
+  ],
+  "offset": 114,
+  "lifetime": 30
+ },
+ {
+  "id": 1095,
+  "title": "Web Developer",
+  "level": "Junior",
+  "company": "Sable Media",
+  "city": "Lyon",
+  "salary_min": 34000,
+  "salary_max": 41000,
+  "skills": [
+   "Git",
+   "PySpark",
+   "VBA"
+  ],
+  "offset": 56,
+  "lifetime": 16
+ },
+ {
+  "id": 1096,
+  "title": "Web Developer",
+  "level": "Junior",
+  "company": "Copperfield Energy",
+  "city": "Remote",
+  "salary_min": 34000,
+  "salary_max": 49000,
+  "skills": [
+   "Docker",
+   "Git",
+   "Qlik Sense"
+  ],
+  "offset": 101,
+  "lifetime": 39
+ },
+ {
+  "id": 1097,
+  "title": "QA Tester",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "Manchester",
+  "salary_min": 38000,
+  "salary_max": 45000,
+  "skills": [
+   "Excel",
+   "PySpark",
+   "Python"
+  ],
+  "offset": -5,
+  "lifetime": 38
+ },
+ {
+  "id": 1098,
+  "title": "Operations Analyst",
+  "level": "Mid-level",
+  "company": "Atlas Tutors",
+  "city": "Manchester",
+  "salary_min": 52000,
+  "salary_max": 62000,
+  "skills": [
+   "Excel",
+   "PySpark",
+   "Python"
+  ],
+  "offset": 38,
+  "lifetime": 37
+ },
+ {
+  "id": 1099,
+  "title": "Data Scientist",
+  "level": "Mid-level",
+  "company": "Riverside Logistics",
+  "city": "London",
+  "salary_min": 49000,
+  "salary_max": 56000,
+  "skills": [
+   "Git",
+   "PySpark",
+   "VBA"
+  ],
+  "offset": -23,
+  "lifetime": 20
+ },
+ {
+  "id": 1100,
+  "title": "QA Tester",
+  "level": "Mid-level",
+  "company": "Harbour Analytics",
+  "city": "Remote",
+  "salary_min": 53000,
+  "salary_max": 69000,
+  "skills": [
+   "PySpark",
+   "Python",
+   "VBA"
+  ],
+  "offset": -14,
+  "lifetime": 37
+ },
+ {
+  "id": 1101,
+  "title": "BI Developer",
+  "level": "Junior",
+  "company": "Lumen Health",
+  "city": "Manchester",
+  "salary_min": 37000,
+  "salary_max": 44000,
+  "skills": [
+   "Excel",
+   "SQL",
+   "VBA"
+  ],
+  "offset": 51,
+  "lifetime": 14
+ },
+ {
+  "id": 1102,
+  "title": "Structured Finance Analyst",
+  "level": "Junior",
+  "company": "Sable Media",
+  "city": "Manchester",
+  "salary_min": 33000,
+  "salary_max": 51000,
+  "skills": [
+   "Docker",
+   "PySpark",
+   "SQL"
+  ],
+  "offset": 99,
+  "lifetime": 12
+ },
+ {
+  "id": 1103,
+  "title": "QA Tester",
+  "level": "Senior",
+  "company": "Copperfield Energy",
+  "city": "Lyon",
+  "salary_min": 67000,
+  "salary_max": 74000,
+  "skills": [
+   "Excel",
+   "Power BI",
+   "Tableau"
+  ],
+  "offset": 0,
+  "lifetime": 29
+ },
+ {
+  "id": 1104,
+  "title": "Operations Analyst",
+  "level": "Junior",
+  "company": "Copperfield Energy",
+  "city": "Lyon",
+  "salary_min": 31000,
+  "salary_max": 49000,
+  "skills": [
+   "Docker",
+   "Python",
+   "R"
+  ],
+  "offset": 36,
+  "lifetime": 23
+ },
+ {
+  "id": 1105,
+  "title": "Business Analyst",
+  "level": "Senior",
+  "company": "Sable Media",
+  "city": "Manchester",
+  "salary_min": 75000,
+  "salary_max": 88000,
+  "skills": [
+   "Docker",
+   "Git",
+   "VBA"
+  ],
+  "offset": -18,
+  "lifetime": 32
+ },
+ {
+  "id": 1106,
+  "title": "Structured Finance Analyst",
+  "level": "Junior",
+  "company": "Northbridge Bank",
+  "city": "Manchester",
+  "salary_min": 35000,
+  "salary_max": 46000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "Git"
+  ],
+  "offset": 120,
+  "lifetime": 31
+ },
+ {
+  "id": 1107,
+  "title": "Business Analyst",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "Remote",
+  "salary_min": 33000,
+  "salary_max": 43000,
+  "skills": [
+   "AWS",
+   "Git",
+   "SQL"
+  ],
+  "offset": -48,
+  "lifetime": 40
+ },
+ {
+  "id": 1108,
+  "title": "Data Analyst",
+  "level": "Mid-level",
+  "company": "Riverside Logistics",
+  "city": "Edinburgh",
+  "salary_min": 53000,
+  "salary_max": 68000,
+  "skills": [
+   "Docker",
+   "Python",
+   "VBA"
+  ],
+  "offset": 117,
+  "lifetime": 37
+ },
+ {
+  "id": 1109,
+  "title": "Credit Risk Analyst",
+  "level": "Junior",
+  "company": "Northbridge Bank",
+  "city": "Lyon",
+  "salary_min": 35000,
+  "salary_max": 54000,
+  "skills": [
+   "AWS",
+   "Python",
+   "Qlik Sense"
+  ],
+  "offset": 32,
+  "lifetime": 20
+ },
+ {
+  "id": 1110,
+  "title": "Data Scientist",
+  "level": "Senior",
+  "company": "Harbour Analytics",
+  "city": "Manchester",
+  "salary_min": 68000,
+  "salary_max": 85000,
+  "skills": [
+   "Docker",
+   "Python",
+   "VBA"
+  ],
+  "offset": 118,
+  "lifetime": 14
+ },
+ {
+  "id": 1111,
+  "title": "Structured Finance Analyst",
+  "level": "Mid-level",
+  "company": "Lumen Health",
+  "city": "Leeds",
+  "salary_min": 56000,
+  "salary_max": 68000,
+  "skills": [
+   "Qlik Sense",
+   "R",
+   "VBA"
+  ],
+  "offset": -12,
+  "lifetime": 14
+ },
+ {
+  "id": 1112,
+  "title": "Python Developer",
+  "level": "Senior",
+  "company": "Northbridge Bank",
+  "city": "Remote",
+  "salary_min": 73000,
+  "salary_max": 82000,
+  "skills": [
+   "Qlik Sense",
+   "R",
+   "Tableau"
+  ],
+  "offset": 103,
+  "lifetime": 34
+ },
+ {
+  "id": 1113,
+  "title": "BI Developer",
+  "level": "Junior",
+  "company": "Riverside Logistics",
+  "city": "Lyon",
+  "salary_min": 32000,
+  "salary_max": 47000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "PySpark"
+  ],
+  "offset": 69,
+  "lifetime": 15
+ },
+ {
+  "id": 1114,
+  "title": "Web Developer",
+  "level": "Senior",
+  "company": "Copperfield Energy",
+  "city": "Leeds",
+  "salary_min": 69000,
+  "salary_max": 81000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "Power BI"
+  ],
+  "offset": -26,
+  "lifetime": 34
+ },
+ {
+  "id": 1115,
+  "title": "Junior Data Engineer",
+  "level": "Junior",
+  "company": "Copperfield Energy",
+  "city": "Edinburgh",
+  "salary_min": 41000,
+  "salary_max": 59000,
+  "skills": [
+   "Excel",
+   "Python",
+   "R"
+  ],
+  "offset": -30,
+  "lifetime": 12
+ },
+ {
+  "id": 1116,
+  "title": "QA Tester",
+  "level": "Senior",
+  "company": "Copperfield Energy",
+  "city": "Paris",
+  "salary_min": 68000,
+  "salary_max": 76000,
+  "skills": [
+   "Docker",
+   "Git",
+   "Qlik Sense"
+  ],
+  "offset": 113,
+  "lifetime": 14
+ },
+ {
+  "id": 1117,
+  "title": "Reporting Analyst",
+  "level": "Senior",
+  "company": "Lumen Health",
+  "city": "Paris",
+  "salary_min": 70000,
+  "salary_max": 87000,
+  "skills": [
+   "Git",
+   "PySpark",
+   "Tableau"
+  ],
+  "offset": -23,
+  "lifetime": 37
+ },
+ {
+  "id": 1118,
+  "title": "Python Developer",
+  "level": "Mid-level",
+  "company": "Meridian Retail",
+  "city": "London",
+  "salary_min": 57000,
+  "salary_max": 65000,
+  "skills": [
+   "Power BI",
+   "PySpark",
+   "Qlik Sense"
+  ],
+  "offset": 71,
+  "lifetime": 35
+ },
+ {
+  "id": 1119,
+  "title": "Python Developer",
+  "level": "Senior",
+  "company": "Harbour Analytics",
+  "city": "Manchester",
+  "salary_min": 70000,
+  "salary_max": 83000,
+  "skills": [
+   "Excel",
+   "Power BI",
+   "R"
+  ],
+  "offset": 92,
+  "lifetime": 26
+ },
+ {
+  "id": 1120,
+  "title": "QA Tester",
+  "level": "Senior",
+  "company": "Copperfield Energy",
+  "city": "Manchester",
+  "salary_min": 71000,
+  "salary_max": 78000,
+  "skills": [
+   "Power BI",
+   "Tableau",
+   "VBA"
+  ],
+  "offset": 16,
+  "lifetime": 37
+ },
+ {
+  "id": 1121,
+  "title": "QA Tester",
+  "level": "Senior",
+  "company": "Copperfield Energy",
+  "city": "Remote",
+  "salary_min": 70000,
+  "salary_max": 80000,
+  "skills": [
+   "AWS",
+   "Excel",
+   "SQL"
+  ],
+  "offset": 18,
+  "lifetime": 40
+ },
+ {
+  "id": 1122,
+  "title": "Reporting Analyst",
+  "level": "Senior",
+  "company": "Riverside Logistics",
+  "city": "Remote",
+  "salary_min": 65000,
+  "salary_max": 73000,
+  "skills": [
+   "Docker",
+   "Git",
+   "R"
+  ],
+  "offset": 70,
+  "lifetime": 10
+ },
+ {
+  "id": 1123,
+  "title": "BI Developer",
+  "level": "Junior",
+  "company": "Lumen Health",
+  "city": "Remote",
+  "salary_min": 35000,
+  "salary_max": 54000,
+  "skills": [
+   "Excel",
+   "Git",
+   "VBA"
+  ],
+  "offset": 31,
+  "lifetime": 10
+ },
+ {
+  "id": 1124,
+  "title": "Junior Data Engineer",
+  "level": "Mid-level",
+  "company": "Copperfield Energy",
+  "city": "Lyon",
+  "salary_min": 51000,
+  "salary_max": 60000,
+  "skills": [
+   "Excel",
+   "Python",
+   "R"
+  ],
+  "offset": 86,
+  "lifetime": 22
+ },
+ {
+  "id": 1125,
+  "title": "Data Analyst",
+  "level": "Mid-level",
+  "company": "Atlas Tutors",
+  "city": "Paris",
+  "salary_min": 55000,
+  "salary_max": 75000,
+  "skills": [
+   "AWS",
+   "PySpark",
+   "SQL"
+  ],
+  "offset": 69,
+  "lifetime": 35
+ },
+ {
+  "id": 1126,
+  "title": "Structured Finance Analyst",
+  "level": "Junior",
+  "company": "Copperfield Energy",
+  "city": "Lyon",
+  "salary_min": 32000,
+  "salary_max": 39000,
+  "skills": [
+   "AWS",
+   "Power BI",
+   "PySpark"
+  ],
+  "offset": 15,
+  "lifetime": 10
+ },
+ {
+  "id": 1127,
+  "title": "BI Developer",
+  "level": "Junior",
+  "company": "Riverside Logistics",
+  "city": "Lyon",
+  "salary_min": 30000,
+  "salary_max": 40000,
+  "skills": [
+   "Git",
+   "Python",
+   "VBA"
+  ],
+  "offset": 96,
+  "lifetime": 26
+ },
+ {
+  "id": 1128,
+  "title": "Credit Risk Analyst",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "Manchester",
+  "salary_min": 33000,
+  "salary_max": 53000,
+  "skills": [
+   "Excel",
+   "Power BI",
+   "R"
+  ],
+  "offset": 2,
+  "lifetime": 25
+ },
+ {
+  "id": 1129,
+  "title": "Data Analyst",
+  "level": "Senior",
+  "company": "Meridian Retail",
+  "city": "Paris",
+  "salary_min": 65000,
+  "salary_max": 78000,
+  "skills": [
+   "Excel",
+   "Qlik Sense",
+   "VBA"
+  ],
+  "offset": 21,
+  "lifetime": 24
+ },
+ {
+  "id": 1130,
+  "title": "Web Developer",
+  "level": "Junior",
+  "company": "Copperfield Energy",
+  "city": "Paris",
+  "salary_min": 33000,
+  "salary_max": 50000,
+  "skills": [
+   "Docker",
+   "Python",
+   "SQL"
+  ],
+  "offset": 73,
+  "lifetime": 39
+ },
+ {
+  "id": 1131,
+  "title": "BI Developer",
+  "level": "Senior",
+  "company": "Riverside Logistics",
+  "city": "Manchester",
+  "salary_min": 66000,
+  "salary_max": 78000,
+  "skills": [
+   "Python",
+   "Tableau",
+   "VBA"
+  ],
+  "offset": 5,
+  "lifetime": 40
+ },
+ {
+  "id": 1132,
+  "title": "Reporting Analyst",
+  "level": "Junior",
+  "company": "Northbridge Bank",
+  "city": "Paris",
+  "salary_min": 35000,
+  "salary_max": 53000,
+  "skills": [
+   "AWS",
+   "Excel",
+   "Python"
+  ],
+  "offset": -39,
+  "lifetime": 16
+ },
+ {
+  "id": 1133,
+  "title": "Web Developer",
+  "level": "Mid-level",
+  "company": "Harbour Analytics",
+  "city": "Paris",
+  "salary_min": 47000,
+  "salary_max": 52000,
+  "skills": [
+   "AWS",
+   "PySpark",
+   "Qlik Sense"
+  ],
+  "offset": -2,
+  "lifetime": 37
+ },
+ {
+  "id": 1134,
+  "title": "Python Developer",
+  "level": "Senior",
+  "company": "Harbour Analytics",
+  "city": "Paris",
+  "salary_min": 72000,
+  "salary_max": 84000,
+  "skills": [
+   "Python",
+   "Qlik Sense",
+   "SQL"
+  ],
+  "offset": 22,
+  "lifetime": 31
+ },
+ {
+  "id": 1135,
+  "title": "Web Developer",
+  "level": "Senior",
+  "company": "Copperfield Energy",
+  "city": "Leeds",
+  "salary_min": 67000,
+  "salary_max": 76000,
+  "skills": [
+   "Docker",
+   "SQL",
+   "VBA"
+  ],
+  "offset": 28,
+  "lifetime": 22
+ },
+ {
+  "id": 1136,
+  "title": "Junior Data Engineer",
+  "level": "Mid-level",
+  "company": "Meridian Retail",
+  "city": "Remote",
+  "salary_min": 46000,
+  "salary_max": 59000,
+  "skills": [
+   "PySpark",
+   "Python",
+   "Tableau"
+  ],
+  "offset": -24,
+  "lifetime": 18
+ },
+ {
+  "id": 1137,
+  "title": "Junior Data Engineer",
+  "level": "Mid-level",
+  "company": "Kestrel Insurance",
+  "city": "Leeds",
+  "salary_min": 46000,
+  "salary_max": 57000,
+  "skills": [
+   "AWS",
+   "R",
+   "Tableau"
+  ],
+  "offset": 83,
+  "lifetime": 10
+ },
+ {
+  "id": 1138,
+  "title": "Business Analyst",
+  "level": "Junior",
+  "company": "Kestrel Insurance",
+  "city": "Leeds",
+  "salary_min": 41000,
+  "salary_max": 55000,
+  "skills": [
+   "Docker",
+   "Python",
+   "SQL"
+  ],
+  "offset": -1,
+  "lifetime": 36
+ },
+ {
+  "id": 1139,
+  "title": "Junior Data Engineer",
+  "level": "Junior",
+  "company": "Lumen Health",
+  "city": "Lyon",
+  "salary_min": 30000,
+  "salary_max": 44000,
+  "skills": [
+   "Python",
+   "Tableau",
+   "VBA"
+  ],
+  "offset": 47,
+  "lifetime": 20
+ },
+ {
+  "id": 1140,
+  "title": "Credit Risk Analyst",
+  "level": "Mid-level",
+  "company": "Lumen Health",
+  "city": "London",
+  "salary_min": 48000,
+  "salary_max": 61000,
+  "skills": [
+   "Git",
+   "R",
+   "SQL"
+  ],
+  "offset": 39,
+  "lifetime": 10
+ },
+ {
+  "id": 1141,
+  "title": "QA Tester",
+  "level": "Senior",
+  "company": "Meridian Retail",
+  "city": "Lyon",
+  "salary_min": 71000,
+  "salary_max": 89000,
+  "skills": [
+   "Excel",
+   "Power BI",
+   "Tableau"
+  ],
+  "offset": 63,
+  "lifetime": 16
+ },
+ {
+  "id": 1142,
+  "title": "Operations Analyst",
+  "level": "Mid-level",
+  "company": "Atlas Tutors",
+  "city": "Remote",
+  "salary_min": 48000,
+  "salary_max": 59000,
+  "skills": [
+   "Excel",
+   "PySpark",
+   "SQL"
+  ],
+  "offset": 4,
+  "lifetime": 18
+ },
+ {
+  "id": 1143,
+  "title": "Credit Risk Analyst",
+  "level": "Senior",
+  "company": "Meridian Retail",
+  "city": "Paris",
+  "salary_min": 71000,
+  "salary_max": 89000,
+  "skills": [
+   "AWS",
+   "PySpark",
+   "SQL"
+  ],
+  "offset": -34,
+  "lifetime": 39
+ },
+ {
+  "id": 1144,
+  "title": "Web Developer",
+  "level": "Mid-level",
+  "company": "Kestrel Insurance",
+  "city": "Lyon",
+  "salary_min": 52000,
+  "salary_max": 72000,
+  "skills": [
+   "Excel",
+   "Power BI",
+   "SQL"
+  ],
+  "offset": 73,
+  "lifetime": 29
+ },
+ {
+  "id": 1145,
+  "title": "Python Developer",
+  "level": "Junior",
+  "company": "Sable Media",
+  "city": "Lyon",
+  "salary_min": 36000,
+  "salary_max": 44000,
+  "skills": [
+   "AWS",
+   "Excel",
+   "Git"
+  ],
+  "offset": 51,
+  "lifetime": 38
+ },
+ {
+  "id": 1146,
+  "title": "Operations Analyst",
+  "level": "Mid-level",
+  "company": "Lumen Health",
+  "city": "Leeds",
+  "salary_min": 49000,
+  "salary_max": 56000,
+  "skills": [
+   "Qlik Sense",
+   "SQL",
+   "VBA"
+  ],
+  "offset": -10,
+  "lifetime": 11
+ },
+ {
+  "id": 1147,
+  "title": "Web Developer",
+  "level": "Senior",
+  "company": "Riverside Logistics",
+  "city": "Remote",
+  "salary_min": 72000,
+  "salary_max": 91000,
+  "skills": [
+   "PySpark",
+   "R",
+   "Tableau"
+  ],
+  "offset": 96,
+  "lifetime": 40
+ },
+ {
+  "id": 1148,
+  "title": "Credit Risk Analyst",
+  "level": "Junior",
+  "company": "Sable Media",
+  "city": "Manchester",
+  "salary_min": 33000,
+  "salary_max": 44000,
+  "skills": [
+   "Git",
+   "R",
+   "VBA"
+  ],
+  "offset": 10,
+  "lifetime": 36
+ },
+ {
+  "id": 1149,
+  "title": "Structured Finance Analyst",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "London",
+  "salary_min": 40000,
+  "salary_max": 48000,
+  "skills": [
+   "Docker",
+   "Qlik Sense",
+   "Tableau"
+  ],
+  "offset": 116,
+  "lifetime": 37
+ },
+ {
+  "id": 1150,
+  "title": "Junior Data Engineer",
+  "level": "Mid-level",
+  "company": "Lumen Health",
+  "city": "Lyon",
+  "salary_min": 55000,
+  "salary_max": 68000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "Qlik Sense"
+  ],
+  "offset": -43,
+  "lifetime": 19
+ },
+ {
+  "id": 1151,
+  "title": "Data Scientist",
+  "level": "Senior",
+  "company": "Harbour Analytics",
+  "city": "Lyon",
+  "salary_min": 74000,
+  "salary_max": 85000,
+  "skills": [
+   "Docker",
+   "PySpark",
+   "SQL"
+  ],
+  "offset": 61,
+  "lifetime": 36
+ },
+ {
+  "id": 1152,
+  "title": "Data Scientist",
+  "level": "Mid-level",
+  "company": "Atlas Tutors",
+  "city": "Leeds",
+  "salary_min": 51000,
+  "salary_max": 65000,
+  "skills": [
+   "Power BI",
+   "Python",
+   "R"
+  ],
+  "offset": -3,
+  "lifetime": 13
+ },
+ {
+  "id": 1153,
+  "title": "Web Developer",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "Leeds",
+  "salary_min": 36000,
+  "salary_max": 42000,
+  "skills": [
+   "Excel",
+   "Python",
+   "R"
+  ],
+  "offset": 31,
+  "lifetime": 11
+ },
+ {
+  "id": 1154,
+  "title": "Structured Finance Analyst",
+  "level": "Senior",
+  "company": "Lumen Health",
+  "city": "Paris",
+  "salary_min": 69000,
+  "salary_max": 75000,
+  "skills": [
+   "Git",
+   "Python",
+   "R"
+  ],
+  "offset": -58,
+  "lifetime": 11
+ },
+ {
+  "id": 1155,
+  "title": "Junior Data Engineer",
+  "level": "Junior",
+  "company": "Copperfield Energy",
+  "city": "London",
+  "salary_min": 35000,
+  "salary_max": 47000,
+  "skills": [
+   "Excel",
+   "Python",
+   "Qlik Sense"
+  ],
+  "offset": -37,
+  "lifetime": 34
+ },
+ {
+  "id": 1156,
+  "title": "Junior Data Engineer",
+  "level": "Senior",
+  "company": "Northbridge Bank",
+  "city": "Leeds",
+  "salary_min": 70000,
+  "salary_max": 76000,
+  "skills": [
+   "AWS",
+   "PySpark",
+   "SQL"
+  ],
+  "offset": 88,
+  "lifetime": 25
+ },
+ {
+  "id": 1157,
+  "title": "Python Developer",
+  "level": "Mid-level",
+  "company": "Lumen Health",
+  "city": "Lyon",
+  "salary_min": 53000,
+  "salary_max": 67000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "R"
+  ],
+  "offset": 81,
+  "lifetime": 26
+ },
+ {
+  "id": 1158,
+  "title": "BI Developer",
+  "level": "Mid-level",
+  "company": "Sable Media",
+  "city": "Leeds",
+  "salary_min": 55000,
+  "salary_max": 61000,
+  "skills": [
+   "AWS",
+   "Docker",
+   "Power BI"
+  ],
+  "offset": -46,
+  "lifetime": 16
+ },
+ {
+  "id": 1159,
+  "title": "Operations Analyst",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "Lyon",
+  "salary_min": 36000,
+  "salary_max": 45000,
+  "skills": [
+   "R",
+   "Tableau",
+   "VBA"
+  ],
+  "offset": -40,
+  "lifetime": 15
+ },
+ {
+  "id": 1160,
+  "title": "Business Analyst",
+  "level": "Senior",
+  "company": "Copperfield Energy",
+  "city": "Lyon",
+  "salary_min": 70000,
+  "salary_max": 90000,
+  "skills": [
+   "Docker",
+   "Python",
+   "SQL"
+  ],
+  "offset": 34,
+  "lifetime": 10
+ },
+ {
+  "id": 1161,
+  "title": "Web Developer",
+  "level": "Senior",
+  "company": "Harbour Analytics",
+  "city": "Manchester",
+  "salary_min": 69000,
+  "salary_max": 86000,
+  "skills": [
+   "Excel",
+   "PySpark",
+   "R"
+  ],
+  "offset": 16,
+  "lifetime": 14
+ },
+ {
+  "id": 1162,
+  "title": "Junior Data Engineer",
+  "level": "Mid-level",
+  "company": "Northbridge Bank",
+  "city": "Edinburgh",
+  "salary_min": 45000,
+  "salary_max": 57000,
+  "skills": [
+   "AWS",
+   "PySpark",
+   "VBA"
+  ],
+  "offset": -57,
+  "lifetime": 31
+ },
+ {
+  "id": 1163,
+  "title": "Web Developer",
+  "level": "Senior",
+  "company": "Meridian Retail",
+  "city": "Edinburgh",
+  "salary_min": 67000,
+  "salary_max": 81000,
+  "skills": [
+   "Git",
+   "Qlik Sense",
+   "Tableau"
+  ],
+  "offset": -38,
+  "lifetime": 32
+ },
+ {
+  "id": 1164,
+  "title": "Data Scientist",
+  "level": "Senior",
+  "company": "Kestrel Insurance",
+  "city": "Manchester",
+  "salary_min": 70000,
+  "salary_max": 85000,
+  "skills": [
+   "Qlik Sense",
+   "R",
+   "VBA"
+  ],
+  "offset": 106,
+  "lifetime": 33
+ },
+ {
+  "id": 1165,
+  "title": "Credit Risk Analyst",
+  "level": "Junior",
+  "company": "Northbridge Bank",
+  "city": "Leeds",
+  "salary_min": 37000,
+  "salary_max": 44000,
+  "skills": [
+   "Docker",
+   "Git",
+   "VBA"
+  ],
+  "offset": 101,
+  "lifetime": 40
+ },
+ {
+  "id": 1166,
+  "title": "Python Developer",
+  "level": "Junior",
+  "company": "Riverside Logistics",
+  "city": "Edinburgh",
+  "salary_min": 34000,
+  "salary_max": 51000,
+  "skills": [
+   "Docker",
+   "PySpark",
+   "SQL"
+  ],
+  "offset": 74,
+  "lifetime": 26
+ },
+ {
+  "id": 1167,
+  "title": "Structured Finance Analyst",
+  "level": "Senior",
+  "company": "Meridian Retail",
+  "city": "Manchester",
+  "salary_min": 76000,
+  "salary_max": 86000,
+  "skills": [
+   "Qlik Sense",
+   "R",
+   "VBA"
+  ],
+  "offset": 21,
+  "lifetime": 40
+ },
+ {
+  "id": 1168,
+  "title": "Credit Risk Analyst",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "Remote",
+  "salary_min": 33000,
+  "salary_max": 49000,
+  "skills": [
+   "Git",
+   "SQL",
+   "VBA"
+  ],
+  "offset": -7,
+  "lifetime": 14
+ },
+ {
+  "id": 1169,
+  "title": "BI Developer",
+  "level": "Senior",
+  "company": "Lumen Health",
+  "city": "London",
+  "salary_min": 73000,
+  "salary_max": 84000,
+  "skills": [
+   "Docker",
+   "Git",
+   "VBA"
+  ],
+  "offset": -19,
+  "lifetime": 12
+ },
+ {
+  "id": 1170,
+  "title": "Business Analyst",
+  "level": "Mid-level",
+  "company": "Atlas Tutors",
+  "city": "Edinburgh",
+  "salary_min": 45000,
+  "salary_max": 64000,
+  "skills": [
+   "AWS",
+   "PySpark",
+   "Tableau"
+  ],
+  "offset": 77,
+  "lifetime": 11
+ },
+ {
+  "id": 1171,
+  "title": "Reporting Analyst",
+  "level": "Mid-level",
+  "company": "Lumen Health",
+  "city": "Leeds",
+  "salary_min": 51000,
+  "salary_max": 66000,
+  "skills": [
+   "Git",
+   "PySpark",
+   "Tableau"
+  ],
+  "offset": -18,
+  "lifetime": 11
+ },
+ {
+  "id": 1172,
+  "title": "Data Scientist",
+  "level": "Senior",
+  "company": "Sable Media",
+  "city": "Paris",
+  "salary_min": 71000,
+  "salary_max": 87000,
+  "skills": [
+   "Excel",
+   "Git",
+   "Qlik Sense"
+  ],
+  "offset": -33,
+  "lifetime": 40
+ },
+ {
+  "id": 1173,
+  "title": "Structured Finance Analyst",
+  "level": "Mid-level",
+  "company": "Northbridge Bank",
+  "city": "Paris",
+  "salary_min": 50000,
+  "salary_max": 57000,
+  "skills": [
+   "Docker",
+   "SQL",
+   "VBA"
+  ],
+  "offset": -45,
+  "lifetime": 13
+ },
+ {
+  "id": 1174,
+  "title": "QA Tester",
+  "level": "Junior",
+  "company": "Northbridge Bank",
+  "city": "Paris",
+  "salary_min": 42000,
+  "salary_max": 62000,
+  "skills": [
+   "Excel",
+   "Git",
+   "VBA"
+  ],
+  "offset": 51,
+  "lifetime": 29
+ },
+ {
+  "id": 1175,
+  "title": "Junior Data Engineer",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "Remote",
+  "salary_min": 36000,
+  "salary_max": 43000,
+  "skills": [
+   "Power BI",
+   "Python",
+   "Tableau"
+  ],
+  "offset": 27,
+  "lifetime": 24
+ },
+ {
+  "id": 1176,
+  "title": "QA Tester",
+  "level": "Junior",
+  "company": "Kestrel Insurance",
+  "city": "Lyon",
+  "salary_min": 31000,
+  "salary_max": 43000,
+  "skills": [
+   "Git",
+   "Python",
+   "R"
+  ],
+  "offset": -51,
+  "lifetime": 33
+ },
+ {
+  "id": 1177,
+  "title": "Reporting Analyst",
+  "level": "Senior",
+  "company": "Kestrel Insurance",
+  "city": "Manchester",
+  "salary_min": 65000,
+  "salary_max": 70000,
+  "skills": [
+   "Git",
+   "Qlik Sense",
+   "Tableau"
+  ],
+  "offset": 71,
+  "lifetime": 21
+ },
+ {
+  "id": 1178,
+  "title": "Data Analyst",
+  "level": "Mid-level",
+  "company": "Riverside Logistics",
+  "city": "Edinburgh",
+  "salary_min": 51000,
+  "salary_max": 60000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "PySpark"
+  ],
+  "offset": -54,
+  "lifetime": 10
+ },
+ {
+  "id": 1179,
+  "title": "Credit Risk Analyst",
+  "level": "Mid-level",
+  "company": "Atlas Tutors",
+  "city": "Leeds",
+  "salary_min": 57000,
+  "salary_max": 75000,
+  "skills": [
+   "AWS",
+   "Excel",
+   "Python"
+  ],
+  "offset": 43,
+  "lifetime": 24
+ },
+ {
+  "id": 1180,
+  "title": "Web Developer",
+  "level": "Junior",
+  "company": "Meridian Retail",
+  "city": "Leeds",
+  "salary_min": 30000,
+  "salary_max": 43000,
+  "skills": [
+   "Git",
+   "SQL",
+   "VBA"
+  ],
+  "offset": 12,
+  "lifetime": 16
+ },
+ {
+  "id": 1181,
+  "title": "Operations Analyst",
+  "level": "Mid-level",
+  "company": "Northbridge Bank",
+  "city": "Manchester",
+  "salary_min": 55000,
+  "salary_max": 72000,
+  "skills": [
+   "PySpark",
+   "Python",
+   "VBA"
+  ],
+  "offset": 39,
+  "lifetime": 21
+ },
+ {
+  "id": 1182,
+  "title": "Business Analyst",
+  "level": "Senior",
+  "company": "Copperfield Energy",
+  "city": "Manchester",
+  "salary_min": 77000,
+  "salary_max": 86000,
+  "skills": [
+   "Power BI",
+   "PySpark",
+   "VBA"
+  ],
+  "offset": -48,
+  "lifetime": 11
+ },
+ {
+  "id": 1183,
+  "title": "Junior Data Engineer",
+  "level": "Senior",
+  "company": "Northbridge Bank",
+  "city": "Manchester",
+  "salary_min": 70000,
+  "salary_max": 86000,
+  "skills": [
+   "AWS",
+   "Qlik Sense",
+   "VBA"
+  ],
+  "offset": -1,
+  "lifetime": 12
+ },
+ {
+  "id": 1184,
+  "title": "Data Scientist",
+  "level": "Senior",
+  "company": "Riverside Logistics",
+  "city": "Lyon",
+  "salary_min": 73000,
+  "salary_max": 79000,
+  "skills": [
+   "Docker",
+   "Git",
+   "VBA"
+  ],
+  "offset": 107,
+  "lifetime": 29
+ },
+ {
+  "id": 1185,
+  "title": "Structured Finance Analyst",
+  "level": "Junior",
+  "company": "Northbridge Bank",
+  "city": "London",
+  "salary_min": 39000,
+  "salary_max": 58000,
+  "skills": [
+   "AWS",
+   "Tableau",
+   "VBA"
+  ],
+  "offset": -53,
+  "lifetime": 32
+ },
+ {
+  "id": 1186,
+  "title": "Structured Finance Analyst",
+  "level": "Senior",
+  "company": "Lumen Health",
+  "city": "Lyon",
+  "salary_min": 77000,
+  "salary_max": 85000,
+  "skills": [
+   "AWS",
+   "Git",
+   "SQL"
+  ],
+  "offset": 39,
+  "lifetime": 19
+ },
+ {
+  "id": 1187,
+  "title": "BI Developer",
+  "level": "Senior",
+  "company": "Kestrel Insurance",
+  "city": "Manchester",
+  "salary_min": 69000,
+  "salary_max": 75000,
+  "skills": [
+   "PySpark",
+   "Tableau",
+   "VBA"
+  ],
+  "offset": -18,
+  "lifetime": 14
+ },
+ {
+  "id": 1188,
+  "title": "Data Scientist",
+  "level": "Junior",
+  "company": "Kestrel Insurance",
+  "city": "Remote",
+  "salary_min": 34000,
+  "salary_max": 51000,
+  "skills": [
+   "Git",
+   "Python",
+   "SQL"
+  ],
+  "offset": 88,
+  "lifetime": 14
+ },
+ {
+  "id": 1189,
+  "title": "Reporting Analyst",
+  "level": "Senior",
+  "company": "Sable Media",
+  "city": "Edinburgh",
+  "salary_min": 67000,
+  "salary_max": 80000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "VBA"
+  ],
+  "offset": 91,
+  "lifetime": 13
+ },
+ {
+  "id": 1190,
+  "title": "Business Analyst",
+  "level": "Mid-level",
+  "company": "Sable Media",
+  "city": "Manchester",
+  "salary_min": 51000,
+  "salary_max": 65000,
+  "skills": [
+   "Git",
+   "Power BI",
+   "PySpark"
+  ],
+  "offset": -17,
+  "lifetime": 15
+ },
+ {
+  "id": 1191,
+  "title": "BI Developer",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "Paris",
+  "salary_min": 37000,
+  "salary_max": 56000,
+  "skills": [
+   "Python",
+   "SQL",
+   "VBA"
+  ],
+  "offset": -32,
+  "lifetime": 40
+ },
+ {
+  "id": 1192,
+  "title": "Business Analyst",
+  "level": "Senior",
+  "company": "Copperfield Energy",
+  "city": "Remote",
+  "salary_min": 75000,
+  "salary_max": 95000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "Power BI"
+  ],
+  "offset": -49,
+  "lifetime": 23
+ },
+ {
+  "id": 1193,
+  "title": "QA Tester",
+  "level": "Junior",
+  "company": "Meridian Retail",
+  "city": "Paris",
+  "salary_min": 30000,
+  "salary_max": 39000,
+  "skills": [
+   "Excel",
+   "Python",
+   "VBA"
+  ],
+  "offset": 65,
+  "lifetime": 38
+ },
+ {
+  "id": 1194,
+  "title": "Junior Data Engineer",
+  "level": "Mid-level",
+  "company": "Meridian Retail",
+  "city": "Leeds",
+  "salary_min": 57000,
+  "salary_max": 69000,
+  "skills": [
+   "AWS",
+   "Power BI",
+   "VBA"
+  ],
+  "offset": 51,
+  "lifetime": 30
+ },
+ {
+  "id": 1195,
+  "title": "QA Tester",
+  "level": "Senior",
+  "company": "Atlas Tutors",
+  "city": "London",
+  "salary_min": 72000,
+  "salary_max": 91000,
+  "skills": [
+   "Power BI",
+   "Qlik Sense",
+   "SQL"
+  ],
+  "offset": 42,
+  "lifetime": 25
+ },
+ {
+  "id": 1196,
+  "title": "Data Scientist",
+  "level": "Mid-level",
+  "company": "Copperfield Energy",
+  "city": "Remote",
+  "salary_min": 45000,
+  "salary_max": 59000,
+  "skills": [
+   "AWS",
+   "Qlik Sense",
+   "SQL"
+  ],
+  "offset": 34,
+  "lifetime": 31
+ },
+ {
+  "id": 1197,
+  "title": "Structured Finance Analyst",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "Lyon",
+  "salary_min": 38000,
+  "salary_max": 55000,
+  "skills": [
+   "Git",
+   "Qlik Sense",
+   "R"
+  ],
+  "offset": 74,
+  "lifetime": 22
+ },
+ {
+  "id": 1198,
+  "title": "Junior Data Engineer",
+  "level": "Senior",
+  "company": "Harbour Analytics",
+  "city": "Remote",
+  "salary_min": 67000,
+  "salary_max": 74000,
+  "skills": [
+   "Docker",
+   "PySpark",
+   "Qlik Sense"
+  ],
+  "offset": 91,
+  "lifetime": 38
+ },
+ {
+  "id": 1199,
+  "title": "Reporting Analyst",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "Leeds",
+  "salary_min": 41000,
+  "salary_max": 54000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "PySpark"
+  ],
+  "offset": 17,
+  "lifetime": 11
+ },
+ {
+  "id": 1200,
+  "title": "Operations Analyst",
+  "level": "Senior",
+  "company": "Riverside Logistics",
+  "city": "Lyon",
+  "salary_min": 70000,
+  "salary_max": 88000,
+  "skills": [
+   "Git",
+   "R",
+   "VBA"
+  ],
+  "offset": 43,
+  "lifetime": 13
+ },
+ {
+  "id": 1201,
+  "title": "Data Scientist",
+  "level": "Mid-level",
+  "company": "Meridian Retail",
+  "city": "Lyon",
+  "salary_min": 57000,
+  "salary_max": 62000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "PySpark"
+  ],
+  "offset": -4,
+  "lifetime": 38
+ },
+ {
+  "id": 1202,
+  "title": "Data Analyst",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "Manchester",
+  "salary_min": 37000,
+  "salary_max": 50000,
+  "skills": [
+   "Git",
+   "Power BI",
+   "VBA"
+  ],
+  "offset": 0,
+  "lifetime": 22
+ },
+ {
+  "id": 1203,
+  "title": "Junior Data Engineer",
+  "level": "Junior",
+  "company": "Kestrel Insurance",
+  "city": "Paris",
+  "salary_min": 40000,
+  "salary_max": 56000,
+  "skills": [
+   "Docker",
+   "Python",
+   "R"
+  ],
+  "offset": 66,
+  "lifetime": 13
+ },
+ {
+  "id": 1204,
+  "title": "Operations Analyst",
+  "level": "Senior",
+  "company": "Kestrel Insurance",
+  "city": "Remote",
+  "salary_min": 72000,
+  "salary_max": 89000,
+  "skills": [
+   "Git",
+   "PySpark",
+   "VBA"
+  ],
+  "offset": 80,
+  "lifetime": 17
+ },
+ {
+  "id": 1205,
+  "title": "Operations Analyst",
+  "level": "Senior",
+  "company": "Lumen Health",
+  "city": "Leeds",
+  "salary_min": 66000,
+  "salary_max": 79000,
+  "skills": [
+   "R",
+   "Tableau",
+   "VBA"
+  ],
+  "offset": -7,
+  "lifetime": 18
+ },
+ {
+  "id": 1206,
+  "title": "Credit Risk Analyst",
+  "level": "Senior",
+  "company": "Harbour Analytics",
+  "city": "Paris",
+  "salary_min": 66000,
+  "salary_max": 85000,
+  "skills": [
+   "Power BI",
+   "PySpark",
+   "VBA"
+  ],
+  "offset": -12,
+  "lifetime": 30
+ },
+ {
+  "id": 1207,
+  "title": "BI Developer",
+  "level": "Mid-level",
+  "company": "Meridian Retail",
+  "city": "Paris",
+  "salary_min": 49000,
+  "salary_max": 54000,
+  "skills": [
+   "Excel",
+   "PySpark",
+   "Tableau"
+  ],
+  "offset": 106,
+  "lifetime": 20
+ },
+ {
+  "id": 1208,
+  "title": "Operations Analyst",
+  "level": "Senior",
+  "company": "Harbour Analytics",
+  "city": "Edinburgh",
+  "salary_min": 68000,
+  "salary_max": 77000,
+  "skills": [
+   "AWS",
+   "R",
+   "SQL"
+  ],
+  "offset": -5,
+  "lifetime": 17
+ },
+ {
+  "id": 1209,
+  "title": "QA Tester",
+  "level": "Junior",
+  "company": "Northbridge Bank",
+  "city": "Manchester",
+  "salary_min": 37000,
+  "salary_max": 53000,
+  "skills": [
+   "Python",
+   "R",
+   "SQL"
+  ],
+  "offset": 106,
+  "lifetime": 11
+ },
+ {
+  "id": 1210,
+  "title": "Junior Data Engineer",
+  "level": "Senior",
+  "company": "Kestrel Insurance",
+  "city": "Manchester",
+  "salary_min": 71000,
+  "salary_max": 91000,
+  "skills": [
+   "Excel",
+   "Git",
+   "PySpark"
+  ],
+  "offset": 78,
+  "lifetime": 25
+ },
+ {
+  "id": 1211,
+  "title": "QA Tester",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "Leeds",
+  "salary_min": 34000,
+  "salary_max": 49000,
+  "skills": [
+   "AWS",
+   "Docker",
+   "Excel"
+  ],
+  "offset": -7,
+  "lifetime": 29
+ },
+ {
+  "id": 1212,
+  "title": "Junior Data Engineer",
+  "level": "Mid-level",
+  "company": "Northbridge Bank",
+  "city": "Edinburgh",
+  "salary_min": 55000,
+  "salary_max": 62000,
+  "skills": [
+   "Excel",
+   "PySpark",
+   "Tableau"
+  ],
+  "offset": -20,
+  "lifetime": 38
+ },
+ {
+  "id": 1213,
+  "title": "Operations Analyst",
+  "level": "Mid-level",
+  "company": "Sable Media",
+  "city": "Paris",
+  "salary_min": 53000,
+  "salary_max": 62000,
+  "skills": [
+   "Git",
+   "PySpark",
+   "Qlik Sense"
+  ],
+  "offset": 6,
+  "lifetime": 27
+ },
+ {
+  "id": 1214,
+  "title": "Operations Analyst",
+  "level": "Mid-level",
+  "company": "Riverside Logistics",
+  "city": "Edinburgh",
+  "salary_min": 49000,
+  "salary_max": 61000,
+  "skills": [
+   "Excel",
+   "Power BI",
+   "PySpark"
+  ],
+  "offset": 48,
+  "lifetime": 36
+ },
+ {
+  "id": 1215,
+  "title": "Structured Finance Analyst",
+  "level": "Junior",
+  "company": "Meridian Retail",
+  "city": "Paris",
+  "salary_min": 36000,
+  "salary_max": 50000,
+  "skills": [
+   "AWS",
+   "Docker",
+   "Excel"
+  ],
+  "offset": 86,
+  "lifetime": 23
+ },
+ {
+  "id": 1216,
+  "title": "Business Analyst",
+  "level": "Junior",
+  "company": "Meridian Retail",
+  "city": "Manchester",
+  "salary_min": 37000,
+  "salary_max": 44000,
+  "skills": [
+   "AWS",
+   "Qlik Sense",
+   "VBA"
+  ],
+  "offset": -45,
+  "lifetime": 11
+ },
+ {
+  "id": 1217,
+  "title": "QA Tester",
+  "level": "Mid-level",
+  "company": "Riverside Logistics",
+  "city": "Lyon",
+  "salary_min": 50000,
+  "salary_max": 70000,
+  "skills": [
+   "Docker",
+   "R",
+   "Tableau"
+  ],
+  "offset": -54,
+  "lifetime": 20
+ },
+ {
+  "id": 1218,
+  "title": "Data Analyst",
+  "level": "Mid-level",
+  "company": "Lumen Health",
+  "city": "Leeds",
+  "salary_min": 48000,
+  "salary_max": 64000,
+  "skills": [
+   "Git",
+   "R",
+   "Tableau"
+  ],
+  "offset": -2,
+  "lifetime": 25
+ },
+ {
+  "id": 1219,
+  "title": "Business Analyst",
+  "level": "Senior",
+  "company": "Kestrel Insurance",
+  "city": "Edinburgh",
+  "salary_min": 73000,
+  "salary_max": 86000,
+  "skills": [
+   "Git",
+   "Qlik Sense",
+   "R"
+  ],
+  "offset": 67,
+  "lifetime": 36
+ },
+ {
+  "id": 1220,
+  "title": "Python Developer",
+  "level": "Junior",
+  "company": "Lumen Health",
+  "city": "Remote",
+  "salary_min": 32000,
+  "salary_max": 42000,
+  "skills": [
+   "Power BI",
+   "Python",
+   "Qlik Sense"
+  ],
+  "offset": 111,
+  "lifetime": 12
+ },
+ {
+  "id": 1221,
+  "title": "Python Developer",
+  "level": "Senior",
+  "company": "Lumen Health",
+  "city": "Remote",
+  "salary_min": 75000,
+  "salary_max": 80000,
+  "skills": [
+   "Docker",
+   "Qlik Sense",
+   "VBA"
+  ],
+  "offset": 37,
+  "lifetime": 11
+ },
+ {
+  "id": 1222,
+  "title": "Credit Risk Analyst",
+  "level": "Senior",
+  "company": "Sable Media",
+  "city": "Paris",
+  "salary_min": 72000,
+  "salary_max": 88000,
+  "skills": [
+   "Qlik Sense",
+   "R",
+   "VBA"
+  ],
+  "offset": 117,
+  "lifetime": 22
+ },
+ {
+  "id": 1223,
+  "title": "QA Tester",
+  "level": "Junior",
+  "company": "Lumen Health",
+  "city": "Edinburgh",
+  "salary_min": 42000,
+  "salary_max": 57000,
+  "skills": [
+   "Git",
+   "PySpark",
+   "SQL"
+  ],
+  "offset": 67,
+  "lifetime": 29
+ },
+ {
+  "id": 1224,
+  "title": "Credit Risk Analyst",
+  "level": "Senior",
+  "company": "Sable Media",
+  "city": "Lyon",
+  "salary_min": 73000,
+  "salary_max": 86000,
+  "skills": [
+   "Excel",
+   "Power BI",
+   "VBA"
+  ],
+  "offset": 61,
+  "lifetime": 26
+ },
+ {
+  "id": 1225,
+  "title": "QA Tester",
+  "level": "Senior",
+  "company": "Sable Media",
+  "city": "Paris",
+  "salary_min": 66000,
+  "salary_max": 76000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "PySpark"
+  ],
+  "offset": 77,
+  "lifetime": 16
+ },
+ {
+  "id": 1226,
+  "title": "Data Analyst",
+  "level": "Mid-level",
+  "company": "Meridian Retail",
+  "city": "London",
+  "salary_min": 49000,
+  "salary_max": 66000,
+  "skills": [
+   "Docker",
+   "Power BI",
+   "PySpark"
+  ],
+  "offset": 78,
+  "lifetime": 16
+ },
+ {
+  "id": 1227,
+  "title": "Structured Finance Analyst",
+  "level": "Mid-level",
+  "company": "Meridian Retail",
+  "city": "Remote",
+  "salary_min": 46000,
+  "salary_max": 59000,
+  "skills": [
+   "Excel",
+   "Git",
+   "Power BI"
+  ],
+  "offset": 33,
+  "lifetime": 10
+ },
+ {
+  "id": 1228,
+  "title": "Junior Data Engineer",
+  "level": "Mid-level",
+  "company": "Meridian Retail",
+  "city": "Leeds",
+  "salary_min": 48000,
+  "salary_max": 58000,
+  "skills": [
+   "Docker",
+   "Git",
+   "SQL"
+  ],
+  "offset": 45,
+  "lifetime": 17
+ },
+ {
+  "id": 1229,
+  "title": "Reporting Analyst",
+  "level": "Mid-level",
+  "company": "Northbridge Bank",
+  "city": "Manchester",
+  "salary_min": 53000,
+  "salary_max": 66000,
+  "skills": [
+   "Docker",
+   "Power BI",
+   "Tableau"
+  ],
+  "offset": 61,
+  "lifetime": 13
+ },
+ {
+  "id": 1230,
+  "title": "Python Developer",
+  "level": "Senior",
+  "company": "Copperfield Energy",
+  "city": "London",
+  "salary_min": 72000,
+  "salary_max": 92000,
+  "skills": [
+   "Docker",
+   "PySpark",
+   "SQL"
+  ],
+  "offset": 1,
+  "lifetime": 16
+ },
+ {
+  "id": 1231,
+  "title": "Junior Data Engineer",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "Edinburgh",
+  "salary_min": 39000,
+  "salary_max": 51000,
+  "skills": [
+   "Power BI",
+   "Qlik Sense",
+   "SQL"
+  ],
+  "offset": 105,
+  "lifetime": 24
+ },
+ {
+  "id": 1232,
+  "title": "Python Developer",
+  "level": "Senior",
+  "company": "Kestrel Insurance",
+  "city": "Manchester",
+  "salary_min": 68000,
+  "salary_max": 73000,
+  "skills": [
+   "AWS",
+   "Docker",
+   "Excel"
+  ],
+  "offset": 60,
+  "lifetime": 15
+ },
+ {
+  "id": 1233,
+  "title": "Data Scientist",
+  "level": "Mid-level",
+  "company": "Northbridge Bank",
+  "city": "Paris",
+  "salary_min": 50000,
+  "salary_max": 58000,
+  "skills": [
+   "Python",
+   "R",
+   "SQL"
+  ],
+  "offset": 107,
+  "lifetime": 32
+ },
+ {
+  "id": 1234,
+  "title": "Operations Analyst",
+  "level": "Mid-level",
+  "company": "Riverside Logistics",
+  "city": "Manchester",
+  "salary_min": 45000,
+  "salary_max": 62000,
+  "skills": [
+   "AWS",
+   "Excel",
+   "Tableau"
+  ],
+  "offset": -58,
+  "lifetime": 33
+ },
+ {
+  "id": 1235,
+  "title": "Business Analyst",
+  "level": "Junior",
+  "company": "Sable Media",
+  "city": "London",
+  "salary_min": 34000,
+  "salary_max": 54000,
+  "skills": [
+   "Git",
+   "R",
+   "Tableau"
+  ],
+  "offset": 14,
+  "lifetime": 11
+ },
+ {
+  "id": 1236,
+  "title": "Data Analyst",
+  "level": "Junior",
+  "company": "Meridian Retail",
+  "city": "London",
+  "salary_min": 32000,
+  "salary_max": 51000,
+  "skills": [
+   "AWS",
+   "Python",
+   "VBA"
+  ],
+  "offset": -27,
+  "lifetime": 12
+ },
+ {
+  "id": 1237,
+  "title": "Python Developer",
+  "level": "Mid-level",
+  "company": "Northbridge Bank",
+  "city": "Remote",
+  "salary_min": 51000,
+  "salary_max": 69000,
+  "skills": [
+   "Qlik Sense",
+   "SQL",
+   "Tableau"
+  ],
+  "offset": -19,
+  "lifetime": 13
+ },
+ {
+  "id": 1238,
+  "title": "QA Tester",
+  "level": "Mid-level",
+  "company": "Riverside Logistics",
+  "city": "Manchester",
+  "salary_min": 48000,
+  "salary_max": 60000,
+  "skills": [
+   "Docker",
+   "Power BI",
+   "VBA"
+  ],
+  "offset": -32,
+  "lifetime": 12
+ },
+ {
+  "id": 1239,
+  "title": "QA Tester",
+  "level": "Mid-level",
+  "company": "Harbour Analytics",
+  "city": "Lyon",
+  "salary_min": 50000,
+  "salary_max": 58000,
+  "skills": [
+   "Excel",
+   "Power BI",
+   "PySpark"
+  ],
+  "offset": 1,
+  "lifetime": 23
+ },
+ {
+  "id": 1240,
+  "title": "QA Tester",
+  "level": "Senior",
+  "company": "Harbour Analytics",
+  "city": "Paris",
+  "salary_min": 66000,
+  "salary_max": 74000,
+  "skills": [
+   "Docker",
+   "Power BI",
+   "Tableau"
+  ],
+  "offset": 55,
+  "lifetime": 13
+ },
+ {
+  "id": 1241,
+  "title": "Data Analyst",
+  "level": "Senior",
+  "company": "Northbridge Bank",
+  "city": "Lyon",
+  "salary_min": 75000,
+  "salary_max": 80000,
+  "skills": [
+   "Docker",
+   "Power BI",
+   "SQL"
+  ],
+  "offset": 52,
+  "lifetime": 22
+ },
+ {
+  "id": 1242,
+  "title": "QA Tester",
+  "level": "Mid-level",
+  "company": "Harbour Analytics",
+  "city": "London",
+  "salary_min": 52000,
+  "salary_max": 62000,
+  "skills": [
+   "PySpark",
+   "Python",
+   "SQL"
+  ],
+  "offset": 8,
+  "lifetime": 15
+ },
+ {
+  "id": 1243,
+  "title": "Web Developer",
+  "level": "Mid-level",
+  "company": "Riverside Logistics",
+  "city": "Leeds",
+  "salary_min": 51000,
+  "salary_max": 57000,
+  "skills": [
+   "Git",
+   "Qlik Sense",
+   "VBA"
+  ],
+  "offset": 32,
+  "lifetime": 12
+ },
+ {
+  "id": 1244,
+  "title": "QA Tester",
+  "level": "Junior",
+  "company": "Lumen Health",
+  "city": "Remote",
+  "salary_min": 31000,
+  "salary_max": 36000,
+  "skills": [
+   "AWS",
+   "Docker",
+   "PySpark"
+  ],
+  "offset": 116,
+  "lifetime": 30
+ },
+ {
+  "id": 1245,
+  "title": "Reporting Analyst",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "Manchester",
+  "salary_min": 36000,
+  "salary_max": 47000,
+  "skills": [
+   "AWS",
+   "Power BI",
+   "Python"
+  ],
+  "offset": 36,
+  "lifetime": 11
+ },
+ {
+  "id": 1246,
+  "title": "Data Scientist",
+  "level": "Senior",
+  "company": "Copperfield Energy",
+  "city": "Remote",
+  "salary_min": 70000,
+  "salary_max": 82000,
+  "skills": [
+   "Git",
+   "Power BI",
+   "Qlik Sense"
+  ],
+  "offset": -7,
+  "lifetime": 37
+ },
+ {
+  "id": 1247,
+  "title": "Junior Data Engineer",
+  "level": "Senior",
+  "company": "Copperfield Energy",
+  "city": "Manchester",
+  "salary_min": 65000,
+  "salary_max": 77000,
+  "skills": [
+   "Docker",
+   "Git",
+   "Tableau"
+  ],
+  "offset": 42,
+  "lifetime": 38
+ },
+ {
+  "id": 1248,
+  "title": "Credit Risk Analyst",
+  "level": "Mid-level",
+  "company": "Northbridge Bank",
+  "city": "Manchester",
+  "salary_min": 53000,
+  "salary_max": 64000,
+  "skills": [
+   "Excel",
+   "Python",
+   "VBA"
+  ],
+  "offset": 44,
+  "lifetime": 18
+ },
+ {
+  "id": 1249,
+  "title": "Junior Data Engineer",
+  "level": "Senior",
+  "company": "Meridian Retail",
+  "city": "Lyon",
+  "salary_min": 75000,
+  "salary_max": 88000,
+  "skills": [
+   "Excel",
+   "Power BI",
+   "Python"
+  ],
+  "offset": -10,
+  "lifetime": 22
+ },
+ {
+  "id": 1250,
+  "title": "Credit Risk Analyst",
+  "level": "Junior",
+  "company": "Riverside Logistics",
+  "city": "Manchester",
+  "salary_min": 32000,
+  "salary_max": 51000,
+  "skills": [
+   "Qlik Sense",
+   "SQL",
+   "VBA"
+  ],
+  "offset": 64,
+  "lifetime": 30
+ },
+ {
+  "id": 1251,
+  "title": "Web Developer",
+  "level": "Mid-level",
+  "company": "Sable Media",
+  "city": "Edinburgh",
+  "salary_min": 49000,
+  "salary_max": 54000,
+  "skills": [
+   "AWS",
+   "PySpark",
+   "Qlik Sense"
+  ],
+  "offset": 67,
+  "lifetime": 31
+ },
+ {
+  "id": 1252,
+  "title": "Credit Risk Analyst",
+  "level": "Senior",
+  "company": "Riverside Logistics",
+  "city": "Leeds",
+  "salary_min": 75000,
+  "salary_max": 89000,
+  "skills": [
+   "AWS",
+   "Tableau",
+   "VBA"
+  ],
+  "offset": 0,
+  "lifetime": 40
+ },
+ {
+  "id": 1253,
+  "title": "BI Developer",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "Lyon",
+  "salary_min": 40000,
+  "salary_max": 52000,
+  "skills": [
+   "AWS",
+   "Power BI",
+   "R"
+  ],
+  "offset": 91,
+  "lifetime": 17
+ },
+ {
+  "id": 1254,
+  "title": "Business Analyst",
+  "level": "Mid-level",
+  "company": "Atlas Tutors",
+  "city": "Lyon",
+  "salary_min": 55000,
+  "salary_max": 72000,
+  "skills": [
+   "Docker",
+   "Git",
+   "Power BI"
+  ],
+  "offset": 34,
+  "lifetime": 15
+ },
+ {
+  "id": 1255,
+  "title": "Data Scientist",
+  "level": "Junior",
+  "company": "Lumen Health",
+  "city": "Leeds",
+  "salary_min": 30000,
+  "salary_max": 44000,
+  "skills": [
+   "Docker",
+   "Power BI",
+   "Python"
+  ],
+  "offset": 8,
+  "lifetime": 32
+ },
+ {
+  "id": 1256,
+  "title": "BI Developer",
+  "level": "Senior",
+  "company": "Copperfield Energy",
+  "city": "Leeds",
+  "salary_min": 77000,
+  "salary_max": 88000,
+  "skills": [
+   "Docker",
+   "Power BI",
+   "SQL"
+  ],
+  "offset": 103,
+  "lifetime": 28
+ },
+ {
+  "id": 1257,
+  "title": "BI Developer",
+  "level": "Mid-level",
+  "company": "Northbridge Bank",
+  "city": "Lyon",
+  "salary_min": 52000,
+  "salary_max": 70000,
+  "skills": [
+   "Excel",
+   "Git",
+   "Qlik Sense"
+  ],
+  "offset": 7,
+  "lifetime": 10
+ },
+ {
+  "id": 1258,
+  "title": "Business Analyst",
+  "level": "Senior",
+  "company": "Copperfield Energy",
+  "city": "Edinburgh",
+  "salary_min": 77000,
+  "salary_max": 85000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "Qlik Sense"
+  ],
+  "offset": -32,
+  "lifetime": 12
+ },
+ {
+  "id": 1259,
+  "title": "BI Developer",
+  "level": "Senior",
+  "company": "Sable Media",
+  "city": "London",
+  "salary_min": 69000,
+  "salary_max": 89000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "Python"
+  ],
+  "offset": 68,
+  "lifetime": 15
+ },
+ {
+  "id": 1260,
+  "title": "Junior Data Engineer",
+  "level": "Senior",
+  "company": "Sable Media",
+  "city": "Lyon",
+  "salary_min": 75000,
+  "salary_max": 83000,
+  "skills": [
+   "AWS",
+   "Python",
+   "Tableau"
+  ],
+  "offset": -46,
+  "lifetime": 37
+ },
+ {
+  "id": 1261,
+  "title": "Structured Finance Analyst",
+  "level": "Mid-level",
+  "company": "Lumen Health",
+  "city": "Lyon",
+  "salary_min": 50000,
+  "salary_max": 60000,
+  "skills": [
+   "AWS",
+   "R",
+   "SQL"
+  ],
+  "offset": -42,
+  "lifetime": 32
+ },
+ {
+  "id": 1262,
+  "title": "Business Analyst",
+  "level": "Junior",
+  "company": "Kestrel Insurance",
+  "city": "Remote",
+  "salary_min": 36000,
+  "salary_max": 43000,
+  "skills": [
+   "AWS",
+   "R",
+   "VBA"
+  ],
+  "offset": 82,
+  "lifetime": 29
+ },
+ {
+  "id": 1263,
+  "title": "Credit Risk Analyst",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "Leeds",
+  "salary_min": 31000,
+  "salary_max": 36000,
+  "skills": [
+   "Docker",
+   "Git",
+   "PySpark"
+  ],
+  "offset": -56,
+  "lifetime": 10
+ },
+ {
+  "id": 1264,
+  "title": "Structured Finance Analyst",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "Lyon",
+  "salary_min": 30000,
+  "salary_max": 38000,
+  "skills": [
+   "Git",
+   "SQL",
+   "VBA"
+  ],
+  "offset": -52,
+  "lifetime": 30
+ },
+ {
+  "id": 1265,
+  "title": "Data Scientist",
+  "level": "Senior",
+  "company": "Kestrel Insurance",
+  "city": "Edinburgh",
+  "salary_min": 66000,
+  "salary_max": 80000,
+  "skills": [
+   "Docker",
+   "Qlik Sense",
+   "Tableau"
+  ],
+  "offset": 18,
+  "lifetime": 17
+ },
+ {
+  "id": 1266,
+  "title": "Credit Risk Analyst",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "Paris",
+  "salary_min": 40000,
+  "salary_max": 48000,
+  "skills": [
+   "Excel",
+   "Git",
+   "PySpark"
+  ],
+  "offset": -39,
+  "lifetime": 18
+ },
+ {
+  "id": 1267,
+  "title": "BI Developer",
+  "level": "Senior",
+  "company": "Meridian Retail",
+  "city": "Paris",
+  "salary_min": 74000,
+  "salary_max": 80000,
+  "skills": [
+   "Python",
+   "Qlik Sense",
+   "SQL"
+  ],
+  "offset": 102,
+  "lifetime": 21
+ },
+ {
+  "id": 1268,
+  "title": "Web Developer",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "Lyon",
+  "salary_min": 42000,
+  "salary_max": 60000,
+  "skills": [
+   "Excel",
+   "Git",
+   "Tableau"
+  ],
+  "offset": -11,
+  "lifetime": 18
+ },
+ {
+  "id": 1269,
+  "title": "Data Scientist",
+  "level": "Junior",
+  "company": "Northbridge Bank",
+  "city": "Remote",
+  "salary_min": 37000,
+  "salary_max": 48000,
+  "skills": [
+   "Excel",
+   "PySpark",
+   "SQL"
+  ],
+  "offset": 73,
+  "lifetime": 28
+ },
+ {
+  "id": 1270,
+  "title": "Python Developer",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "Manchester",
+  "salary_min": 42000,
+  "salary_max": 47000,
+  "skills": [
+   "Docker",
+   "Power BI",
+   "SQL"
+  ],
+  "offset": 65,
+  "lifetime": 27
+ },
+ {
+  "id": 1271,
+  "title": "Structured Finance Analyst",
+  "level": "Junior",
+  "company": "Riverside Logistics",
+  "city": "Edinburgh",
+  "salary_min": 35000,
+  "salary_max": 50000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "PySpark"
+  ],
+  "offset": -42,
+  "lifetime": 22
+ },
+ {
+  "id": 1272,
+  "title": "Junior Data Engineer",
+  "level": "Mid-level",
+  "company": "Riverside Logistics",
+  "city": "Paris",
+  "salary_min": 51000,
+  "salary_max": 57000,
+  "skills": [
+   "Excel",
+   "R",
+   "VBA"
+  ],
+  "offset": 46,
+  "lifetime": 12
+ },
+ {
+  "id": 1273,
+  "title": "Business Analyst",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "Manchester",
+  "salary_min": 36000,
+  "salary_max": 55000,
+  "skills": [
+   "Excel",
+   "Python",
+   "R"
+  ],
+  "offset": 60,
+  "lifetime": 11
+ },
+ {
+  "id": 1274,
+  "title": "Junior Data Engineer",
+  "level": "Senior",
+  "company": "Riverside Logistics",
+  "city": "London",
+  "salary_min": 66000,
+  "salary_max": 83000,
+  "skills": [
+   "Docker",
+   "Git",
+   "Python"
+  ],
+  "offset": 119,
+  "lifetime": 25
+ },
+ {
+  "id": 1275,
+  "title": "Junior Data Engineer",
+  "level": "Mid-level",
+  "company": "Atlas Tutors",
+  "city": "Leeds",
+  "salary_min": 52000,
+  "salary_max": 69000,
+  "skills": [
+   "Power BI",
+   "Qlik Sense",
+   "Tableau"
+  ],
+  "offset": 14,
+  "lifetime": 34
+ },
+ {
+  "id": 1276,
+  "title": "Python Developer",
+  "level": "Junior",
+  "company": "Meridian Retail",
+  "city": "Remote",
+  "salary_min": 32000,
+  "salary_max": 50000,
+  "skills": [
+   "Excel",
+   "PySpark",
+   "SQL"
+  ],
+  "offset": -7,
+  "lifetime": 21
+ },
+ {
+  "id": 1277,
+  "title": "Data Analyst",
+  "level": "Mid-level",
+  "company": "Meridian Retail",
+  "city": "Remote",
+  "salary_min": 45000,
+  "salary_max": 51000,
+  "skills": [
+   "Git",
+   "Power BI",
+   "Qlik Sense"
+  ],
+  "offset": 61,
+  "lifetime": 26
+ },
+ {
+  "id": 1278,
+  "title": "Data Analyst",
+  "level": "Junior",
+  "company": "Meridian Retail",
+  "city": "London",
+  "salary_min": 33000,
+  "salary_max": 52000,
+  "skills": [
+   "PySpark",
+   "R",
+   "SQL"
+  ],
+  "offset": 27,
+  "lifetime": 29
+ },
+ {
+  "id": 1279,
+  "title": "Python Developer",
+  "level": "Senior",
+  "company": "Atlas Tutors",
+  "city": "Edinburgh",
+  "salary_min": 70000,
+  "salary_max": 89000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "R"
+  ],
+  "offset": -13,
+  "lifetime": 23
+ },
+ {
+  "id": 1280,
+  "title": "Operations Analyst",
+  "level": "Junior",
+  "company": "Lumen Health",
+  "city": "London",
+  "salary_min": 31000,
+  "salary_max": 36000,
+  "skills": [
+   "Excel",
+   "Python",
+   "Qlik Sense"
+  ],
+  "offset": 27,
+  "lifetime": 13
+ },
+ {
+  "id": 1281,
+  "title": "Reporting Analyst",
+  "level": "Mid-level",
+  "company": "Harbour Analytics",
+  "city": "Leeds",
+  "salary_min": 54000,
+  "salary_max": 62000,
+  "skills": [
+   "Git",
+   "PySpark",
+   "Tableau"
+  ],
+  "offset": -8,
+  "lifetime": 22
+ },
+ {
+  "id": 1282,
+  "title": "QA Tester",
+  "level": "Senior",
+  "company": "Northbridge Bank",
+  "city": "Manchester",
+  "salary_min": 73000,
+  "salary_max": 87000,
+  "skills": [
+   "Excel",
+   "R",
+   "VBA"
+  ],
+  "offset": 30,
+  "lifetime": 17
+ },
+ {
+  "id": 1283,
+  "title": "Python Developer",
+  "level": "Junior",
+  "company": "Riverside Logistics",
+  "city": "Remote",
+  "salary_min": 34000,
+  "salary_max": 45000,
+  "skills": [
+   "Docker",
+   "PySpark",
+   "Tableau"
+  ],
+  "offset": 81,
+  "lifetime": 29
+ },
+ {
+  "id": 1284,
+  "title": "Junior Data Engineer",
+  "level": "Junior",
+  "company": "Lumen Health",
+  "city": "Edinburgh",
+  "salary_min": 42000,
+  "salary_max": 53000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "SQL"
+  ],
+  "offset": -15,
+  "lifetime": 24
+ },
+ {
+  "id": 1285,
+  "title": "Data Scientist",
+  "level": "Junior",
+  "company": "Riverside Logistics",
+  "city": "Lyon",
+  "salary_min": 38000,
+  "salary_max": 43000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "R"
+  ],
+  "offset": -9,
+  "lifetime": 16
+ },
+ {
+  "id": 1286,
+  "title": "Junior Data Engineer",
+  "level": "Junior",
+  "company": "Riverside Logistics",
+  "city": "Manchester",
+  "salary_min": 36000,
+  "salary_max": 43000,
+  "skills": [
+   "Qlik Sense",
+   "R",
+   "SQL"
+  ],
+  "offset": 69,
+  "lifetime": 33
+ },
+ {
+  "id": 1287,
+  "title": "Operations Analyst",
+  "level": "Mid-level",
+  "company": "Sable Media",
+  "city": "Edinburgh",
+  "salary_min": 47000,
+  "salary_max": 62000,
+  "skills": [
+   "AWS",
+   "Git",
+   "Power BI"
+  ],
+  "offset": 44,
+  "lifetime": 12
+ },
+ {
+  "id": 1288,
+  "title": "QA Tester",
+  "level": "Mid-level",
+  "company": "Copperfield Energy",
+  "city": "Lyon",
+  "salary_min": 56000,
+  "salary_max": 72000,
+  "skills": [
+   "Git",
+   "Power BI",
+   "SQL"
+  ],
+  "offset": 98,
+  "lifetime": 22
+ },
+ {
+  "id": 1289,
+  "title": "Junior Data Engineer",
+  "level": "Mid-level",
+  "company": "Northbridge Bank",
+  "city": "Leeds",
+  "salary_min": 46000,
+  "salary_max": 51000,
+  "skills": [
+   "Docker",
+   "Python",
+   "Qlik Sense"
+  ],
+  "offset": 25,
+  "lifetime": 28
+ },
+ {
+  "id": 1290,
+  "title": "Reporting Analyst",
+  "level": "Junior",
+  "company": "Sable Media",
+  "city": "Leeds",
+  "salary_min": 30000,
+  "salary_max": 40000,
+  "skills": [
+   "Docker",
+   "PySpark",
+   "SQL"
+  ],
+  "offset": -54,
+  "lifetime": 13
+ },
+ {
+  "id": 1291,
+  "title": "Business Analyst",
+  "level": "Mid-level",
+  "company": "Lumen Health",
+  "city": "Remote",
+  "salary_min": 52000,
+  "salary_max": 67000,
+  "skills": [
+   "Python",
+   "Tableau",
+   "VBA"
+  ],
+  "offset": 115,
+  "lifetime": 31
+ },
+ {
+  "id": 1292,
+  "title": "Junior Data Engineer",
+  "level": "Junior",
+  "company": "Northbridge Bank",
+  "city": "Edinburgh",
+  "salary_min": 32000,
+  "salary_max": 48000,
+  "skills": [
+   "AWS",
+   "PySpark",
+   "Python"
+  ],
+  "offset": 43,
+  "lifetime": 25
+ },
+ {
+  "id": 1293,
+  "title": "Web Developer",
+  "level": "Mid-level",
+  "company": "Riverside Logistics",
+  "city": "Lyon",
+  "salary_min": 51000,
+  "salary_max": 58000,
+  "skills": [
+   "Power BI",
+   "PySpark",
+   "R"
+  ],
+  "offset": 30,
+  "lifetime": 23
+ },
+ {
+  "id": 1294,
+  "title": "Data Scientist",
+  "level": "Mid-level",
+  "company": "Sable Media",
+  "city": "Paris",
+  "salary_min": 56000,
+  "salary_max": 69000,
+  "skills": [
+   "PySpark",
+   "SQL",
+   "Tableau"
+  ],
+  "offset": 15,
+  "lifetime": 24
+ },
+ {
+  "id": 1295,
+  "title": "Junior Data Engineer",
+  "level": "Junior",
+  "company": "Sable Media",
+  "city": "Remote",
+  "salary_min": 30000,
+  "salary_max": 47000,
+  "skills": [
+   "Git",
+   "PySpark",
+   "VBA"
+  ],
+  "offset": 92,
+  "lifetime": 34
+ },
+ {
+  "id": 1296,
+  "title": "Junior Data Engineer",
+  "level": "Junior",
+  "company": "Lumen Health",
+  "city": "Lyon",
+  "salary_min": 34000,
+  "salary_max": 39000,
+  "skills": [
+   "Power BI",
+   "Python",
+   "VBA"
+  ],
+  "offset": 105,
+  "lifetime": 18
+ },
+ {
+  "id": 1297,
+  "title": "Web Developer",
+  "level": "Senior",
+  "company": "Harbour Analytics",
+  "city": "Leeds",
+  "salary_min": 75000,
+  "salary_max": 92000,
+  "skills": [
+   "Excel",
+   "R",
+   "SQL"
+  ],
+  "offset": -32,
+  "lifetime": 15
+ },
+ {
+  "id": 1298,
+  "title": "Business Analyst",
+  "level": "Mid-level",
+  "company": "Sable Media",
+  "city": "London",
+  "salary_min": 48000,
+  "salary_max": 58000,
+  "skills": [
+   "Docker",
+   "Power BI",
+   "Tableau"
+  ],
+  "offset": -7,
+  "lifetime": 27
+ },
+ {
+  "id": 1299,
+  "title": "Operations Analyst",
+  "level": "Senior",
+  "company": "Lumen Health",
+  "city": "London",
+  "salary_min": 76000,
+  "salary_max": 95000,
+  "skills": [
+   "AWS",
+   "PySpark",
+   "Qlik Sense"
+  ],
+  "offset": 102,
+  "lifetime": 14
+ },
+ {
+  "id": 1300,
+  "title": "Web Developer",
+  "level": "Mid-level",
+  "company": "Kestrel Insurance",
+  "city": "Edinburgh",
+  "salary_min": 54000,
+  "salary_max": 74000,
+  "skills": [
+   "Power BI",
+   "R",
+   "VBA"
+  ],
+  "offset": -43,
+  "lifetime": 13
+ },
+ {
+  "id": 1301,
+  "title": "BI Developer",
+  "level": "Mid-level",
+  "company": "Kestrel Insurance",
+  "city": "Manchester",
+  "salary_min": 56000,
+  "salary_max": 70000,
+  "skills": [
+   "AWS",
+   "Excel",
+   "Power BI"
+  ],
+  "offset": -12,
+  "lifetime": 37
+ },
+ {
+  "id": 1302,
+  "title": "Operations Analyst",
+  "level": "Junior",
+  "company": "Kestrel Insurance",
+  "city": "Remote",
+  "salary_min": 39000,
+  "salary_max": 53000,
+  "skills": [
+   "Excel",
+   "PySpark",
+   "R"
+  ],
+  "offset": 71,
+  "lifetime": 39
+ },
+ {
+  "id": 1303,
+  "title": "Operations Analyst",
+  "level": "Mid-level",
+  "company": "Riverside Logistics",
+  "city": "Edinburgh",
+  "salary_min": 47000,
+  "salary_max": 56000,
+  "skills": [
+   "Git",
+   "Power BI",
+   "Tableau"
+  ],
+  "offset": 33,
+  "lifetime": 16
+ },
+ {
+  "id": 1304,
+  "title": "Junior Data Engineer",
+  "level": "Mid-level",
+  "company": "Kestrel Insurance",
+  "city": "Lyon",
+  "salary_min": 48000,
+  "salary_max": 68000,
+  "skills": [
+   "AWS",
+   "Git",
+   "Qlik Sense"
+  ],
+  "offset": 16,
+  "lifetime": 15
+ },
+ {
+  "id": 1305,
+  "title": "Credit Risk Analyst",
+  "level": "Senior",
+  "company": "Meridian Retail",
+  "city": "Paris",
+  "salary_min": 69000,
+  "salary_max": 83000,
+  "skills": [
+   "AWS",
+   "Qlik Sense",
+   "Tableau"
+  ],
+  "offset": 44,
+  "lifetime": 33
+ },
+ {
+  "id": 1306,
+  "title": "Credit Risk Analyst",
+  "level": "Mid-level",
+  "company": "Sable Media",
+  "city": "London",
+  "salary_min": 46000,
+  "salary_max": 58000,
+  "skills": [
+   "Docker",
+   "R",
+   "SQL"
+  ],
+  "offset": 54,
+  "lifetime": 22
+ },
+ {
+  "id": 1307,
+  "title": "Web Developer",
+  "level": "Junior",
+  "company": "Lumen Health",
+  "city": "London",
+  "salary_min": 41000,
+  "salary_max": 50000,
+  "skills": [
+   "Excel",
+   "Power BI",
+   "VBA"
+  ],
+  "offset": -5,
+  "lifetime": 19
+ },
+ {
+  "id": 1308,
+  "title": "Data Scientist",
+  "level": "Junior",
+  "company": "Lumen Health",
+  "city": "Paris",
+  "salary_min": 37000,
+  "salary_max": 54000,
+  "skills": [
+   "AWS",
+   "Qlik Sense",
+   "SQL"
+  ],
+  "offset": -54,
+  "lifetime": 38
+ },
+ {
+  "id": 1309,
+  "title": "Web Developer",
+  "level": "Mid-level",
+  "company": "Sable Media",
+  "city": "Remote",
+  "salary_min": 46000,
+  "salary_max": 52000,
+  "skills": [
+   "Docker",
+   "Git",
+   "Power BI"
+  ],
+  "offset": 90,
+  "lifetime": 37
+ },
+ {
+  "id": 1310,
+  "title": "Credit Risk Analyst",
+  "level": "Mid-level",
+  "company": "Lumen Health",
+  "city": "Paris",
+  "salary_min": 50000,
+  "salary_max": 69000,
+  "skills": [
+   "Python",
+   "SQL",
+   "VBA"
+  ],
+  "offset": 74,
+  "lifetime": 25
+ },
+ {
+  "id": 1311,
+  "title": "Credit Risk Analyst",
+  "level": "Junior",
+  "company": "Lumen Health",
+  "city": "Manchester",
+  "salary_min": 32000,
+  "salary_max": 45000,
+  "skills": [
+   "AWS",
+   "R",
+   "VBA"
+  ],
+  "offset": 120,
+  "lifetime": 36
+ },
+ {
+  "id": 1312,
+  "title": "Web Developer",
+  "level": "Junior",
+  "company": "Sable Media",
+  "city": "Manchester",
+  "salary_min": 35000,
+  "salary_max": 53000,
+  "skills": [
+   "Docker",
+   "PySpark",
+   "SQL"
+  ],
+  "offset": 80,
+  "lifetime": 33
+ },
+ {
+  "id": 1313,
+  "title": "BI Developer",
+  "level": "Junior",
+  "company": "Northbridge Bank",
+  "city": "Lyon",
+  "salary_min": 34000,
+  "salary_max": 47000,
+  "skills": [
+   "Excel",
+   "Power BI",
+   "SQL"
+  ],
+  "offset": 87,
+  "lifetime": 12
+ },
+ {
+  "id": 1314,
+  "title": "Python Developer",
+  "level": "Senior",
+  "company": "Copperfield Energy",
+  "city": "Lyon",
+  "salary_min": 77000,
+  "salary_max": 85000,
+  "skills": [
+   "Excel",
+   "Git",
+   "SQL"
+  ],
+  "offset": 34,
+  "lifetime": 25
+ },
+ {
+  "id": 1315,
+  "title": "Reporting Analyst",
+  "level": "Mid-level",
+  "company": "Harbour Analytics",
+  "city": "Edinburgh",
+  "salary_min": 46000,
+  "salary_max": 58000,
+  "skills": [
+   "Docker",
+   "R",
+   "Tableau"
+  ],
+  "offset": -49,
+  "lifetime": 25
+ },
+ {
+  "id": 1316,
+  "title": "Web Developer",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "Edinburgh",
+  "salary_min": 35000,
+  "salary_max": 48000,
+  "skills": [
+   "Power BI",
+   "R",
+   "Tableau"
+  ],
+  "offset": 49,
+  "lifetime": 32
+ },
+ {
+  "id": 1317,
+  "title": "Data Analyst",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "Paris",
+  "salary_min": 33000,
+  "salary_max": 41000,
+  "skills": [
+   "Git",
+   "PySpark",
+   "Qlik Sense"
+  ],
+  "offset": 7,
+  "lifetime": 31
+ },
+ {
+  "id": 1318,
+  "title": "QA Tester",
+  "level": "Junior",
+  "company": "Sable Media",
+  "city": "Remote",
+  "salary_min": 40000,
+  "salary_max": 46000,
+  "skills": [
+   "Git",
+   "Qlik Sense",
+   "R"
+  ],
+  "offset": 68,
+  "lifetime": 31
+ },
+ {
+  "id": 1319,
+  "title": "Operations Analyst",
+  "level": "Mid-level",
+  "company": "Riverside Logistics",
+  "city": "London",
+  "salary_min": 56000,
+  "salary_max": 64000,
+  "skills": [
+   "Docker",
+   "Git",
+   "VBA"
+  ],
+  "offset": 30,
+  "lifetime": 34
+ },
+ {
+  "id": 1320,
+  "title": "Structured Finance Analyst",
+  "level": "Senior",
+  "company": "Riverside Logistics",
+  "city": "Lyon",
+  "salary_min": 69000,
+  "salary_max": 88000,
+  "skills": [
+   "Docker",
+   "Power BI",
+   "Python"
+  ],
+  "offset": 99,
+  "lifetime": 11
+ },
+ {
+  "id": 1321,
+  "title": "Python Developer",
+  "level": "Senior",
+  "company": "Meridian Retail",
+  "city": "Leeds",
+  "salary_min": 68000,
+  "salary_max": 87000,
+  "skills": [
+   "Excel",
+   "Git",
+   "PySpark"
+  ],
+  "offset": -21,
+  "lifetime": 19
+ },
+ {
+  "id": 1322,
+  "title": "QA Tester",
+  "level": "Mid-level",
+  "company": "Riverside Logistics",
+  "city": "Leeds",
+  "salary_min": 52000,
+  "salary_max": 62000,
+  "skills": [
+   "PySpark",
+   "Qlik Sense",
+   "SQL"
+  ],
+  "offset": -56,
+  "lifetime": 25
+ },
+ {
+  "id": 1323,
+  "title": "BI Developer",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "Remote",
+  "salary_min": 36000,
+  "salary_max": 55000,
+  "skills": [
+   "Git",
+   "SQL",
+   "VBA"
+  ],
+  "offset": -5,
+  "lifetime": 25
+ },
+ {
+  "id": 1324,
+  "title": "Credit Risk Analyst",
+  "level": "Junior",
+  "company": "Sable Media",
+  "city": "Manchester",
+  "salary_min": 33000,
+  "salary_max": 43000,
+  "skills": [
+   "Docker",
+   "Qlik Sense",
+   "R"
+  ],
+  "offset": -56,
+  "lifetime": 38
+ },
+ {
+  "id": 1325,
+  "title": "Operations Analyst",
+  "level": "Senior",
+  "company": "Northbridge Bank",
+  "city": "Lyon",
+  "salary_min": 71000,
+  "salary_max": 79000,
+  "skills": [
+   "Docker",
+   "Qlik Sense",
+   "R"
+  ],
+  "offset": 19,
+  "lifetime": 38
+ },
+ {
+  "id": 1326,
+  "title": "Credit Risk Analyst",
+  "level": "Mid-level",
+  "company": "Atlas Tutors",
+  "city": "London",
+  "salary_min": 54000,
+  "salary_max": 73000,
+  "skills": [
+   "Git",
+   "Power BI",
+   "SQL"
+  ],
+  "offset": 9,
+  "lifetime": 23
+ },
+ {
+  "id": 1327,
+  "title": "Web Developer",
+  "level": "Junior",
+  "company": "Meridian Retail",
+  "city": "Lyon",
+  "salary_min": 33000,
+  "salary_max": 47000,
+  "skills": [
+   "Docker",
+   "Python",
+   "SQL"
+  ],
+  "offset": -46,
+  "lifetime": 26
+ },
+ {
+  "id": 1328,
+  "title": "QA Tester",
+  "level": "Junior",
+  "company": "Riverside Logistics",
+  "city": "Edinburgh",
+  "salary_min": 35000,
+  "salary_max": 51000,
+  "skills": [
+   "Power BI",
+   "PySpark",
+   "Python"
+  ],
+  "offset": 94,
+  "lifetime": 29
+ },
+ {
+  "id": 1329,
+  "title": "Credit Risk Analyst",
+  "level": "Junior",
+  "company": "Meridian Retail",
+  "city": "London",
+  "salary_min": 32000,
+  "salary_max": 40000,
+  "skills": [
+   "Python",
+   "R",
+   "SQL"
+  ],
+  "offset": 120,
+  "lifetime": 24
+ },
+ {
+  "id": 1330,
+  "title": "Business Analyst",
+  "level": "Mid-level",
+  "company": "Atlas Tutors",
+  "city": "London",
+  "salary_min": 49000,
+  "salary_max": 63000,
+  "skills": [
+   "Git",
+   "Python",
+   "Qlik Sense"
+  ],
+  "offset": -55,
+  "lifetime": 10
+ },
+ {
+  "id": 1331,
+  "title": "Junior Data Engineer",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "Paris",
+  "salary_min": 31000,
+  "salary_max": 46000,
+  "skills": [
+   "Git",
+   "R",
+   "SQL"
+  ],
+  "offset": 61,
+  "lifetime": 27
+ },
+ {
+  "id": 1332,
+  "title": "Python Developer",
+  "level": "Mid-level",
+  "company": "Northbridge Bank",
+  "city": "Manchester",
+  "salary_min": 57000,
+  "salary_max": 73000,
+  "skills": [
+   "R",
+   "SQL",
+   "VBA"
+  ],
+  "offset": -57,
+  "lifetime": 23
+ },
+ {
+  "id": 1333,
+  "title": "Python Developer",
+  "level": "Junior",
+  "company": "Riverside Logistics",
+  "city": "London",
+  "salary_min": 34000,
+  "salary_max": 54000,
+  "skills": [
+   "Excel",
+   "PySpark",
+   "Python"
+  ],
+  "offset": 97,
+  "lifetime": 29
+ },
+ {
+  "id": 1334,
+  "title": "Junior Data Engineer",
+  "level": "Mid-level",
+  "company": "Atlas Tutors",
+  "city": "Lyon",
+  "salary_min": 46000,
+  "salary_max": 61000,
+  "skills": [
+   "Excel",
+   "R",
+   "VBA"
+  ],
+  "offset": -21,
+  "lifetime": 16
+ },
+ {
+  "id": 1335,
+  "title": "QA Tester",
+  "level": "Senior",
+  "company": "Sable Media",
+  "city": "Leeds",
+  "salary_min": 76000,
+  "salary_max": 87000,
+  "skills": [
+   "Git",
+   "PySpark",
+   "SQL"
+  ],
+  "offset": -31,
+  "lifetime": 28
+ },
+ {
+  "id": 1336,
+  "title": "Data Scientist",
+  "level": "Senior",
+  "company": "Sable Media",
+  "city": "Leeds",
+  "salary_min": 67000,
+  "salary_max": 77000,
+  "skills": [
+   "AWS",
+   "Git",
+   "R"
+  ],
+  "offset": -56,
+  "lifetime": 34
+ },
+ {
+  "id": 1337,
+  "title": "BI Developer",
+  "level": "Junior",
+  "company": "Lumen Health",
+  "city": "Paris",
+  "salary_min": 41000,
+  "salary_max": 53000,
+  "skills": [
+   "AWS",
+   "Power BI",
+   "Qlik Sense"
+  ],
+  "offset": -51,
+  "lifetime": 34
+ },
+ {
+  "id": 1338,
+  "title": "Web Developer",
+  "level": "Junior",
+  "company": "Sable Media",
+  "city": "Remote",
+  "salary_min": 40000,
+  "salary_max": 54000,
+  "skills": [
+   "PySpark",
+   "Qlik Sense",
+   "Tableau"
+  ],
+  "offset": 9,
+  "lifetime": 22
+ },
+ {
+  "id": 1339,
+  "title": "Structured Finance Analyst",
+  "level": "Junior",
+  "company": "Riverside Logistics",
+  "city": "Remote",
+  "salary_min": 37000,
+  "salary_max": 56000,
+  "skills": [
+   "R",
+   "SQL",
+   "Tableau"
+  ],
+  "offset": 11,
+  "lifetime": 19
+ },
+ {
+  "id": 1340,
+  "title": "Data Scientist",
+  "level": "Senior",
+  "company": "Atlas Tutors",
+  "city": "Edinburgh",
+  "salary_min": 74000,
+  "salary_max": 92000,
+  "skills": [
+   "AWS",
+   "Git",
+   "VBA"
+  ],
+  "offset": 88,
+  "lifetime": 36
+ },
+ {
+  "id": 1341,
+  "title": "Credit Risk Analyst",
+  "level": "Mid-level",
+  "company": "Lumen Health",
+  "city": "Leeds",
+  "salary_min": 45000,
+  "salary_max": 57000,
+  "skills": [
+   "Git",
+   "Power BI",
+   "VBA"
+  ],
+  "offset": 104,
+  "lifetime": 28
+ },
+ {
+  "id": 1342,
+  "title": "Python Developer",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "London",
+  "salary_min": 32000,
+  "salary_max": 49000,
+  "skills": [
+   "Power BI",
+   "PySpark",
+   "Tableau"
+  ],
+  "offset": 52,
+  "lifetime": 39
+ },
+ {
+  "id": 1343,
+  "title": "Data Scientist",
+  "level": "Junior",
+  "company": "Sable Media",
+  "city": "Edinburgh",
+  "salary_min": 32000,
+  "salary_max": 52000,
+  "skills": [
+   "Power BI",
+   "PySpark",
+   "VBA"
+  ],
+  "offset": -20,
+  "lifetime": 39
+ },
+ {
+  "id": 1344,
+  "title": "BI Developer",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "Lyon",
+  "salary_min": 34000,
+  "salary_max": 45000,
+  "skills": [
+   "AWS",
+   "Git",
+   "Tableau"
+  ],
+  "offset": 16,
+  "lifetime": 35
+ },
+ {
+  "id": 1345,
+  "title": "Reporting Analyst",
+  "level": "Mid-level",
+  "company": "Harbour Analytics",
+  "city": "London",
+  "salary_min": 45000,
+  "salary_max": 50000,
+  "skills": [
+   "AWS",
+   "Qlik Sense",
+   "SQL"
+  ],
+  "offset": 46,
+  "lifetime": 34
+ },
+ {
+  "id": 1346,
+  "title": "Python Developer",
+  "level": "Junior",
+  "company": "Riverside Logistics",
+  "city": "Manchester",
+  "salary_min": 42000,
+  "salary_max": 52000,
+  "skills": [
+   "Excel",
+   "Git",
+   "Tableau"
+  ],
+  "offset": 103,
+  "lifetime": 39
+ },
+ {
+  "id": 1347,
+  "title": "Web Developer",
+  "level": "Mid-level",
+  "company": "Harbour Analytics",
+  "city": "Manchester",
+  "salary_min": 51000,
+  "salary_max": 65000,
+  "skills": [
+   "AWS",
+   "Tableau",
+   "VBA"
+  ],
+  "offset": 92,
+  "lifetime": 27
+ },
+ {
+  "id": 1348,
+  "title": "Data Scientist",
+  "level": "Junior",
+  "company": "Northbridge Bank",
+  "city": "Remote",
+  "salary_min": 35000,
+  "salary_max": 44000,
+  "skills": [
+   "AWS",
+   "PySpark",
+   "R"
+  ],
+  "offset": -47,
+  "lifetime": 20
+ },
+ {
+  "id": 1349,
+  "title": "Web Developer",
+  "level": "Mid-level",
+  "company": "Harbour Analytics",
+  "city": "Paris",
+  "salary_min": 47000,
+  "salary_max": 52000,
+  "skills": [
+   "AWS",
+   "Docker",
+   "Power BI"
+  ],
+  "offset": 53,
+  "lifetime": 11
+ },
+ {
+  "id": 1350,
+  "title": "Operations Analyst",
+  "level": "Mid-level",
+  "company": "Copperfield Energy",
+  "city": "London",
+  "salary_min": 55000,
+  "salary_max": 75000,
+  "skills": [
+   "AWS",
+   "Git",
+   "Python"
+  ],
+  "offset": 112,
+  "lifetime": 24
+ },
+ {
+  "id": 1351,
+  "title": "Web Developer",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "London",
+  "salary_min": 42000,
+  "salary_max": 58000,
+  "skills": [
+   "PySpark",
+   "R",
+   "SQL"
+  ],
+  "offset": 87,
+  "lifetime": 13
+ },
+ {
+  "id": 1352,
+  "title": "BI Developer",
+  "level": "Mid-level",
+  "company": "Harbour Analytics",
+  "city": "London",
+  "salary_min": 53000,
+  "salary_max": 60000,
+  "skills": [
+   "AWS",
+   "Excel",
+   "Power BI"
+  ],
+  "offset": -49,
+  "lifetime": 38
+ },
+ {
+  "id": 1353,
+  "title": "Business Analyst",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "Remote",
+  "salary_min": 37000,
+  "salary_max": 55000,
+  "skills": [
+   "Docker",
+   "R",
+   "SQL"
+  ],
+  "offset": -38,
+  "lifetime": 25
+ },
+ {
+  "id": 1354,
+  "title": "Operations Analyst",
+  "level": "Junior",
+  "company": "Kestrel Insurance",
+  "city": "Manchester",
+  "salary_min": 38000,
+  "salary_max": 51000,
+  "skills": [
+   "Docker",
+   "PySpark",
+   "Qlik Sense"
+  ],
+  "offset": -60,
+  "lifetime": 10
+ },
+ {
+  "id": 1355,
+  "title": "Data Scientist",
+  "level": "Junior",
+  "company": "Lumen Health",
+  "city": "London",
+  "salary_min": 35000,
+  "salary_max": 46000,
+  "skills": [
+   "AWS",
+   "Python",
+   "Qlik Sense"
+  ],
+  "offset": -40,
+  "lifetime": 11
+ },
+ {
+  "id": 1356,
+  "title": "Credit Risk Analyst",
+  "level": "Senior",
+  "company": "Meridian Retail",
+  "city": "Lyon",
+  "salary_min": 73000,
+  "salary_max": 89000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "Git"
+  ],
+  "offset": -35,
+  "lifetime": 12
+ },
+ {
+  "id": 1357,
+  "title": "Python Developer",
+  "level": "Senior",
+  "company": "Harbour Analytics",
+  "city": "London",
+  "salary_min": 72000,
+  "salary_max": 92000,
+  "skills": [
+   "Power BI",
+   "Python",
+   "R"
+  ],
+  "offset": -21,
+  "lifetime": 25
+ },
+ {
+  "id": 1358,
+  "title": "Credit Risk Analyst",
+  "level": "Junior",
+  "company": "Riverside Logistics",
+  "city": "London",
+  "salary_min": 34000,
+  "salary_max": 48000,
+  "skills": [
+   "Power BI",
+   "Python",
+   "VBA"
+  ],
+  "offset": 27,
+  "lifetime": 29
+ },
+ {
+  "id": 1359,
+  "title": "BI Developer",
+  "level": "Senior",
+  "company": "Lumen Health",
+  "city": "London",
+  "salary_min": 69000,
+  "salary_max": 81000,
+  "skills": [
+   "Git",
+   "PySpark",
+   "VBA"
+  ],
+  "offset": -44,
+  "lifetime": 24
+ },
+ {
+  "id": 1360,
+  "title": "QA Tester",
+  "level": "Mid-level",
+  "company": "Meridian Retail",
+  "city": "Lyon",
+  "salary_min": 50000,
+  "salary_max": 61000,
+  "skills": [
+   "Docker",
+   "Power BI",
+   "PySpark"
+  ],
+  "offset": 106,
+  "lifetime": 37
+ },
+ {
+  "id": 1361,
+  "title": "Business Analyst",
+  "level": "Junior",
+  "company": "Kestrel Insurance",
+  "city": "Leeds",
+  "salary_min": 40000,
+  "salary_max": 57000,
+  "skills": [
+   "Power BI",
+   "R",
+   "Tableau"
+  ],
+  "offset": 102,
+  "lifetime": 18
+ },
+ {
+  "id": 1362,
+  "title": "Reporting Analyst",
+  "level": "Mid-level",
+  "company": "Northbridge Bank",
+  "city": "Edinburgh",
+  "salary_min": 53000,
+  "salary_max": 64000,
+  "skills": [
+   "AWS",
+   "Excel",
+   "R"
+  ],
+  "offset": 97,
+  "lifetime": 23
+ },
+ {
+  "id": 1363,
+  "title": "BI Developer",
+  "level": "Junior",
+  "company": "Copperfield Energy",
+  "city": "Edinburgh",
+  "salary_min": 33000,
+  "salary_max": 44000,
+  "skills": [
+   "Docker",
+   "Git",
+   "Qlik Sense"
+  ],
+  "offset": 79,
+  "lifetime": 22
+ },
+ {
+  "id": 1364,
+  "title": "Operations Analyst",
+  "level": "Senior",
+  "company": "Atlas Tutors",
+  "city": "Lyon",
+  "salary_min": 73000,
+  "salary_max": 82000,
+  "skills": [
+   "Power BI",
+   "Qlik Sense",
+   "SQL"
+  ],
+  "offset": -52,
+  "lifetime": 38
+ },
+ {
+  "id": 1365,
+  "title": "QA Tester",
+  "level": "Mid-level",
+  "company": "Lumen Health",
+  "city": "Manchester",
+  "salary_min": 56000,
+  "salary_max": 65000,
+  "skills": [
+   "Docker",
+   "Tableau",
+   "VBA"
+  ],
+  "offset": 49,
+  "lifetime": 33
+ },
+ {
+  "id": 1366,
+  "title": "Python Developer",
+  "level": "Junior",
+  "company": "Meridian Retail",
+  "city": "Paris",
+  "salary_min": 30000,
+  "salary_max": 35000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "VBA"
+  ],
+  "offset": 36,
+  "lifetime": 34
+ },
+ {
+  "id": 1367,
+  "title": "Web Developer",
+  "level": "Junior",
+  "company": "Copperfield Energy",
+  "city": "London",
+  "salary_min": 42000,
+  "salary_max": 58000,
+  "skills": [
+   "Docker",
+   "Git",
+   "Power BI"
+  ],
+  "offset": -57,
+  "lifetime": 30
+ },
+ {
+  "id": 1368,
+  "title": "BI Developer",
+  "level": "Mid-level",
+  "company": "Lumen Health",
+  "city": "Remote",
+  "salary_min": 49000,
+  "salary_max": 64000,
+  "skills": [
+   "Python",
+   "Qlik Sense",
+   "R"
+  ],
+  "offset": 114,
+  "lifetime": 28
+ },
+ {
+  "id": 1369,
+  "title": "Web Developer",
+  "level": "Senior",
+  "company": "Atlas Tutors",
+  "city": "Paris",
+  "salary_min": 77000,
+  "salary_max": 95000,
+  "skills": [
+   "AWS",
+   "Git",
+   "Power BI"
+  ],
+  "offset": -1,
+  "lifetime": 38
+ },
+ {
+  "id": 1370,
+  "title": "Data Scientist",
+  "level": "Mid-level",
+  "company": "Lumen Health",
+  "city": "Manchester",
+  "salary_min": 56000,
+  "salary_max": 66000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "PySpark"
+  ],
+  "offset": -52,
+  "lifetime": 21
+ },
+ {
+  "id": 1371,
+  "title": "Junior Data Engineer",
+  "level": "Senior",
+  "company": "Atlas Tutors",
+  "city": "Edinburgh",
+  "salary_min": 69000,
+  "salary_max": 82000,
+  "skills": [
+   "Git",
+   "Power BI",
+   "R"
+  ],
+  "offset": -15,
+  "lifetime": 23
+ },
+ {
+  "id": 1372,
+  "title": "Credit Risk Analyst",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "London",
+  "salary_min": 32000,
+  "salary_max": 42000,
+  "skills": [
+   "Excel",
+   "PySpark",
+   "VBA"
+  ],
+  "offset": 79,
+  "lifetime": 35
+ },
+ {
+  "id": 1373,
+  "title": "Business Analyst",
+  "level": "Mid-level",
+  "company": "Kestrel Insurance",
+  "city": "Paris",
+  "salary_min": 51000,
+  "salary_max": 63000,
+  "skills": [
+   "Docker",
+   "Excel",
+   "Python"
+  ],
+  "offset": 111,
+  "lifetime": 11
+ },
+ {
+  "id": 1374,
+  "title": "Web Developer",
+  "level": "Mid-level",
+  "company": "Meridian Retail",
+  "city": "Paris",
+  "salary_min": 56000,
+  "salary_max": 63000,
+  "skills": [
+   "Excel",
+   "SQL",
+   "Tableau"
+  ],
+  "offset": -27,
+  "lifetime": 11
+ },
+ {
+  "id": 1375,
+  "title": "Python Developer",
+  "level": "Senior",
+  "company": "Copperfield Energy",
+  "city": "Paris",
+  "salary_min": 69000,
+  "salary_max": 75000,
+  "skills": [
+   "Power BI",
+   "Qlik Sense",
+   "SQL"
+  ],
+  "offset": 73,
+  "lifetime": 10
+ },
+ {
+  "id": 1376,
+  "title": "Credit Risk Analyst",
+  "level": "Senior",
+  "company": "Sable Media",
+  "city": "Paris",
+  "salary_min": 76000,
+  "salary_max": 83000,
+  "skills": [
+   "Git",
+   "R",
+   "Tableau"
+  ],
+  "offset": 112,
+  "lifetime": 36
+ },
+ {
+  "id": 1377,
+  "title": "QA Tester",
+  "level": "Senior",
+  "company": "Harbour Analytics",
+  "city": "Leeds",
+  "salary_min": 75000,
+  "salary_max": 94000,
+  "skills": [
+   "PySpark",
+   "Qlik Sense",
+   "VBA"
+  ],
+  "offset": 4,
+  "lifetime": 33
+ },
+ {
+  "id": 1378,
+  "title": "Reporting Analyst",
+  "level": "Junior",
+  "company": "Riverside Logistics",
+  "city": "Remote",
+  "salary_min": 38000,
+  "salary_max": 56000,
+  "skills": [
+   "Docker",
+   "Git",
+   "Tableau"
+  ],
+  "offset": 53,
+  "lifetime": 27
+ },
+ {
+  "id": 1379,
+  "title": "Credit Risk Analyst",
+  "level": "Junior",
+  "company": "Copperfield Energy",
+  "city": "Edinburgh",
+  "salary_min": 30000,
+  "salary_max": 41000,
+  "skills": [
+   "Docker",
+   "SQL",
+   "Tableau"
+  ],
+  "offset": -52,
+  "lifetime": 14
+ },
+ {
+  "id": 1380,
+  "title": "QA Tester",
+  "level": "Senior",
+  "company": "Copperfield Energy",
+  "city": "Remote",
+  "salary_min": 67000,
+  "salary_max": 75000,
+  "skills": [
+   "Power BI",
+   "PySpark",
+   "Tableau"
+  ],
+  "offset": -46,
+  "lifetime": 32
+ },
+ {
+  "id": 1381,
+  "title": "Python Developer",
+  "level": "Senior",
+  "company": "Meridian Retail",
+  "city": "Edinburgh",
+  "salary_min": 69000,
+  "salary_max": 82000,
+  "skills": [
+   "PySpark",
+   "Python",
+   "VBA"
+  ],
+  "offset": 64,
+  "lifetime": 30
+ },
+ {
+  "id": 1382,
+  "title": "BI Developer",
+  "level": "Senior",
+  "company": "Kestrel Insurance",
+  "city": "Leeds",
+  "salary_min": 72000,
+  "salary_max": 89000,
+  "skills": [
+   "Python",
+   "R",
+   "Tableau"
+  ],
+  "offset": -1,
+  "lifetime": 19
+ },
+ {
+  "id": 1383,
+  "title": "Credit Risk Analyst",
+  "level": "Junior",
+  "company": "Copperfield Energy",
+  "city": "Paris",
+  "salary_min": 33000,
+  "salary_max": 38000,
+  "skills": [
+   "Git",
+   "Power BI",
+   "VBA"
+  ],
+  "offset": -56,
+  "lifetime": 39
+ },
+ {
+  "id": 1384,
+  "title": "Credit Risk Analyst",
+  "level": "Junior",
+  "company": "Atlas Tutors",
+  "city": "Lyon",
+  "salary_min": 35000,
+  "salary_max": 46000,
+  "skills": [
+   "Excel",
+   "Python",
+   "Qlik Sense"
+  ],
+  "offset": 48,
+  "lifetime": 16
+ },
+ {
+  "id": 1385,
+  "title": "Data Analyst",
+  "level": "Senior",
+  "company": "Meridian Retail",
+  "city": "Lyon",
+  "salary_min": 70000,
+  "salary_max": 84000,
+  "skills": [
+   "AWS",
+   "PySpark",
+   "VBA"
+  ],
+  "offset": -53,
+  "lifetime": 39
+ },
+ {
+  "id": 1386,
+  "title": "BI Developer",
+  "level": "Mid-level",
+  "company": "Meridian Retail",
+  "city": "Edinburgh",
+  "salary_min": 48000,
+  "salary_max": 65000,
+  "skills": [
+   "Excel",
+   "R",
+   "VBA"
+  ],
+  "offset": 91,
+  "lifetime": 12
+ },
+ {
+  "id": 1387,
+  "title": "Reporting Analyst",
+  "level": "Junior",
+  "company": "Riverside Logistics",
+  "city": "Lyon",
+  "salary_min": 37000,
+  "salary_max": 47000,
+  "skills": [
+   "AWS",
+   "Power BI",
+   "PySpark"
+  ],
+  "offset": 14,
+  "lifetime": 25
+ },
+ {
+  "id": 1388,
+  "title": "Business Analyst",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "Paris",
+  "salary_min": 36000,
+  "salary_max": 46000,
+  "skills": [
+   "Docker",
+   "Power BI",
+   "Tableau"
+  ],
+  "offset": 119,
+  "lifetime": 32
+ },
+ {
+  "id": 1389,
+  "title": "Business Analyst",
+  "level": "Mid-level",
+  "company": "Riverside Logistics",
+  "city": "Remote",
+  "salary_min": 47000,
+  "salary_max": 59000,
+  "skills": [
+   "PySpark",
+   "R",
+   "SQL"
+  ],
+  "offset": 27,
+  "lifetime": 25
+ },
+ {
+  "id": 1390,
+  "title": "Reporting Analyst",
+  "level": "Mid-level",
+  "company": "Riverside Logistics",
+  "city": "Leeds",
+  "salary_min": 48000,
+  "salary_max": 67000,
+  "skills": [
+   "Excel",
+   "Git",
+   "Python"
+  ],
+  "offset": 38,
+  "lifetime": 25
+ },
+ {
+  "id": 1391,
+  "title": "Business Analyst",
+  "level": "Junior",
+  "company": "Harbour Analytics",
+  "city": "Edinburgh",
+  "salary_min": 39000,
+  "salary_max": 56000,
+  "skills": [
+   "Git",
+   "Power BI",
+   "Python"
+  ],
+  "offset": 43,
+  "lifetime": 12
+ },
+ {
+  "id": 1392,
+  "title": "Credit Risk Analyst",
+  "level": "Mid-level",
+  "company": "Harbour Analytics",
+  "city": "Paris",
+  "salary_min": 52000,
+  "salary_max": 61000,
+  "skills": [
+   "Excel",
+   "Power BI",
+   "VBA"
+  ],
+  "offset": -23,
+  "lifetime": 23
+ },
+ {
+  "id": 1393,
+  "title": "Data Scientist",
+  "level": "Junior",
+  "company": "Copperfield Energy",
+  "city": "Manchester",
+  "salary_min": 35000,
+  "salary_max": 46000,
+  "skills": [
+   "Excel",
+   "R",
+   "SQL"
+  ],
+  "offset": -23,
+  "lifetime": 15
+ },
+ {
+  "id": 1394,
+  "title": "Data Analyst",
+  "level": "Senior",
+  "company": "Northbridge Bank",
+  "city": "Manchester",
+  "salary_min": 66000,
+  "salary_max": 81000,
+  "skills": [
+   "AWS",
+   "Power BI",
+   "R"
+  ],
+  "offset": 1,
+  "lifetime": 17
+ },
+ {
+  "id": 1395,
+  "title": "Data Scientist",
+  "level": "Mid-level",
+  "company": "Northbridge Bank",
+  "city": "London",
+  "salary_min": 54000,
+  "salary_max": 65000,
+  "skills": [
+   "Python",
+   "Qlik Sense",
+   "Tableau"
+  ],
+  "offset": 13,
+  "lifetime": 39
+ },
+ {
+  "id": 1396,
+  "title": "Web Developer",
+  "level": "Mid-level",
+  "company": "Atlas Tutors",
+  "city": "Paris",
+  "salary_min": 57000,
+  "salary_max": 63000,
+  "skills": [
+   "Git",
+   "Qlik Sense",
+   "Tableau"
+  ],
+  "offset": -44,
+  "lifetime": 21
+ },
+ {
+  "id": 1397,
+  "title": "Operations Analyst",
+  "level": "Junior",
+  "company": "Kestrel Insurance",
+  "city": "Lyon",
+  "salary_min": 38000,
+  "salary_max": 57000,
+  "skills": [
+   "PySpark",
+   "SQL",
+   "VBA"
+  ],
+  "offset": -46,
+  "lifetime": 39
+ },
+ {
+  "id": 1398,
+  "title": "Structured Finance Analyst",
+  "level": "Junior",
+  "company": "Lumen Health",
+  "city": "Paris",
+  "salary_min": 35000,
+  "salary_max": 45000,
+  "skills": [
+   "Docker",
+   "PySpark",
+   "Tableau"
+  ],
+  "offset": 12,
+  "lifetime": 17
+ },
+ {
+  "id": 1399,
+  "title": "BI Developer",
+  "level": "Senior",
+  "company": "Sable Media",
+  "city": "Lyon",
+  "salary_min": 67000,
+  "salary_max": 86000,
+  "skills": [
+   "Docker",
+   "Power BI",
+   "VBA"
+  ],
+  "offset": 38,
+  "lifetime": 33
+ },
+ {
+  "id": 1400,
+  "title": "Python Developer",
+  "level": "Senior",
+  "company": "Lumen Health",
+  "city": "Leeds",
+  "salary_min": 76000,
+  "salary_max": 83000,
+  "skills": [
+   "Git",
+   "Qlik Sense",
+   "SQL"
+  ],
+  "offset": 81,
+  "lifetime": 40
+ }
+]

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Quotes (JavaScript){% endblock %}
+{% block content %}
+<h1>Quotes, built by JavaScript</h1>
+<p class="hint">This page arrives empty. JavaScript in the browser adds the quotes.</p>
+<section id="quotes"></section>
+<ul class="pager">
+  {% if page > 1 %}<li class="previous"><a href="/quotes/js/page/{{ page - 1 }}/">previous</a></li>{% endif %}
+  {% if page < pages %}<li class="next"><a href="/quotes/js/page/{{ page + 1 }}/">next</a></li>{% endif %}
+</ul>
+<script>
+var data = {{ data|safe }};
+var box = document.getElementById("quotes");
+data.forEach(function (q) {
+  var div = document.createElement("div");
+  div.className = "quote";
+  div.innerHTML = '<span class="text">“' + q.text + '”</span>' +
+    '<span class="by">by <small class="author">' + q.author + '</small></span>' +
+    '<div class="tags">Tags: ' + q.tags.map(function (t) {
+      return '<a class="tag" href="/quotes/tag/' + t + '/">' + t + '</a>'; }).join(" ") + '</div>';
+  box.appendChild(div);
+});
+</script>
+{% endblock %}

@@ -1,0 +1,2 @@
+questions
+{"author": "Rashid Noor", "text": "The wrong answer shows you where to look.", "tags": ["failure", "questions"]}

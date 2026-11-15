@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Price Watch{% endblock %}
+{% block content %}
+<h1>Price Watch</h1>
+<p class="site-date">Prices on <time datetime="{{ day.isoformat() }}">{{ day.isoformat() }}</time></p>
+<table class="data-table" id="prices">
+  <thead><tr><th>Product</th><th>Price</th><th>Change since yesterday</th></tr></thead>
+  <tbody>{% for r in rows %}
+    <tr data-id="{{ r.id }}"><td><a href="/prices/item/{{ r.id }}/">{{ r.name }}</a></td><td class="price">£{{ '%.2f'|format(r.price) }}</td><td class="change">{{ '%+.2f'|format(r.change) }}</td></tr>{% endfor %}
+  </tbody>
+</table>
+{% endblock %}

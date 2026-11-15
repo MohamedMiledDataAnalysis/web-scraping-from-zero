@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Product{% endblock %}
+{% block content %}
+<div id="product" data-id="{{ pid }}"><p>Loading...</p></div>
+<script>
+fetch("/shop/api/product/{{ pid }}").then(function (r) { return r.json(); }).then(function (p) {
+  document.getElementById("product").innerHTML =
+    '<h1 class="name">' + p.name + '</h1><p class="sku">' + p.sku + '</p>' +
+    '<p class="price">£' + p.price.toFixed(2) + '</p><p class="rating">' + p.rating +
+    ' / 5 (' + p.reviews + ' reviews)</p><p class="stock">' + (p.in_stock ? 'In stock' : 'Out of stock') + '</p>';
+});
+</script>
+{% endblock %}

@@ -1,0 +1,58 @@
+[
+ {
+  "name": "Ada Fernhill",
+  "slug": "ada-fernhill",
+  "born": "1871",
+  "place": "Coldharbour, England",
+  "bio": "Ada Fernhill was a schoolteacher who wrote short essays on patience and work."
+ },
+ {
+  "name": "Tomas Reyna",
+  "slug": "tomas-reyna",
+  "born": "1902",
+  "place": "Valparaiso, Chile",
+  "bio": "Tomas Reyna was a sailor and poet who wrote about the sea and friendship."
+ },
+ {
+  "name": "Mira Okonkwo",
+  "slug": "mira-okonkwo",
+  "born": "1948",
+  "place": "Enugu, Nigeria",
+  "bio": "Mira Okonkwo is an engineer known for her talks on curiosity and failure."
+ },
+ {
+  "name": "Henrik Sall",
+  "slug": "henrik-sall",
+  "born": "1889",
+  "place": "Bergen, Norway",
+  "bio": "Henrik Sall was a bookbinder who kept notebooks of everyday sayings."
+ },
+ {
+  "name": "June Albright",
+  "slug": "june-albright",
+  "born": "1935",
+  "place": "Halifax, Canada",
+  "bio": "June Albright was a radio host famous for her morning advice programme."
+ },
+ {
+  "name": "Rashid Noor",
+  "slug": "rashid-noor",
+  "born": "1960",
+  "place": "Tunis, Tunisia",
+  "bio": "Rashid Noor is a mathematician who writes about learning and mistakes."
+ },
+ {
+  "name": "Celeste Moreau",
+  "slug": "celeste-moreau",
+  "born": "1912",
+  "place": "Lyon, France",
+  "bio": "Celeste Moreau was a chef who wrote about cooking, time and generosity."
+ },
+ {
+  "name": "Walter Pike",
+  "slug": "walter-pike",
+  "born": "1924",
+  "place": "Leeds, England",
+  "bio": "Walter Pike was a carpenter and the author of a small book of maxims."
+ }
+]

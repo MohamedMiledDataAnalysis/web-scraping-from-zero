@@ -1,0 +1,2 @@
+The Broken Forest 26.93 19 True
+<class 'str'> <class 'float'> <class 'int'> <class 'bool'>

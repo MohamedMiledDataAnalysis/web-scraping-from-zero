@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}{{ heading }}{% endblock %}
+{% block content %}
+<h1>{{ heading }}</h1>
+<div class="quotes-layout">
+<section class="quote-list">
+{% for q in quotes %}
+  <div class="quote" data-id="{{ q.id }}">
+    <span class="text">“{{ q.text }}”</span>
+    <span class="by">by <small class="author">{{ q.author }}</small>
+      <a href="/quotes/author/{{ authors[q.author].slug }}/">(about)</a></span>
+    <div class="tags">Tags:
+      {% for t in q.tags %}<a class="tag" href="/quotes/tag/{{ t }}/">{{ t }}</a>{% endfor %}
+    </div>
+  </div>
+{% endfor %}
+<ul class="pager">
+  {% if page > 1 %}<li class="previous"><a href="{{ base }}page/{{ page - 1 }}/">previous</a></li>{% endif %}
+  {% if page < pages %}<li class="next"><a href="{{ base }}page/{{ page + 1 }}/">next</a></li>{% endif %}
+</ul>
+</section>
+<aside class="tag-box"><h2>Tags</h2>
+{% for t in tags %}<a class="tag" href="/quotes/tag/{{ t }}/">{{ t }}</a> {% endfor %}
+</aside>
+</div>
+{% endblock %}

@@ -1,0 +1,1202 @@
+[
+ {
+  "id": 1,
+  "sku": "PG-0001",
+  "name": "Pro Kettle",
+  "category": "Kitchen",
+  "price": 59.74,
+  "rating": 4.7,
+  "reviews": 446,
+  "in_stock": false
+ },
+ {
+  "id": 2,
+  "sku": "PG-0002",
+  "name": "Mini Kettle",
+  "category": "Kitchen",
+  "price": 177.31,
+  "rating": 4.4,
+  "reviews": 26,
+  "in_stock": true
+ },
+ {
+  "id": 3,
+  "sku": "PG-0003",
+  "name": "Compact Kettle",
+  "category": "Kitchen",
+  "price": 44.06,
+  "rating": 4.0,
+  "reviews": 498,
+  "in_stock": true
+ },
+ {
+  "id": 4,
+  "sku": "PG-0004",
+  "name": "Smart Kettle",
+  "category": "Kitchen",
+  "price": 67.03,
+  "rating": 3.0,
+  "reviews": 136,
+  "in_stock": true
+ },
+ {
+  "id": 5,
+  "sku": "PG-0005",
+  "name": "Classic Kettle",
+  "category": "Kitchen",
+  "price": 65.52,
+  "rating": 4.7,
+  "reviews": 647,
+  "in_stock": true
+ },
+ {
+  "id": 6,
+  "sku": "PG-0006",
+  "name": "Deluxe Kettle",
+  "category": "Kitchen",
+  "price": 81.76,
+  "rating": 2.9,
+  "reviews": 356,
+  "in_stock": true
+ },
+ {
+  "id": 7,
+  "sku": "PG-0007",
+  "name": "Eco Toaster",
+  "category": "Kitchen",
+  "price": 117.15,
+  "rating": 4.1,
+  "reviews": 518,
+  "in_stock": true
+ },
+ {
+  "id": 8,
+  "sku": "PG-0008",
+  "name": "Classic Toaster",
+  "category": "Kitchen",
+  "price": 90.52,
+  "rating": 3.0,
+  "reviews": 771,
+  "in_stock": false
+ },
+ {
+  "id": 9,
+  "sku": "PG-0009",
+  "name": "Travel Toaster",
+  "category": "Kitchen",
+  "price": 78.58,
+  "rating": 3.5,
+  "reviews": 406,
+  "in_stock": true
+ },
+ {
+  "id": 10,
+  "sku": "PG-0010",
+  "name": "Smart Toaster",
+  "category": "Kitchen",
+  "price": 134.32,
+  "rating": 2.7,
+  "reviews": 6,
+  "in_stock": true
+ },
+ {
+  "id": 11,
+  "sku": "PG-0011",
+  "name": "Compact Toaster",
+  "category": "Kitchen",
+  "price": 167.99,
+  "rating": 4.5,
+  "reviews": 66,
+  "in_stock": false
+ },
+ {
+  "id": 12,
+  "sku": "PG-0012",
+  "name": "Mini Toaster",
+  "category": "Kitchen",
+  "price": 122.2,
+  "rating": 4.1,
+  "reviews": 713,
+  "in_stock": true
+ },
+ {
+  "id": 13,
+  "sku": "PG-0013",
+  "name": "Travel Blender",
+  "category": "Kitchen",
+  "price": 39.7,
+  "rating": 3.9,
+  "reviews": 301,
+  "in_stock": true
+ },
+ {
+  "id": 14,
+  "sku": "PG-0014",
+  "name": "Compact Blender",
+  "category": "Kitchen",
+  "price": 141.31,
+  "rating": 4.7,
+  "reviews": 279,
+  "in_stock": true
+ },
+ {
+  "id": 15,
+  "sku": "PG-0015",
+  "name": "Mini Blender",
+  "category": "Kitchen",
+  "price": 174.81,
+  "rating": 3.1,
+  "reviews": 90,
+  "in_stock": true
+ },
+ {
+  "id": 16,
+  "sku": "PG-0016",
+  "name": "Smart Blender",
+  "category": "Kitchen",
+  "price": 140.96,
+  "rating": 3.3,
+  "reviews": 99,
+  "in_stock": true
+ },
+ {
+  "id": 17,
+  "sku": "PG-0017",
+  "name": "Pro Blender",
+  "category": "Kitchen",
+  "price": 58.96,
+  "rating": 4.4,
+  "reviews": 886,
+  "in_stock": true
+ },
+ {
+  "id": 18,
+  "sku": "PG-0018",
+  "name": "Classic Blender",
+  "category": "Kitchen",
+  "price": 187.14,
+  "rating": 3.4,
+  "reviews": 51,
+  "in_stock": true
+ },
+ {
+  "id": 19,
+  "sku": "PG-0019",
+  "name": "Pro Coffee Grinder",
+  "category": "Kitchen",
+  "price": 165.23,
+  "rating": 3.4,
+  "reviews": 1,
+  "in_stock": false
+ },
+ {
+  "id": 20,
+  "sku": "PG-0020",
+  "name": "Travel Coffee Grinder",
+  "category": "Kitchen",
+  "price": 127.14,
+  "rating": 2.7,
+  "reviews": 706,
+  "in_stock": false
+ },
+ {
+  "id": 21,
+  "sku": "PG-0021",
+  "name": "Classic Coffee Grinder",
+  "category": "Kitchen",
+  "price": 44.79,
+  "rating": 3.3,
+  "reviews": 393,
+  "in_stock": true
+ },
+ {
+  "id": 22,
+  "sku": "PG-0022",
+  "name": "Smart Coffee Grinder",
+  "category": "Kitchen",
+  "price": 126.47,
+  "rating": 4.5,
+  "reviews": 893,
+  "in_stock": true
+ },
+ {
+  "id": 23,
+  "sku": "PG-0023",
+  "name": "Deluxe Coffee Grinder",
+  "category": "Kitchen",
+  "price": 53.94,
+  "rating": 4.2,
+  "reviews": 697,
+  "in_stock": true
+ },
+ {
+  "id": 24,
+  "sku": "PG-0024",
+  "name": "Compact Coffee Grinder",
+  "category": "Kitchen",
+  "price": 92.65,
+  "rating": 2.6,
+  "reviews": 651,
+  "in_stock": true
+ },
+ {
+  "id": 25,
+  "sku": "PG-0025",
+  "name": "Eco Scale",
+  "category": "Kitchen",
+  "price": 28.94,
+  "rating": 4.6,
+  "reviews": 703,
+  "in_stock": true
+ },
+ {
+  "id": 26,
+  "sku": "PG-0026",
+  "name": "Pro Scale",
+  "category": "Kitchen",
+  "price": 151.38,
+  "rating": 4.2,
+  "reviews": 744,
+  "in_stock": true
+ },
+ {
+  "id": 27,
+  "sku": "PG-0027",
+  "name": "Travel Scale",
+  "category": "Kitchen",
+  "price": 14.3,
+  "rating": 3.0,
+  "reviews": 233,
+  "in_stock": true
+ },
+ {
+  "id": 28,
+  "sku": "PG-0028",
+  "name": "Classic Scale",
+  "category": "Kitchen",
+  "price": 21.34,
+  "rating": 3.6,
+  "reviews": 285,
+  "in_stock": true
+ },
+ {
+  "id": 29,
+  "sku": "PG-0029",
+  "name": "Smart Scale",
+  "category": "Kitchen",
+  "price": 65.62,
+  "rating": 2.5,
+  "reviews": 123,
+  "in_stock": true
+ },
+ {
+  "id": 30,
+  "sku": "PG-0030",
+  "name": "Mini Scale",
+  "category": "Kitchen",
+  "price": 106.54,
+  "rating": 3.2,
+  "reviews": 177,
+  "in_stock": false
+ },
+ {
+  "id": 31,
+  "sku": "PG-0031",
+  "name": "Classic Desk Lamp",
+  "category": "Office",
+  "price": 133.85,
+  "rating": 3.6,
+  "reviews": 332,
+  "in_stock": true
+ },
+ {
+  "id": 32,
+  "sku": "PG-0032",
+  "name": "Travel Desk Lamp",
+  "category": "Office",
+  "price": 118.16,
+  "rating": 4.6,
+  "reviews": 488,
+  "in_stock": true
+ },
+ {
+  "id": 33,
+  "sku": "PG-0033",
+  "name": "Compact Desk Lamp",
+  "category": "Office",
+  "price": 42.63,
+  "rating": 4.8,
+  "reviews": 159,
+  "in_stock": true
+ },
+ {
+  "id": 34,
+  "sku": "PG-0034",
+  "name": "Mini Desk Lamp",
+  "category": "Office",
+  "price": 124.73,
+  "rating": 4.2,
+  "reviews": 635,
+  "in_stock": true
+ },
+ {
+  "id": 35,
+  "sku": "PG-0035",
+  "name": "Smart Desk Lamp",
+  "category": "Office",
+  "price": 159.79,
+  "rating": 3.6,
+  "reviews": 118,
+  "in_stock": true
+ },
+ {
+  "id": 36,
+  "sku": "PG-0036",
+  "name": "Pro Desk Lamp",
+  "category": "Office",
+  "price": 98.42,
+  "rating": 3.4,
+  "reviews": 320,
+  "in_stock": true
+ },
+ {
+  "id": 37,
+  "sku": "PG-0037",
+  "name": "Travel Notebook",
+  "category": "Office",
+  "price": 182.52,
+  "rating": 3.5,
+  "reviews": 379,
+  "in_stock": true
+ },
+ {
+  "id": 38,
+  "sku": "PG-0038",
+  "name": "Eco Notebook",
+  "category": "Office",
+  "price": 174.67,
+  "rating": 3.1,
+  "reviews": 161,
+  "in_stock": true
+ },
+ {
+  "id": 39,
+  "sku": "PG-0039",
+  "name": "Classic Notebook",
+  "category": "Office",
+  "price": 134.42,
+  "rating": 4.9,
+  "reviews": 592,
+  "in_stock": true
+ },
+ {
+  "id": 40,
+  "sku": "PG-0040",
+  "name": "Pro Notebook",
+  "category": "Office",
+  "price": 142.18,
+  "rating": 3.3,
+  "reviews": 704,
+  "in_stock": true
+ },
+ {
+  "id": 41,
+  "sku": "PG-0041",
+  "name": "Mini Notebook",
+  "category": "Office",
+  "price": 5.55,
+  "rating": 2.7,
+  "reviews": 175,
+  "in_stock": true
+ },
+ {
+  "id": 42,
+  "sku": "PG-0042",
+  "name": "Compact Notebook",
+  "category": "Office",
+  "price": 124.17,
+  "rating": 2.7,
+  "reviews": 474,
+  "in_stock": true
+ },
+ {
+  "id": 43,
+  "sku": "PG-0043",
+  "name": "Mini Monitor Stand",
+  "category": "Office",
+  "price": 94.33,
+  "rating": 3.9,
+  "reviews": 666,
+  "in_stock": true
+ },
+ {
+  "id": 44,
+  "sku": "PG-0044",
+  "name": "Smart Monitor Stand",
+  "category": "Office",
+  "price": 143.16,
+  "rating": 2.7,
+  "reviews": 423,
+  "in_stock": true
+ },
+ {
+  "id": 45,
+  "sku": "PG-0045",
+  "name": "Travel Monitor Stand",
+  "category": "Office",
+  "price": 56.32,
+  "rating": 4.8,
+  "reviews": 291,
+  "in_stock": true
+ },
+ {
+  "id": 46,
+  "sku": "PG-0046",
+  "name": "Compact Monitor Stand",
+  "category": "Office",
+  "price": 172.55,
+  "rating": 3.4,
+  "reviews": 322,
+  "in_stock": true
+ },
+ {
+  "id": 47,
+  "sku": "PG-0047",
+  "name": "Classic Monitor Stand",
+  "category": "Office",
+  "price": 179.85,
+  "rating": 3.8,
+  "reviews": 716,
+  "in_stock": true
+ },
+ {
+  "id": 48,
+  "sku": "PG-0048",
+  "name": "Pro Monitor Stand",
+  "category": "Office",
+  "price": 114.85,
+  "rating": 3.9,
+  "reviews": 190,
+  "in_stock": true
+ },
+ {
+  "id": 49,
+  "sku": "PG-0049",
+  "name": "Deluxe Stapler",
+  "category": "Office",
+  "price": 45.1,
+  "rating": 2.6,
+  "reviews": 127,
+  "in_stock": true
+ },
+ {
+  "id": 50,
+  "sku": "PG-0050",
+  "name": "Eco Stapler",
+  "category": "Office",
+  "price": 41.59,
+  "rating": 4.6,
+  "reviews": 764,
+  "in_stock": true
+ },
+ {
+  "id": 51,
+  "sku": "PG-0051",
+  "name": "Compact Stapler",
+  "category": "Office",
+  "price": 116.98,
+  "rating": 3.9,
+  "reviews": 440,
+  "in_stock": true
+ },
+ {
+  "id": 52,
+  "sku": "PG-0052",
+  "name": "Mini Stapler",
+  "category": "Office",
+  "price": 139.11,
+  "rating": 3.9,
+  "reviews": 258,
+  "in_stock": true
+ },
+ {
+  "id": 53,
+  "sku": "PG-0053",
+  "name": "Classic Stapler",
+  "category": "Office",
+  "price": 6.41,
+  "rating": 4.0,
+  "reviews": 664,
+  "in_stock": true
+ },
+ {
+  "id": 54,
+  "sku": "PG-0054",
+  "name": "Smart Stapler",
+  "category": "Office",
+  "price": 37.18,
+  "rating": 3.5,
+  "reviews": 286,
+  "in_stock": true
+ },
+ {
+  "id": 55,
+  "sku": "PG-0055",
+  "name": "Compact Chair Cushion",
+  "category": "Office",
+  "price": 166.34,
+  "rating": 3.5,
+  "reviews": 537,
+  "in_stock": false
+ },
+ {
+  "id": 56,
+  "sku": "PG-0056",
+  "name": "Classic Chair Cushion",
+  "category": "Office",
+  "price": 38.74,
+  "rating": 2.6,
+  "reviews": 460,
+  "in_stock": true
+ },
+ {
+  "id": 57,
+  "sku": "PG-0057",
+  "name": "Travel Chair Cushion",
+  "category": "Office",
+  "price": 134.46,
+  "rating": 4.9,
+  "reviews": 65,
+  "in_stock": true
+ },
+ {
+  "id": 58,
+  "sku": "PG-0058",
+  "name": "Pro Chair Cushion",
+  "category": "Office",
+  "price": 161.78,
+  "rating": 3.9,
+  "reviews": 400,
+  "in_stock": true
+ },
+ {
+  "id": 59,
+  "sku": "PG-0059",
+  "name": "Smart Chair Cushion",
+  "category": "Office",
+  "price": 119.81,
+  "rating": 4.9,
+  "reviews": 868,
+  "in_stock": true
+ },
+ {
+  "id": 60,
+  "sku": "PG-0060",
+  "name": "Mini Chair Cushion",
+  "category": "Office",
+  "price": 137.83,
+  "rating": 4.9,
+  "reviews": 15,
+  "in_stock": true
+ },
+ {
+  "id": 61,
+  "sku": "PG-0061",
+  "name": "Travel Headphones",
+  "category": "Audio",
+  "price": 158.11,
+  "rating": 4.4,
+  "reviews": 320,
+  "in_stock": true
+ },
+ {
+  "id": 62,
+  "sku": "PG-0062",
+  "name": "Deluxe Headphones",
+  "category": "Audio",
+  "price": 6.47,
+  "rating": 3.0,
+  "reviews": 435,
+  "in_stock": true
+ },
+ {
+  "id": 63,
+  "sku": "PG-0063",
+  "name": "Mini Headphones",
+  "category": "Audio",
+  "price": 137.02,
+  "rating": 3.9,
+  "reviews": 375,
+  "in_stock": true
+ },
+ {
+  "id": 64,
+  "sku": "PG-0064",
+  "name": "Compact Headphones",
+  "category": "Audio",
+  "price": 33.61,
+  "rating": 4.3,
+  "reviews": 283,
+  "in_stock": true
+ },
+ {
+  "id": 65,
+  "sku": "PG-0065",
+  "name": "Eco Headphones",
+  "category": "Audio",
+  "price": 5.16,
+  "rating": 4.6,
+  "reviews": 386,
+  "in_stock": true
+ },
+ {
+  "id": 66,
+  "sku": "PG-0066",
+  "name": "Pro Headphones",
+  "category": "Audio",
+  "price": 124.5,
+  "rating": 4.0,
+  "reviews": 344,
+  "in_stock": true
+ },
+ {
+  "id": 67,
+  "sku": "PG-0067",
+  "name": "Classic Speaker",
+  "category": "Audio",
+  "price": 42.51,
+  "rating": 4.8,
+  "reviews": 231,
+  "in_stock": true
+ },
+ {
+  "id": 68,
+  "sku": "PG-0068",
+  "name": "Pro Speaker",
+  "category": "Audio",
+  "price": 58.61,
+  "rating": 3.1,
+  "reviews": 618,
+  "in_stock": true
+ },
+ {
+  "id": 69,
+  "sku": "PG-0069",
+  "name": "Deluxe Speaker",
+  "category": "Audio",
+  "price": 131.82,
+  "rating": 2.8,
+  "reviews": 217,
+  "in_stock": false
+ },
+ {
+  "id": 70,
+  "sku": "PG-0070",
+  "name": "Compact Speaker",
+  "category": "Audio",
+  "price": 167.08,
+  "rating": 3.3,
+  "reviews": 550,
+  "in_stock": true
+ },
+ {
+  "id": 71,
+  "sku": "PG-0071",
+  "name": "Eco Speaker",
+  "category": "Audio",
+  "price": 41.46,
+  "rating": 2.8,
+  "reviews": 127,
+  "in_stock": true
+ },
+ {
+  "id": 72,
+  "sku": "PG-0072",
+  "name": "Smart Speaker",
+  "category": "Audio",
+  "price": 20.67,
+  "rating": 4.8,
+  "reviews": 891,
+  "in_stock": true
+ },
+ {
+  "id": 73,
+  "sku": "PG-0073",
+  "name": "Mini Radio",
+  "category": "Audio",
+  "price": 142.22,
+  "rating": 4.7,
+  "reviews": 206,
+  "in_stock": true
+ },
+ {
+  "id": 74,
+  "sku": "PG-0074",
+  "name": "Classic Radio",
+  "category": "Audio",
+  "price": 93.74,
+  "rating": 2.7,
+  "reviews": 318,
+  "in_stock": true
+ },
+ {
+  "id": 75,
+  "sku": "PG-0075",
+  "name": "Travel Radio",
+  "category": "Audio",
+  "price": 7.43,
+  "rating": 4.0,
+  "reviews": 119,
+  "in_stock": true
+ },
+ {
+  "id": 76,
+  "sku": "PG-0076",
+  "name": "Eco Radio",
+  "category": "Audio",
+  "price": 138.24,
+  "rating": 3.3,
+  "reviews": 710,
+  "in_stock": true
+ },
+ {
+  "id": 77,
+  "sku": "PG-0077",
+  "name": "Pro Radio",
+  "category": "Audio",
+  "price": 166.89,
+  "rating": 3.2,
+  "reviews": 215,
+  "in_stock": true
+ },
+ {
+  "id": 78,
+  "sku": "PG-0078",
+  "name": "Compact Radio",
+  "category": "Audio",
+  "price": 72.61,
+  "rating": 3.4,
+  "reviews": 306,
+  "in_stock": true
+ },
+ {
+  "id": 79,
+  "sku": "PG-0079",
+  "name": "Compact Earbuds",
+  "category": "Audio",
+  "price": 171.13,
+  "rating": 2.5,
+  "reviews": 656,
+  "in_stock": false
+ },
+ {
+  "id": 80,
+  "sku": "PG-0080",
+  "name": "Deluxe Earbuds",
+  "category": "Audio",
+  "price": 78.36,
+  "rating": 4.1,
+  "reviews": 578,
+  "in_stock": true
+ },
+ {
+  "id": 81,
+  "sku": "PG-0081",
+  "name": "Eco Earbuds",
+  "category": "Audio",
+  "price": 51.44,
+  "rating": 4.3,
+  "reviews": 771,
+  "in_stock": false
+ },
+ {
+  "id": 82,
+  "sku": "PG-0082",
+  "name": "Pro Earbuds",
+  "category": "Audio",
+  "price": 79.08,
+  "rating": 4.7,
+  "reviews": 632,
+  "in_stock": true
+ },
+ {
+  "id": 83,
+  "sku": "PG-0083",
+  "name": "Classic Earbuds",
+  "category": "Audio",
+  "price": 92.04,
+  "rating": 4.3,
+  "reviews": 286,
+  "in_stock": false
+ },
+ {
+  "id": 84,
+  "sku": "PG-0084",
+  "name": "Smart Earbuds",
+  "category": "Audio",
+  "price": 91.26,
+  "rating": 3.1,
+  "reviews": 670,
+  "in_stock": true
+ },
+ {
+  "id": 85,
+  "sku": "PG-0085",
+  "name": "Eco Microphone",
+  "category": "Audio",
+  "price": 8.71,
+  "rating": 3.0,
+  "reviews": 683,
+  "in_stock": true
+ },
+ {
+  "id": 86,
+  "sku": "PG-0086",
+  "name": "Pro Microphone",
+  "category": "Audio",
+  "price": 34.38,
+  "rating": 4.1,
+  "reviews": 122,
+  "in_stock": true
+ },
+ {
+  "id": 87,
+  "sku": "PG-0087",
+  "name": "Classic Microphone",
+  "category": "Audio",
+  "price": 96.32,
+  "rating": 3.1,
+  "reviews": 500,
+  "in_stock": false
+ },
+ {
+  "id": 88,
+  "sku": "PG-0088",
+  "name": "Deluxe Microphone",
+  "category": "Audio",
+  "price": 144.1,
+  "rating": 2.6,
+  "reviews": 519,
+  "in_stock": true
+ },
+ {
+  "id": 89,
+  "sku": "PG-0089",
+  "name": "Smart Microphone",
+  "category": "Audio",
+  "price": 78.83,
+  "rating": 2.5,
+  "reviews": 129,
+  "in_stock": true
+ },
+ {
+  "id": 90,
+  "sku": "PG-0090",
+  "name": "Mini Microphone",
+  "category": "Audio",
+  "price": 23.59,
+  "rating": 4.3,
+  "reviews": 63,
+  "in_stock": true
+ },
+ {
+  "id": 91,
+  "sku": "PG-0091",
+  "name": "Travel Watering Can",
+  "category": "Garden",
+  "price": 62.28,
+  "rating": 4.4,
+  "reviews": 469,
+  "in_stock": true
+ },
+ {
+  "id": 92,
+  "sku": "PG-0092",
+  "name": "Deluxe Watering Can",
+  "category": "Garden",
+  "price": 176.21,
+  "rating": 2.7,
+  "reviews": 115,
+  "in_stock": true
+ },
+ {
+  "id": 93,
+  "sku": "PG-0093",
+  "name": "Smart Watering Can",
+  "category": "Garden",
+  "price": 110.39,
+  "rating": 2.6,
+  "reviews": 438,
+  "in_stock": true
+ },
+ {
+  "id": 94,
+  "sku": "PG-0094",
+  "name": "Mini Watering Can",
+  "category": "Garden",
+  "price": 7.03,
+  "rating": 3.1,
+  "reviews": 55,
+  "in_stock": false
+ },
+ {
+  "id": 95,
+  "sku": "PG-0095",
+  "name": "Pro Watering Can",
+  "category": "Garden",
+  "price": 137.52,
+  "rating": 3.0,
+  "reviews": 259,
+  "in_stock": true
+ },
+ {
+  "id": 96,
+  "sku": "PG-0096",
+  "name": "Classic Watering Can",
+  "category": "Garden",
+  "price": 57.34,
+  "rating": 4.5,
+  "reviews": 434,
+  "in_stock": true
+ },
+ {
+  "id": 97,
+  "sku": "PG-0097",
+  "name": "Mini Pruner",
+  "category": "Garden",
+  "price": 158.52,
+  "rating": 3.7,
+  "reviews": 199,
+  "in_stock": false
+ },
+ {
+  "id": 98,
+  "sku": "PG-0098",
+  "name": "Classic Pruner",
+  "category": "Garden",
+  "price": 119.72,
+  "rating": 4.8,
+  "reviews": 95,
+  "in_stock": true
+ },
+ {
+  "id": 99,
+  "sku": "PG-0099",
+  "name": "Compact Pruner",
+  "category": "Garden",
+  "price": 67.3,
+  "rating": 3.8,
+  "reviews": 177,
+  "in_stock": true
+ },
+ {
+  "id": 100,
+  "sku": "PG-0100",
+  "name": "Eco Pruner",
+  "category": "Garden",
+  "price": 95.85,
+  "rating": 3.3,
+  "reviews": 470,
+  "in_stock": true
+ },
+ {
+  "id": 101,
+  "sku": "PG-0101",
+  "name": "Pro Pruner",
+  "category": "Garden",
+  "price": 126.75,
+  "rating": 3.2,
+  "reviews": 247,
+  "in_stock": false
+ },
+ {
+  "id": 102,
+  "sku": "PG-0102",
+  "name": "Smart Pruner",
+  "category": "Garden",
+  "price": 77.73,
+  "rating": 2.6,
+  "reviews": 466,
+  "in_stock": true
+ },
+ {
+  "id": 103,
+  "sku": "PG-0103",
+  "name": "Deluxe Bird Feeder",
+  "category": "Garden",
+  "price": 51.46,
+  "rating": 3.6,
+  "reviews": 268,
+  "in_stock": true
+ },
+ {
+  "id": 104,
+  "sku": "PG-0104",
+  "name": "Classic Bird Feeder",
+  "category": "Garden",
+  "price": 25.57,
+  "rating": 3.2,
+  "reviews": 270,
+  "in_stock": true
+ },
+ {
+  "id": 105,
+  "sku": "PG-0105",
+  "name": "Eco Bird Feeder",
+  "category": "Garden",
+  "price": 123.26,
+  "rating": 3.3,
+  "reviews": 530,
+  "in_stock": false
+ },
+ {
+  "id": 106,
+  "sku": "PG-0106",
+  "name": "Smart Bird Feeder",
+  "category": "Garden",
+  "price": 163.75,
+  "rating": 4.8,
+  "reviews": 210,
+  "in_stock": true
+ },
+ {
+  "id": 107,
+  "sku": "PG-0107",
+  "name": "Travel Bird Feeder",
+  "category": "Garden",
+  "price": 83.36,
+  "rating": 4.9,
+  "reviews": 260,
+  "in_stock": false
+ },
+ {
+  "id": 108,
+  "sku": "PG-0108",
+  "name": "Pro Bird Feeder",
+  "category": "Garden",
+  "price": 35.3,
+  "rating": 4.5,
+  "reviews": 164,
+  "in_stock": true
+ },
+ {
+  "id": 109,
+  "sku": "PG-0109",
+  "name": "Classic Hose Reel",
+  "category": "Garden",
+  "price": 175.38,
+  "rating": 4.0,
+  "reviews": 253,
+  "in_stock": true
+ },
+ {
+  "id": 110,
+  "sku": "PG-0110",
+  "name": "Travel Hose Reel",
+  "category": "Garden",
+  "price": 114.71,
+  "rating": 4.6,
+  "reviews": 604,
+  "in_stock": true
+ },
+ {
+  "id": 111,
+  "sku": "PG-0111",
+  "name": "Deluxe Hose Reel",
+  "category": "Garden",
+  "price": 46.86,
+  "rating": 3.5,
+  "reviews": 13,
+  "in_stock": true
+ },
+ {
+  "id": 112,
+  "sku": "PG-0112",
+  "name": "Pro Hose Reel",
+  "category": "Garden",
+  "price": 84.81,
+  "rating": 4.3,
+  "reviews": 894,
+  "in_stock": false
+ },
+ {
+  "id": 113,
+  "sku": "PG-0113",
+  "name": "Eco Hose Reel",
+  "category": "Garden",
+  "price": 18.78,
+  "rating": 4.3,
+  "reviews": 362,
+  "in_stock": true
+ },
+ {
+  "id": 114,
+  "sku": "PG-0114",
+  "name": "Mini Hose Reel",
+  "category": "Garden",
+  "price": 145.67,
+  "rating": 2.8,
+  "reviews": 143,
+  "in_stock": false
+ },
+ {
+  "id": 115,
+  "sku": "PG-0115",
+  "name": "Pro Planter",
+  "category": "Garden",
+  "price": 106.69,
+  "rating": 4.1,
+  "reviews": 264,
+  "in_stock": false
+ },
+ {
+  "id": 116,
+  "sku": "PG-0116",
+  "name": "Travel Planter",
+  "category": "Garden",
+  "price": 26.09,
+  "rating": 4.7,
+  "reviews": 838,
+  "in_stock": true
+ },
+ {
+  "id": 117,
+  "sku": "PG-0117",
+  "name": "Smart Planter",
+  "category": "Garden",
+  "price": 135.08,
+  "rating": 4.3,
+  "reviews": 302,
+  "in_stock": true
+ },
+ {
+  "id": 118,
+  "sku": "PG-0118",
+  "name": "Compact Planter",
+  "category": "Garden",
+  "price": 122.95,
+  "rating": 4.2,
+  "reviews": 727,
+  "in_stock": true
+ },
+ {
+  "id": 119,
+  "sku": "PG-0119",
+  "name": "Mini Planter",
+  "category": "Garden",
+  "price": 168.11,
+  "rating": 3.9,
+  "reviews": 403,
+  "in_stock": true
+ },
+ {
+  "id": 120,
+  "sku": "PG-0120",
+  "name": "Deluxe Planter",
+  "category": "Garden",
+  "price": 100.48,
+  "rating": 4.3,
+  "reviews": 209,
+  "in_stock": true
+ }
+]

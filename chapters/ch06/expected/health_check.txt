@@ -1,0 +1,11 @@
+200  /               Practice Ground | Practice Ground
+200  /library/       All books | Practice Ground
+200  /quotes/        Quotes to scrape | Practice Ground
+200  /tables/        Tables | Practice Ground
+200  /api/           Open API | Practice Ground
+200  /shop/          Shop | Practice Ground
+200  /account/login  Log in | Practice Ground
+200  /files/         Files | Practice Ground
+200  /jobs/          Jobs | Practice Ground
+200  /prices/        Price Watch | Practice Ground
+200  /trouble/       Trouble zone | Practice Ground

@@ -1,0 +1,24 @@
+body{font-family:Georgia,serif;margin:0;color:#1d2433;background:#fbfaf6}
+.site-header{background:#1f3a5f;padding:12px 24px}
+.site-header a{color:#fff;text-decoration:none;margin-right:12px}
+.site-header .logo{font-weight:bold;color:#d4a72c;font-size:1.3em}
+main{max-width:1000px;margin:24px auto;padding:0 16px}
+.site-footer{text-align:center;color:#666;font-size:.85em;padding:24px}
+.library{display:flex;gap:24px}.categories{width:180px;font-size:.9em}
+.categories ul{list-style:none;padding:0}
+.book-grid,.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.book-card,.product,.quote,.job,.card{background:#fff;border:1px solid #ddd;border-radius:6px;padding:10px}
+.book-card h3{font-size:1em;min-height:2.4em}
+.price{color:#1f3a5f;font-weight:bold}.in-stock{color:#2b7a3d}.out-of-stock{color:#a33}
+.star-rating{color:#d4a72c}.pager{list-style:none;display:flex;gap:16px;padding:0}
+.quote{margin-bottom:12px}.quote .text{display:block;font-style:italic}
+.tag{background:#eef2f7;padding:2px 6px;margin-right:4px;border-radius:4px;font-size:.85em}
+.quotes-layout{display:flex;gap:24px}.quote-list{flex:3}.tag-box{flex:1}
+.data-table{border-collapse:collapse;margin:12px 0}
+.data-table th,.data-table td{border:1px solid #ccc;padding:4px 8px}
+.data-table th{background:#1f3a5f;color:#fff}
+.breadcrumb{list-style:none;display:flex;gap:8px;padding:0}
+.breadcrumb li+li:before{content:"/ "}
+.error{color:#a33;font-weight:bold}.badge{background:#d4a72c;color:#fff;padding:1px 6px;border-radius:4px;font-size:.7em}
+.job-list{list-style:none;padding:0}.job{margin-bottom:10px}
+form label{display:block;margin-top:8px}

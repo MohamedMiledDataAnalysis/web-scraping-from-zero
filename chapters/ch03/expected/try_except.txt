@@ -1,0 +1,6 @@
+24.99
+Could not read the price 'Price on request'
+None
+18.5
+Could not read the price ''
+None

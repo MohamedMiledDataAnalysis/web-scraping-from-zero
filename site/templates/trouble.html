@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Trouble zone{% endblock %}
+{% block content %}
+<h1>Trouble zone</h1>
+<p>Each address below causes one real-world problem on purpose.</p>
+<ul class="trouble-list">
+  <li><a href="/trouble/status/404">/trouble/status/404</a>: any status code you put in the address</li>
+  <li><a href="/trouble/old-page">/trouble/old-page</a>: a permanent redirect (301)</li>
+  <li><a href="/trouble/slow?seconds=3">/trouble/slow?seconds=3</a>: a slow page</li>
+  <li><a href="/trouble/limited">/trouble/limited</a>: 5 requests per 10 seconds, then 429</li>
+  <li><a href="/trouble/flaky">/trouble/flaky</a>: fails twice (503), then works once</li>
+  <li><a href="/trouble/agent">/trouble/agent</a>: refuses robots that hide their name (403)</li>
+  <li><a href="/trouble/wrong-charset">/trouble/wrong-charset</a>: announces the wrong text encoding</li>
+  <li><a href="/trouble/messy-cards">/trouble/messy-cards</a>: product cards with missing parts</li>
+</ul>
+{% endblock %}

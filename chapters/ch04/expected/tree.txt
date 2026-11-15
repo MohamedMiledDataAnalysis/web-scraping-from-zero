@@ -1,0 +1,13 @@
+<ul id="menu">
+ <li>
+  <a href="/library/">
+   Library
+  </a>
+ </li>
+ <li class="active">
+  <a href="/quotes/">
+   Quotes
+  </a>
+ </li>
+</ul>
+

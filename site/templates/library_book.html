@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}{{ book.title }}{% endblock %}
+{% block content %}
+<script type="application/ld+json">
+{{ ld|safe }}
+</script>
+<ul class="breadcrumb">
+  <li><a href="/">Home</a></li><li><a href="/library/">Library</a></li>
+  <li><a href="/library/category/{{ cat }}/">{{ book.category }}</a></li>
+  <li class="active">{{ book.title }}</li>
+</ul>
+<article class="book-page">
+  <h1>{{ book.title }}</h1>
+  <p class="author">by <span itemprop="author">{{ book.author }}</span></p>
+  <p class="price">£{{ '%.2f'|format(book.price) }}</p>
+  <p class="star-rating {{ rating_words[book.rating - 1] }}">{{ '★' * book.rating }}{{ '☆' * (5 - book.rating) }}</p>
+  <div id="description"><h2>Description</h2><p>{{ book.description }}</p></div>
+  <h2>Book information</h2>
+  <table class="info">
+    <tr><th>UPC</th><td>{{ book.upc }}</td></tr>
+    <tr><th>Category</th><td>{{ book.category }}</td></tr>
+    <tr><th>Price</th><td>£{{ '%.2f'|format(book.price) }}</td></tr>
+    <tr><th>Availability</th><td>{% if book.stock %}In stock ({{ book.stock }} available){% else %}Out of stock (0 available){% endif %}</td></tr>
+    <tr><th>Pages</th><td>{{ book.pages }}</td></tr>
+    <tr><th>Year</th><td>{{ book.year }}</td></tr>
+  </table>
+</article>
+{% endblock %}

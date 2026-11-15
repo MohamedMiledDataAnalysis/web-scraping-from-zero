@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Files{% endblock %}
+{% block content %}
+<h1>Files to download</h1>
+<table class="data-table" id="file-list">
+  <thead><tr><th>File</th><th>Size (bytes)</th></tr></thead>
+  <tbody>{% for f in files %}<tr><td><a href="/files/{{ f.name }}">{{ f.name }}</a></td><td>{{ f.size }}</td></tr>{% endfor %}</tbody>
+</table>
+{% endblock %}

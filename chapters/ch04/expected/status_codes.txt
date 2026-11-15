@@ -1,0 +1,6 @@
+200 -> 200 OK | ok: True
+404 -> 404 NOT FOUND | ok: False
+429 -> 429 TOO MANY REQUESTS | ok: False
+503 -> 503 SERVICE UNAVAILABLE | ok: False
+200 http://localhost:8000/trouble/moved
+[301]
