@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Towers in the Harbour | Practice Ground</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="/">Practice Ground</a>
+  <nav>
+    <a href="/library/">Library</a> <a href="/quotes/">Quotes</a>
+    <a href="/tables/">Tables</a> <a href="/api/">API</a> <a href="/shop/">Shop</a>
+    <a href="/account/">Account</a> <a href="/files/">Files</a>
+    <a href="/jobs/">Jobs</a> <a href="/prices/">Prices</a> <a href="/trouble/">Trouble zone</a>
+  </nav>
+</header>
+<main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Towers in the Harbour",
+  "author": {
+    "@type": "Person",
+    "name": "Elena Rahman"
+  },
+  "genre": "Travel",
+  "numberOfPages": 303,
+  "datePublished": "2005",
+  "sku": "035598f873c3380d",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 3,
+    "bestRating": 5
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "43.48",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+<ul class="breadcrumb">
+  <li><a href="/">Home</a></li><li><a href="/library/">Library</a></li>
+  <li><a href="/library/category/travel/">Travel</a></li>
+  <li class="active">Towers in the Harbour</li>
+</ul>
+<article class="book-page">
+  <h1>Towers in the Harbour</h1>
+  <p class="author">by <span itemprop="author">Elena Rahman</span></p>
+  <p class="price">£43.48</p>
+  <p class="star-rating Three">★★★☆☆</p>
+  <div id="description"><h2>Description</h2><p>A story about lost letters. Perfect for a long train journey.</p></div>
+  <h2>Book information</h2>
+  <table class="info">
+    <tr><th>UPC</th><td>035598f873c3380d</td></tr>
+    <tr><th>Category</th><td>Travel</td></tr>
+    <tr><th>Price</th><td>£43.48</td></tr>
+    <tr><th>Availability</th><td>In stock (22 available)</td></tr>
+    <tr><th>Pages</th><td>303</td></tr>
+    <tr><th>Year</th><td>2005</td></tr>
+  </table>
+</article>
+
+</main>
+<footer class="site-footer">Practice Ground, the companion site of <em>I Finally Understand Web Scraping</em>. All data is invented. <a href="/terms/">Terms of use</a></footer>
+</body>
+</html>

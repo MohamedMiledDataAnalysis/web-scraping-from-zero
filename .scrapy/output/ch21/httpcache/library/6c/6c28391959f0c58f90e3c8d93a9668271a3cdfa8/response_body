@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Winter of Little Stations | Practice Ground</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="/">Practice Ground</a>
+  <nav>
+    <a href="/library/">Library</a> <a href="/quotes/">Quotes</a>
+    <a href="/tables/">Tables</a> <a href="/api/">API</a> <a href="/shop/">Shop</a>
+    <a href="/account/">Account</a> <a href="/files/">Files</a>
+    <a href="/jobs/">Jobs</a> <a href="/prices/">Prices</a> <a href="/trouble/">Trouble zone</a>
+  </nav>
+</header>
+<main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "The Winter of Little Stations",
+  "author": {
+    "@type": "Person",
+    "name": "Yara Underwood"
+  },
+  "genre": "History",
+  "numberOfPages": 625,
+  "datePublished": "1989",
+  "sku": "e960db5662366780",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4,
+    "bestRating": 5
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "20.82",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+<ul class="breadcrumb">
+  <li><a href="/">Home</a></li><li><a href="/library/">Library</a></li>
+  <li><a href="/library/category/history/">History</a></li>
+  <li class="active">The Winter of Little Stations</li>
+</ul>
+<article class="book-page">
+  <h1>The Winter of Little Stations</h1>
+  <p class="author">by <span itemprop="author">Yara Underwood</span></p>
+  <p class="price">£20.82</p>
+  <p class="star-rating Four">★★★★☆</p>
+  <div id="description"><h2>Description</h2><p>A warm and funny book about the first winter after a war. Perfect for a long train journey.</p></div>
+  <h2>Book information</h2>
+  <table class="info">
+    <tr><th>UPC</th><td>e960db5662366780</td></tr>
+    <tr><th>Category</th><td>History</td></tr>
+    <tr><th>Price</th><td>£20.82</td></tr>
+    <tr><th>Availability</th><td>In stock (13 available)</td></tr>
+    <tr><th>Pages</th><td>625</td></tr>
+    <tr><th>Year</th><td>1989</td></tr>
+  </table>
+</article>
+
+</main>
+<footer class="site-footer">Practice Ground, the companion site of <em>I Finally Understand Web Scraping</em>. All data is invented. <a href="/terms/">Terms of use</a></footer>
+</body>
+</html>

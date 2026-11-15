@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>All books | Practice Ground</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="/">Practice Ground</a>
+  <nav>
+    <a href="/library/">Library</a> <a href="/quotes/">Quotes</a>
+    <a href="/tables/">Tables</a> <a href="/api/">API</a> <a href="/shop/">Shop</a>
+    <a href="/account/">Account</a> <a href="/files/">Files</a>
+    <a href="/jobs/">Jobs</a> <a href="/prices/">Prices</a> <a href="/trouble/">Trouble zone</a>
+  </nav>
+</header>
+<main>
+
+<div class="library">
+<aside class="categories">
+  <h2>Categories</h2>
+  <ul>
+  <li><a href="/library/category/art/">Art</a></li>
+  <li><a href="/library/category/biography/">Biography</a></li>
+  <li><a href="/library/category/business/">Business</a></li>
+  <li><a href="/library/category/children/">Children</a></li>
+  <li><a href="/library/category/cookery/">Cookery</a></li>
+  <li><a href="/library/category/fantasy/">Fantasy</a></li>
+  <li><a href="/library/category/fiction/">Fiction</a></li>
+  <li><a href="/library/category/history/">History</a></li>
+  <li><a href="/library/category/horror/">Horror</a></li>
+  <li><a href="/library/category/humour/">Humour</a></li>
+  <li><a href="/library/category/music/">Music</a></li>
+  <li><a href="/library/category/mystery/">Mystery</a></li>
+  <li><a href="/library/category/philosophy/">Philosophy</a></li>
+  <li><a href="/library/category/poetry/">Poetry</a></li>
+  <li><a href="/library/category/romance/">Romance</a></li>
+  <li><a href="/library/category/science/">Science</a></li>
+  <li><a href="/library/category/science-fiction/">Science Fiction</a></li>
+  <li><a href="/library/category/self-help/">Self Help</a></li>
+  <li><a href="/library/category/sport/">Sport</a></li>
+  <li><a href="/library/category/travel/">Travel</a></li>
+  </ul>
+</aside>
+<section>
+  <h1>All books</h1>
+  <p class="result-count"><strong>1000</strong> results, page <strong>3</strong> of <strong>50</strong>.</p>
+  <div class="book-grid">
+  
+    <article class="book-card" data-id="41">
+      <h3><a href="book/painted-clockmaker-41.html" title="Painted Clockmaker">Painted Clockmaker</a></h3>
+      <p class="author">by Jonas Winslow</p>
+      <p class="star-rating Three" aria-label="3 stars">★★★☆☆</p>
+      <p class="price">£28.58</p>
+      <p class="availability out-of-stock">Out of stock</p>
+    </article>
+  
+    <article class="book-card" data-id="42">
+      <h3><a href="book/the-crimson-forest-a-novel-42.html" title="The Crimson Forest: A Novel">The Crimson Forest: A Novel</a></h3>
+      <p class="author">by Louis Ashby</p>
+      <p class="star-rating Four" aria-label="4 stars">★★★★☆</p>
+      <p class="price">£13.23</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="43">
+      <h3><a href="book/notes-from-the-bridge-43.html" title="Notes from the Bridge">Notes from the Bridge</a></h3>
+      <p class="author">by Yara Winslow</p>
+      <p class="star-rating Four" aria-label="4 stars">★★★★☆</p>
+      <p class="price">£38.80</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="44">
+      <h3><a href="book/the-distant-island-a-novel-44.html" title="The Distant Island: A Novel">The Distant Island: A Novel</a></h3>
+      <p class="author">by Margot Lindqvist</p>
+      <p class="star-rating Four" aria-label="4 stars">★★★★☆</p>
+      <p class="price">£57.70</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="45">
+      <h3><a href="book/the-hollow-violin-45.html" title="The Hollow Violin">The Hollow Violin</a></h3>
+      <p class="author">by Amelia Okafor</p>
+      <p class="star-rating Five" aria-label="5 stars">★★★★★</p>
+      <p class="price">£52.40</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="46">
+      <h3><a href="book/last-winter-46.html" title="Last Winter">Last Winter</a></h3>
+      <p class="author">by Victor Underwood</p>
+      <p class="star-rating Two" aria-label="2 stars">★★☆☆☆</p>
+      <p class="price">£12.55</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="47">
+      <h3><a href="book/the-winter-of-little-stations-47.html" title="The Winter of Little Stations">The Winter of Little Stat...</a></h3>
+      <p class="author">by Yara Underwood</p>
+      <p class="star-rating Four" aria-label="4 stars">★★★★☆</p>
+      <p class="price">£20.82</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="48">
+      <h3><a href="book/the-map-of-midnight-mirrors-48.html" title="The Map of Midnight Mirrors">The Map of Midnight Mirrors</a></h3>
+      <p class="author">by Samuel Stroud</p>
+      <p class="star-rating Four" aria-label="4 stars">★★★★☆</p>
+      <p class="price">£59.59</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="49">
+      <h3><a href="book/a-river-of-bridges-49.html" title="A River of Bridges">A River of Bridges</a></h3>
+      <p class="author">by Nadia Okafor</p>
+      <p class="star-rating Three" aria-label="3 stars">★★★☆☆</p>
+      <p class="price">£43.33</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="50">
+      <h3><a href="book/a-letter-of-gardens-50.html" title="A Letter of Gardens">A Letter of Gardens</a></h3>
+      <p class="author">by Omar Fairbairn</p>
+      <p class="star-rating Two" aria-label="2 stars">★★☆☆☆</p>
+      <p class="price">£53.14</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="51">
+      <h3><a href="book/beyond-the-iron-lighthouse-51.html" title="Beyond the Iron Lighthouse">Beyond the Iron Lighthouse</a></h3>
+      <p class="author">by Rosa Fairbairn</p>
+      <p class="star-rating One" aria-label="1 stars">★☆☆☆☆</p>
+      <p class="price">£23.33</p>
+      <p class="availability out-of-stock">Out of stock</p>
+    </article>
+  
+    <article class="book-card" data-id="52">
+      <h3><a href="book/beyond-the-lost-kingdom-52.html" title="Beyond the Lost Kingdom">Beyond the Lost Kingdom</a></h3>
+      <p class="author">by Amelia Mendes</p>
+      <p class="star-rating Three" aria-label="3 stars">★★★☆☆</p>
+      <p class="price">£41.28</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="53">
+      <h3><a href="book/the-iron-market-a-novel-53.html" title="The Iron Market: A Novel">The Iron Market: A Novel</a></h3>
+      <p class="author">by Jonas Haddad</p>
+      <p class="star-rating Three" aria-label="3 stars">★★★☆☆</p>
+      <p class="price">£53.24</p>
+      <p class="availability out-of-stock">Out of stock</p>
+    </article>
+  
+    <article class="book-card" data-id="54">
+      <h3><a href="book/a-harbour-of-rivers-54.html" title="A Harbour of Rivers">A Harbour of Rivers</a></h3>
+      <p class="author">by Amelia Whitfield</p>
+      <p class="star-rating Two" aria-label="2 stars">★★☆☆☆</p>
+      <p class="price">£25.03</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="55">
+      <h3><a href="book/a-window-of-clockmakers-55.html" title="A Window of Clockmakers">A Window of Clockmakers</a></h3>
+      <p class="author">by Felix Okafor</p>
+      <p class="star-rating Three" aria-label="3 stars">★★★☆☆</p>
+      <p class="price">£30.51</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="56">
+      <h3><a href="book/the-distant-archive-56.html" title="The Distant Archive">The Distant Archive</a></h3>
+      <p class="author">by Henry Ashby</p>
+      <p class="star-rating One" aria-label="1 stars">★☆☆☆☆</p>
+      <p class="price">£33.24</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="57">
+      <h3><a href="book/beyond-the-velvet-island-57.html" title="Beyond the Velvet Island">Beyond the Velvet Island</a></h3>
+      <p class="author">by Margot Tavares</p>
+      <p class="star-rating Five" aria-label="5 stars">★★★★★</p>
+      <p class="price">£15.65</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="58">
+      <h3><a href="book/the-northern-violin-58.html" title="The Northern Violin">The Northern Violin</a></h3>
+      <p class="author">by Felix Underwood</p>
+      <p class="star-rating Three" aria-label="3 stars">★★★☆☆</p>
+      <p class="price">£6.77</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="59">
+      <h3><a href="book/beyond-the-quiet-river-59.html" title="Beyond the Quiet River">Beyond the Quiet River</a></h3>
+      <p class="author">by Felix Fairbairn</p>
+      <p class="star-rating Three" aria-label="3 stars">★★★☆☆</p>
+      <p class="price">£37.44</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="60">
+      <h3><a href="book/the-island-and-the-station-60.html" title="The Island and the Station">The Island and the Station</a></h3>
+      <p class="author">by Clara Kowal</p>
+      <p class="star-rating One" aria-label="1 stars">★☆☆☆☆</p>
+      <p class="price">£16.04</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+  </div>
+  <ul class="pager">
+    <li class="previous"><a href="page-2.html">previous</a></li>
+    <li class="current">Page 3 of 50</li>
+    <li class="next"><a href="page-4.html">next</a></li>
+  </ul>
+</section>
+</div>
+
+</main>
+<footer class="site-footer">Practice Ground, the companion site of <em>I Finally Understand Web Scraping</em>. All data is invented. <a href="/terms/">Terms of use</a></footer>
+</body>
+</html>

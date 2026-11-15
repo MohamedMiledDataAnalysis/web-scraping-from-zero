@@ -1,0 +1,3 @@
+44 jobs kept
+{'id': 1252, 'title': 'Senior Credit Risk Analyst', 'city': 'Leeds', 'salary_min': 75000, 'salary_max': 89000}
+Remote in file: 0

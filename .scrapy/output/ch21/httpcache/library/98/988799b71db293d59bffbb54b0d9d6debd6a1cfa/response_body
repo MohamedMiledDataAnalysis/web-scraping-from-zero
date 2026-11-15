@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Beyond the Distant Kitchen | Practice Ground</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="/">Practice Ground</a>
+  <nav>
+    <a href="/library/">Library</a> <a href="/quotes/">Quotes</a>
+    <a href="/tables/">Tables</a> <a href="/api/">API</a> <a href="/shop/">Shop</a>
+    <a href="/account/">Account</a> <a href="/files/">Files</a>
+    <a href="/jobs/">Jobs</a> <a href="/prices/">Prices</a> <a href="/trouble/">Trouble zone</a>
+  </nav>
+</header>
+<main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Beyond the Distant Kitchen",
+  "author": {
+    "@type": "Person",
+    "name": "Jonas Lindqvist"
+  },
+  "genre": "Poetry",
+  "numberOfPages": 639,
+  "datePublished": "2001",
+  "sku": "0e140c698c32d826",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 1,
+    "bestRating": 5
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "18.87",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+<ul class="breadcrumb">
+  <li><a href="/">Home</a></li><li><a href="/library/">Library</a></li>
+  <li><a href="/library/category/poetry/">Poetry</a></li>
+  <li class="active">Beyond the Distant Kitchen</li>
+</ul>
+<article class="book-page">
+  <h1>Beyond the Distant Kitchen</h1>
+  <p class="author">by <span itemprop="author">Jonas Lindqvist</span></p>
+  <p class="price">£18.87</p>
+  <p class="star-rating One">★☆☆☆☆</p>
+  <div id="description"><h2>Description</h2><p>A dark tale of an old map and a new friendship. Perfect for a long train journey.</p></div>
+  <h2>Book information</h2>
+  <table class="info">
+    <tr><th>UPC</th><td>0e140c698c32d826</td></tr>
+    <tr><th>Category</th><td>Poetry</td></tr>
+    <tr><th>Price</th><td>£18.87</td></tr>
+    <tr><th>Availability</th><td>In stock (5 available)</td></tr>
+    <tr><th>Pages</th><td>639</td></tr>
+    <tr><th>Year</th><td>2001</td></tr>
+  </table>
+</article>
+
+</main>
+<footer class="site-footer">Practice Ground, the companion site of <em>I Finally Understand Web Scraping</em>. All data is invented. <a href="/terms/">Terms of use</a></footer>
+</body>
+</html>

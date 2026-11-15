@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Meadows in the Forest | Practice Ground</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="/">Practice Ground</a>
+  <nav>
+    <a href="/library/">Library</a> <a href="/quotes/">Quotes</a>
+    <a href="/tables/">Tables</a> <a href="/api/">API</a> <a href="/shop/">Shop</a>
+    <a href="/account/">Account</a> <a href="/files/">Files</a>
+    <a href="/jobs/">Jobs</a> <a href="/prices/">Prices</a> <a href="/trouble/">Trouble zone</a>
+  </nav>
+</header>
+<main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Meadows in the Forest",
+  "author": {
+    "@type": "Person",
+    "name": "Ines Ibsen"
+  },
+  "genre": "Self Help",
+  "numberOfPages": 561,
+  "datePublished": "1986",
+  "sku": "e859c123d9019888",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 2,
+    "bestRating": 5
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "56.05",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+<ul class="breadcrumb">
+  <li><a href="/">Home</a></li><li><a href="/library/">Library</a></li>
+  <li><a href="/library/category/self-help/">Self Help</a></li>
+  <li class="active">Meadows in the Forest</li>
+</ul>
+<article class="book-page">
+  <h1>Meadows in the Forest</h1>
+  <p class="author">by <span itemprop="author">Ines Ibsen</span></p>
+  <p class="price">£56.05</p>
+  <p class="star-rating Two">★★☆☆☆</p>
+  <div id="description"><h2>Description</h2><p>A warm and funny book about music, memory and loss. Short chapters make it easy to read.</p></div>
+  <h2>Book information</h2>
+  <table class="info">
+    <tr><th>UPC</th><td>e859c123d9019888</td></tr>
+    <tr><th>Category</th><td>Self Help</td></tr>
+    <tr><th>Price</th><td>£56.05</td></tr>
+    <tr><th>Availability</th><td>In stock (15 available)</td></tr>
+    <tr><th>Pages</th><td>561</td></tr>
+    <tr><th>Year</th><td>1986</td></tr>
+  </table>
+</article>
+
+</main>
+<footer class="site-footer">Practice Ground, the companion site of <em>I Finally Understand Web Scraping</em>. All data is invented. <a href="/terms/">Terms of use</a></footer>
+</body>
+</html>

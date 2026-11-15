@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Maps in the Clockmaker | Practice Ground</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="/">Practice Ground</a>
+  <nav>
+    <a href="/library/">Library</a> <a href="/quotes/">Quotes</a>
+    <a href="/tables/">Tables</a> <a href="/api/">API</a> <a href="/shop/">Shop</a>
+    <a href="/account/">Account</a> <a href="/files/">Files</a>
+    <a href="/jobs/">Jobs</a> <a href="/prices/">Prices</a> <a href="/trouble/">Trouble zone</a>
+  </nav>
+</header>
+<main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Maps in the Clockmaker",
+  "author": {
+    "@type": "Person",
+    "name": "Tariq Laurent"
+  },
+  "genre": "Music",
+  "numberOfPages": 141,
+  "datePublished": "2025",
+  "sku": "7ddd7595ab0c5d26",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 3,
+    "bestRating": 5
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "17.77",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+<ul class="breadcrumb">
+  <li><a href="/">Home</a></li><li><a href="/library/">Library</a></li>
+  <li><a href="/library/category/music/">Music</a></li>
+  <li class="active">Maps in the Clockmaker</li>
+</ul>
+<article class="book-page">
+  <h1>Maps in the Clockmaker</h1>
+  <p class="author">by <span itemprop="author">Tariq Laurent</span></p>
+  <p class="price">£17.77</p>
+  <p class="star-rating Three">★★★☆☆</p>
+  <div id="description"><h2>Description</h2><p>A warm and funny book about family secrets. Short chapters make it easy to read.</p></div>
+  <h2>Book information</h2>
+  <table class="info">
+    <tr><th>UPC</th><td>7ddd7595ab0c5d26</td></tr>
+    <tr><th>Category</th><td>Music</td></tr>
+    <tr><th>Price</th><td>£17.77</td></tr>
+    <tr><th>Availability</th><td>In stock (10 available)</td></tr>
+    <tr><th>Pages</th><td>141</td></tr>
+    <tr><th>Year</th><td>2025</td></tr>
+  </table>
+</article>
+
+</main>
+<footer class="site-footer">Practice Ground, the companion site of <em>I Finally Understand Web Scraping</em>. All data is invented. <a href="/terms/">Terms of use</a></footer>
+</body>
+</html>

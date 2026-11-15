@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>All books | Practice Ground</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="/">Practice Ground</a>
+  <nav>
+    <a href="/library/">Library</a> <a href="/quotes/">Quotes</a>
+    <a href="/tables/">Tables</a> <a href="/api/">API</a> <a href="/shop/">Shop</a>
+    <a href="/account/">Account</a> <a href="/files/">Files</a>
+    <a href="/jobs/">Jobs</a> <a href="/prices/">Prices</a> <a href="/trouble/">Trouble zone</a>
+  </nav>
+</header>
+<main>
+
+<div class="library">
+<aside class="categories">
+  <h2>Categories</h2>
+  <ul>
+  <li><a href="/library/category/art/">Art</a></li>
+  <li><a href="/library/category/biography/">Biography</a></li>
+  <li><a href="/library/category/business/">Business</a></li>
+  <li><a href="/library/category/children/">Children</a></li>
+  <li><a href="/library/category/cookery/">Cookery</a></li>
+  <li><a href="/library/category/fantasy/">Fantasy</a></li>
+  <li><a href="/library/category/fiction/">Fiction</a></li>
+  <li><a href="/library/category/history/">History</a></li>
+  <li><a href="/library/category/horror/">Horror</a></li>
+  <li><a href="/library/category/humour/">Humour</a></li>
+  <li><a href="/library/category/music/">Music</a></li>
+  <li><a href="/library/category/mystery/">Mystery</a></li>
+  <li><a href="/library/category/philosophy/">Philosophy</a></li>
+  <li><a href="/library/category/poetry/">Poetry</a></li>
+  <li><a href="/library/category/romance/">Romance</a></li>
+  <li><a href="/library/category/science/">Science</a></li>
+  <li><a href="/library/category/science-fiction/">Science Fiction</a></li>
+  <li><a href="/library/category/self-help/">Self Help</a></li>
+  <li><a href="/library/category/sport/">Sport</a></li>
+  <li><a href="/library/category/travel/">Travel</a></li>
+  </ul>
+</aside>
+<section>
+  <h1>All books</h1>
+  <p class="result-count"><strong>1000</strong> results, page <strong>4</strong> of <strong>50</strong>.</p>
+  <div class="book-grid">
+  
+    <article class="book-card" data-id="61">
+      <h3><a href="book/the-orchard-and-the-window-61.html" title="The Orchard and the Window">The Orchard and the Window</a></h3>
+      <p class="author">by Victor Varga</p>
+      <p class="star-rating Five" aria-label="5 stars">★★★★★</p>
+      <p class="price">£58.27</p>
+      <p class="availability out-of-stock">Out of stock</p>
+    </article>
+  
+    <article class="book-card" data-id="62">
+      <h3><a href="book/the-lost-meadow-a-novel-62.html" title="The Lost Meadow: A Novel">The Lost Meadow: A Novel</a></h3>
+      <p class="author">by Margot Tavares</p>
+      <p class="star-rating Five" aria-label="5 stars">★★★★★</p>
+      <p class="price">£31.11</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="63">
+      <h3><a href="book/a-bridge-of-compasses-63.html" title="A Bridge of Compasses">A Bridge of Compasses</a></h3>
+      <p class="author">by Maya Laurent</p>
+      <p class="star-rating One" aria-label="1 stars">★☆☆☆☆</p>
+      <p class="price">£26.11</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="64">
+      <h3><a href="book/little-market-64.html" title="Little Market">Little Market</a></h3>
+      <p class="author">by Nadia Brennan</p>
+      <p class="star-rating Five" aria-label="5 stars">★★★★★</p>
+      <p class="price">£59.87</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="65">
+      <h3><a href="book/notes-from-the-river-65.html" title="Notes from the River">Notes from the River</a></h3>
+      <p class="author">by Samuel Varga</p>
+      <p class="star-rating Three" aria-label="3 stars">★★★☆☆</p>
+      <p class="price">£33.84</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="66">
+      <h3><a href="book/paper-library-66.html" title="Paper Library">Paper Library</a></h3>
+      <p class="author">by Yara Tavares</p>
+      <p class="star-rating Four" aria-label="4 stars">★★★★☆</p>
+      <p class="price">£58.29</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="67">
+      <h3><a href="book/librarys-in-the-tower-67.html" title="Librarys in the Tower">Librarys in the Tower</a></h3>
+      <p class="author">by Sofia Duval</p>
+      <p class="star-rating Two" aria-label="2 stars">★★☆☆☆</p>
+      <p class="price">£16.21</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="68">
+      <h3><a href="book/silent-forest-68.html" title="Silent Forest">Silent Forest</a></h3>
+      <p class="author">by Nadia Laurent</p>
+      <p class="star-rating Four" aria-label="4 stars">★★★★☆</p>
+      <p class="price">£33.30</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="69">
+      <h3><a href="book/lanterns-in-the-garden-69.html" title="Lanterns in the Garden">Lanterns in the Garden</a></h3>
+      <p class="author">by Louis Duval</p>
+      <p class="star-rating Four" aria-label="4 stars">★★★★☆</p>
+      <p class="price">£46.25</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="70">
+      <h3><a href="book/the-little-river-a-novel-70.html" title="The Little River: A Novel">The Little River: A Novel</a></h3>
+      <p class="author">by Felix Tavares</p>
+      <p class="star-rating Three" aria-label="3 stars">★★★☆☆</p>
+      <p class="price">£42.08</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="71">
+      <h3><a href="book/a-map-of-lanterns-71.html" title="A Map of Lanterns">A Map of Lanterns</a></h3>
+      <p class="author">by Ines Underwood</p>
+      <p class="star-rating Three" aria-label="3 stars">★★★☆☆</p>
+      <p class="price">£48.27</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="72">
+      <h3><a href="book/the-archive-of-last-compasses-72.html" title="The Archive of Last Compasses">The Archive of Last Compa...</a></h3>
+      <p class="author">by Theo Okafor</p>
+      <p class="star-rating Five" aria-label="5 stars">★★★★★</p>
+      <p class="price">£56.64</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="73">
+      <h3><a href="book/orchards-in-the-lighthouse-73.html" title="Orchards in the Lighthouse">Orchards in the Lighthouse</a></h3>
+      <p class="author">by Ines Whitfield</p>
+      <p class="star-rating Two" aria-label="2 stars">★★☆☆☆</p>
+      <p class="price">£13.40</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="74">
+      <h3><a href="book/beyond-the-golden-harbour-74.html" title="Beyond the Golden Harbour">Beyond the Golden Harbour</a></h3>
+      <p class="author">by Samuel Tavares</p>
+      <p class="star-rating Two" aria-label="2 stars">★★☆☆☆</p>
+      <p class="price">£31.88</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="75">
+      <h3><a href="book/the-bright-meadow-75.html" title="The Bright Meadow">The Bright Meadow</a></h3>
+      <p class="author">by Nadia Winslow</p>
+      <p class="star-rating Two" aria-label="2 stars">★★☆☆☆</p>
+      <p class="price">£21.02</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="76">
+      <h3><a href="book/violins-in-the-market-76.html" title="Violins in the Market">Violins in the Market</a></h3>
+      <p class="author">by Omar Underwood</p>
+      <p class="star-rating One" aria-label="1 stars">★☆☆☆☆</p>
+      <p class="price">£41.08</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="77">
+      <h3><a href="book/the-meadow-and-the-tower-77.html" title="The Meadow and the Tower">The Meadow and the Tower</a></h3>
+      <p class="author">by Ines Whitfield</p>
+      <p class="star-rating Four" aria-label="4 stars">★★★★☆</p>
+      <p class="price">£11.31</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="78">
+      <h3><a href="book/beyond-the-bright-mirror-78.html" title="Beyond the Bright Mirror">Beyond the Bright Mirror</a></h3>
+      <p class="author">by Oscar Rahman</p>
+      <p class="star-rating Four" aria-label="4 stars">★★★★☆</p>
+      <p class="price">£9.36</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+    <article class="book-card" data-id="79">
+      <h3><a href="book/the-river-of-quiet-bridges-79.html" title="The River of Quiet Bridges">The River of Quiet Bridges</a></h3>
+      <p class="author">by Felix Hartley</p>
+      <p class="star-rating One" aria-label="1 stars">★☆☆☆☆</p>
+      <p class="price">£19.25</p>
+      <p class="availability out-of-stock">Out of stock</p>
+    </article>
+  
+    <article class="book-card" data-id="80">
+      <h3><a href="book/beyond-the-quiet-tower-80.html" title="Beyond the Quiet Tower">Beyond the Quiet Tower</a></h3>
+      <p class="author">by Yara Castell</p>
+      <p class="star-rating Four" aria-label="4 stars">★★★★☆</p>
+      <p class="price">£33.43</p>
+      <p class="availability in-stock">In stock</p>
+    </article>
+  
+  </div>
+  <ul class="pager">
+    <li class="previous"><a href="page-3.html">previous</a></li>
+    <li class="current">Page 4 of 50</li>
+    <li class="next"><a href="page-5.html">next</a></li>
+  </ul>
+</section>
+</div>
+
+</main>
+<footer class="site-footer">Practice Ground, the companion site of <em>I Finally Understand Web Scraping</em>. All data is invented. <a href="/terms/">Terms of use</a></footer>
+</body>
+</html>
