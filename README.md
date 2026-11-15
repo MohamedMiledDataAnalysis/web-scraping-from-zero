@@ -36,6 +36,7 @@ Chapter 0 of the book walks through every step with what you should see and the 
 | `site/` | the website (Flask): `app.py`, templates, `data/` (books, quotes, products, jobs, prices, stations) and `files/` (CSV, Excel, UTF-16, PDF) |
 | `site/generate_data.py`, `site/generate_files.py` | rebuild the data from a fixed seed |
 | `check_setup.py` | the setup check of Chapter 0 |
+| `check_real_sites.py` | checks that the public websites of the *Now try it* sections still answer |
 | `run_mailbox.py` | the test mailbox of Chapter 22 (emails never leave your computer) |
 | `toolkit/` | `PoliteClient` (Chapter 20) and the test mailbox |
 | `chapters/chNN/examples/` | every program printed in chapter NN |
@@ -44,7 +45,7 @@ Chapter 0 of the book walks through every step with what you should see and the 
 | `chapters/chNN/expected/` | the exact output of every program, as printed in the book |
 | `chapters/ch23` to `ch26` | the four projects |
 | `chapters/ch26/PLAN_TEMPLATE.md` | the plan template for your own project |
-| `reference/` | cheat sheets and the legal checklist |
+| `reference/` | error sheets, cheat sheets, the legal checklist, the glossary, and `real_sites.md` (alternatives if a public site changes or closes) |
 | `tests/run_all.py` | runs the programs and compares them with `expected/` |
 | `output/` | where the programs write their results (empty in the repository) |
 
