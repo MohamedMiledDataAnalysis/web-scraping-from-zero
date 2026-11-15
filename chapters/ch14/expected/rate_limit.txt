@@ -1,0 +1,2 @@
+429 on attempt 1: waiting 10 s as asked
+12 calls done, 5 stations each time

@@ -1,0 +1,7 @@
+5 stations
+LON London Riverside UK
+MAN Manchester Hill UK
+EDI Edinburgh Port UK
+PAR Paris Canal FR
+LYO Lyon Confluence FR
+Requests left: 9

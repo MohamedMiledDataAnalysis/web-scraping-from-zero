@@ -1,0 +1,2 @@
+401 {'error': 'Missing API key. Send it in the X-API-Key header.', 'status': 401}
+403 {'error': 'This API key is not valid.', 'status': 403}

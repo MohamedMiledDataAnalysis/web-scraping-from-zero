@@ -1,0 +1,7 @@
+120 products in 10 requests
+          count    mean     max
+category                       
+Audio        30   83.25  171.13
+Garden       30   97.50  176.21
+Kitchen      30   98.25  187.14
+Office       30  111.58  182.52

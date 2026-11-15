@@ -1,0 +1,3 @@
+Right after get: 0
+After waiting: 12
+Showing 12 of 120 products

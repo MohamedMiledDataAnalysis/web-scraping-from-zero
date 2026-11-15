@@ -1,0 +1,10 @@
+page 1 of 4: 10 days
+page 2 of 4: 10 days
+page 3 of 4: 10 days
+page 4 of 4: 1 days
+31 days
+      date  rain_mm station  temp_max_c  temp_min_c
+2027-01-01      0.0     EDI         6.7        -0.3
+2027-01-02     12.5     EDI         6.2        -0.8
+2027-01-03      0.0     EDI         5.1        -1.9
+Rainy days: 14

@@ -1,0 +1,2 @@
+400 Unknown station. See /api/v1/stations.
+400 end must be after start, at most 366 days later.

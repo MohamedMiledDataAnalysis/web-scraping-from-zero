@@ -1,0 +1,4 @@
+1 10 120
+PG-0001 Pro Kettle 59.74 False
+PG-0002 Mini Kettle 177.31 True
+PG-0003 Compact Kettle 44.06 True

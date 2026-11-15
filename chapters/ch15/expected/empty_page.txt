@@ -1,0 +1,4 @@
+0 products found
+Loading products...
+<div class="product-grid" id="products"></div>
+['/static/shop.js']

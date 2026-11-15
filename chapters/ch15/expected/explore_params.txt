@@ -1,0 +1,5 @@
+{'per_page': 50} -> 3 pages, 50 ['Pro Kettle', 'Mini Kettle', 'Compact Kettle']
+{'per_page': 500} -> 3 pages, 50 ['Pro Kettle', 'Mini Kettle', 'Compact Kettle']
+{'sort': 'price', 'per_page': 3} -> 40 pages, 3 ['Eco Headphones', 'Mini Notebook', 'Classic Stapler']
+{'category': 'Garden', 'per_page': 1} -> 30 pages, 1 ['Travel Watering Can']
+{'page': 99} -> 10 pages, 0 []

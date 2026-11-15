@@ -1,0 +1,2 @@
+12 products in the final HTML
+True

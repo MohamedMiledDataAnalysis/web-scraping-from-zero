@@ -1,0 +1,10 @@
+   id        name                                price             tags
+0   1  Pro Kettle  {'amount': 39.5, 'currency': 'GBP'}        [kitchen]
+1   2  Mini Radio  {'amount': 24.0, 'currency': 'GBP'}  [audio, travel]
+   id        name             tags  price.amount price.currency
+0   1  Pro Kettle        [kitchen]          39.5            GBP
+1   2  Mini Radio  [audio, travel]          24.0            GBP
+         name     tags
+0  Pro Kettle  kitchen
+1  Mini Radio    audio
+1  Mini Radio   travel

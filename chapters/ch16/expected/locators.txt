@@ -1,0 +1,5 @@
+10 cards
+Tomas Reyna
+['courage', 'sea']
+http://localhost:8000/quotes/js/page/2/
+Walter Pike

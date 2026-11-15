@@ -6,3 +6,4 @@ output/*
 !output/.gitkeep
 *.pdf
 !site/files/*.pdf
+.env

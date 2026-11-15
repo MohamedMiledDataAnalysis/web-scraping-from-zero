@@ -1,0 +1,2 @@
+['category', 'id', 'in_stock', 'name', 'price', 'rating', 'reviews', 'sku']
+['Mini Kettle', 'Compact Kettle', 'Smart Kettle', 'Classic Kettle']

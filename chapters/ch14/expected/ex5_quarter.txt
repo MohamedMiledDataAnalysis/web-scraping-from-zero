@@ -1,0 +1,8 @@
+450 observations
+station
+LYO    326.5
+PAR    291.7
+EDI    270.5
+MAN    232.7
+LON    209.9
+429 answers: 0

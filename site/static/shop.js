@@ -1,6 +1,6 @@
 // The Gadget Shop page arrives empty. This script asks the hidden API for
 // products and adds them to the page, 12 at a time, as you scroll down.
-var state = { page: 0, pages: 1, loading: false };
+var state = { page: 0, pages: 1, loading: false, gen: 0 };
 
 function card(p) {
   var div = document.createElement("div");
@@ -16,6 +16,7 @@ function card(p) {
 function loadNext() {
   if (state.loading || state.page >= state.pages) return;
   state.loading = true;
+  var gen = state.gen;          // answers from an older list are ignored
   document.getElementById("status").textContent = "Loading products...";
   var params = new URLSearchParams({
     page: state.page + 1,
@@ -24,6 +25,7 @@ function loadNext() {
   });
   fetch("/shop/api/products?" + params).then(function (r) { return r.json(); })
     .then(function (data) {
+      if (gen !== state.gen) return;
       state.page = data.page; state.pages = data.pages;
       var box = document.getElementById("products");
       data.products.forEach(function (p) { box.appendChild(card(p)); });
@@ -34,7 +36,7 @@ function loadNext() {
 }
 
 function restart() {
-  state = { page: 0, pages: 1, loading: false };
+  state = { page: 0, pages: 1, loading: false, gen: state.gen + 1 };
   document.getElementById("products").innerHTML = "";
   loadNext();
 }
