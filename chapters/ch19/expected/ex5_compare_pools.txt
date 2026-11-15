@@ -1,0 +1,4 @@
+       file                        issuer   M.1.1  M.2.2
+pool_a.xlsx Banque Lumière SFH (invented) 12450.6   61.4
+pool_b.xlsx Banque Lumière SFH (invented) 12450.6   61.4
+pool_c.xlsx Banque Lumière SFH (invented) 12450.6   61.4

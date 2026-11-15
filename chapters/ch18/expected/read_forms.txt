@@ -1,0 +1,9 @@
+http://localhost:8000/jobs/
+  method: get | action: (this page)
+   input text q ''
+   select  city ''
+http://localhost:8000/account/login
+  method: post | action: (this page)
+   input hidden csrf_token '<32 random characters>'
+   input text username ''
+   input password password ''

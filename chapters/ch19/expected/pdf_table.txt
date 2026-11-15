@@ -1,0 +1,9 @@
+1 page(s)
+Mortgage arrears and possessions, 2026
+[['Quarter', 'Loans in arrears', 'Of which 2.5%+ of balance', 'Possessions'], ['Q1 2026', '80,013', '31,863', '1,007']]
+Quarter  Loans in arrears  Of which 2.5%+ of balance  Possessions
+Q1 2026             80013                      31863         1007
+Q2 2026             94086                      40188         1210
+Q3 2026             90559                      36938         1126
+Q4 2026             87002                      35729         1306
+Possessions in 2026: 4649

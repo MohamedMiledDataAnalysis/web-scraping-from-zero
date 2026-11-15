@@ -1,0 +1,5 @@
+Cookies after the login page: ['session']
+With the session: http://localhost:8000/account/
+Without it: http://localhost:8000/account/login?next=/account/
+number,date,item,total,status
+12 orders

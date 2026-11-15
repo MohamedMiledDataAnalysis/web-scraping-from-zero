@@ -1,0 +1,8 @@
+   Order       Date                Item  Total     Status
+PG-20271 2027-02-20 A River of Kingdoms £26.43 On its way
+PG-20272 2027-02-11   The Bright Meadow £21.02 On its way
+PG-20273 2027-02-02         Crimson Map  £5.25  Delivered
+Status
+Delivered     10
+On its way     2
+After logout: http://localhost:8000/account/login?next=/account/

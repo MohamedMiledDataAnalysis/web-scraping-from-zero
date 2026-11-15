@@ -1,0 +1,11 @@
+b'\xff\xfeI\x00S\x00I\x00N\x00\t\x00'
+(40, 6)
+         ISIN      Issuer      Asset type Currency  Haircut (%)   Maturity
+PG79806111821 Issuer B SA             ABS      EUR          1.5 2033-09-15
+PG49448995492 Issuer C SA Government bond      GBP          0.5 2031-06-15
+PG23207631353 Issuer D SA    Covered bond      EUR          4.0 2030-02-15
+Asset type
+ABS                2.00
+Corporate bond     5.29
+Covered bond       3.88
+Government bond    3.06

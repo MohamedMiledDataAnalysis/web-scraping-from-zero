@@ -1,0 +1,6 @@
+http://localhost:8000/files/arrears_report_2026.pdf
+http://localhost:8000/files/bank_capital_eu.csv
+http://localhost:8000/files/cover_pool_synthetic.xlsx
+http://localhost:8000/files/eligible_assets.txt
+http://localhost:8000/files/market_report_q4_2026.xlsx
+http://localhost:8000/files/monthly_sales.csv

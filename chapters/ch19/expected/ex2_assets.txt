@@ -1,0 +1,4 @@
+Currency
+EUR    31
+GBP     9
+Latest maturity: 2045-04-15
