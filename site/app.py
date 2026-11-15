@@ -499,7 +499,8 @@ def trouble_limited():
     if not ok:
         return Response("Too many requests", status=429,
                         headers={"Retry-After": str(retry)})
-    return Response(f"OK - {remaining} requests left in this window",
+    word = "request" if remaining == 1 else "requests"
+    return Response(f"OK - {remaining} {word} left in this window",
                     mimetype="text/plain")
 
 

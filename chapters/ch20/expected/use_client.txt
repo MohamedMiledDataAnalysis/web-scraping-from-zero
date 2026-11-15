@@ -1,0 +1,7 @@
+200 /library/
+WARNING status 503 on http://localhost:8000/trouble/flaky, retry 1 in 0.5 s
+WARNING status 503 on http://localhost:8000/trouble/flaky, retry 2 in 1.0 s
+200 /trouble/flaky
+Not allowed: robots.txt forbids http://localhost:8000/private/
+Not allowed: status 403 for http://localhost:8000/trouble/status/403
+404 /trouble/status/404

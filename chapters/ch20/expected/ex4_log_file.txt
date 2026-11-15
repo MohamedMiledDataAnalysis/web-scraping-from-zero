@@ -1,0 +1,2 @@
+WARNING status 503 on http://localhost:8000/trouble/flaky, retry 1 in 0.3 s
+WARNING status 503 on http://localhost:8000/trouble/flaky, retry 2 in 0.6 s

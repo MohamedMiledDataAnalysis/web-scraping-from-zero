@@ -1,0 +1,9 @@
+request 1: 200 OK - 4 requests left in this window
+request 2: 200 OK - 3 requests left in this window
+request 3: 200 OK - 2 requests left in this window
+request 4: 200 OK - 1 requests left in this window
+request 5: 200 OK - 0 requests left in this window
+request 6: 429, waiting 10 s, then 1.0 s between requests
+request 6: 200 OK - 4 requests left in this window
+request 7: 200 OK - 3 requests left in this window
+request 8: 200 OK - 2 requests left in this window

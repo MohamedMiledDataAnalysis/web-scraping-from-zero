@@ -1,0 +1,4 @@
+  attempt 1: status 503, waiting 0.5 s
+  attempt 2: status 503, waiting 1.0 s
+200 It worked this time
+404 - not retried

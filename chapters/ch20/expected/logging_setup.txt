@@ -1,0 +1,4 @@
+INFO    Starting: 50 pages to visit
+WARNING Retrying /trouble/flaky after status 503
+ERROR   Gave up on /trouble/slow?seconds=30
+3 lines in the file
