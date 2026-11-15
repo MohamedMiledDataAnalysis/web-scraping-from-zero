@@ -1,0 +1,10 @@
+                          measure value
+                     jobs tracked    28
+                       still open    24
+                 closed this week     4
+average days online (closed jobs)   2.2
+                 most asked skill   VBA
+                     title   city  salary_max
+   Senior Python Developer London       92000
+Senior Credit Risk Analyst  Leeds       89000
+       Senior BI Developer  Leeds       89000

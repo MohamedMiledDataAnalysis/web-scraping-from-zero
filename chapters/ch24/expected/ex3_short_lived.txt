@@ -1,0 +1,4 @@
+                               title  city first_seen  last_seen  days
+          Mid-level Business Analyst Leeds 2027-03-01 2027-03-02   2.0
+        Mid-level Operations Analyst Leeds 2027-03-01 2027-03-01   1.0
+Mid-level Structured Finance Analyst Leeds 2027-03-01 2027-03-02   2.0

@@ -1,0 +1,5 @@
+      city  jobs
+     Leeds    12
+Manchester     7
+    Remote     6
+    London     3

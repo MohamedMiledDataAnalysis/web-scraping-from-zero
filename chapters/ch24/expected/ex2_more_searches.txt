@@ -1,0 +1,2 @@
+['analyst', 'python', 'data'] -> 24 matching jobs
+['analyst', 'python', 'data', 'sql'] -> 25 matching jobs

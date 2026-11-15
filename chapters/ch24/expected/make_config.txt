@@ -1,0 +1,15 @@
+{
+  "searches": [
+    "analyst",
+    "python",
+    "data"
+  ],
+  "cities": [
+    "Leeds",
+    "Manchester",
+    "London",
+    "Remote"
+  ],
+  "min_salary": 40000,
+  "email_to": "me@localhost"
+}

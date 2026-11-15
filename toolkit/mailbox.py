@@ -3,9 +3,12 @@
 It receives emails on localhost, port 1025, prints them and saves them in
 output/mailbox/. Nothing ever leaves your computer.
 """
+import logging
 from pathlib import Path
 
 from aiosmtpd.controller import Controller
+
+logging.getLogger("mail.log").setLevel(logging.WARNING)   # keep the SMTP chatter quiet
 
 BOX = Path("output/mailbox")
 
