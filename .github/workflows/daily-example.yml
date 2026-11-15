@@ -1,0 +1,30 @@
+# Example of a scheduled scraper on GitHub Actions (Chapter 22).
+# It is DISABLED: it only runs when you start it by hand (workflow_dispatch).
+# To schedule it, uncomment the "schedule" lines, point the job at a real
+# site's public pages that its terms allow you to collect, and store any
+# password in Settings > Secrets and variables > Actions.
+name: daily-example
+
+on:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: "5 7 * * *"      # every day at 07:05 UTC
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: python -m pip install -r requirements.txt
+      - name: Start the Practice Ground and run the daily job
+        run: |
+          python run_site.py --live &
+          sleep 3
+          python chapters/ch22/examples/job_entry.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: daily-output
+          path: output/ch22/

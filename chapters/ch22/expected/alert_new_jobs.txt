@@ -1,0 +1,4 @@
+[mailbox] message 1 to me@localhost: Subject: 3 new analyst or developer jobs on 2027-03-06
+- Junior Business Analyst, Kestrel Insurance, Leeds, up to £50,000
+- Senior Structured Finance Analyst, Sable Media, Leeds, up to £76,000
+- Senior BI Developer, Riverside Logistics, Manchester, up to £78,000

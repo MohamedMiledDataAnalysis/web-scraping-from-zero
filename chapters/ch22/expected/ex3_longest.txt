@@ -1,0 +1,2 @@
+  id                  title           company  days first_seen
+1004 Mid-level Data Analyst Kestrel Insurance     6 2027-03-01
