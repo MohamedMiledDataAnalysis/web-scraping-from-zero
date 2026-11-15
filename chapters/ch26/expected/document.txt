@@ -1,0 +1,2 @@
+| title | text |  | book title, from JSON-LD `name` | A Market of Windows |
+['DATA_DICTIONARY.md', 'README.md', 'library_value.csv']

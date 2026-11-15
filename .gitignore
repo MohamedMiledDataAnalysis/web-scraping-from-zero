@@ -7,3 +7,4 @@ output/*
 *.pdf
 !site/files/*.pdf
 .env
+.scrapy/

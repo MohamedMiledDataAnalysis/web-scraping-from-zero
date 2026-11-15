@@ -11,4 +11,4 @@ values = dict(zip(fields["Field"], fields["Value"]))
 pool, bonds = values["M.1.1"], values["M.1.2"]
 print(issuer, date)
 print(f"Overcollateralisation: {(pool / bonds - 1) * 100:.1f}%")
-print("WA LTV:", values["M.2.2"], "| loans:", values["M.2.1"])
+print("WA LTV:", values["M.2.2"], "| loans:", int(values["M.2.1"]))

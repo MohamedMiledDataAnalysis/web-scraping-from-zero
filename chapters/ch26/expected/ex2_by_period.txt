@@ -1,0 +1,5 @@
+             count  median
+period                    
+before 1990    468    12.8
+1990-2009      253    12.4
+2010 on        199    12.4

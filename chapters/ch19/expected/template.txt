@@ -12,4 +12,4 @@
 10                                                   M.2.3  Weighted average seasoning (months)       58
 Banque Lumière SFH (invented) 2026-12-31
 Overcollateralisation: 26.1%
-WA LTV: 61.4 | loans: 98214.0
+WA LTV: 61.4 | loans: 98214

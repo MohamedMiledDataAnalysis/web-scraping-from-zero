@@ -1,0 +1,1 @@
+Checks passed; 920 books in stock kept out of 1000

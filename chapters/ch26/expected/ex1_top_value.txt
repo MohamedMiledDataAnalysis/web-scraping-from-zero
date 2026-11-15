@@ -1,0 +1,4 @@
+                     title category  pages_per_pound
+The Window and the Harbour  Mystery           118.46
+        The Crimson Forest  History           118.13
+        Mirrors in the Map  Science           117.51
