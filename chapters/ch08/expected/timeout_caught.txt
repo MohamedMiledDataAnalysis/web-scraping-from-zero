@@ -1,0 +1,2 @@
+0.5 -> 200
+3 -> gave up after 2 seconds

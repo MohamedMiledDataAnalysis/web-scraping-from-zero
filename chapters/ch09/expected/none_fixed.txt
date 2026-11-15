@@ -1,0 +1,6 @@
+Desk Lamp    '£24.99'
+Wall Clock   '£ 18.50'
+Mug Set      None
+Doormat      'Price on request'
+Cushion      '£1,049.00'
+None         '£7'

@@ -1,0 +1,5 @@
+                   Team  Points
+0      Riverside Rovers      45
+1          Harbour Town      40
+2        Kestrel United      36
+3  Copperfield Athletic      32

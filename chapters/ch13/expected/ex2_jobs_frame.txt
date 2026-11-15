@@ -1,0 +1,4 @@
+                     title       city  salary_min  age_days
+Senior Credit Risk Analyst      Leeds       75000         0
+       Junior Data Analyst Manchester       37000         0
+          Senior QA Tester       Lyon       67000         0

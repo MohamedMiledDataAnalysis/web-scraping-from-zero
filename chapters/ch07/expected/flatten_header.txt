@@ -1,0 +1,6 @@
+[('Pos', 'Pos'), ('Team', 'Team'), ('Results', 'Won')]
+['Pos', 'Team', 'Results Won', 'Results Drawn', 'Results Lost', 'Points']
+               Team  Results Won  Points
+0  Riverside Rovers           14      45
+1   Harbour Town[a]           12      40
+2    Kestrel United           11      36

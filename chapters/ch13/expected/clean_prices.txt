@@ -1,0 +1,8 @@
+         price_text    price
+0            £24.99    24.99
+1          £ 18.50     18.50
+2               NaN      NaN
+3  Price on request      NaN
+4         £1,049.00  1049.00
+5                £7     7.00
+1099.49

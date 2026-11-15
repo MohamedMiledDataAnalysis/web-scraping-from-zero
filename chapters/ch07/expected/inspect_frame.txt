@@ -1,0 +1,12 @@
+(8, 4)
+['Planet', 'Mean distance from the Sun (million km)', 'Diameter (km)', 'Orbital period (days)']
+Planet                                         str
+Mean distance from the Sun (million km)    float64
+Diameter (km)                                int64
+Orbital period (days)                      float64
+dtype: object
+    Planet  Mean distance from the Sun (million km)  Diameter (km)  Orbital period (days)
+0  Mercury                                     57.9           4879                   88.0
+1    Venus                                    108.2          12104                  224.7
+2    Earth                                    149.6          12756                  365.2
+142984

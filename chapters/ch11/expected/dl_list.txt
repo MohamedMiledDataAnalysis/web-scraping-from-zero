@@ -1,0 +1,1 @@
+{'Company': 'Riverside Logistics', 'Location': 'Leeds', 'Salary': '£75,000 – £89,000', 'Skills': 'AWS, Tableau, VBA', 'Posted': '2027-03-01', 'title': 'Senior Credit Risk Analyst'}

@@ -1,0 +1,11 @@
+url          http://localhost:8000/library/book/the-broken-forest-1.html
+title        The Broken Forest
+author       Nadia Kowal
+category     History
+price        26.93
+rating       3
+stock        19
+upc          5892a9288d75ab7c
+pages        486
+year         2010
+description  An unforgettable journey through the quiet courage of ordinary people. The author's finest book so far.

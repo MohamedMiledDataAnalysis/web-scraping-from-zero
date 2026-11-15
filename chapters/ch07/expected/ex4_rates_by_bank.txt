@@ -1,0 +1,5 @@
+Bank
+Harbour Building Society    5.50
+Northbridge Bank            3.58
+Kestrel Direct              3.45
+Name: Rate, dtype: float64

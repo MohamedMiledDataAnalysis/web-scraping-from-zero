@@ -1,0 +1,6 @@
+0 identical rows
+1 repeated urls
+ url  price scraped
+/b/2  19.20   09:00
+/b/1  26.93   09:05
+/b/3   6.56   09:05

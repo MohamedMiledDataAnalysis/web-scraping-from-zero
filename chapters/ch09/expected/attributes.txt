@@ -1,0 +1,6 @@
+book/the-broken-forest-1.html
+The Broken Forest
+1
+['star-rating', 'Three']
+None
+{'href': 'book/the-broken-forest-1.html', 'title': 'The Broken Forest'}

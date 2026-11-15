@@ -1,0 +1,10 @@
+3 tables found
+    Planet  Mean distance from the Sun (million km)  Diameter (km)  Orbital period (days)
+0  Mercury                                     57.9           4879                   88.0
+1    Venus                                    108.2          12104                  224.7
+2    Earth                                    149.6          12756                  365.2
+3     Mars                                    228.0           6792                  687.0
+4  Jupiter                                    778.5         142984                 4331.0
+5   Saturn                                   1432.0         120536                10747.0
+6   Uranus                                   2867.0          51118                30589.0
+7  Neptune                                   4515.0          49528                59800.0

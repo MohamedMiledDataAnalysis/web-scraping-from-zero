@@ -1,0 +1,16 @@
+(24, 1) ['LEI;Bank;Country;Year;Total assets (EUR m);CET1 ratio (%);Scenario']
+(24, 7)
+LEI                         str
+Bank                        str
+Country                     str
+Year                      int64
+Total assets (EUR m)    float64
+CET1 ratio (%)          float64
+Scenario                    str
+            Bank  CET1 ratio (%)
+   Banca Collina           10.11
+     Banco Brisa           10.53
+  Banque Lumière           11.62
+  Nordhafen Bank           12.46
+Northbridge Bank           12.83
+     Kanaal Bank           13.38

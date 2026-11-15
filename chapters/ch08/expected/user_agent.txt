@@ -1,0 +1,2 @@
+403 python-requests/2.34.2
+200 <h1>Welcome</h1><p>Your User-Agent: LearningScraper/1.0 (+mailto:reader@example.com)</p>

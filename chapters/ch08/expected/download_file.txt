@@ -1,0 +1,6 @@
+output/ch08/monthly_sales.csv 1297 bytes
+region
+East     59442.44
+North    62659.58
+South    57643.76
+West     68059.91

@@ -1,0 +1,5 @@
+work 13
+learning 9
+habits 7
+friendship 5
+kindness 5

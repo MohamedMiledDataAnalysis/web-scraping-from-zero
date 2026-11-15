@@ -1,0 +1,2 @@
+10
+{'text': '“The sea teaches nothing to those who stay on the shore.”', 'author': 'Tomas Reyna', 'tags': ['courage', 'sea']}

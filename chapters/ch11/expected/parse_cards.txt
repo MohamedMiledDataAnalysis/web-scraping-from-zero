@@ -1,0 +1,3 @@
+20
+{'id': 1, 'title': 'The Broken Forest', 'url': 'book/the-broken-forest-1.html', 'author': 'Nadia Kowal', 'rating': 3, 'price': 26.93, 'in_stock': True}
+{'id': 2, 'title': 'Salt Kingdom', 'url': 'book/salt-kingdom-2.html', 'author': 'Omar Hartley', 'rating': 1, 'price': 19.2, 'in_stock': True}

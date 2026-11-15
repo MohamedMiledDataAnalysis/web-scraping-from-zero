@@ -150,8 +150,10 @@ QUOTES = [
     ("Walter Pike", "Build the chair you would like to sit on.", ["kindness", "work"]),
     ("Walter Pike", "Sawdust on the floor means something was made.", ["work", "humour"]),
 ]
+mixed = list(QUOTES)
+random.Random(7).shuffle(mixed)      # mix the authors on every page
 quotes = [{"id": i + 1, "author": a, "text": t, "tags": tags}
-          for i, (a, t, tags) in enumerate(QUOTES)]
+          for i, (a, t, tags) in enumerate(mixed)]
 authors = [{"name": n, "slug": slugify(n), "born": b, "place": p, "bio": bio}
            for n, (b, p, bio) in AUTHORS.items()]
 (DATA / "quotes.json").write_text(json.dumps(quotes, indent=1), encoding="utf-8")

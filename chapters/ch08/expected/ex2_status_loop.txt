@@ -1,0 +1,3 @@
+500 500 Server Error: INTERNAL SERVER ERROR for url: http://localhost:8000/trouble/status/500
+200 ok
+403 403 Client Error: FORBIDDEN for url: http://localhost:8000/trouble/status/403

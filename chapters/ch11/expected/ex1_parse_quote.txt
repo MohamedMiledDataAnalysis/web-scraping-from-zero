@@ -1,0 +1,2 @@
+{'text': 'Sawdust on the floor means something was made.', 'author': 'Walter Pike', 'tags': ['work', 'humour']}
+{'text': 'Patience is not waiting; it is working while you wait.', 'author': 'Ada Fernhill', 'tags': ['patience', 'work']}

@@ -1,0 +1,4 @@
+['  In stock\n', 'IN STOCK', 'In\xa0stock', 'Out of  stock ']
+['in stock', 'in stock', 'in stock', 'out of stock']
+in stock        3
+out of stock    1

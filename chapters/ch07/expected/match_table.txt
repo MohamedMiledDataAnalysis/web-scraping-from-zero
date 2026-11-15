@@ -1,0 +1,7 @@
+1
+                       Bank        Account   Rate Minimum deposit
+0          Northbridge Bank     Easy Saver  3.10%              £1
+1          Northbridge Bank   Fixed 1 year  4.05%          £1,000
+2  Harbour Building Society  Regular Saver  5.50%             £25
+3            Kestrel Direct     Easy Saver  3.45%            £100
+4            Kestrel Direct  Fixed 2 years    NaN          £5,000

@@ -1,0 +1,3 @@
+<class 'str'> <!DOCTYPE html>
+<class 'bytes'> b'<!DOCTYPE html>'
+<class 'dict'> 120 Pro Kettle

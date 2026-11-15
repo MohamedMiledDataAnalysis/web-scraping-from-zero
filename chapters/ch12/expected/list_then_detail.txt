@@ -1,0 +1,8 @@
+48 books in History
+20 detail pages done
+40 detail pages done
+                           title  price  stock
+0              The Broken Forest  26.93     19
+1  The Winter of Little Stations  20.82     13
+2          A Bridge of Compasses  26.11     17
+Total stock: 547

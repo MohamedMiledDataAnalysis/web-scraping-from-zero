@@ -1,0 +1,9 @@
+['Riverside Rovers', 'Harbour Town', 'Kestrel United', 'Copperfield Athletic', 'Meadow Park', 'Old Station FC']
+Bank                   str
+Account                str
+Rate               float64
+Minimum deposit      int64
+dtype: object
+                       Bank        Account  Rate  Minimum deposit
+2  Harbour Building Society  Regular Saver  5.50               25
+1          Northbridge Bank   Fixed 1 year  4.05             1000

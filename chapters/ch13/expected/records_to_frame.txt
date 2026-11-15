@@ -1,0 +1,12 @@
+         name        price_text
+0   Desk Lamp            £24.99
+1  Wall Clock          £ 18.50 
+2     Mug Set               NaN
+3     Doormat  Price on request
+4     Cushion         £1,049.00
+5   Plant Pot                £7
+(6, 2)
+name          str
+price_text    str
+name          0
+price_text    1

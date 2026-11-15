@@ -1,0 +1,1 @@
+{'id': 1252, 'title': 'Senior Credit Risk Analyst', 'company': 'Riverside Logistics', 'city': 'Leeds', 'salary_min': 75000, 'salary_max': 89000, 'posted': '2027-03-01', 'new': True}

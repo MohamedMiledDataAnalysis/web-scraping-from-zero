@@ -1,51 +1,6 @@
 [
  {
   "id": 1,
-  "author": "Ada Fernhill",
-  "text": "Patience is not waiting; it is working while you wait.",
-  "tags": [
-   "patience",
-   "work"
-  ]
- },
- {
-  "id": 2,
-  "author": "Ada Fernhill",
-  "text": "A lesson learned slowly is a lesson kept for life.",
-  "tags": [
-   "learning",
-   "patience"
-  ]
- },
- {
-  "id": 3,
-  "author": "Ada Fernhill",
-  "text": "Tidy the desk and the mind will follow.",
-  "tags": [
-   "work",
-   "habits"
-  ]
- },
- {
-  "id": 4,
-  "author": "Ada Fernhill",
-  "text": "The pupil who asks twice understands once and for all.",
-  "tags": [
-   "learning",
-   "questions"
-  ]
- },
- {
-  "id": 5,
-  "author": "Ada Fernhill",
-  "text": "Small daily efforts build tall houses.",
-  "tags": [
-   "work",
-   "habits"
-  ]
- },
- {
-  "id": 6,
   "author": "Tomas Reyna",
   "text": "The sea teaches nothing to those who stay on the shore.",
   "tags": [
@@ -54,21 +9,66 @@
   ]
  },
  {
-  "id": 7,
-  "author": "Tomas Reyna",
-  "text": "A friend is a harbour you carry with you.",
+  "id": 2,
+  "author": "Walter Pike",
+  "text": "Measure the wood, not your worries.",
   "tags": [
-   "friendship",
-   "sea"
+   "work",
+   "hope"
+  ]
+ },
+ {
+  "id": 3,
+  "author": "Mira Okonkwo",
+  "text": "A failed test is a successful question.",
+  "tags": [
+   "failure",
+   "questions"
+  ]
+ },
+ {
+  "id": 4,
+  "author": "Henrik Sall",
+  "text": "A good habit is a quiet friend.",
+  "tags": [
+   "habits",
+   "friendship"
+  ]
+ },
+ {
+  "id": 5,
+  "author": "Henrik Sall",
+  "text": "A book well bound outlives its binder.",
+  "tags": [
+   "work",
+   "time"
+  ]
+ },
+ {
+  "id": 6,
+  "author": "Mira Okonkwo",
+  "text": "Curiosity is the engine; failure is the fuel.",
+  "tags": [
+   "curiosity",
+   "failure"
+  ]
+ },
+ {
+  "id": 7,
+  "author": "Celeste Moreau",
+  "text": "Good food takes the time it takes.",
+  "tags": [
+   "time",
+   "patience"
   ]
  },
  {
   "id": 8,
-  "author": "Tomas Reyna",
-  "text": "Every storm ends in the same calm morning.",
+  "author": "June Albright",
+  "text": "Laughter is the shortest road between two people.",
   "tags": [
-   "hope",
-   "sea"
+   "friendship",
+   "humour"
   ]
  },
  {
@@ -82,24 +82,6 @@
  },
  {
   "id": 10,
-  "author": "Tomas Reyna",
-  "text": "Share your bread and your map.",
-  "tags": [
-   "friendship",
-   "generosity"
-  ]
- },
- {
-  "id": 11,
-  "author": "Mira Okonkwo",
-  "text": "Curiosity is the engine; failure is the fuel.",
-  "tags": [
-   "curiosity",
-   "failure"
-  ]
- },
- {
-  "id": 12,
   "author": "Mira Okonkwo",
   "text": "Break it on purpose, and you will know how it works.",
   "tags": [
@@ -108,151 +90,25 @@
   ]
  },
  {
-  "id": 13,
-  "author": "Mira Okonkwo",
-  "text": "A failed test is a successful question.",
-  "tags": [
-   "failure",
-   "questions"
-  ]
- },
- {
-  "id": 14,
-  "author": "Mira Okonkwo",
-  "text": "Measure twice, ask three times.",
-  "tags": [
-   "questions",
-   "work"
-  ]
- },
- {
-  "id": 15,
-  "author": "Mira Okonkwo",
-  "text": "The best tool is the one you understand.",
+  "id": 11,
+  "author": "Walter Pike",
+  "text": "Sawdust on the floor means something was made.",
   "tags": [
    "work",
-   "learning"
-  ]
- },
- {
-  "id": 16,
-  "author": "Henrik Sall",
-  "text": "A book well bound outlives its binder.",
-  "tags": [
-   "work",
-   "time"
-  ]
- },
- {
-  "id": 17,
-  "author": "Henrik Sall",
-  "text": "Kind words cost nothing and are worth a fortune.",
-  "tags": [
-   "kindness",
-   "generosity"
-  ]
- },
- {
-  "id": 18,
-  "author": "Henrik Sall",
-  "text": "Read slowly the books you love.",
-  "tags": [
-   "reading",
-   "time"
-  ]
- },
- {
-  "id": 19,
-  "author": "Henrik Sall",
-  "text": "The page you skip is the page you needed.",
-  "tags": [
-   "reading",
-   "learning"
-  ]
- },
- {
-  "id": 20,
-  "author": "Henrik Sall",
-  "text": "A good habit is a quiet friend.",
-  "tags": [
-   "habits",
-   "friendship"
-  ]
- },
- {
-  "id": 21,
-  "author": "June Albright",
-  "text": "Start the day with one good sentence.",
-  "tags": [
-   "habits",
-   "hope"
-  ]
- },
- {
-  "id": 22,
-  "author": "June Albright",
-  "text": "Laughter is the shortest road between two people.",
-  "tags": [
-   "friendship",
    "humour"
   ]
  },
  {
-  "id": 23,
-  "author": "June Albright",
-  "text": "If you cannot be brave, be kind; it often looks the same.",
+  "id": 12,
+  "author": "Ada Fernhill",
+  "text": "Patience is not waiting; it is working while you wait.",
   "tags": [
-   "courage",
-   "kindness"
-  ]
- },
- {
-  "id": 24,
-  "author": "June Albright",
-  "text": "Morning comes to everyone, even the worried.",
-  "tags": [
-   "hope",
-   "time"
-  ]
- },
- {
-  "id": 25,
-  "author": "June Albright",
-  "text": "Listen first; the radio taught me that.",
-  "tags": [
-   "questions",
-   "kindness"
-  ]
- },
- {
-  "id": 26,
-  "author": "Rashid Noor",
-  "text": "A mistake you can name is a mistake you can fix.",
-  "tags": [
-   "failure",
-   "learning"
-  ]
- },
- {
-  "id": 27,
-  "author": "Rashid Noor",
-  "text": "Understanding is slower than memorising and lasts longer.",
-  "tags": [
-   "learning",
-   "time"
-  ]
- },
- {
-  "id": 28,
-  "author": "Rashid Noor",
-  "text": "Every hard problem is three easy problems holding hands.",
-  "tags": [
-   "learning",
+   "patience",
    "work"
   ]
  },
  {
-  "id": 29,
+  "id": 13,
   "author": "Rashid Noor",
   "text": "Draw the picture before you write the equation.",
   "tags": [
@@ -261,25 +117,43 @@
   ]
  },
  {
-  "id": 30,
-  "author": "Rashid Noor",
-  "text": "The wrong answer shows you where to look.",
+  "id": 14,
+  "author": "Mira Okonkwo",
+  "text": "The best tool is the one you understand.",
   "tags": [
-   "failure",
-   "questions"
+   "work",
+   "learning"
   ]
  },
  {
-  "id": 31,
-  "author": "Celeste Moreau",
-  "text": "Good food takes the time it takes.",
+  "id": 15,
+  "author": "Walter Pike",
+  "text": "Build the chair you would like to sit on.",
   "tags": [
-   "time",
-   "patience"
+   "kindness",
+   "work"
   ]
  },
  {
-  "id": 32,
+  "id": 16,
+  "author": "Henrik Sall",
+  "text": "The page you skip is the page you needed.",
+  "tags": [
+   "reading",
+   "learning"
+  ]
+ },
+ {
+  "id": 17,
+  "author": "June Albright",
+  "text": "If you cannot be brave, be kind; it often looks the same.",
+  "tags": [
+   "courage",
+   "kindness"
+  ]
+ },
+ {
+  "id": 18,
   "author": "Celeste Moreau",
   "text": "Cook for others and you will never eat alone.",
   "tags": [
@@ -288,7 +162,34 @@
   ]
  },
  {
-  "id": 33,
+  "id": 19,
+  "author": "Rashid Noor",
+  "text": "Every hard problem is three easy problems holding hands.",
+  "tags": [
+   "learning",
+   "work"
+  ]
+ },
+ {
+  "id": 20,
+  "author": "June Albright",
+  "text": "Listen first; the radio taught me that.",
+  "tags": [
+   "questions",
+   "kindness"
+  ]
+ },
+ {
+  "id": 21,
+  "author": "Henrik Sall",
+  "text": "Read slowly the books you love.",
+  "tags": [
+   "reading",
+   "time"
+  ]
+ },
+ {
+  "id": 22,
   "author": "Celeste Moreau",
   "text": "Salt, patience and a little butter fix most things.",
   "tags": [
@@ -297,12 +198,111 @@
   ]
  },
  {
-  "id": 34,
+  "id": 23,
+  "author": "Tomas Reyna",
+  "text": "Every storm ends in the same calm morning.",
+  "tags": [
+   "hope",
+   "sea"
+  ]
+ },
+ {
+  "id": 24,
+  "author": "Rashid Noor",
+  "text": "Understanding is slower than memorising and lasts longer.",
+  "tags": [
+   "learning",
+   "time"
+  ]
+ },
+ {
+  "id": 25,
+  "author": "Walter Pike",
+  "text": "Sharpen the tool before you blame it.",
+  "tags": [
+   "habits",
+   "work"
+  ]
+ },
+ {
+  "id": 26,
+  "author": "Mira Okonkwo",
+  "text": "Measure twice, ask three times.",
+  "tags": [
+   "questions",
+   "work"
+  ]
+ },
+ {
+  "id": 27,
+  "author": "Ada Fernhill",
+  "text": "Tidy the desk and the mind will follow.",
+  "tags": [
+   "work",
+   "habits"
+  ]
+ },
+ {
+  "id": 28,
+  "author": "Ada Fernhill",
+  "text": "A lesson learned slowly is a lesson kept for life.",
+  "tags": [
+   "learning",
+   "patience"
+  ]
+ },
+ {
+  "id": 29,
   "author": "Celeste Moreau",
   "text": "Taste as you go, in the kitchen and in life.",
   "tags": [
    "curiosity",
    "habits"
+  ]
+ },
+ {
+  "id": 30,
+  "author": "Henrik Sall",
+  "text": "Kind words cost nothing and are worth a fortune.",
+  "tags": [
+   "kindness",
+   "generosity"
+  ]
+ },
+ {
+  "id": 31,
+  "author": "Rashid Noor",
+  "text": "The wrong answer shows you where to look.",
+  "tags": [
+   "failure",
+   "questions"
+  ]
+ },
+ {
+  "id": 32,
+  "author": "Walter Pike",
+  "text": "A straight cut starts with a steady breath.",
+  "tags": [
+   "patience",
+   "work"
+  ]
+ },
+ {
+  "id": 33,
+  "author": "June Albright",
+  "text": "Morning comes to everyone, even the worried.",
+  "tags": [
+   "hope",
+   "time"
+  ]
+ },
+ {
+  "id": 34,
+  "author": "Tomas Reyna",
+  "text": "A friend is a harbour you carry with you.",
+  "tags": [
+   "friendship",
+   "sea"
   ]
  },
  {
@@ -316,47 +316,47 @@
  },
  {
   "id": 36,
-  "author": "Walter Pike",
-  "text": "Measure the wood, not your worries.",
+  "author": "Ada Fernhill",
+  "text": "Small daily efforts build tall houses.",
   "tags": [
    "work",
-   "hope"
+   "habits"
   ]
  },
  {
   "id": 37,
-  "author": "Walter Pike",
-  "text": "A straight cut starts with a steady breath.",
+  "author": "Ada Fernhill",
+  "text": "The pupil who asks twice understands once and for all.",
   "tags": [
-   "patience",
-   "work"
+   "learning",
+   "questions"
   ]
  },
  {
   "id": 38,
-  "author": "Walter Pike",
-  "text": "Sharpen the tool before you blame it.",
+  "author": "Rashid Noor",
+  "text": "A mistake you can name is a mistake you can fix.",
   "tags": [
-   "habits",
-   "work"
+   "failure",
+   "learning"
   ]
  },
  {
   "id": 39,
-  "author": "Walter Pike",
-  "text": "Build the chair you would like to sit on.",
+  "author": "Tomas Reyna",
+  "text": "Share your bread and your map.",
   "tags": [
-   "kindness",
-   "work"
+   "friendship",
+   "generosity"
   ]
  },
  {
   "id": 40,
-  "author": "Walter Pike",
-  "text": "Sawdust on the floor means something was made.",
+  "author": "June Albright",
+  "text": "Start the day with one good sentence.",
   "tags": [
-   "work",
-   "humour"
+   "habits",
+   "hope"
   ]
  }
 ]

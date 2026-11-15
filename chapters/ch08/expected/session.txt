@@ -1,0 +1,2 @@
+10 pages with a session: 200
+User-Agent sent: LearningScraper/1.0 (+mailto:reader@example.com)

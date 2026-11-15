@@ -123,10 +123,14 @@ def home():
 @app.route("/robots.txt")
 def robots():
     text = ("# Practice Ground robots.txt\n"
+            "# Please wait 0.2 seconds between two requests (see /terms/).\n"
             "User-agent: *\n"
             "Disallow: /private/\n"
             "Disallow: /admin/\n"
-            "Crawl-delay: 1\n"
+            "\n"
+            "User-agent: SlowBot\n"
+            "Disallow: /private/\n"
+            "Crawl-delay: 5\n"
             "\n"
             "User-agent: BadBot\n"
             "Disallow: /\n"
@@ -525,7 +529,7 @@ def trouble_agent():
 
 @app.route("/trouble/wrong-charset")
 def trouble_charset():
-    body = "<h1>Café crème — prix : 3,50 €</h1>".encode("utf-8")
+    body = "<h1>Café crème, prix : 3,50 euros</h1>".encode("utf-8")
     return Response(body, headers={"Content-Type": "text/html; charset=ISO-8859-1"})
 
 

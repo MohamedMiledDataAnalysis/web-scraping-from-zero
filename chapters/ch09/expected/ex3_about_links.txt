@@ -1,0 +1,10 @@
+Tomas Reyna http://localhost:8000/quotes/author/tomas-reyna/
+Walter Pike http://localhost:8000/quotes/author/walter-pike/
+Mira Okonkwo http://localhost:8000/quotes/author/mira-okonkwo/
+Henrik Sall http://localhost:8000/quotes/author/henrik-sall/
+Henrik Sall http://localhost:8000/quotes/author/henrik-sall/
+Mira Okonkwo http://localhost:8000/quotes/author/mira-okonkwo/
+Celeste Moreau http://localhost:8000/quotes/author/celeste-moreau/
+June Albright http://localhost:8000/quotes/author/june-albright/
+Tomas Reyna http://localhost:8000/quotes/author/tomas-reyna/
+Mira Okonkwo http://localhost:8000/quotes/author/mira-okonkwo/

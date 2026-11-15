@@ -1,0 +1,2 @@
+'��I\x00S\x00I\x00N\x00\t\x00I\x00s\x00s\x00u\x00e\x00r\x00\t\x00A\x00s\x00'
+'ISIN\tIssuer\tAsset type\tCurrency\tHaircut (%)\tMaturity'

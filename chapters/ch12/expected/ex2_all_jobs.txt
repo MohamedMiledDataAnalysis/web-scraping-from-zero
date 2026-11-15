@@ -1,0 +1,2 @@
+50 jobs
+[('Leeds', 12), ('Lyon', 10), ('Paris', 7)]

@@ -1,0 +1,8 @@
+  Pos                  Team Results            Points
+  Pos                  Team     Won Drawn Lost Points
+0   1      Riverside Rovers      14     3    1     45
+1   2       Harbour Town[a]      12     4    2     40
+2   3        Kestrel United      11     3    4     36
+3   4  Copperfield Athletic       9     5    4     32
+4   5           Meadow Park       7     4    7     25
+5   6        Old Station FC       3     2   13     11

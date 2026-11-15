@@ -1,0 +1,7 @@
+20 categories
+Travel           70
+Science          59
+Mystery          56
+Biography        54
+Self Help        54
+Total: 1000
