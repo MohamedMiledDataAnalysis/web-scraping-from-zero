@@ -1,4 +1,4 @@
-"""Exercise 13.3 (medium).
+r"""Exercise 13.3 (medium).
 
     Read `bank_capital_eu.csv` correctly and print, for each country, the lowest CET1 ratio under the adverse scenario, all years.
 

@@ -1,4 +1,4 @@
-"""Exercise 6.1 (easy).
+r"""Exercise 6.1 (easy).
 
     Print the number of results of the job board for the site date, then for 15 March 2027. The number is in the paragraph with the class `result-count`.
 

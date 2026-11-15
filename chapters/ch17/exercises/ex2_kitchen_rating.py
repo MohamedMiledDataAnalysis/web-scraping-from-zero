@@ -1,4 +1,4 @@
-"""Exercise 17.2 (medium).
+r"""Exercise 17.2 (medium).
 
     In the shop, choose *Kitchen* and sort by *Rating*, and print the three best products with their rating.
 

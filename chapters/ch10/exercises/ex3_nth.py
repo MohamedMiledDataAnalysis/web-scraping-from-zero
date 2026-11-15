@@ -1,4 +1,4 @@
-"""Exercise 10.3 (medium).
+r"""Exercise 10.3 (medium).
 
     On the tables page, use a selector to print the name and diameter of the last planet of the planets table, then the third row of the rates table (header row included). Use `:last-of-type` and `:nth-of-type`.
 

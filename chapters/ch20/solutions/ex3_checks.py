@@ -14,11 +14,19 @@ client = PoliteClient("LearningScraper/1.0", delay=0.2)
 def scrape(price_selector):
     rows = []
     for page in range(1, 6):
-        html = client.get(f"http://localhost:8000/library/page-{page}.html").text
-        for card in BeautifulSoup(html, "html.parser").select("article.book-card"):
+        html = client.get(
+            f"http://localhost:8000/library/page-{page}.html"
+        ).text
+        for card in BeautifulSoup(html, "html.parser").select(
+            "article.book-card"
+        ):
             price = card.select_one(price_selector)
-            rows.append({"title": card.select_one("h3 a")["title"],
-                         "price": float(price.text[1:]) if price else None})
+            rows.append(
+                {
+                    "title": card.select_one("h3 a")["title"],
+                    "price": float(price.text[1:]) if price else None,
+                }
+            )
     return pd.DataFrame(rows)
 
 

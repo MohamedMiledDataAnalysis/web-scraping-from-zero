@@ -259,6 +259,7 @@
   "chapters/ch20/examples/obey_429.py",
   "chapters/ch20/examples/logging_setup.py",
   "chapters/ch20/examples/checks.py",
+  "chapters/ch20/examples/first_class.py",
   "chapters/ch20/examples/use_client.py",
   "chapters/ch20/solutions/ex1_give_up.py",
   "chapters/ch20/solutions/ex2_timeout.py",

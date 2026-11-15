@@ -12,4 +12,9 @@ for searches in [config["searches"], config["searches"] + ["sql"]]:
     jobs = {}
     for q in searches:
         jobs.update(collect_list("2027-03-07", q))
-    print(searches, "->", sum(matches(j, config) for j in jobs.values()), "matching jobs")
+    print(
+        searches,
+        "->",
+        sum(matches(j, config) for j in jobs.values()),
+        "matching jobs",
+    )

@@ -1,6 +1,6 @@
-**Answer.** Romance: a median of 15.3 pages per pound, against 10.6 for Business, the lowest.
+**Answer.** Romance: a median of 15.32 pages per pound, against 10.57 for Business, the lowest.
           books  median
 category               
-Romance      50    15.3
-Sport        40    15.3
-Poetry       44    14.9
+Romance      50   15.32
+Sport        40   15.26
+Poetry       44   14.86

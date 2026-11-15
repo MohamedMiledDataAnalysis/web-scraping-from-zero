@@ -2,7 +2,7 @@ import pandas as pd
 
 path = "output/ch19/files/market_report_q4_2026.xlsx"
 issuance = pd.read_excel(path, sheet_name="Issuance", header=3)
-print(issuance.tail(3).to_string())
+print(issuance.tail(3).to_string(max_colwidth=24))
 
 issuance = issuance.dropna(subset=["Q1 2026"])
 issuance = issuance[issuance["Country"] != "Total"]

@@ -10,14 +10,20 @@ from book_parser import parse_book_page
 
 DELAY = 0.2
 session = requests.Session()
-session.headers["User-Agent"] = "LearningScraper/1.0 (+mailto:reader@example.com)"
+session.headers["User-Agent"] = (
+    "LearningScraper/1.0 (+mailto:reader@example.com)"
+)
 
 
-def get_soup(url):
+def get_html(url):
     time.sleep(DELAY)
     response = session.get(url, timeout=10)
     response.raise_for_status()
-    return BeautifulSoup(response.text, "html.parser")
+    return response.text
+
+
+def get_soup(url):
+    return BeautifulSoup(get_html(url), "html.parser")
 
 
 # Level 1: the list pages of the category -> detail addresses
@@ -34,7 +40,7 @@ print(len(detail_urls), "books in History")
 # Level 2: every detail page -> one record
 records = []
 for i, detail in enumerate(detail_urls, start=1):
-    records.append(parse_book_page(detail, str(get_soup(detail))))
+    records.append(parse_book_page(detail, get_html(detail)))
     if i % 20 == 0:
         print(i, "detail pages done")
 

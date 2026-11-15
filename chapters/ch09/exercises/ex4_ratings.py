@@ -1,4 +1,4 @@
-"""Exercise 9.4 (medium).
+r"""Exercise 9.4 (medium).
 
     On page 1 of the library, count the books per rating (`One` to `Five`), using the second class of the `star-rating` paragraph. Print the counts in the order One to Five.
 
@@ -7,6 +7,5 @@ Solution: chapters/ch09/solutions/ex4_ratings.py
 """
 import requests
 from bs4 import BeautifulSoup
-counts = {w: 0 for w in ["One", "Two", "Three", "Four", "Five"]}
 
 # Your code here

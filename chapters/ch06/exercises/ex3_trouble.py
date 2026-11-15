@@ -1,4 +1,4 @@
-"""Exercise 6.3 (medium).
+r"""Exercise 6.3 (medium).
 
     Print the first three links of the Trouble zone list (`ul.trouble-list`) with their text: the address, two spaces, then the explanation after the colon.
 

@@ -1,4 +1,4 @@
-"""Exercise 21.1 (easy).
+r"""Exercise 21.1 (easy).
 
     Change `quotes_spider.py` to collect the author pages instead: from each quote, follow the *(about)* link and yield the name, birth year and birthplace. Scrapy's duplicate filter visits each author once. Print the number of authors in the file.
 

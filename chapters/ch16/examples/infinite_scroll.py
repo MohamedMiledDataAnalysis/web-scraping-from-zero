@@ -1,3 +1,4 @@
+from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from playwright.sync_api import sync_playwright
 
 with sync_playwright() as p:
@@ -11,13 +12,17 @@ with sync_playwright() as p:
         if count == previous:
             break
         previous = count
-        page.mouse.wheel(0, 20000)                 # scroll down a lot
+        page.mouse.wheel(0, 20000)  # scroll down a lot
         try:
             page.wait_for_function(
-                f"document.querySelectorAll('div.product').length > {count}",
-                timeout=3000)
-        except Exception:
-            pass                                   # nothing more came
-    print(page.locator("div.product").count(), "products after scrolling")
+                "document.querySelectorAll('div.product').length"
+                f" > {count}",
+                timeout=3000,
+            )
+        except PlaywrightTimeoutError:
+            pass  # nothing more came
+    print(
+        page.locator("div.product").count(), "products after scrolling"
+    )
     print(page.locator("#status").inner_text())
     browser.close()

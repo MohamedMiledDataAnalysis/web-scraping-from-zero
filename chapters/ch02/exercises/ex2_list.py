@@ -1,4 +1,4 @@
-"""Exercise 2.2 (easy).
+r"""Exercise 2.2 (easy).
 
     From the list `ratings = ["Three", "One", "Five", "Two"]`, print the number of ratings, the first one and the last one, on one line.
 

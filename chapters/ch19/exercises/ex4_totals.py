@@ -1,4 +1,4 @@
-"""Exercise 19.4 (medium).
+r"""Exercise 19.4 (medium).
 
     Recompute the *Total* row of the *Issuance* sheet (the sum of each quarter over the six countries), and print it.
 

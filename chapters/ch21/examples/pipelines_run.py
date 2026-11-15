@@ -48,16 +48,25 @@ class CountPipeline:
         print(f"{self.count} jobs kept")
 
 
-process = CrawlerProcess(settings={
-    "ROBOTSTXT_OBEY": True,
-    "USER_AGENT": "LearningScraper/1.0 (+mailto:reader@example.com)",
-    "DOWNLOAD_DELAY": 0.2,
-    "LOG_LEVEL": "ERROR",
-    "ITEM_PIPELINES": {"__main__.CleanPipeline": 100,
-                       "__main__.RemotePipeline": 200,
-                       "__main__.CountPipeline": 300},
-    "FEEDS": {"output/ch21/jobs.json": {"format": "json", "overwrite": True}},
-})
+process = CrawlerProcess(
+    settings={
+        "ROBOTSTXT_OBEY": True,
+        "USER_AGENT": "LearningScraper/1.0 (+mailto:reader@example.com)",
+        "DOWNLOAD_DELAY": 0.2,
+        "LOG_LEVEL": "ERROR",
+        "ITEM_PIPELINES": {
+            "__main__.CleanPipeline": 100,
+            "__main__.RemotePipeline": 200,
+            "__main__.CountPipeline": 300,
+        },
+        "FEEDS": {
+            "output/ch21/jobs.json": {
+                "format": "json",
+                "overwrite": True,
+            }
+        },
+    }
+)
 process.crawl(JobsSpider)
 process.start()
 

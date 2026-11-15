@@ -25,10 +25,17 @@ with open(OUT, "a", newline="", encoding="utf-8") as f:
         if page in done:
             continue
         url = f"http://localhost:8000/library/page-{page}.html"
-        soup = BeautifulSoup(session.get(url, timeout=10).text, "html.parser")
+        soup = BeautifulSoup(
+            session.get(url, timeout=10).text, "html.parser"
+        )
         cards = soup.select("article.book-card h3 a")
-        writer.writerow({"page": page, "books": len(cards),
-                         "first_title": cards[0]["title"]})
+        writer.writerow(
+            {
+                "page": page,
+                "books": len(cards),
+                "first_title": cards[0]["title"],
+            }
+        )
         f.flush()
         time.sleep(0.2)
         if page == 6:

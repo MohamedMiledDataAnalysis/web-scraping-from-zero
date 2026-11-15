@@ -1,4 +1,4 @@
-"""Exercise 22.2 (medium).
+r"""Exercise 22.2 (medium).
 
     After `five_days.py` and `alert_new_jobs.py` (which added 6 March), query `output/ch22/jobs.db` with SQL to print the number of jobs per day.
 

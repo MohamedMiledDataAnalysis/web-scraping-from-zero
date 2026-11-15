@@ -1,4 +1,4 @@
-"""Exercise 11.1 (easy).
+r"""Exercise 11.1 (easy).
 
     Write `parse_quote(div)` returning `text`, `author` and `tags` for one quote, and print the result for the first two quotes of page 2.
 

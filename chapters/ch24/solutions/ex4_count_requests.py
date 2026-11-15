@@ -23,6 +23,9 @@ tracker.DB = "output/ch24/count.db"
 Path(tracker.DB).unlink(missing_ok=True)
 config = json.loads(Path("output/ch24/config.json").read_text())
 for n in range(7):
-    tracker.run_day((dt.date(2027, 3, 1) + dt.timedelta(n)).isoformat(), config,
-                    with_email=False)
+    tracker.run_day(
+        (dt.date(2027, 3, 1) + dt.timedelta(n)).isoformat(),
+        config,
+        with_email=False,
+    )
 print(dict(counts), "| total:", sum(counts.values()))

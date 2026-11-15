@@ -1,4 +1,4 @@
-"""Exercise 4.3 (medium).
+r"""Exercise 4.3 (medium).
 
     Request `http://localhost:8000/library/page-51.html` (the library has only 50 pages) and print the status code, whether the response is `ok`, and the text of its `h1`.
 

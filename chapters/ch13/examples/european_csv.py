@@ -7,5 +7,11 @@ print(wrong.shape, list(wrong.columns)[:1])
 banks = pd.read_csv(url, sep=";", decimal=",", thousands=".")
 print(banks.shape)
 print(banks.dtypes.to_string())
-adverse = banks[(banks["Scenario"] == "Adverse") & (banks["Year"] == 2025)]
-print(adverse[["Bank", "CET1 ratio (%)"]].sort_values("CET1 ratio (%)").to_string(index=False))
+adverse = banks[
+    (banks["Scenario"] == "Adverse") & (banks["Year"] == 2025)
+]
+print(
+    adverse[["Bank", "CET1 ratio (%)"]]
+    .sort_values("CET1 ratio (%)")
+    .to_string(index=False)
+)

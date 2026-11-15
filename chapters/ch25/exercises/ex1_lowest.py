@@ -1,4 +1,4 @@
-"""Exercise 25.1 (easy).
+r"""Exercise 25.1 (easy).
 
     Print, for each watched product, its lowest price over the two weeks and the day it happened.
 

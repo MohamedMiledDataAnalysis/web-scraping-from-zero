@@ -16,15 +16,29 @@ class AuthorsSpider(scrapy.Spider):
             yield response.follow(next_page, self.parse)
 
     def parse_author(self, response):
-        yield {"name": response.css("h1.author-title::text").get(),
-               "born": response.css("span.author-born-date::text").get(),
-               "place": response.css("span.author-born-location::text").get()}
+        yield {
+            "name": response.css("h1.author-title::text").get(),
+            "born": response.css("span.author-born-date::text").get(),
+            "place": response.css(
+                "span.author-born-location::text"
+            ).get(),
+        }
 
 
-process = CrawlerProcess(settings={
-    "ROBOTSTXT_OBEY": True, "DOWNLOAD_DELAY": 0.2, "LOG_LEVEL": "ERROR",
-    "USER_AGENT": "LearningScraper/1.0 (+mailto:reader@example.com)",
-    "FEEDS": {"output/ch21/authors.json": {"format": "json", "overwrite": True}}})
+process = CrawlerProcess(
+    settings={
+        "ROBOTSTXT_OBEY": True,
+        "DOWNLOAD_DELAY": 0.2,
+        "LOG_LEVEL": "ERROR",
+        "USER_AGENT": "LearningScraper/1.0 (+mailto:reader@example.com)",
+        "FEEDS": {
+            "output/ch21/authors.json": {
+                "format": "json",
+                "overwrite": True,
+            }
+        },
+    }
+)
 process.crawl(AuthorsSpider)
 process.start()
 authors = json.load(open("output/ch21/authors.json", encoding="utf-8"))

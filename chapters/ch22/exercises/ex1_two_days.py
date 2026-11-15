@@ -1,4 +1,4 @@
-"""Exercise 22.1 (easy).
+r"""Exercise 22.1 (easy).
 
     Using `history.py`, store the jobs of 1 and 10 March 2027 in a new database `output/ch22/ex1.db`, and print the number of new and removed jobs on the 10th.
 

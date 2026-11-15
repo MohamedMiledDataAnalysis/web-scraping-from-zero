@@ -1,7 +1,7 @@
-                                                                         Country  Q1 2026  Q2 2026  Q3 2026  Q4 2026  Total 2026
-6                                                                          Total      NaN      NaN      NaN      NaN         NaN
-7                                                                            NaN      NaN      NaN      NaN      NaN         NaN
-8  Note: figures revised since the previous report. Spain Q4 is provisional (p).      NaN      NaN      NaN      NaN         NaN
+                   Country  Q1 2026  Q2 2026  Q3 2026  Q4 2026  Total 2026
+6                    Total      NaN      NaN      NaN      NaN         NaN
+7                      NaN      NaN      NaN      NaN      NaN         NaN
+8  Note: figures revise...      NaN      NaN      NaN      NaN         NaN
        Country  Q1 2026  Q2 2026  Q3 2026  Q4 2026  Total 2026
         France      4.5     12.0     18.8      9.2        44.5
        Germany     15.9     13.8     10.9     15.3        55.9

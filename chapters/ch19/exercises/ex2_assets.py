@@ -1,4 +1,4 @@
-"""Exercise 19.2 (medium).
+r"""Exercise 19.2 (medium).
 
     From `eligible_assets.txt`, print the number of assets per currency and the latest maturity date.
 

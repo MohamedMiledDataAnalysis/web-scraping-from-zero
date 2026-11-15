@@ -1,4 +1,4 @@
-"""Exercise 7.2 (medium).
+r"""Exercise 7.2 (medium).
 
     Read only the league table with `match="Points"`, flatten its header, remove the footnote mark, and print the team and the points of teams with more than 30 points.
 

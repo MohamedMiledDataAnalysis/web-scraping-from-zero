@@ -1,4 +1,4 @@
-"""Exercise 19.1 (easy).
+r"""Exercise 19.1 (easy).
 
     Download `monthly_sales.csv` with streaming, check that its `Content-Type` is `text/csv`, and print the best month for the *North* region.
 

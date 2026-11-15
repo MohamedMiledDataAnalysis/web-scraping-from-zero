@@ -1,4 +1,4 @@
-"""Exercise 19.3 (medium).
+r"""Exercise 19.3 (medium).
 
     From the *Outstanding* sheet of the market report, print the asset class with the largest growth between 2025 and 2026, in EUR billion.
 

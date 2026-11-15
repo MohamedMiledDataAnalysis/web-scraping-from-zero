@@ -1,4 +1,4 @@
-"""Exercise 23.2 (medium).
+r"""Exercise 23.2 (medium).
 
     Is there a link between rating and price? Print the average price per rating, and the correlation between the two columns (`books["price"].corr(books["rating"])`), rounded to three decimals.
 

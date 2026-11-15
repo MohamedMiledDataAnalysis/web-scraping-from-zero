@@ -1,4 +1,4 @@
-"""Exercise 20.1 (easy).
+r"""Exercise 20.1 (easy).
 
     Use `get_with_retries` from `backoff.py` (copy the function) on `/trouble/status/500` with 3 tries and `base_wait=0.2`, and catch the final error to print its message.
 

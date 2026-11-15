@@ -1,4 +1,4 @@
-"""Exercise 9.3 (medium).
+r"""Exercise 9.3 (medium).
 
     For each quote of page 1 of the quotes, print the author and the address of the author's *about* page, made complete with `urljoin`. Expected first three lines:
 

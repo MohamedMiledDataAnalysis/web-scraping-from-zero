@@ -18,12 +18,20 @@ def parse_book_page(url, html):
         "title": ld.get("name") or soup.h1.text,
         "author": ld.get("author", {}).get("name"),
         "category": ld.get("genre") or info.get("Category"),
-        "price": float(ld["offers"]["price"]) if "offers" in ld else None,
+        "price": (
+            float(ld["offers"]["price"]) if "offers" in ld else None
+        ),
         "rating": ld.get("aggregateRating", {}).get("ratingValue"),
-        "stock": int(stock_text.split("(")[1].split()[0]) if "(" in stock_text else None,
+        "stock": (
+            int(stock_text.split("(")[1].split()[0])
+            if "(" in stock_text
+            else None
+        ),
         "upc": info.get("UPC"),
         "pages": ld.get("numberOfPages"),
-        "year": int(ld["datePublished"]) if "datePublished" in ld else None,
+        "year": (
+            int(ld["datePublished"]) if "datePublished" in ld else None
+        ),
         "description": soup.select_one("#description p").text,
     }
 

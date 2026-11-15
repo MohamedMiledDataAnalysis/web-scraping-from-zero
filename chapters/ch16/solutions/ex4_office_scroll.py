@@ -6,11 +6,22 @@ with sync_playwright() as p:
     page.goto("http://localhost:8000/shop/")
     page.wait_for_selector("div.product")
     page.select_option("#category", "Office")
-    page.wait_for_function("document.querySelector('#status').innerText.includes('of 30')")
-    while "Showing 30" not in page.locator("#status").inner_text():
+    page.wait_for_function(
+        "document.querySelector('#status').innerText.includes('of 30')"
+    )
+    for _ in range(20):  # never more than 20 scrolls
+        if "Showing 30" in page.locator("#status").inner_text():
+            break
+        n = page.locator("div.product").count()
         page.mouse.wheel(0, 20000)
-        page.wait_for_timeout(300)
+        page.wait_for_function(
+            f"document.querySelectorAll('div.product').length > {n}",
+            timeout=5000,
+        )
     prices = page.locator("div.product p.price").all_inner_texts()
     browser.close()
 values = [float(t.replace("£", "")) for t in prices]
-print(len(values), "products, average £" + f"{sum(values) / len(values):.2f}")
+print(
+    len(values),
+    "products, average £" + f"{sum(values) / len(values):.2f}",
+)

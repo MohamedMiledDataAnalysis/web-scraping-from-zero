@@ -1,4 +1,4 @@
-"""Exercise 20.3 (medium).
+r"""Exercise 20.3 (medium).
 
     Scrape pages 1 to 5 of the library with `PoliteClient`, build a DataFrame of titles and prices, and run `check_books` on it with `expected_rows=100`. Then run the same check on a version where you break the price selector on purpose.
 

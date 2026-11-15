@@ -12,7 +12,9 @@ def parse_quote(div):
     }
 
 
-html = requests.get("http://localhost:8000/quotes/page/2/", timeout=10).text
+html = requests.get(
+    "http://localhost:8000/quotes/page/2/", timeout=10
+).text
 soup = BeautifulSoup(html, "html.parser")
 for div in soup.select("div.quote")[:2]:
     print(parse_quote(div))

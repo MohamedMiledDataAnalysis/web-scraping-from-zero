@@ -1,4 +1,4 @@
-"""Exercise 22.4 (harder).
+r"""Exercise 22.4 (harder).
 
     Write an alert that sends an email only when a **Leeds** job with a maximum salary of at least £60,000 appears between 2027-03-05 and 2027-03-06, using the test mailbox. Print the email's subject line, or `No alert` if nothing qualifies.
 

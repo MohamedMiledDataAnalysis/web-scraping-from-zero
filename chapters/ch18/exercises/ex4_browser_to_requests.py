@@ -1,4 +1,4 @@
-"""Exercise 18.4 (harder).
+r"""Exercise 18.4 (harder).
 
     Log in with Playwright, copy the browser's cookies into a `requests.Session`, close the browser, and use the session to print the number of orders on `/account/`.
 

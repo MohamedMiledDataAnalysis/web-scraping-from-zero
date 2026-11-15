@@ -8,8 +8,12 @@ from bs4 import BeautifulSoup
 session = requests.Session()
 url, cities = "http://localhost:8000/jobs/", []
 while url:
-    soup = BeautifulSoup(session.get(url, timeout=10).text, "html.parser")
-    cities += [li.select_one("p.location").text for li in soup.select("li.job")]
+    soup = BeautifulSoup(
+        session.get(url, timeout=10).text, "html.parser"
+    )
+    cities += [
+        li.select_one("p.location").text for li in soup.select("li.job")
+    ]
     nxt = soup.select_one("ul.pager li.next a")
     url = urljoin(url, nxt["href"]) if nxt else None
     time.sleep(0.2)

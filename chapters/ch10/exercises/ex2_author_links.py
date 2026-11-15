@@ -1,4 +1,4 @@
-"""Exercise 10.2 (easy).
+r"""Exercise 10.2 (easy).
 
     On the quotes page 1, print the number of links whose address contains `/author/`, then the address of the first one.
 

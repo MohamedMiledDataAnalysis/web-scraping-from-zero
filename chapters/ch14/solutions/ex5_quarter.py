@@ -24,7 +24,11 @@ def api_get(url, params=None):
 rows = []
 for station in ["LON", "MAN", "EDI", "PAR", "LYO"]:
     url = BASE + "/api/v1/observations"
-    params = {"station": station, "start": "2027-01-01", "end": "2027-03-31"}
+    params = {
+        "station": station,
+        "start": "2027-01-01",
+        "end": "2027-03-31",
+    }
     while url:
         data = api_get(url, params)
         rows += data["results"]
@@ -34,5 +38,11 @@ for station in ["LON", "MAN", "EDI", "PAR", "LYO"]:
 
 df = pd.DataFrame(rows)
 print(len(df), "observations")
-print(df.groupby("station")["rain_mm"].sum().round(1).sort_values(ascending=False).to_string())
+print(
+    df.groupby("station")["rain_mm"]
+    .sum()
+    .round(1)
+    .sort_values(ascending=False)
+    .to_string()
+)
 print("429 answers:", limited)

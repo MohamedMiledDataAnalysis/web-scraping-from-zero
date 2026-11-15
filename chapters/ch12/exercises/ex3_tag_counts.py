@@ -1,4 +1,4 @@
-"""Exercise 12.3 (medium).
+r"""Exercise 12.3 (medium).
 
     For each tag of the quotes (the tag box), visit its page and count its quotes. Remember that a tag page can have several pages. Print the five most used tags.
 
@@ -10,7 +10,6 @@ from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
 base = "http://localhost:8000/quotes/"
-tag_urls = {a.text: urljoin(base, a["href"]) for a in home.select("aside.tag-box a")}
 counts = {}
 
 # Your code here

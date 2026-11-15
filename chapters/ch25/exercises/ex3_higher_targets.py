@@ -1,4 +1,4 @@
-"""Exercise 25.3 (medium).
+r"""Exercise 25.3 (medium).
 
     Run the alerts of 2027-03-10 again with a target 5% higher for every product, without collecting again (`alerts_for` reads the database only).
 

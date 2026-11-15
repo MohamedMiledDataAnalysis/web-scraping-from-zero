@@ -1,4 +1,5 @@
-                               title  city first_seen  last_seen  days
-          Mid-level Business Analyst Leeds 2027-03-01 2027-03-02   2.0
-        Mid-level Operations Analyst Leeds 2027-03-01 2027-03-01   1.0
-Mid-level Structured Finance Analyst Leeds 2027-03-01 2027-03-02   2.0
+                               title   city     posted  last_seen  days
+          Mid-level Business Analyst  Leeds 2027-02-20 2027-03-02    11
+        Mid-level Operations Analyst  Leeds 2027-02-19 2027-03-01    11
+Mid-level Structured Finance Analyst  Leeds 2027-02-17 2027-03-02    14
+             Senior Python Developer London 2027-02-08 2027-03-04    25

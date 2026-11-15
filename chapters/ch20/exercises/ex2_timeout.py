@@ -1,4 +1,4 @@
-"""Exercise 20.2 (medium).
+r"""Exercise 20.2 (medium).
 
     Use `PoliteClient` with `timeout=1` and `tries=2` on `/trouble/slow?seconds=2`. Catch the error and print it.
 

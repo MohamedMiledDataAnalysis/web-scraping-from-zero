@@ -17,6 +17,11 @@ with sync_playwright() as p:
 session = requests.Session()
 for c in cookies:
     session.cookies.set(c["name"], c["value"])
-soup = BeautifulSoup(session.get("http://localhost:8000/account/", timeout=10).text,
-                     "html.parser")
-print(len(soup.select("#orders tbody tr")), "orders, read without a browser")
+soup = BeautifulSoup(
+    session.get("http://localhost:8000/account/", timeout=10).text,
+    "html.parser",
+)
+print(
+    len(soup.select("#orders tbody tr")),
+    "orders, read without a browser",
+)

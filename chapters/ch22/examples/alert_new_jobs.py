@@ -16,11 +16,17 @@ try:
     new, removed = run("2027-03-06")
     wanted = new[new["title"].str.contains("Analyst|Developer")]
     if len(wanted):
-        lines = [f"- {r.title}, {r.company}, {r.city}, up to £{r.salary_max:,}"
-                 for r in wanted.itertuples()]
-        send_alert(f"{len(wanted)} new analyst or developer jobs on 2027-03-06",
-                   "\n".join(lines))
+        lines = [
+            f"- {r.title}, {r.company}, {r.city}, up to £{r.salary_max:,}"
+            for r in wanted.itertuples()
+        ]
+        send_alert(
+            f"{len(wanted)} new analyst or developer jobs on 2027-03-06",
+            "\n".join(lines),
+        )
 finally:
     box.stop()
-message = sorted(Path("output/mailbox").glob("*.eml"))[-1].read_text(encoding="utf-8")
+message = sorted(Path("output/mailbox").glob("*.eml"))[-1].read_text(
+    encoding="utf-8"
+)
 print(message.split("\n\n", 1)[1].strip())

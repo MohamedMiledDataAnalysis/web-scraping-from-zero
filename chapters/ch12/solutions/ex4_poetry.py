@@ -11,11 +11,17 @@ from book_parser import parse_book_page  # noqa: E402
 session = requests.Session()
 url, records = "http://localhost:8000/library/category/poetry/", []
 while url:
-    soup = BeautifulSoup(session.get(url, timeout=10).text, "html.parser")
+    soup = BeautifulSoup(
+        session.get(url, timeout=10).text, "html.parser"
+    )
     for a in soup.select("article.book-card h3 a"):
         detail = urljoin(url, a["href"])
         time.sleep(0.2)
-        records.append(parse_book_page(detail, session.get(detail, timeout=10).text))
+        records.append(
+            parse_book_page(
+                detail, session.get(detail, timeout=10).text
+            )
+        )
     nxt = soup.select_one("li.next a")
     url = urljoin(url, nxt["href"]) if nxt else None
 

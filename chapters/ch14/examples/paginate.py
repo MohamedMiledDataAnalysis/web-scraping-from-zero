@@ -15,9 +15,12 @@ while url:
     r.raise_for_status()
     data = r.json()
     rows += data["results"]
-    print(f"page {data['page']} of {data['pages']}: {len(data['results'])} days")
+    print(
+        f"page {data['page']} of {data['pages']}: "
+        f"{len(data['results'])} days"
+    )
     url = urljoin(BASE, data["next"]) if data["next"] else None
-    params = None            # the next address already contains them
+    params = None  # the next address already contains them
 
 weather = pd.DataFrame(rows)
 print(len(weather), "days")

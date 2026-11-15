@@ -1,4 +1,4 @@
-"""Exercise 15.1 (easy).
+r"""Exercise 15.1 (easy).
 
     With the hidden API, print the three highest-rated products of the *Office* category (use `sort=rating`).
 

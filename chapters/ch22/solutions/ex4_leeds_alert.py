@@ -16,10 +16,20 @@ try:
     new, _ = run("2027-03-06")
     hits = new[(new["city"] == "Leeds") & (new["salary_max"] >= 60000)]
     if len(hits):
-        send_alert(f"Leeds: {len(hits)} well-paid new job(s)",
-                   "\n".join(f"{r.title} at {r.company}" for r in hits.itertuples()))
-        text = sorted(Path("output/mailbox").glob("*.eml"))[-1].read_text(encoding="utf-8")
-        print(next(l for l in text.splitlines() if l.startswith("Subject:")))
+        send_alert(
+            f"Leeds: {len(hits)} well-paid new job(s)",
+            "\n".join(
+                f"{r.title} at {r.company}" for r in hits.itertuples()
+            ),
+        )
+        text = sorted(Path("output/mailbox").glob("*.eml"))[
+            -1
+        ].read_text(encoding="utf-8")
+        print(
+            next(
+                l for l in text.splitlines() if l.startswith("Subject:")
+            )
+        )
     else:
         print("No alert")
 finally:

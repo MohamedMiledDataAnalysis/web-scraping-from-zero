@@ -2,7 +2,7 @@ import pandas as pd
 
 path = "output/ch19/files/cover_pool_synthetic.xlsx"
 raw = pd.read_excel(path, header=None)
-print(raw.to_string())
+print(raw.to_string(max_colwidth=28))
 
 issuer = raw.iloc[1, 1]
 date = raw.iloc[2, 1]

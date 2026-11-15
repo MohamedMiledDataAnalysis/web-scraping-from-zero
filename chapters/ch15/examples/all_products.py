@@ -15,4 +15,9 @@ while page <= pages:
 
 df = pd.DataFrame(products)
 print(len(df), "products in", pages, "requests")
-print(df.groupby("category")["price"].agg(["count", "mean", "max"]).round(2).to_string())
+print(
+    df.groupby("category")["price"]
+    .agg(["count", "mean", "max"])
+    .round(2)
+    .to_string()
+)

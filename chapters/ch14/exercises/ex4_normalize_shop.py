@@ -1,4 +1,4 @@
-"""Exercise 14.4 (medium).
+r"""Exercise 14.4 (medium).
 
     The hidden shop API of Chapter 15 also answers without a key: `http://localhost:8000/shop/api/products?per_page=5`. Flatten its answer with `json_normalize` and print the columns, then the names of the products in stock.
 

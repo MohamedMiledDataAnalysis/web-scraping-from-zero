@@ -1,4 +1,4 @@
-"""Exercise 10.1 (easy).
+r"""Exercise 10.1 (easy).
 
     With one `select`, print the titles (attribute `title`) of the books of page 1 that have five stars.
 

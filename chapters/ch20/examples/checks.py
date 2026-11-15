@@ -17,7 +17,12 @@ def check_books(df, expected_rows=None):
     return problems
 
 
-good = pd.DataFrame({"title": ["A", "B", "C"], "price": [5.0, 7.5, 12.0]})
-broken = pd.DataFrame({"title": ["A", "B", "B"], "price": [None, None, 0.0]})
-print(check_books(good, expected_rows=3))
-print(check_books(broken, expected_rows=20))
+good = pd.DataFrame(
+    {"title": ["A", "B", "C"], "price": [5.0, 7.5, 12.0]}
+)
+broken = pd.DataFrame(
+    {"title": ["A", "B", "B"], "price": [None, None, 0.0]}
+)
+if __name__ == "__main__":  # only when run, not when imported
+    print(check_books(good, expected_rows=3))
+    print(check_books(broken, expected_rows=20))

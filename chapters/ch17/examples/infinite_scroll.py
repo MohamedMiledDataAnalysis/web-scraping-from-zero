@@ -11,16 +11,29 @@ driver = webdriver.Chrome(options=options)
 try:
     driver.get("http://localhost:8000/shop/")
     wait = WebDriverWait(driver, 10)
-    wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "div.product")))
+    wait.until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, "div.product"))
+    )
     while True:
-        count = len(driver.find_elements(By.CSS_SELECTOR, "div.product"))
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        count = len(
+            driver.find_elements(By.CSS_SELECTOR, "div.product")
+        )
+        driver.execute_script(
+            "window.scrollTo(0, document.body.scrollHeight);"
+        )
         try:
             WebDriverWait(driver, 3).until(
-                lambda d: len(d.find_elements(By.CSS_SELECTOR, "div.product")) > count)
+                lambda d: len(
+                    d.find_elements(By.CSS_SELECTOR, "div.product")
+                )
+                > count
+            )
         except TimeoutException:
             break
-    print(len(driver.find_elements(By.CSS_SELECTOR, "div.product")), "products")
+    print(
+        len(driver.find_elements(By.CSS_SELECTOR, "div.product")),
+        "products",
+    )
     print(driver.find_element(By.ID, "status").text)
 finally:
     driver.quit()

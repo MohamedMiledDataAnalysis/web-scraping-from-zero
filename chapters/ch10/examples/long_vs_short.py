@@ -3,7 +3,9 @@ from bs4 import BeautifulSoup
 
 html = requests.get("http://localhost:8000/library/", timeout=10).text
 soup = BeautifulSoup(html, "html.parser")
-copied = "body > main > div > section > div > article:nth-child(1) > p.price"
+copied = (
+    "body > main > div > section > div > article:nth-child(1) > p.price"
+)
 short = "article.book-card p.price"
 print(soup.select_one(copied).text, len(soup.select(short)))
 

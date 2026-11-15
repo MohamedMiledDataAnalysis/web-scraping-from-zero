@@ -1,4 +1,4 @@
-"""Exercise 5.1 (easy).
+r"""Exercise 5.1 (easy).
 
     Using `RobotFileParser`, print whether the robot `LearningScraper` may fetch `/quotes/`, `/admin/` and `/private/notes.html` on the Practice Ground.
 

@@ -1,4 +1,4 @@
-"""Exercise 24.4 (harder).
+r"""Exercise 24.4 (harder).
 
     Count the requests the week sent: list pages and detail pages. Wrap `client.get` to count calls, run the week again quietly without emails, and print the totals.
 
@@ -13,5 +13,6 @@ from collections import Counter
 from pathlib import Path
 sys.path.insert(0, "chapters/ch24/project")
 import tracker  # noqa: E402
+tracker.DB = "output/ch24/count.db"
 
 # Your code here

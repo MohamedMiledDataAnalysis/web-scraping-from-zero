@@ -1,4 +1,4 @@
-"""Exercise 12.2 (medium).
+r"""Exercise 12.2 (medium).
 
     Collect every job of the job board on the site date (all pages; the *next* link is in `ul.pager li.next a`). Print the number of jobs and the three cities with the most jobs.
 
@@ -10,5 +10,6 @@ from collections import Counter
 from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
+url, cities = "http://localhost:8000/jobs/", []
 
 # Your code here

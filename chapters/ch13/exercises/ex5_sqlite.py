@@ -1,4 +1,4 @@
-"""Exercise 13.5 (harder).
+r"""Exercise 13.5 (harder).
 
     Save the clean books of exercise 13.4 to an SQLite table `books`, then use one SQL query to print the number of books and the average price per rating, highest rating first.
 

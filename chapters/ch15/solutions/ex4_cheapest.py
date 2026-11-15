@@ -10,8 +10,11 @@ URL = "http://localhost:8000/shop/api/products"
 def all_pages(url, params):
     items, page, pages = [], 1, 1
     while page <= pages:
-        data = session.get(url, params={**params, "page": page, "per_page": 50},
-                           timeout=10).json()
+        data = session.get(
+            url,
+            params={**params, "page": page, "per_page": 50},
+            timeout=10,
+        ).json()
         items += data["products"]
         pages = data["pages"]
         page += 1
@@ -20,6 +23,10 @@ def all_pages(url, params):
 
 
 for category in ["Audio", "Garden", "Kitchen", "Office"]:
-    df = pd.DataFrame(all_pages(URL, {"category": category, "sort": "price"}))
+    df = pd.DataFrame(
+        all_pages(URL, {"category": category, "sort": "price"})
+    )
     cheapest = df[df["in_stock"]].iloc[0]
-    print(f"{category:<8} {cheapest['name']:<20} £{cheapest['price']:.2f}")
+    print(
+        f"{category:<8} {cheapest['name']:<20} £{cheapest['price']:.2f}"
+    )

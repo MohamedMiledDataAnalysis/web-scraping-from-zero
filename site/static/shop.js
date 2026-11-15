@@ -23,7 +23,8 @@ function loadNext() {
     category: document.getElementById("category").value,
     sort: document.getElementById("sort").value
   });
-  fetch("/shop/api/products?" + params).then(function (r) { return r.json(); })
+  fetch("/shop/api/products?" + params)
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (data) {
       if (gen !== state.gen) return;
       state.page = data.page; state.pages = data.pages;
@@ -32,6 +33,11 @@ function loadNext() {
       document.getElementById("status").textContent =
         "Showing " + box.children.length + " of " + data.total + " products";
       state.loading = false;
+    })
+    .catch(function () {          // a failed request must not freeze the shop
+      if (gen !== state.gen) return;
+      state.loading = false;
+      document.getElementById("status").textContent = "Could not load products";
     });
 }
 

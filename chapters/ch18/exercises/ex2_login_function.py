@@ -1,4 +1,4 @@
-"""Exercise 18.2 (medium).
+r"""Exercise 18.2 (medium).
 
     Write a function `login(session, username, password)` that returns `True` when the login worked (the page shows the user's name in `#user-name`) and `False` otherwise. Test it with the right and the wrong password, each in a new session.
 

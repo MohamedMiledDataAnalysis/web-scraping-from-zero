@@ -1,4 +1,4 @@
-"""Exercise 10.4 (medium).
+r"""Exercise 10.4 (medium).
 
     Rewrite exercise 10.1 with XPath and lxml. the same as exercise 10.1.
 

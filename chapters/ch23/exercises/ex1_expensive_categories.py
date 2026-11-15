@@ -1,4 +1,4 @@
-"""Exercise 23.1 (easy).
+r"""Exercise 23.1 (easy).
 
     From `catalogue.xlsx`, print the three categories with the highest average price.
 

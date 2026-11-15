@@ -193,7 +193,7 @@ def library_book(slug):
         "@context": "https://schema.org", "@type": "Book",
         "name": book["title"], "author": {"@type": "Person", "name": book["author"]},
         "genre": book["category"], "numberOfPages": book["pages"],
-        "datePublished": str(book["year"]), "isbn": None, "sku": book["upc"],
+        "datePublished": str(book["year"]), "isbn": None,
         "aggregateRating": {"@type": "AggregateRating", "ratingValue": book["rating"],
                             "bestRating": 5},
         "offers": {"@type": "Offer", "price": f'{book["price"]:.2f}',

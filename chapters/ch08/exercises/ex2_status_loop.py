@@ -1,4 +1,4 @@
-"""Exercise 8.2 (easy).
+r"""Exercise 8.2 (easy).
 
     Request `/trouble/status/500`, `/trouble/status/200` and `/trouble/status/403` in a loop. For each, print `ok` or the error message of `raise_for_status()`.
 

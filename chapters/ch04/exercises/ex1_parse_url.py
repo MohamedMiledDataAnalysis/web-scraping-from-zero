@@ -1,4 +1,4 @@
-"""Exercise 4.1 (easy).
+r"""Exercise 4.1 (easy).
 
     Print the host, the path and the value of `q` in `http://localhost:8000/jobs/?q=python&city=London`.
 

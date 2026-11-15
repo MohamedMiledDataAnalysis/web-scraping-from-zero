@@ -17,7 +17,9 @@ def get_with_retries(url, tries=4, base_wait=0.5):
                 return r
             reason = f"status {r.status_code}"
         if attempt == tries:
-            raise RuntimeError(f"Gave up after {tries} tries: {url} ({reason})")
+            raise RuntimeError(
+                f"Gave up after {tries} tries: {url} ({reason})"
+            )
         wait = base_wait * 2 ** (attempt - 1)
         print(f"  attempt {attempt}: {reason}, waiting {wait} s")
         time.sleep(wait)

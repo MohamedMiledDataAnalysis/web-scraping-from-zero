@@ -1,4 +1,4 @@
-"""Exercise 21.3 (medium).
+r"""Exercise 21.3 (medium).
 
     Add a pipeline to the jobs crawl that drops jobs whose maximum salary is under £50,000, and print how many jobs are kept.
 

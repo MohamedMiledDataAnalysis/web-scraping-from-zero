@@ -1,4 +1,4 @@
-"""Exercise 9.2 (easy).
+r"""Exercise 9.2 (easy).
 
     On the author page `http://localhost:8000/quotes/author/tomas-reyna/`, print the author's name, birth year and birthplace.
 

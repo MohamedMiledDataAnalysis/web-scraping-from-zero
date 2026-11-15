@@ -1,4 +1,4 @@
-"""Exercise 1.4 (harder).
+r"""Exercise 1.4 (harder).
 
     Print only the books of page 1 that cost less than £15. The price text is `£26.93`: remove the `£` with `.replace("£", "")` and turn the rest into a number with `float()`.
 

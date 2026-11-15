@@ -1,15 +1,15 @@
-                                                         0                                    1        2
-0   Harmonised-style cover pool report (synthetic example)                                  NaN      NaN
-1                                                   Issuer        Banque Lumière SFH (invented)      NaN
-2                                           Reporting date                           2026-12-31      NaN
-3                                                      NaN                                  NaN      NaN
-4                                                    Field                          Description    Value
-5                                                    M.1.1              Cover pool size (EUR m)  12450.6
-6                                                    M.1.2    Outstanding covered bonds (EUR m)     9875
-7                                                    M.1.3            Overcollateralisation (%)      NaN
-8                                                    M.2.1                      Number of loans    98214
-9                                                    M.2.2             Weighted average LTV (%)     61.4
-10                                                   M.2.3  Weighted average seasoning (months)       58
+                              0                            1        2
+0   Harmonised-style cover p...                          NaN      NaN
+1                        Issuer  Banque Lumière SFH (inve...      NaN
+2                Reporting date                   2026-12-31      NaN
+3                           NaN                          NaN      NaN
+4                         Field                  Description    Value
+5                         M.1.1      Cover pool size (EUR m)  12450.6
+6                         M.1.2  Outstanding covered bond...     9875
+7                         M.1.3    Overcollateralisation (%)      NaN
+8                         M.2.1              Number of loans    98214
+9                         M.2.2     Weighted average LTV (%)     61.4
+10                        M.2.3  Weighted average seasoni...       58
 Banque Lumière SFH (invented) 2026-12-31
 Overcollateralisation: 26.1%
 WA LTV: 61.4 | loans: 98214

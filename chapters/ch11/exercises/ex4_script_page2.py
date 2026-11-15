@@ -1,4 +1,4 @@
-"""Exercise 11.4 (medium).
+r"""Exercise 11.4 (medium).
 
     From the data inside the script of `/quotes/js/page/2/`, print the number of quotes and the list of distinct authors, sorted.
 

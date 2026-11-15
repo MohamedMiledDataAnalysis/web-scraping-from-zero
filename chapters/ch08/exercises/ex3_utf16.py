@@ -1,4 +1,4 @@
-"""Exercise 8.3 (medium).
+r"""Exercise 8.3 (medium).
 
     Download `eligible_assets.txt` from the Files section, and print its first line two ways: with `r.text` as `requests` decodes it, and with `r.content.decode("utf-16")`.
 

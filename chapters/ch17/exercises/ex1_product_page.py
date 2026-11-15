@@ -1,4 +1,4 @@
-"""Exercise 17.1 (easy).
+r"""Exercise 17.1 (easy).
 
     Open `http://localhost:8000/shop/product/42`, wait for the name, and print the name, price and stock text.
 

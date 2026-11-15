@@ -1,4 +1,4 @@
-"""Exercise 10.5 (harder).
+r"""Exercise 10.5 (harder).
 
     With one XPath expression, print the authors of the quotes of page 1 that have the tag `work`.
 

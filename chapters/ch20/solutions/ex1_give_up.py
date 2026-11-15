@@ -17,11 +17,17 @@ def get_with_retries(url, tries=4, base_wait=0.5):
                 return r
             reason = f"status {r.status_code}"
         if attempt == tries:
-            raise RuntimeError(f"Gave up after {tries} tries: {url} ({reason})")
+            raise RuntimeError(
+                f"Gave up after {tries} tries: {url} ({reason})"
+            )
         time.sleep(base_wait * 2 ** (attempt - 1))
 
 
 try:
-    get_with_retries("http://localhost:8000/trouble/status/500", tries=3, base_wait=0.2)
+    get_with_retries(
+        "http://localhost:8000/trouble/status/500",
+        tries=3,
+        base_wait=0.2,
+    )
 except RuntimeError as error:
     print(error)

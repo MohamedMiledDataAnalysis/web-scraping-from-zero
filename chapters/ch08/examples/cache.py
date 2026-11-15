@@ -8,7 +8,7 @@ CACHE.mkdir(parents=True, exist_ok=True)
 
 
 def get_html(url):
-    """Return the page's HTML, from the cache if it was downloaded before."""
+    """The page's HTML, from the cache if downloaded before."""
     name = hashlib.sha1(url.encode()).hexdigest()[:16] + ".html"
     path = CACHE / name
     if path.exists():

@@ -9,7 +9,7 @@
   {% if page < pages %}<li class="next"><a href="/quotes/js/page/{{ page + 1 }}/">next</a></li>{% endif %}
 </ul>
 <script>
-var data = {{ data|safe }};
+var data = {{ data|safe }};  // JSON written by the server
 var box = document.getElementById("quotes");
 data.forEach(function (q) {
   var div = document.createElement("div");

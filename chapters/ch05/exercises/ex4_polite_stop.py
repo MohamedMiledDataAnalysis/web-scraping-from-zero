@@ -1,4 +1,4 @@
-"""Exercise 5.4 (harder).
+r"""Exercise 5.4 (harder).
 
     Change `polite_get` so it also refuses to run when the response status is 429, 403 or 401, printing `Stopping: status 403` (for example) and returning `None`. Test it on `/library/` and `/trouble/status/403`.
 

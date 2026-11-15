@@ -1,4 +1,4 @@
-"""Exercise 22.3 (medium).
+r"""Exercise 22.3 (medium).
 
     Find, in `jobs.db`, the job that stayed online the longest during the six stored days (the most rows), with its number of days.
 
@@ -7,6 +7,5 @@ Solution: chapters/ch22/solutions/ex3_longest.py
 """
 import sqlite3
 import pandas as pd
-query = """
 
 # Your code here

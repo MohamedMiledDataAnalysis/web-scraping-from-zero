@@ -13,10 +13,18 @@ for name in ["pool_a.xlsx", "pool_b.xlsx", "pool_c.xlsx"]:
 def read_cover_pool(path):
     raw = pd.read_excel(path, header=None)
     fields = pd.read_excel(path, header=4)
-    record = {"file": Path(path).name, "issuer": raw.iloc[1, 1], "date": raw.iloc[2, 1]}
+    record = {
+        "file": Path(path).name,
+        "issuer": raw.iloc[1, 1],
+        "date": raw.iloc[2, 1],
+    }
     record.update(dict(zip(fields["Field"], fields["Value"])))
     return record
 
 
-pools = pd.DataFrame([read_cover_pool(p) for p in sorted(folder.glob("*.xlsx"))])
-print(pools[["file", "issuer", "M.1.1", "M.2.2"]].to_string(index=False))
+pools = pd.DataFrame(
+    [read_cover_pool(p) for p in sorted(folder.glob("*.xlsx"))]
+)
+print(
+    pools[["file", "issuer", "M.1.1", "M.2.2"]].to_string(index=False)
+)

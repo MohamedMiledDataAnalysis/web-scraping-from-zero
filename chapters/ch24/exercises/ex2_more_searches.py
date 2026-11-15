@@ -1,4 +1,4 @@
-"""Exercise 24.2 (medium).
+r"""Exercise 24.2 (medium).
 
     Add `"sql"` to the searches of a copy of the configuration and count, without storing anything, how many matching jobs the board has on 2027-03-07 with and without it. Use `collect_list` and `matches`.
 

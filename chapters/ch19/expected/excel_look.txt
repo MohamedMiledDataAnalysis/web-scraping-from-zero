@@ -1,17 +1,17 @@
 --- Contents: (4, 1)
-                                                               0
-0          Securitisation Market Report, Q4 2026 (invented data)
-1                                                            NaN
-2        Sheet 'Issuance': new issuance by country (EUR billion)
-3  Sheet 'Outstanding': outstanding by asset class (EUR billion)
+                         0
+0  Securitisation Marke...
+1                      NaN
+2  Sheet 'Issuance': ne...
+3  Sheet 'Outstanding':...
 --- Issuance: (13, 6)
-                                               0        1        2        3        4           5
-0  Table 1. New issuance by country, EUR billion      NaN      NaN      NaN      NaN         NaN
-1    Source: Practice Ground research (invented)      NaN      NaN      NaN      NaN         NaN
-2                                            NaN      NaN      NaN      NaN      NaN         NaN
-3                                        Country  Q1 2026  Q2 2026  Q3 2026  Q4 2026  Total 2026
-4                                         France      4.5       12     18.8      9.2        44.5
-5                                        Germany     15.9     13.8     10.9     15.3        55.9
+                         0        1        2        3        4           5
+0  Table 1. New issuanc...      NaN      NaN      NaN      NaN         NaN
+1  Source: Practice Gro...      NaN      NaN      NaN      NaN         NaN
+2                      NaN      NaN      NaN      NaN      NaN         NaN
+3                  Country  Q1 2026  Q2 2026  Q3 2026  Q4 2026  Total 2026
+4                   France      4.5       12     18.8      9.2        44.5
+5                  Germany     15.9     13.8     10.9     15.3        55.9
 --- Outstanding: (7, 3)
               0       1       2
 0   Asset class  2025.0  2026.0

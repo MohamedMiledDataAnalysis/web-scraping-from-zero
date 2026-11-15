@@ -1,4 +1,4 @@
-"""Exercise 20.4 (harder).
+r"""Exercise 20.4 (harder).
 
     Write a log of a crawl of pages 1 to 3 of the library plus `/trouble/flaky` (after a reset) into `output/ch20/crawl.log`, with `PoliteClient` and a file handler. Then read the log file and print only the warning lines, without their time stamp.
 

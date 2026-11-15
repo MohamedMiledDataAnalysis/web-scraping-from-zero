@@ -1,4 +1,4 @@
-"""Exercise 3.2 (medium).
+r"""Exercise 3.2 (medium).
 
     Write a function `stars_to_number(word)` that turns `"One"` to `"Five"` into 1 to 5. Use a dictionary inside the function. If the word is unknown, return `None`. Test it on `"Three"`, `"five"` (lower case!) and `"Six"`.
 

@@ -1,4 +1,4 @@
-"""Exercise 11.5 (harder).
+r"""Exercise 11.5 (harder).
 
     Check that the visible price and the JSON-LD price of every book of page 1 are equal. Print the number of books checked and the number of differences.
 
@@ -10,5 +10,6 @@ from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
 base = "http://localhost:8000/library/"
+checked = differences = 0
 
 # Your code here

@@ -8,7 +8,9 @@ def text_or_none(parent, *args, **kwargs):
     return found.get_text(" ", strip=True) if found else None
 
 
-html = requests.get("http://localhost:8000/trouble/messy-cards", timeout=10).text
+html = requests.get(
+    "http://localhost:8000/trouble/messy-cards", timeout=10
+).text
 soup = BeautifulSoup(html, "html.parser")
 for card in soup.find_all("div", class_="card"):
     name = text_or_none(card, "h3", class_="name")

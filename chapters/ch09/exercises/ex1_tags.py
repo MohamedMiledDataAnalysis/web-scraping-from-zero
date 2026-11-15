@@ -1,4 +1,4 @@
-"""Exercise 9.1 (easy).
+r"""Exercise 9.1 (easy).
 
     Print the text of every tag in the *Tags* box on the right of `http://localhost:8000/quotes/` (the `aside` with the class `tag-box`), on one line separated by commas.
 

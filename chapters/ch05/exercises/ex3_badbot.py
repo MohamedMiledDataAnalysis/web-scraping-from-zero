@@ -1,4 +1,4 @@
-"""Exercise 5.3 (medium).
+r"""Exercise 5.3 (medium).
 
     A robot called *BadBot* wants to scrape the library. Print what `robots.txt` answers for it, then explain in a comment of your program why.
 

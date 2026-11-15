@@ -1,4 +1,4 @@
-"""Exercise 18.3 (medium).
+r"""Exercise 18.3 (medium).
 
     Log in with `requests`, download `orders.csv` into `output/ch18/orders.csv`, read it with pandas, and print the total of all orders and the orders still *On its way*.
 

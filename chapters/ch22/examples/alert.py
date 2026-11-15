@@ -1,4 +1,5 @@
 """Send an alert email. Settings come from environment variables."""
+
 import os
 import smtplib
 from email.message import EmailMessage
@@ -15,7 +16,7 @@ def send_alert(subject, body):
     msg["To"] = os.environ.get("ALERT_TO", "me@localhost")
     msg.set_content(body)
     with smtplib.SMTP(host, port, timeout=30) as smtp:
-        if user:                       # a real mail server: encrypt, then log in
+        if user:  # a real mail server: encrypt, then log in
             smtp.starttls()
             smtp.login(user, password)
         smtp.send_message(msg)

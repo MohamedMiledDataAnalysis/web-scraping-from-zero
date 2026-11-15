@@ -1,4 +1,4 @@
-"""Exercise 24.1 (easy).
+r"""Exercise 24.1 (easy).
 
     Print the number of jobs in the database per city, largest first.
 

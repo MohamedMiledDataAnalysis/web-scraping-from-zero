@@ -4,7 +4,9 @@ import pandas as pd
 
 source = Path("output/ch23/m2_detail_pages.csv")
 if not source.exists():
-    raise SystemExit("Run chapters/ch23/project/m1_list_pages.py and m2_detail_pages.py first.")
+    raise SystemExit(
+        "Run m1_list_pages.py and m2_detail_pages.py (Chapter 23) first."
+    )
 books = pd.read_csv(source)
 
 problems = []
@@ -23,7 +25,23 @@ data = books[books["stock"] > 0].copy()
 data["pages_per_pound"] = (data["pages"] / data["price"]).round(2)
 out = Path("output/ch26/dataset")
 out.mkdir(parents=True, exist_ok=True)
-columns = ["title", "author", "category", "price", "pages", "stock", "year",
-           "pages_per_pound", "url"]
-data[columns].sort_values(["category", "title"]).to_csv(out / "library_value.csv", index=False)
-print("Checks passed;", len(data), "books in stock kept out of", len(books))
+columns = [
+    "title",
+    "author",
+    "category",
+    "price",
+    "pages",
+    "stock",
+    "year",
+    "pages_per_pound",
+    "url",
+]
+data[columns].sort_values(["category", "title"]).to_csv(
+    out / "library_value.csv", index=False
+)
+print(
+    "Checks passed;",
+    len(data),
+    "books in stock kept out of",
+    len(books),
+)

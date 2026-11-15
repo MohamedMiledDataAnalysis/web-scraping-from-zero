@@ -16,4 +16,10 @@ while url:
     params = None
 df = pd.DataFrame(rows)
 warmest = df.loc[df["temp_max_c"].idxmax()]
-print(len(df), "days; warmest:", warmest["temp_max_c"], "on", warmest["date"])
+print(
+    len(df),
+    "days; warmest:",
+    warmest["temp_max_c"],
+    "on",
+    warmest["date"],
+)

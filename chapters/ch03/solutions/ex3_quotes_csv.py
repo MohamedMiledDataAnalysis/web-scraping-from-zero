@@ -2,9 +2,18 @@ import csv
 from pathlib import Path
 
 quotes = [
-    {"author": "Ada Fernhill", "text": "Small daily efforts build tall houses."},
-    {"author": "Walter Pike", "text": "Measure the wood, not your worries."},
-    {"author": "June Albright", "text": "Start the day with one good sentence."},
+    {
+        "author": "Ada Fernhill",
+        "text": "Small daily efforts build tall houses.",
+    },
+    {
+        "author": "Walter Pike",
+        "text": "Measure the wood, not your worries.",
+    },
+    {
+        "author": "June Albright",
+        "text": "Start the day with one good sentence.",
+    },
 ]
 
 folder = Path("output/ch03")

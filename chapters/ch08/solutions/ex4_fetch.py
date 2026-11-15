@@ -15,7 +15,11 @@ def fetch(session, url, timeout=2):
 
 
 session = requests.Session()
-for path in ["/library/", "/trouble/slow?seconds=5", "/trouble/status/404"]:
+for path in [
+    "/library/",
+    "/trouble/slow?seconds=5",
+    "/trouble/status/404",
+]:
     html = fetch(session, "http://localhost:8000" + path)
     if html is not None:
         print("Got", len(html), "characters from", path)

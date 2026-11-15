@@ -11,7 +11,7 @@
 </ul>
 <article class="book-page">
   <h1>{{ book.title }}</h1>
-  <p class="author">by <span itemprop="author">{{ book.author }}</span></p>
+  <p class="author">by <span>{{ book.author }}</span></p>
   <p class="price">£{{ '%.2f'|format(book.price) }}</p>
   <p class="star-rating {{ rating_words[book.rating - 1] }}">{{ '★' * book.rating }}{{ '☆' * (5 - book.rating) }}</p>
   <div id="description"><h2>Description</h2><p>{{ book.description }}</p></div>

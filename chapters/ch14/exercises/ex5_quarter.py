@@ -1,4 +1,4 @@
-"""Exercise 14.5 (harder).
+r"""Exercise 14.5 (harder).
 
     For each of the five stations, collect the observations of the first quarter of 2027 (1 January to 31 March, 9 pages per station: 45 requests), respecting the limit with `api_get`. Print the total rainfall of each station, highest first, and the number of 429 answers you received.
 
@@ -10,7 +10,7 @@ from urllib.parse import urljoin
 import pandas as pd
 import requests
 BASE = "http://localhost:8000"
+session.headers["X-API-Key"] = "pg-demo-2027"
 limited = 0
-rows = []
 
 # Your code here

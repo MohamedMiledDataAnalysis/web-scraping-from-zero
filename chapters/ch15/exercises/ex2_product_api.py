@@ -1,4 +1,4 @@
-"""Exercise 15.2 (medium).
+r"""Exercise 15.2 (medium).
 
     Open a product page of the shop (click a name). Find, in the Network panel, the request that brings the product, and print with `requests` the name, price and reviews of products 7, 8 and 9.
 

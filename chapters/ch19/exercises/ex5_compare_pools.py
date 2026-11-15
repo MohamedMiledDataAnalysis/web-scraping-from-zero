@@ -1,4 +1,4 @@
-"""Exercise 19.5 (harder).
+r"""Exercise 19.5 (harder).
 
     Write `read_cover_pool(path)` that returns a dictionary with the issuer, the date and every field code. Copy the synthetic file twice under new names with `shutil.copy` (to imitate three issuers' files), read the three, and build a DataFrame with one row per file and the columns `issuer`, `M.1.1`, `M.2.2`.
 

@@ -1,4 +1,6 @@
-"""PoliteClient: robots.txt, User-Agent, delay, timeout, retries, Retry-After, log."""
+"""PoliteClient: robots.txt, User-Agent, delay, timeout,
+retries, Retry-After and a log."""
+
 import logging
 import time
 from urllib.parse import urlparse
@@ -11,11 +13,13 @@ RETRY_STATUS = {429, 500, 502, 503, 504}
 
 
 class NotAllowed(Exception):
-    """robots.txt forbids this address, or the site refused us (401, 403)."""
+    """robots.txt forbids it, or the site refused us (401, 403)."""
 
 
 class PoliteClient:
-    def __init__(self, agent, delay=1.0, timeout=15, tries=4, base_wait=1.0):
+    def __init__(
+        self, agent, delay=1.0, timeout=15, tries=4, base_wait=1.0
+    ):
         self.agent, self.delay, self.timeout = agent, delay, timeout
         self.tries, self.base_wait = tries, base_wait
         self.session = requests.Session()
@@ -46,19 +50,41 @@ class PoliteClient:
         for attempt in range(1, self.tries + 1):
             self._wait_turn()
             try:
-                r = self.session.get(url, timeout=self.timeout, **kwargs)
-            except (requests.Timeout, requests.ConnectionError) as error:
+                r = self.session.get(
+                    url, timeout=self.timeout, **kwargs
+                )
+            except (
+                requests.Timeout,
+                requests.ConnectionError,
+            ) as error:
                 reason, wait = type(error).__name__, None
             else:
                 if r.status_code in (401, 403):
-                    raise NotAllowed(f"status {r.status_code} for {url}")
+                    raise NotAllowed(
+                        f"status {r.status_code} for {url}"
+                    )
                 if r.status_code not in RETRY_STATUS:
                     return r
                 reason = f"status {r.status_code}"
                 wait = r.headers.get("Retry-After")
             if attempt == self.tries:
-                log.error("Gave up on %s after %d tries (%s)", url, attempt, reason)
+                log.error(
+                    "Gave up on %s after %d tries (%s)",
+                    url,
+                    attempt,
+                    reason,
+                )
                 raise RuntimeError(f"Gave up on {url} ({reason})")
-            seconds = float(wait) if wait else self.base_wait * 2 ** (attempt - 1)
-            log.warning("%s on %s, retry %d in %.1f s", reason, url, attempt, seconds)
+            seconds = (
+                float(wait)
+                if wait
+                else self.base_wait * 2 ** (attempt - 1)
+            )
+            log.warning(
+                "%s on %s, retry %d in %.1f s",
+                reason,
+                url,
+                attempt,
+                seconds,
+            )
             time.sleep(seconds)

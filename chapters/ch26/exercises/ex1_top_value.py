@@ -1,4 +1,4 @@
-"""Exercise 26.1 (easy).
+r"""Exercise 26.1 (easy).
 
     From `library_value.csv`, print the three books with the most pages per pound, with their category.
 

@@ -1,4 +1,4 @@
-"""Exercise 11.3 (medium).
+r"""Exercise 11.3 (medium).
 
     Print, from its JSON-LD, the name, price and availability (*InStock* or *OutOfStock*) of the books with ids 1 to 5. Their addresses are in the cards of page 1.
 

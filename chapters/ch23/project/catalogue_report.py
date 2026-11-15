@@ -1,4 +1,5 @@
-"""The final catalogue: clean data sheet + summary sheet, in one Excel file."""
+"""The final catalogue: data and summary sheets in one Excel file."""
+
 from pathlib import Path
 
 import pandas as pd
@@ -16,15 +17,26 @@ if books[["price", "rating", "stock"]].isna().any().any():
     problems.append("missing values")
 print("Checks:", problems or "all passed")
 
-summary = (books.groupby("category")
-           .agg(books=("title", "count"), avg_price=("price", "mean"),
-                avg_rating=("rating", "mean"), stock=("stock", "sum"),
-                out_of_stock=("stock", lambda s: (s == 0).sum()))
-           .round(2).sort_values("books", ascending=False))
+summary = (
+    books.groupby("category")
+    .agg(
+        books=("title", "count"),
+        avg_price=("price", "mean"),
+        avg_rating=("rating", "mean"),
+        stock=("stock", "sum"),
+        out_of_stock=("stock", lambda s: (s == 0).sum()),
+    )
+    .round(2)
+    .sort_values("books", ascending=False)
+)
 
 with pd.ExcelWriter(OUT / "catalogue.xlsx") as xl:
     books.to_excel(xl, sheet_name="Catalogue", index=False)
     summary.to_excel(xl, sheet_name="Summary")
 print(summary.head(5).to_string())
-print("Cheapest five-star book:",
-      books[books["rating"] == 5].nsmallest(1, "price")[["title", "price"]].values[0])
+print(
+    "Cheapest five-star book:",
+    books[books["rating"] == 5]
+    .nsmallest(1, "price")[["title", "price"]]
+    .values[0],
+)

@@ -1,14 +1,19 @@
 plan = {
-    "question": "Which category of the library gives the most pages per pound?",
-    "measure": "median of pages / price for the books in stock, per category",
-    "source": "Practice Ground library, detail pages (JSON-LD and information table)",
-    "terms": "learning use allowed; 0.2 s between requests; no /private/ or /admin/",
+    "question": "Which library category gives the most pages per pound?",
+    "measure": "median of pages / price, books in stock, per category",
+    "source": "library detail pages (JSON-LD, information table)",
+    "terms": "learning allowed; 0.2 s apart; no /private/, /admin/",
     "robots": "/library/ allowed for every robot",
     "personal data": "none (invented books and authors)",
-    "method": "Chapter 23's method 2 file if present; otherwise list + detail pages",
+    "method": "Chapter 23's method 2 file (list + detail pages)",
     "requests": 1050,
     "minimum time (s)": 1050 * 0.2,
-    "checks": ["1000 books", "no missing price or pages", "price > 0", "unique urls"],
+    "checks": [
+        "1000 books",
+        "no missing price or pages",
+        "price > 0",
+        "unique urls",
+    ],
 }
 for key, value in plan.items():
     print(f"{key:<16} {value}")
