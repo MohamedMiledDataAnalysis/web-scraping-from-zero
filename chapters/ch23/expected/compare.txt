@@ -1,0 +1,9 @@
+        method  books  columns  requests  minimum time (s)
+  1 list pages   1000        6        50                10
+2 detail pages   1000        9      1001               200
+  3 Playwright   1000        2       100                20
+      4 Scrapy   1000        9      1051               210
+1 list pages    same titles: 1000, price differences: 0
+2 detail pages  same titles: 1000, price differences: 0
+3 Playwright    same titles: 1000, price differences: 0
+4 Scrapy        same titles: 1000, price differences: 0

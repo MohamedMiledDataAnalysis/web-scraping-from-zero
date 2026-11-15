@@ -8,7 +8,7 @@ BASE = "http://localhost:8000"
 
 robots = RobotFileParser(BASE + "/robots.txt")
 robots.read()
-delay = robots.crawl_delay(AGENT) or 1
+delay = robots.crawl_delay(AGENT) or 0.2   # 0.2 s: the site's terms
 
 
 def polite_get(url):

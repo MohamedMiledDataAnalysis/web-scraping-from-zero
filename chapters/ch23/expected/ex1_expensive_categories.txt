@@ -1,0 +1,4 @@
+ category  avg_price
+  Fiction      39.71
+  History      36.72
+Self Help      36.50

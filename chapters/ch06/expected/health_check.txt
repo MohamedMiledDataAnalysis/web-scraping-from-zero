@@ -1,4 +1,4 @@
-200  /               Practice Ground | Practice Ground
+200  /               Home | Practice Ground
 200  /library/       All books | Practice Ground
 200  /quotes/        Quotes to scrape | Practice Ground
 200  /tables/        Tables | Practice Ground

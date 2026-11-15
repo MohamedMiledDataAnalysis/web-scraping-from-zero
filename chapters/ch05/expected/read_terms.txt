@@ -1,5 +1,5 @@
 ['scrap'] -> You may scrape every public page of this site for learning.
-['robot', 'second'] -> Wait at least one second between two requests (see robots.txt ).
+['robot', 'second'] -> Wait at least 0.2 seconds between two requests (see robots.txt ). This site runs on your own computer; on real websites, wait at least one second.
 ['robot', 'scrap'] -> Do not scrape the /private/ and /admin/ areas with a robot.
 ['robot'] -> A robot may log in to the practice account reader to read and download that account's own orders.
 ['second'] -> The Open API allows 10 requests per 10 seconds per key.

@@ -2,5 +2,6 @@
 /private/        allowed: False
 /admin/login     allowed: False
 /jobs/           allowed: True
-Crawl-delay: 1
+Crawl-delay: None
+Crawl-delay for SlowBot: 5
 BadBot on /library/: False

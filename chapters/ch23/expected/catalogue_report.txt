@@ -1,0 +1,9 @@
+Checks: all passed
+           books  avg_price  avg_rating  stock  out_of_stock
+category                                                    
+Travel        70      31.53        2.86    626             8
+Science       59      33.82        3.24    700             4
+Mystery       56      33.39        3.00    598             2
+Biography     54      34.74        2.93    558             4
+Self Help     54      36.50        2.96    638             2
+Cheapest five-star book: ['Lanterns in the Winter' 5.25]

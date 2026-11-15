@@ -1,4 +1,4 @@
 text/html; charset=ISO-8859-1
-ISO-8859-1 -> <h1>CafÃ© crÃ¨me â prix : 3,50 â¬</h1>
+ISO-8859-1 -> <h1>CafÃ© crÃ¨me, prix : 3,50 euros</h1>
 utf-8
-utf-8 -> <h1>Café crème — prix : 3,50 €</h1>
+utf-8 -> <h1>Café crème, prix : 3,50 euros</h1>
