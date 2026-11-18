@@ -1,6 +1,6 @@
 # Chapter 1 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -74,9 +74,7 @@ Output:
 
 **The choice it makes.** Putting the address in a variable costs one line now and saves work later: in Chapter 12 you will build this address in a loop for all 50 pages.
 
-### Another way to solve it
-
-`card.h3.a["title"]` walks the tree step by step. The same element can be found with a CSS selector, which you will use more and more from Chapter 10:
+**Another way to solve it.** `card.h3.a["title"]` walks the tree step by step. The same element can be found with a CSS selector, which you will use more and more from Chapter 10:
 
 ```python
 title = card.select_one("h3 a")["title"]
@@ -84,11 +82,9 @@ title = card.select_one("h3 a")["title"]
 
 `"h3 a"` means *an `<a>` somewhere inside an `<h3>`*. Both lines give the same 20 titles. The selector version still works if the site later wraps the link in another tag; the step-by-step version does not.
 
-### A variation to try
+**A variation to try.** Print page 50, the last page of the library: change the address to `page-50.html`. You get 20 books again (1,000 books in 50 pages). Then try `page-51.html`: nothing is printed, because the page does not exist. Check with `print(page.status_code)`: 200 for page 50, 404 for page 51.
 
-Print page 50, the last page of the library: change the address to `page-50.html`. You get 20 books again (1,000 books in 50 pages). Then try `page-51.html`: nothing is printed, because the page does not exist. Check with `print(page.status_code)`: 200 for page 50, 404 for page 51.
-
-### If your output differs
+**If your output differs.**
 
 1. **Nothing is printed**: print `page.status_code`. 404 means the address is wrong; compare it letter by letter with the one above.
 2. **`requests.exceptions.ConnectionError`**: the Practice Ground is not running. Start it with `python run_site.py` in another terminal.
@@ -140,9 +136,7 @@ Output:
 
 **The choice it makes.** Counting first is a habit worth keeping: before extracting anything from a new page, print how many elements your selector finds. If it is 0, the selector is wrong; if it is the number the page shows, you can go on.
 
-### Another way to solve it
-
-Count something else that appears once per book, such as the prices:
+**Another way to solve it.** Count something else that appears once per book, such as the prices:
 
 ```python
 print(len(soup.select(".price")), "prices on page 1")
@@ -154,11 +148,9 @@ print(len(soup.select(".price")), "prices on page 1")
 
 When two different selectors give the same count, you can trust both. When they differ, one of them also matches something outside the book cards.
 
-### A variation to try
+**A variation to try.** Count the cards on page 50 and on page 51 (`/library/page-50.html` and `page-51.html`). You get 20 and 0. A scraper that reads pages until it finds 0 cards knows it has passed the last page; Chapter 12 uses this.
 
-Count the cards on page 50 and on page 51 (`/library/page-50.html` and `page-51.html`). You get 20 and 0. A scraper that reads pages until it finds 0 cards knows it has passed the last page; Chapter 12 uses this.
-
-### If your output differs
+**If your output differs.**
 
 1. **`0 books on page 1`**: print `page.status_code` and check the selector's spelling: `article.book-card`, with a dot and a hyphen.
 2. **A number other than 20**: you counted another element; print `soup.select("article.book-card")[0]` to see what one card contains.
@@ -216,9 +208,7 @@ Beyond the Distant Kitchen | by Jonas Lindqvist
 
 **The choice it makes.** Searching inside `card` rather than `soup` keeps each title with its own author. It is the pattern of every scraper in this book: find the repeated block first, then look inside each block.
 
-### Another way to solve it
-
-Number the lines with `enumerate`, and remove the `by ` in front of the author with `removeprefix`:
+**Another way to solve it.** Number the lines with `enumerate`, and remove the `by ` in front of the author with `removeprefix`:
 
 ```python
 for i, card in enumerate(cards[:5], start=1):
@@ -236,11 +226,9 @@ for i, card in enumerate(cards[:5], start=1):
 
 `enumerate` gives each item with its position; `start=1` counts from 1 instead of 0. `removeprefix("by ")` removes those three characters only if the text starts with them.
 
-### A variation to try
+**A variation to try.** Print the last five books of page 1 instead of the first five: the slice `cards[-5:]` starts five items from the end.
 
-Print the last five books of page 1 instead of the first five: the slice `cards[-5:]` starts five items from the end.
-
-### If your output differs
+**If your output differs.**
 
 1. **`AttributeError: 'NoneType' object has no attribute 'text'`**: the class name is wrong or missing its dot. Print one card, `print(cards[0])`, and look for the author's class.
 2. **The same author on every line**: you searched `soup` instead of `card`.
@@ -300,9 +288,7 @@ Output:
 
 **The choice it makes.** `replace("£", "")` is enough for this page, where every price has exactly the form `£26.93`. Prices on real sites come with commas, spaces and other currencies; Chapter 13 builds a function that handles them.
 
-### Another way to solve it
-
-Collect the cheap books in a list first, then sort them from cheapest to most expensive and print them:
+**Another way to solve it.** Collect the cheap books in a list first, then sort them from cheapest to most expensive and print them:
 
 ```python
 cheap = []
@@ -323,11 +309,9 @@ for price, title in sorted(cheap):
 
 Each item of `cheap` is a pair (a *tuple*): price, title. `sorted` sorts pairs by their first item, the price. Keeping the results in a list, instead of printing them at once, lets you sort, count or save them later.
 
-### A variation to try
+**A variation to try.** Print the books between £15 and £20 inclusive: `if 15 <= price <= 20:`. On page 1 you get two: *Beyond the Distant Kitchen* at £18.87 and *Salt Kingdom* at £19.20.
 
-Print the books between £15 and £20 inclusive: `if 15 <= price <= 20:`. On page 1 you get two: *Beyond the Distant Kitchen* at £18.87 and *Salt Kingdom* at £19.20.
-
-### If your output differs
+**If your output differs.**
 
 1. **`ValueError: could not convert string to float`**: print `repr(price_text)` to see the exact text, including any hidden space.
 2. **All 20 books printed**: the `print` is not indented under the `if`.

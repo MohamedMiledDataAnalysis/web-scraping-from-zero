@@ -1,6 +1,6 @@
 # Chapter 5 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -56,9 +56,7 @@ Output:
 
 **The choice it makes.** `can_fetch` answers what `robots.txt` says, not what the law or the terms allow. It is one of the five checks of section 5.5, not all of them.
 
-### Another way to solve it
-
-Store the answers in a dictionary instead of printing them, so that a scraper can use them later:
+**Another way to solve it.** Store the answers in a dictionary instead of printing them, so that a scraper can use them later:
 
 ```python
 allowed = {
@@ -72,11 +70,9 @@ print(allowed)
 {'/quotes/': True, '/admin/': False, '/private/notes.html': False}
 ```
 
-### A variation to try
+**A variation to try.** Ask about `/admin` (no final slash) and predict the answer first. It is `True`: the rule `Disallow: /admin/` only covers addresses starting with `/admin/`. A site owner who wants to block both writes `Disallow: /admin`. Then ask for the robot `SlowBot`: `robots.crawl_delay("SlowBot")` returns `5`, the number of seconds that robot must wait between requests.
 
-Ask about `/admin` (no final slash) and predict the answer first. It is `True`: the rule `Disallow: /admin/` only covers addresses starting with `/admin/`. A site owner who wants to block both writes `Disallow: /admin`. Then ask for the robot `SlowBot`: `robots.crawl_delay("SlowBot")` returns `5`, the number of seconds that robot must wait between requests.
-
-### If your output differs
+**If your output differs.**
 
 1. **`False` for every path**: `robots.read()` is missing, or the Practice Ground is not running.
 2. **`True` for `/admin/`**: check the robot's name and the full address you pass.
@@ -132,9 +128,7 @@ http://localhost:8000/sitemap.xml
 
 **The choice it makes.** `site_maps()` returns a list because a `robots.txt` can announce several sitemaps; this one announces one. A sitemap is the owner's own list of pages: on a real site, it is often the best starting point for a crawler, because it lists pages the owner wants found.
 
-### Another way to solve it
-
-Without BeautifulSoup, with `lxml` directly. A sitemap declares a *namespace*, so the search must name it:
+**Another way to solve it.** Without BeautifulSoup, with `lxml` directly. A sitemap declares a *namespace*, so the search must name it:
 
 ```python
 from lxml import etree
@@ -146,15 +140,13 @@ print(len(root.findall(".//s:loc", ns)), "addresses")
 
 It prints `10 addresses`. Without `ns`, `findall(".//loc")` finds nothing: that is the most common surprise with sitemaps.
 
-### A variation to try
+**A variation to try.** Print the first three addresses instead of counting them: `[loc.text for loc in soup.find_all("loc")][:3]` gives the home page, `/library/` and `/quotes/`. Then check each against `robots.txt` with `robots.can_fetch(...)` before visiting it: a sitemap can list pages that `robots.txt` forbids to some robots.
 
-Print the first three addresses instead of counting them: `[loc.text for loc in soup.find_all("loc")][:3]` gives the home page, `/library/` and `/quotes/`. Then check each against `robots.txt` with `robots.can_fetch(...)` before visiting it: a sitemap can list pages that `robots.txt` forbids to some robots.
-
-### If your output differs
+**If your output differs.**
 
 1. **`IndexError: list index out of range`** on `site_maps()[0]`: `site_maps()` returned `None`, meaning no `Sitemap:` line was read; check `robots.read()`.
 2. **A long `XMLParsedAsHTMLWarning`**: you parsed with `"html.parser"`; the count is still right, but use `"xml"`.
-3. **`bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: xml`**: `lxml` is not installed in your environment; run `pip install -r requirements.txt` again.
+3. **`bs4.FeatureNotFound`**, with the message *Couldn't find a tree builder with the features you requested: xml*: `lxml` is not installed in your environment; run `pip install -r requirements.txt` again.
 
 ---
 
@@ -200,20 +192,16 @@ False
 
 **The choice it makes.** A site can ban one robot while welcoming others. Your scraper's name, sent in the `User-Agent` header, is how the site recognises you; use an honest name and check the rules for that name.
 
-### Another way to solve it
-
-The parser matches names without regard to case, and on the first word of the name, so these all return `False`:
+**Another way to solve it.** The parser matches names without regard to case, and on the first word of the name, so these all return `False`:
 
 ```python
 for name in ["BadBot", "badbot", "BadBot/2.0"]:
     print(name, robots.can_fetch(name, "http://localhost:8000/library/"))
 ```
 
-### A variation to try
+**A variation to try.** Ask for `robots.txt` itself: `robots.can_fetch("BadBot", "http://localhost:8000/robots.txt")` returns `True`. Reading `robots.txt` is always allowed, otherwise no robot could learn the rules.
 
-Ask for `robots.txt` itself: `robots.can_fetch("BadBot", "http://localhost:8000/robots.txt")` returns `True`. Reading `robots.txt` is always allowed, otherwise no robot could learn the rules.
-
-### If your output differs
+**If your output differs.**
 
 1. **`True`**: you asked with another name, or for the `*` group.
 2. **`False` for every robot**: `robots.read()` failed; is the Practice Ground running?
@@ -289,9 +277,7 @@ Stopping: status 403
 
 **The choice it makes.** Here 429 stops the scraper. In Chapter 20 you will make it wait and try again instead, using the `Retry-After` header the site sends. A 401 or 403, on the other hand, is a refusal: never retry it.
 
-### Another way to solve it
-
-Raise an exception instead of returning `None`, so that a refusal cannot be ignored by mistake:
+**Another way to solve it.** Raise an exception instead of returning `None`, so that a refusal cannot be ignored by mistake:
 
 ```python
 class Refused(Exception):
@@ -307,11 +293,9 @@ def polite_get(url):
 
 The caller then writes `try: ... except Refused as e: print("Stopping:", e)`. Returning `None` is simpler; raising is safer in long programs. Chapter 20's `PoliteClient` raises, for that reason.
 
-### A variation to try
+**A variation to try.** Count the refusals: keep a variable `refused = 0`, add 1 each time `polite_get` returns `None`, and stop the whole loop with `break` after three refusals. A scraper that keeps knocking on a door that says no gets banned.
 
-Count the refusals: keep a variable `refused = 0`, add 1 each time `polite_get` returns `None`, and stop the whole loop with `break` after three refusals. A scraper that keeps knocking on a door that says no gets banned.
-
-### If your output differs
+**If your output differs.**
 
 1. **`403 /trouble/status/403`**: the status test is missing or after the `return`.
 2. **`Not allowed by robots.txt` for `/library/`**: check `AGENT` and the address.
@@ -343,13 +327,9 @@ Count the refusals: keep a variable `refused = 0`, add 1 each time `polite_get` 
 
 **The choice it makes.** The checklist is ordered so that the cheapest question comes first: an official route ends the analysis in one step. This is good practice, not legal advice: for a commercial project or any personal data, ask a lawyer.
 
-### A variation to try
-
-Apply the checklist to two more projects:
+**A variation to try.** Apply the checklist to two more projects:
 
 - **(d)** Recording the price of ten products on a shop every morning to see how they change. Question 3 decides how (respect `robots.txt` and the delay); question 2 decides whether (search the terms for *automated*). Prices are facts, not personal data. This is Chapter 25's project, done on the Practice Ground.
 - **(e)** Collecting the job titles and salaries of a public job board to study the market. Usually allowed for personal analysis if the terms do not forbid it; remove any recruiter's name (question 4). This is Chapter 24's project.
 
-### If your answers differ
-
-Compare your reasoning, not only your verdict: two people can reach the same answer for different reasons, and the reason is what protects you on the next project.
+**If your answers differ.** Compare your reasoning, not only your verdict: two people can reach the same answer for different reasons, and the reason is what protects you on the next project.

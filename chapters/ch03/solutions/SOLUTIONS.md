@@ -1,6 +1,6 @@
 # Chapter 3 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -46,9 +46,7 @@ Junior Data Analyst, Leeds: £32,000
 
 **The choice it makes.** Keep data as numbers and format only when you print. Chapter 13 shows what it costs to turn text such as `"£32,000"` back into a number.
 
-### Another way to solve it
-
-`format(value, ",")` does the same as `:,` outside an f-string:
+**Another way to solve it.** `format(value, ",")` does the same as `:,` outside an f-string:
 
 ```python
 print(job["title"] + ", " + job["city"] + ": £" + format(job["salary_min"], ","))
@@ -56,13 +54,11 @@ print(job["title"] + ", " + job["city"] + ": £" + format(job["salary_min"], ","
 
 It prints the same sentence. The f-string version is shorter and easier to read; the `+` version shows that every piece must be text before it is joined.
 
-### A variation to try
-
-Add a maximum salary to the dictionary, `job["salary_max"] = 40000`, then print `Junior Data Analyst, Leeds: £32,000 to £40,000`. Then read a key that may be missing without stopping the program: `job.get("salary", "not given")` returns `"not given"` instead of raising `KeyError`.
+**A variation to try.** Add a maximum salary to the dictionary, `job["salary_max"] = 40000`, then print `Junior Data Analyst, Leeds: £32,000 to £40,000`. Then read a key that may be missing without stopping the program: `job.get("salary", "not given")` returns `"not given"` instead of raising `KeyError`.
 
 For a price with pennies, combine the comma and two decimals: `f"{1049.5:,.2f}"` gives `1,049.50`.
 
-### If your output differs
+**If your output differs.**
 
 1. **`£32000` without a comma**: the `:,` is missing or placed outside the braces.
 2. **`SyntaxError`** on the print line: the quotes of the f-string and of the keys are the same kind; use `'` outside and `"` inside.
@@ -117,9 +113,7 @@ None
 
 **The choice it makes.** Returning `None` for an unknown word lets a scraper continue and mark the gap. You will use this function in Chapter 11, because the library writes ratings as the class `star-rating Three`.
 
-### Another way to solve it
-
-A list of words in order, where the position gives the number:
+**Another way to solve it.** A list of words in order, where the position gives the number:
 
 ```python
 def stars_to_number(word):
@@ -130,11 +124,9 @@ def stars_to_number(word):
 
 `order.index("three")` is 2, so the function returns 3. The test `if w in order` is needed because `index` raises `ValueError` on a missing word. The dictionary version is clearer and does not depend on the order of the list.
 
-### A variation to try
+**A variation to try.** Make the function tolerate spaces as well as case: `words.get(word.strip().lower())`. Then `stars_to_number(" Four ")` returns `4`. Text scraped from pages often carries such spaces.
 
-Make the function tolerate spaces as well as case: `words.get(word.strip().lower())`. Then `stars_to_number(" Four ")` returns `4`. Text scraped from pages often carries such spaces.
-
-### If your output differs
+**If your output differs.**
 
 1. **`None` for every word**: the dictionary keys are not in lower case.
 2. **`KeyError`**: you used `words[...]` instead of `words.get(...)`.
@@ -214,9 +206,7 @@ June Albright
 
 **The choice it makes.** The `csv` module handles quotes and commas for you. Chapter 13 does the same with pandas in one line; the `csv` module needs no extra package and shows what a CSV file really contains.
 
-### Another way to solve it
-
-With pandas, which Chapter 7 introduces:
+**Another way to solve it.** With pandas, which Chapter 7 introduces:
 
 ```python
 import pandas as pd
@@ -229,9 +219,7 @@ print(df.iloc[-1]["author"])
 
 It prints the same two lines. `index=False` stops pandas from writing a column of row numbers; `df.iloc[-1]` is the last row.
 
-### A variation to try
-
-See the classic mistake for yourself. Write the file by hand, then count the columns of each line:
+**A variation to try.** See the classic mistake for yourself. Write the file by hand, then count the columns of each line:
 
 ```python
 with open(path, "w", encoding="utf-8") as f:
@@ -246,7 +234,7 @@ print([len(r) for r in csv.reader(open(path, encoding="utf-8"))])
 
 The second line has three columns: the comma inside the quote split it. Run the solution again to repair the file.
 
-### If your output differs
+**If your output differs.**
 
 1. **`2 rows`** and a strange author: the header is missing; check `writeheader()`.
 2. **`FileNotFoundError`**: run the program from the repository folder, so that `output/ch03` is created in the right place.
@@ -306,9 +294,7 @@ Output:
 
 **The choice it makes.** Returning `None` keeps the row and marks the hole; skipping the item would lose the title and the other fields. In scraping, keep the row and mark the missing value: you can remove it later, but you cannot get it back without scraping again.
 
-### Another way to solve it
-
-Keep the prices that were read, and list the texts that were not, with `zip`, which walks two lists side by side:
+**Another way to solve it.** Keep the prices that were read, and list the texts that were not, with `zip`, which walks two lists side by side:
 
 ```python
 ok = [p for p in prices if p is not None]
@@ -324,11 +310,9 @@ print(failed)
 
 Write `is not None`, not `!= None`: it is the correct test for `None`, and it also keeps a price of `0.0`, which a test such as `if p` would drop.
 
-### A variation to try
+**A variation to try.** Predict, then check, what `safe_price` returns for `"Free"`, `"£12.50 each"`, `"12.50 GBP"` and `"€9.99"`. All four return `None`: the function only removes `£`, commas and spaces. Now try `safe_price("nan")`: it returns `nan`, a float meaning *not a number*, because `float("nan")` is valid Python. A real price cleaner must reject it; Chapter 13 builds one with a regular expression, which only accepts digits.
 
-Predict, then check, what `safe_price` returns for `"Free"`, `"£12.50 each"`, `"12.50 GBP"` and `"€9.99"`. All four return `None`: the function only removes `£`, commas and spaces. Now try `safe_price("nan")`: it returns `nan`, a float meaning *not a number*, because `float("nan")` is valid Python. A real price cleaner must reject it; Chapter 13 builds one with a regular expression, which only accepts digits.
-
-### If your output differs
+**If your output differs.**
 
 1. **`[24.99, None, None, None, 1049.0]`**: the space inside `"£ 18.50"` was not removed; use `.replace(" ", "")`.
 2. **The program stops with `ValueError`**: the `try` does not cover the `float(...)` line, or the `except` names another error.

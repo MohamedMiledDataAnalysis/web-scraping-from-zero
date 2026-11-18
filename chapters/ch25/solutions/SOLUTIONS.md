@@ -1,6 +1,6 @@
 # Chapter 25 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -60,9 +60,7 @@ Noise-Cancelling Headphones 100.85 2027-03-02
 
 **The choice it makes.** `groupby("name")["price"].idxmin()` gives, for each product, the row label of its lowest price; `.loc[...]` takes those rows with all their columns. When two days tie, `idxmin` keeps the first; say so if ties are possible.
 
-### Another way to solve it
-
-Sort and keep the first row of each product:
+**Another way to solve it.** Sort and keep the first row of each product:
 
 ```python
 lowest = (hist.sort_values(["name", "price", "day"])
@@ -80,11 +78,9 @@ WHERE id IN (3, 7, 9, 14, 19)
 GROUP BY name, price ORDER BY name
 ```
 
-### A variation to try
+**A variation to try.** Add the highest price and its day beside the lowest, with `idxmax`, and compute how much a buyer saved by buying on the best day rather than the worst.
 
-Add the highest price and its day beside the lowest, with `idxmax`, and compute how much a buyer saved by buying on the best day rather than the worst.
-
-### If your output differs
+**If your output differs.**
 
 1. **Every day is 2027-03-01**: you used `groupby("name").min()`.
 2. **Fewer than five rows**: the history does not cover the two weeks; run the chapter's `two_weeks.py`.
@@ -138,9 +134,7 @@ Air Fryer  30.17  40.2     33.2
 
 **The choice it makes.** The monitor stores all 20 products, not only the watched ones: the history costs nothing more (it is the same request), and questions like this one become possible later. The max-to-min gap reacts to one unusual day; a standard deviation of daily changes measures the usual movement instead.
 
-### Another way to solve it
-
-Let SQLite compute it:
+**Another way to solve it.** Let SQLite compute it:
 
 ```python
 query = """
@@ -152,11 +146,9 @@ query = """
 
 The same row. The database sends back one row instead of 280.
 
-### A variation to try
+**A variation to try.** Measure day-to-day movement instead of the extreme gap: for each product, `hist.sort_values("day").groupby("name")["price"].pct_change().abs()`, then average it per product. Compare the ranking with the gap ranking: a product with one sale day ranks high on the gap and low on daily movement.
 
-Measure day-to-day movement instead of the extreme gap: for each product, `hist.sort_values("day").groupby("name")["price"].pct_change().abs()`, then average it per product. Compare the ranking with the gap ranking: a product with one sale day ranks high on the gap and low on daily movement.
-
-### If your output differs
+**If your output differs.**
 
 1. **A product with a gap of 0**: the history has one day only for it; check the number of rows per product.
 2. **`inf` in `gap_pct`**: a price of 0 is stored, and dividing by it gives infinity; `run_day` refuses prices of 0 or less, so the row came from other code.
@@ -211,9 +203,7 @@ Office Printer: £19.98, at or below your target £20.95
 
 **The choice it makes.** `list or ["No alert"]` gives the list when it is not empty, and the one-message list otherwise. Keeping collection (`run_day`) separate from analysis (`alerts_for`) is what makes this test free: you can try a hundred settings on stored data without sending a single request.
 
-### Another way to solve it
-
-Find, for each product, how high the target would have to be for an alert on 10 March: it is simply that day's price. Compare it with the current target:
+**Another way to solve it.** Find, for each product, how high the target would have to be for an alert on 10 March: it is simply that day's price. Compare it with the current target:
 
 ```python
 import sqlite3
@@ -226,11 +216,9 @@ gap["raise_needed_pct"] = ((gap["price"] / gap["target"] - 1) * 100).round(1)
 
 With the original targets, the monitor needs a raise of 1.7% and the printer of 0.2%, the other three far more. This tells you the threshold directly instead of trying values.
 
-### A variation to try
+**A variation to try.** Loop over raises of 0%, 2%, 5% and 10% and print the number of alerts for each. Then run the same loop over every day of the two weeks: a target that alerts every day is too high to be useful.
 
-Loop over raises of 0%, 2%, 5% and 10% and print the number of alerts for each. Then run the same loop over every day of the two weeks: a target that alerts every day is too high to be useful.
-
-### If your output differs
+**If your output differs.**
 
 1. **`No alert`**: the targets were not raised; print `watch`.
 2. **`£20.95` shown as `£20.94`**: rounding of `19.95 × 1.05 = 20.9475`; `.round(2)` gives 20.95 here, but a target computed differently can round the other way. Store targets in pence when exactness matters.
@@ -310,9 +298,7 @@ Largest fall: 27-inch Monitor (-8.4%)
 
 **The choice it makes.** `pivot` turns the long table (one row per product per day) into a wide one (one column per product). Dividing by the first row puts every product on the same scale. Line styles instead of colours keep the chart readable in a black-and-white book. The index answers *by how much did it change?*; it hides *how much does it cost?*, so give the prices in a table beside it.
 
-### Another way to solve it
-
-pandas draws all the columns at once:
+**Another way to solve it.** pandas draws all the columns at once:
 
 ```python
 ax = index.plot(figsize=(6, 3.5), style=["-", "--", ":", "-.", "-"], color="black")
@@ -322,11 +308,9 @@ ax.figure.savefig("output/ch25/watchlist_index.png", dpi=200, bbox_inches="tight
 
 Shorter; the explicit loop gives you full control over each line, such as the dotted style `(0, (1, 3))` that `style` cannot express.
 
-### A variation to try
+**A variation to try.** Label each line at its right end instead of using a legend: after the loop, `ax.text(index.index[-1], index[name].iloc[-1], name, fontsize=7)` for each product. Direct labels are easier to read than a legend when lines cross.
 
-Label each line at its right end instead of using a legend: after the loop, `ax.text(index.index[-1], index[name].iloc[-1], name, fontsize=7)` for each product. Direct labels are easier to read than a legend when lines cross.
-
-### If your output differs
+**If your output differs.**
 
 1. **`ValueError: Index contains duplicate entries, cannot reshape`**: a product has two rows for one day; the backfill example of the chapter wrote into the main database. Check with `hist.duplicated(["day", "name"]).sum()`.
 2. **Lines that do not start at 1.0**: the table is not sorted by day before `iloc[0]`; `pivot` sorts its index, so check that `day` was parsed as a date.

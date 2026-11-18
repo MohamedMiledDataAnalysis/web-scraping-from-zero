@@ -1,6 +1,6 @@
 # Chapter 15 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -52,9 +52,7 @@ Output:
 
 **The choice it makes.** Let the server sort and limit: you download three products instead of thirty. When ties matter, sort yourself with a second key, as below.
 
-### Another way to solve it
-
-Download the whole category and sort in pandas with an explicit tie-break, the name:
+**Another way to solve it.** Download the whole category and sort in pandas with an explicit tie-break, the name:
 
 ```python
 import pandas as pd
@@ -75,11 +73,9 @@ print(top[["rating", "name"]].to_string(index=False))
 
 A different third product: the tie is broken alphabetically, not by id. Both are correct; what matters is knowing which rule you used.
 
-### A variation to try
+**A variation to try.** Print the three cheapest Office products with `sort=price`. Then try `sort=-rating` and see what the API does with a value it does not document: it ignores it and returns the default order.
 
-Print the three cheapest Office products with `sort=price`. Then try `sort=-rating` and see what the API does with a value it does not document: it ignores it and returns the default order.
-
-### If your output differs
+**If your output differs.**
 
 1. **Nothing printed**: check the case of `Office`.
 2. **Different products at 4.9**: the tie order changed; compare the ids.
@@ -132,9 +128,7 @@ Output:
 
 **The choice it makes.** The product page's address is `/shop/product/7`; the request its JavaScript sends is `/shop/api/product/7`. The page and the data have different addresses: always look in the Network panel, never guess.
 
-### Another way to solve it
-
-Check the status before reading the fields, so that a missing product is reported instead of crashing:
+**Another way to solve it.** Check the status before reading the fields, so that a missing product is reported instead of crashing:
 
 ```python
 for pid in [7, 8, 999]:
@@ -148,11 +142,9 @@ for pid in [7, 8, 999]:
 
 For 999 it prints `999 404 No product with this id`.
 
-### A variation to try
+**A variation to try.** Collect products 1 to 12 into a DataFrame and print the three with the most reviews. Wait 0.2 seconds between requests: 12 requests in a loop are still a burst.
 
-Collect products 1 to 12 into a DataFrame and print the three with the most reviews. Wait 0.2 seconds between requests: 12 requests in a loop are still a burst.
-
-### If your output differs
+**If your output differs.**
 
 1. **`KeyError: 'name'`**: the API returned an error; print `r.status_code` and `r.text`.
 2. **`json.decoder.JSONDecodeError`**: you requested the page, not the API.
@@ -221,9 +213,7 @@ Most reviewed: Pro Hose Reel 894
 
 **The choice it makes.** Reading `pages` from the answer means the loop never guesses. With the default page size of 12, the same collection takes 10 requests; with 50, it takes 3. Ask for the largest page size the API allows.
 
-### Another way to solve it
-
-Ask for page 1 first, then loop over the remaining pages with `range`:
+**Another way to solve it.** Ask for page 1 first, then loop over the remaining pages with `range`:
 
 ```python
 first = session.get(url, params={"page": 1, "per_page": 50}, timeout=10).json()
@@ -235,9 +225,7 @@ for page in range(2, first["pages"] + 1):
 
 The same three requests. The `while` version needs no special first request; the `range` version states the number of pages up front.
 
-### A variation to try
-
-Print the three most reviewed products:
+**A variation to try.** Print the three most reviewed products:
 
 ```python
 print(df.nlargest(3, "reviews")[["name", "reviews"]].to_string(index=False))
@@ -252,7 +240,7 @@ Smart Coffee Grinder      893
 
 The top three are within three reviews of each other: rankings this close can change from one day to the next on a real shop.
 
-### If your output differs
+**If your output differs.**
 
 1. **`1 requests, 50 products`**: `pages` is not updated from the answer.
 2. **`100 out of stock`**: the `~` is missing.
@@ -332,9 +320,7 @@ Office   Mini Notebook        £5.55
 
 **The choice it makes.** `{**params, "page": page}` builds a new dictionary from `params` plus the page keys, without changing `params`. Sorting on the server and filtering in Python divides the work: the API does what it offers (sorting), and you do what it does not (stock filtering).
 
-### Another way to solve it
-
-Collect all products once, then let pandas find the cheapest in-stock product per category:
+**Another way to solve it.** Collect all products once, then let pandas find the cheapest in-stock product per category:
 
 ```python
 df = pd.DataFrame(all_pages(URL, {}))
@@ -353,11 +339,9 @@ category           name  price
 
 Three requests instead of nine (one per category, plus pages). When you need several answers from the same data, collect it once.
 
-### A variation to try
+**A variation to try.** Use `all_pages` to print the best-rated in-stock product of each category: `{"category": category, "sort": "rating"}`, then the first in-stock row. Watch for ties, as in exercise 15.1.
 
-Use `all_pages` to print the best-rated in-stock product of each category: `{"category": category, "sort": "rating"}`, then the first in-stock row. Watch for ties, as in exercise 15.1.
-
-### If your output differs
+**If your output differs.**
 
 1. **Garden shows a product out of stock**: the stock filter is missing or after `.iloc[0]`.
 2. **`IndexError: single positional indexer is out-of-bounds`**: a category has no product in stock, or the category name is misspelt.

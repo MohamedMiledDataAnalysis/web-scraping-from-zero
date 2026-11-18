@@ -1,6 +1,6 @@
 # Chapter 10 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -54,9 +54,7 @@ Notes from the Library
 
 **The choice it makes.** `:has(...)` selects an element that **contains** a match: it is the CSS way to look down before choosing. Recent browsers, BeautifulSoup, Playwright and Scrapy support it. The other way is to select the five-star paragraphs, then go up with `find_parent("article")`; `:has` keeps everything in one selector.
 
-### Another way to solve it
-
-Find the rating paragraphs, then climb to their card:
+**Another way to solve it.** Find the rating paragraphs, then climb to their card:
 
 ```python
 for p in soup.select("p.star-rating.Five"):
@@ -65,11 +63,9 @@ for p in soup.select("p.star-rating.Five"):
 
 It prints the same six titles. Useful with tools that do not support `:has`; less readable, because the selection happens in two places.
 
-### A variation to try
+**A variation to try.** Print the titles of the one-star books (five of them, starting with *Salt Kingdom*), then count the cards that have **no** five-star rating: `len(soup.select("article.book-card:not(:has(.Five))"))` gives 14.
 
-Print the titles of the one-star books (five of them, starting with *Salt Kingdom*), then count the cards that have **no** five-star rating: `len(soup.select("article.book-card:not(:has(.Five))"))` gives 14.
-
-### If your output differs
+**If your output differs.**
 
 1. **Nothing printed**: print `len(soup.select("p.star-rating.Five"))`; if it is 6, the problem is the part after `:has(...)`.
 2. **`NotImplementedError` or a selector error**: your `soupsieve` package is very old; run `pip install -r requirements.txt` again.
@@ -118,9 +114,7 @@ Output:
 
 **The choice it makes.** Matching on the address is robust when links have no class but follow a clear pattern. The three operators: `*=` contains, `^=` starts with, `$=` ends with.
 
-### Another way to solve it
-
-`^=` (starts with) is stricter than `*=` and fits this site's addresses:
+**Another way to solve it.** `^=` (starts with) is stricter than `*=` and fits this site's addresses:
 
 ```python
 print(len(soup.select('a[href^="/quotes/author/"]')))
@@ -128,11 +122,9 @@ print(len(soup.select('a[href^="/quotes/author/"]')))
 
 It also prints 10. `$=` would select by ending: `a[href$="/"]` matches every address ending with a slash, 59 links on this page, which shows why a loose pattern is risky.
 
-### A variation to try
+**A variation to try.** Print the distinct author addresses in order of first appearance, using a dictionary to drop repeats: `list(dict.fromkeys(a["href"] for a in links))`. Six addresses.
 
-Print the distinct author addresses in order of first appearance, using a dictionary to drop repeats: `list(dict.fromkeys(a["href"] for a in links))`. Six addresses.
-
-### If your output differs
+**If your output differs.**
 
 1. **`0`**: check the operator, `*=`, and the quotes.
 2. **`IndexError: list index out of range`** on `links[0]`: the list is empty; fix the selector first.
@@ -191,9 +183,7 @@ Northbridge Bank | Fixed 1 year | 4.05% | £1,000
 
 **The choice it makes.** The rates table has no `thead` or `tbody` in the HTML, so its header row is a `tr` like the others and counts as row 1. Browsers **add** a `tbody` when the source has none, so the Elements panel shows one and *Copy selector* includes it, while `html.parser` and `lxml` do not (html5lib does, as Chapter 9 says): with them, `#rates-table tbody tr` finds nothing.
 
-### Another way to solve it
-
-Python positions on the list `select` returns are often clearer than CSS positions:
+**Another way to solve it.** Python positions on the list `select` returns are often clearer than CSS positions:
 
 ```python
 last = soup.select("#planets-table tbody tr")[-1]
@@ -204,11 +194,9 @@ print(soup.select("#rates-table tr")[2].get_text(" | ", strip=True))
 
 It prints the same two lines. `[-1]` is the last row; `[2]` is the third. Use CSS positions when the selector must work outside Python too, for example in Playwright or Scrapy.
 
-### A variation to try
+**A variation to try.** Compare `:nth-of-type(3)` with `:nth-child(3)`: on these rows every child is a `tr`, so both give the same row. They differ when siblings of other types come first, as the reference's cheat sheet shows.
 
-Compare `:nth-of-type(3)` with `:nth-child(3)`: on these rows every child is a `tr`, so both give the same row. They differ when siblings of other types come first, as the reference's cheat sheet shows.
-
-### If your output differs
+**If your output differs.**
 
 1. **`Earth | 149.6 | ...`**: the selector is not anchored on `#rates-table`.
 2. **`AttributeError: 'NoneType' ...`** on the rates row: you added `tbody`; remove it.
@@ -267,9 +255,7 @@ Notes from the Library
 
 **The choice it makes.** `//article[.//p[...]]` is XPath's `:has`: an `article` that has, somewhere inside it, a matching `p`. `contains(@class, "Five")` would also match a class such as `Fivefold`; the strict form below avoids that.
 
-### Another way to solve it
-
-Go down to the paragraph, then **up** to its card with the `ancestor` axis, which CSS has no equivalent for:
+**Another way to solve it.** Go down to the paragraph, then **up** to its card with the `ancestor` axis, which CSS has no equivalent for:
 
 ```python
 titles = tree.xpath('//p[contains(@class, "Five")]/ancestor::article//h3/a/@title')
@@ -283,11 +269,9 @@ It gives the same six titles. The strict class test, which matches `Five` only a
 
 `normalize-space` turns any run of spaces into one; adding a space at both ends lets `" Five "` match only a whole word.
 
-### A variation to try
+**A variation to try.** Print the titles of the books that are **not** five stars: `//article[not(.//p[contains(@class, "Five")])]//h3/a/@title`. Fourteen titles.
 
-Print the titles of the books that are **not** five stars: `//article[not(.//p[contains(@class, "Five")])]//h3/a/@title`. Fourteen titles.
-
-### If your output differs
+**If your output differs.**
 
 1. **Twenty titles**: the dot before `//p` is missing.
 2. **An empty list**: you compared `@class` with `=`.
@@ -342,9 +326,7 @@ Output:
 
 **The choice it makes.** `text()="work"` compares each text piece directly inside the `a`; on these tags, which hold one plain word, it is exact. For text that may contain inner tags or spaces, `normalize-space()="work"` or `contains(., "work")` is safer (Chapter 10's trap box).
 
-### Another way to solve it
-
-Start from the tag and climb back to its quote with `ancestor`:
+**Another way to solve it.** Start from the tag and climb back to its quote with `ancestor`:
 
 ```python
 authors = tree.xpath(
@@ -355,11 +337,9 @@ authors = tree.xpath(
 
 The same three authors. A condition in brackets reads *quotes that have...*; the `ancestor` path reads *from the tag, up to its quote*. Choose the one that matches how you think about the page.
 
-### A variation to try
+**A variation to try.** Change the tag to `courage`: `['Tomas Reyna', 'Tomas Reyna']`. The same author twice, because he wrote both `courage` quotes. Then return the text of the quotes instead of the authors: replace the last step with `/span[@class="text"]/text()`.
 
-Change the tag to `courage`: `['Tomas Reyna', 'Tomas Reyna']`. The same author twice, because he wrote both `courage` quotes. Then return the text of the quotes instead of the authors: replace the last step with `/span[@class="text"]/text()`.
-
-### If your output differs
+**If your output differs.**
 
 1. **An empty list**: check the case of `work` and the quotes around it.
 2. **Every author of the page**: the condition in brackets is missing its leading dot, so it tests the whole page.

@@ -1,6 +1,6 @@
 # Chapter 16 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -63,9 +63,7 @@ Output:
 
 **The choice it makes.** `next_link.count() == 0` tests for the absence of *next* without waiting 30 seconds for it. `wait_for_load_state()` waits for the new page to load after the click; on sites where this is not enough, `page.wait_for_url(f"**/page/{n + 1}/")` (with `n` the current page) waits for the new address itself.
 
-### Another way to solve it
-
-No browser at all: the data of each page sits in its script, as exercise 11.4 showed.
+**Another way to solve it.** No browser at all: the data of each page sits in its script, as exercise 11.4 showed.
 
 ```python
 import json
@@ -83,11 +81,9 @@ print(len(quotes), quotes[-1]["author"])
 
 It prints `40 June Albright`, in a fraction of the time. Chapter 15's rule applies: when the data is reachable without a browser, skip the browser.
 
-### A variation to try
+**A variation to try.** Collect the quotes as dictionaries instead of two parallel lists: for each `div.quote`, read the text and the author inside it with `quote.locator("span.text").inner_text()`. Two lists that must stay in step are easy to break; one record per quote is safer.
 
-Collect the quotes as dictionaries instead of two parallel lists: for each `div.quote`, read the text and the author inside it with `quote.locator("span.text").inner_text()`. Two lists that must stay in step are easy to break; one record per quote is safer.
-
-### If your output differs
+**If your output differs.**
 
 1. **`TimeoutError` after 30 seconds**: the loop clicks *next* on the last page; check the `count() == 0` test.
 2. **`playwright._impl._errors.Error: Executable doesn't exist`**: run `playwright install chromium` (Chapter 0).
@@ -156,9 +152,7 @@ Output:
 
 **The choice it makes.** Choosing two menus sends two API requests. Waiting for the answer that has **both** `Kitchen` and `sort=rating` makes sure you read the final list, not the intermediate one.
 
-### Another way to solve it
-
-Skip the page and ask the API the same question:
+**Another way to solve it.** Skip the page and ask the API the same question:
 
 ```python
 import requests
@@ -174,11 +168,9 @@ print([(p["rating"], p["name"]) for p in data["products"]])
 
 The page version proves you can drive the menus; the API version is what you would use in production.
 
-### A variation to try
+**A variation to try.** Choose the category *Audio* and the sort *Price*, and print the cheapest three. Change the `expect_response` test to `"sort=price" in r.url and "Audio" in r.url`.
 
-Choose the category *Audio* and the sort *Price*, and print the cheapest three. Change the `expect_response` test to `"sort=price" in r.url and "Audio" in r.url`.
-
-### If your output differs
+**If your output differs.**
 
 1. **Products from another category**: the program read the page before the final answer; check the `expect_response` test.
 2. **`TimeoutError` in `expect_response`**: the test never matched; print each response address with `page.on("response", lambda r: print(r.url))`.
@@ -231,9 +223,7 @@ Compact Notebook £124.17 In stock
 
 **The choice it makes.** No explicit wait: `inner_text()` on a locator waits for the element by itself. That is the main difference between Playwright locators and the `find` methods of BeautifulSoup, which look once and return `None`.
 
-### Another way to solve it
-
-Check the response status first, so that a missing product fails fast instead of after 30 seconds:
+**Another way to solve it.** Check the response status first, so that a missing product fails fast instead of after 30 seconds:
 
 ```python
 response = page.goto("http://localhost:8000/shop/product/999")
@@ -243,11 +233,9 @@ if response.status != 200:
 
 For product 999 it prints `No such product: 404` at once. `page.goto` returns the response of the page itself.
 
-### A variation to try
+**A variation to try.** Read the rating line too, `#product p.rating`: `2.7 / 5 (474 reviews)`. Then extract the number of reviews with the regular expression of Chapter 13: `re.search(r"\((\d+) reviews\)", text).group(1)`.
 
-Read the rating line too, `#product p.rating`: `2.7 / 5 (474 reviews)`. Then extract the number of reviews with the regular expression of Chapter 13: `re.search(r"\((\d+) reviews\)", text).group(1)`.
-
-### If your output differs
+**If your output differs.**
 
 1. **`TimeoutError` waiting for `h1.name`**: the product does not exist, or the page structure differs; open the page in your browser.
 2. **Empty strings**: you read the elements with `page.content()` before JavaScript ran.
@@ -320,9 +308,7 @@ Output:
 
 **The choice it makes.** Here the page itself says when everything is loaded (*Showing 30 of 30 products*): a clear stop condition. Between two scrolls, the program waits for **more** products than before, not for a fixed time. If no new products arrive within 5 seconds, `wait_for_function` raises `TimeoutError` and the script stops with a clear error; `range(20)` stops the loop if the status never says *Showing 30*.
 
-### Another way to solve it
-
-The hidden API of Chapter 15 gives the same 30 products in one request:
+**Another way to solve it.** The hidden API of Chapter 15 gives the same 30 products in one request:
 
 ```python
 import requests
@@ -335,11 +321,9 @@ print(len(prices), f"products, average £{sum(prices) / len(prices):.2f}")
 
 It prints `30 products, average £111.58`. Scrolling is how a person gets the data; the API is how a program should, when it is available.
 
-### A variation to try
+**A variation to try.** Stop on the number of products instead of the status text: read the total from the status (`of 30`) with a regular expression once, then loop until `page.locator("div.product").count()` equals it. This works on sites whose status does not say *Showing*.
 
-Stop on the number of products instead of the status text: read the total from the status (`of 30`) with a regular expression once, then loop until `page.locator("div.product").count()` equals it. This works on sites whose status does not say *Showing*.
-
-### If your output differs
+**If your output differs.**
 
 1. **`24 products`**: the loop stopped one scroll too early; print the status at the end.
 2. **`TimeoutError` in `wait_for_function`**: no new products arrived; open the shop in a browser and scroll by hand to see whether it loads.
@@ -422,9 +406,7 @@ Output:
 
 **The choice it makes.** The same average as exercise 16.4, from clean JSON numbers instead of texts: the page and its data agree. Catching the answers is the bridge between Playwright and the hidden API: you let the browser make the requests, and read the data it receives.
 
-### Another way to solve it
-
-Wait for one specific answer with `expect_response`, instead of collecting all of them:
+**Another way to solve it.** Wait for one specific answer with `expect_response`, instead of collecting all of them:
 
 ```python
 with page.expect_response(lambda r: "category=Office" in r.url and "page=2" in r.url) as info:
@@ -438,11 +420,9 @@ http://localhost:8000/shop/api/products?page=2&category=Office&sort=id 12
 
 The address shows how the page asks for its data: `page`, `category` and `sort=id`, the default order. That is exactly the request you can then send with `requests`.
 
-### A variation to try
+**A variation to try.** Keep only the addresses, not the data: append `r.url` in the listener and print the three addresses. You have rediscovered the hidden API from the browser, as Chapter 15 does with the Network panel.
 
-Keep only the addresses, not the data: append `r.url` in the listener and print the three addresses. You have rediscovered the hidden API from the browser, as Chapter 15 does with the Network panel.
-
-### If your output differs
+**If your output differs.**
 
 1. **`2 answers, 18 products`**, sometimes: the listener was registered too late and lost the race with the first answer.
 2. **`json.decoder.JSONDecodeError`** inside the listener: the filter is too loose and catches a non-JSON response.

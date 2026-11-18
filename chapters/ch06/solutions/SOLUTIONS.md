@@ -1,6 +1,6 @@
 # Chapter 6 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -53,9 +53,7 @@ site date -> 50 jobs
 
 **The choice it makes.** Gluing `"?day=" + day` is fine for one simple value. With several parameters or special characters, let `requests` build the query: `requests.get(url, params={"day": day})`, which Chapter 8 introduces.
 
-### Another way to solve it
-
-Let `requests` add the parameter, and check the address it built:
+**Another way to solve it.** Let `requests` add the parameter, and check the address it built:
 
 ```python
 r = requests.get("http://localhost:8000/jobs/", params={"day": "2027-03-15"})
@@ -68,11 +66,9 @@ http://localhost:8000/jobs/?day=2027-03-15
 
 With `params`, an empty value is easy to leave out: build the dictionary only when `day` is not empty.
 
-### A variation to try
+**A variation to try.** Print the count for four dates and watch the board move: 1 March 50, 8 March 59, 31 March 47, and 1 February 55. Chapter 22 records this every day and compares days.
 
-Print the count for four dates and watch the board move: 1 March 50, 8 March 59, 31 March 47, and 1 February 55. Chapter 22 records this every day and compares days.
-
-### If your output differs
+**If your output differs.**
 
 1. **`AttributeError: 'NoneType' object has no attribute 'text'`**: the page has no `.result-count`; print `r.status_code`. 400 means the date format is wrong: use `YYYY-MM-DD`.
 2. **The same number twice**: the parameter was not added; print `url` inside the loop.
@@ -130,9 +126,7 @@ monthly_sales.csv                1,297 bytes
 
 **The choice it makes.** Chapters 9 and 10 explain `select` in full; copy it for now. Chapter 7 reads the same table in one line with pandas, which is the better tool for whole tables; the loop shows what pandas does for you.
 
-### Another way to solve it
-
-With pandas, as in Chapter 7:
+**Another way to solve it.** With pandas, as in Chapter 7:
 
 ```python
 from io import StringIO
@@ -155,11 +149,9 @@ print(table)
 
 pandas uses the header row for the column names and converts the sizes to numbers itself.
 
-### A variation to try
+**A variation to try.** Print the total size of the six files. Keep the sizes in a list inside the loop, then `print(sum(sizes))`: 21804. Then print the largest file's name: keep pairs `(size, name)` and use `max(pairs)`.
 
-Print the total size of the six files. Keep the sizes in a list inside the loop, then `print(sum(sizes))`: 21804. Then print the largest file's name: keep pairs `(size, name)` and use `max(pairs)`.
-
-### If your output differs
+**If your output differs.**
 
 1. **`ValueError: not enough values to unpack`**: your selector includes the header row; add `tbody`.
 2. **Nothing printed**: print `soup.select_one("#file-list")` to check the id.
@@ -216,9 +208,7 @@ Output:
 
 **The choice it makes.** Cutting the text at a colon depends on how the page writes its items. If the page put the explanation in its own tag, selecting that tag would be more robust; here, the colon is the only separator the page gives.
 
-### Another way to solve it
-
-The explanation is the text that follows the link inside the item. BeautifulSoup reaches it with `next_sibling`, the node right after the `<a>`:
+**Another way to solve it.** The explanation is the text that follows the link inside the item. BeautifulSoup reaches it with `next_sibling`, the node right after the `<a>`:
 
 ```python
 for item in soup.select("ul.trouble-list li")[:3]:
@@ -233,11 +223,9 @@ for item in soup.select("ul.trouble-list li")[:3]:
 
 The colon is still there, because it is part of that text; remove it with `.removeprefix(": ")`. This version depends on the exact tree; the `split` version only on the visible text.
 
-### A variation to try
+**A variation to try.** Print the addresses of all eight items, without explanations, as a Python list: `[li.a["href"] for li in soup.select("ul.trouble-list li")]`. Among them, `/trouble/agent` returns in Chapter 8, and `/trouble/limited` and `/trouble/flaky` in Chapter 20.
 
-Print the addresses of all eight items, without explanations, as a Python list: `[li.a["href"] for li in soup.select("ul.trouble-list li")]`. Among them, `/trouble/agent` returns in Chapter 8, and `/trouble/limited` and `/trouble/flaky` in Chapter 20.
-
-### If your output differs
+**If your output differs.**
 
 1. **`IndexError: list index out of range`**: an item has no colon; print `item.get_text()`.
 2. **Only part of the explanation**: you split without the `1`.

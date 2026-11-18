@@ -1,30 +1,22 @@
 # Chapter 13 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each one has the same parts as the book (what the question asks, the plan, the code, line by line, reading the result, checking, mistakes, the choice it makes), with more detail, plus three parts the book has no room for:
-
-- **Another way to solve it**, with its own code and output;
-- **A variation to try**, to check you can adapt the solution;
-- **If your output differs**, a list of causes in the order to check them.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
 ---
 
-## Exercise 13.1 (easy) — numbers in a sentence
+## Exercise 13.1 (easy)
 
-> Use `re.findall` to print every number of the text `"Rooms: 3, floor 12, built 1998, price £245,000"`, then the price alone as an integer.
+> Use `re.findall` to print every number of the text `"Rooms: 3, floor 12, built 1998, price £245,000"`, then the price alone as an integer. Expected output:
 
-### What the question asks
+**What the question asks.** Two separate results from the same sentence. First, *every* number, as a list: this shows you what a simple pattern does with a real sentence. Second, *one* number, the price, as a Python `int`: a value you can add, compare and store, not the text `"245,000"`.
 
-Two separate results from the same sentence. First, *every* number, as a list: this shows you what a simple pattern does with a real sentence. Second, *one* number, the price, as a Python `int`: a value you can add, compare and store, not the text `"245,000"`.
-
-### The plan
+**The plan.**
 
 1. Find every run of digits with `re.findall(r"\d+", text)`.
 2. Find the price by anchoring on what comes before it, the `£` sign, and accept the commas inside it: `£([\d,]+)`.
 3. Keep only the part in brackets, remove the commas, convert to `int`.
-
-### The code
 
 ```python
 import re
@@ -42,7 +34,7 @@ Output:
 245000
 ```
 
-### Line by line
+**Line by line.**
 
 - `import re` loads Python's regular-expression module. It is part of Python; there is nothing to install.
 - `text = ...` is the sentence. On a real page this text would come from `.text` on an element.
@@ -57,19 +49,17 @@ Output:
   - The brackets `( )` form a *group*. `.group(1)` returns what the first group matched, `"245,000"`; `.group(0)` would return the whole match, `"£245,000"`.
 - `price.replace(",", "")` gives `"245000"`. `int(...)` converts it to the number 245000, and `print` shows it without quotes.
 
-### Reading the result
-
-The first line has **five** items for four numbers. `245,000` became `'245'` and `'000'`, because a comma is not a digit: `\d+` stops at the comma and starts a new match after it. This is the most common surprise with numbers in scraped text, which is why the price needs its own pattern.
+**Reading the result.** The first line has **five** items for four numbers. `245,000` became `'245'` and `'000'`, because a comma is not a digit: `\d+` stops at the comma and starts a new match after it. This is the most common surprise with numbers in scraped text, which is why the price needs its own pattern.
 
 The second line is `245000`, with no quotes: it is an `int`, not a string.
 
-### Checking the answer
+**Checking.**
 
 - `print(type(int(price.replace(",", ""))))` prints `<class 'int'>`.
 - `print(int(price.replace(",", "")) + 1)` prints `245001`: you can calculate with it.
 - Count the numbers in the sentence yourself: 3, 12, 1998, 245,000. The list has one item more, for the reason above.
 
-### Mistakes this exercise provokes
+**Mistakes this exercise provokes.**
 
 | What you wrote | What happens | Fix |
 |---|---|---|
@@ -79,13 +69,9 @@ The second line is `245000`, with no quotes: it is an `int`, not a string.
 | `"\d+"` without `r` | works, but Python 3.12+ prints `SyntaxWarning: invalid escape sequence '\d'` | always `r"..."` for patterns |
 | `re.findall(r"£([\d,]+)", text)[0]` | works too, but builds a list for one value | `search` when you want one |
 
-### The choice it makes
+**The choice it makes.** `[\d,]+` is permissive: it would also accept `1,,2` or `,,,`. Section 13.2 of the book uses a strict pattern, `\d+(?:,\d{3})*`, which accepts commas only between groups of three digits. On a page whose format you know, the short pattern is easier to read and enough; on text you do not control, use the strict one.
 
-`[\d,]+` is permissive: it would also accept `1,,2` or `,,,`. Section 13.2 of the book uses a strict pattern, `\d+(?:,\d{3})*`, which accepts commas only between groups of three digits. On a page whose format you know, the short pattern is easier to read and enough; on text you do not control, use the strict one.
-
-### Another way to solve it
-
-The strict pattern of section 13.2 keeps `245,000` whole in the list itself:
+**Another way to solve it.** The strict pattern of section 13.2 keeps `245,000` whole in the list itself:
 
 ```python
 print(re.findall(r"\d+(?:,\d{3})*", text))
@@ -97,9 +83,7 @@ print(re.findall(r"\d+(?:,\d{3})*", text))
 
 `(?:,\d{3})*` means *zero or more groups of a comma followed by exactly three digits*. `(?: )` groups without capturing, so `findall` still returns the whole match. Note that `3, 12` stays two numbers: the comma there is followed by a space, not three digits.
 
-### A variation to try
-
-Extract both prices from `"Was £1,299.50, now £1,099.00"` as floats. You need commas **and** decimals:
+**A variation to try.** Extract both prices from `"Was £1,299.50, now £1,099.00"` as floats. You need commas **and** decimals:
 
 ```python
 t2 = "Was £1,299.50, now £1,099.00"
@@ -112,7 +96,7 @@ print(re.findall(r"£(\d+(?:,\d{3})*(?:\.\d+)?)", t2))
 
 Then convert each with `float(x.replace(",", ""))`. Which is the current price? The last one: `re.findall(...)[-1]`.
 
-### If your output differs
+**If your output differs.**
 
 1. **`AttributeError: 'NoneType' object has no attribute 'group'`**: `search` found nothing. Print `repr(text)`: your text may use a different character, such as `GBP` or a non-breaking space after `£`.
 2. **Only four items in the first list**: you used the strict pattern, which is correct but not what the exercise asked; compare with the output above.
@@ -120,23 +104,19 @@ Then convert each with `float(x.replace(",", ""))`. Which is the current price? 
 
 ---
 
-## Exercise 13.2 (medium) — a job DataFrame with numbers and dates
+## Exercise 13.2 (medium)
 
-> Scrape the job board (page 1 only), build a DataFrame with `title`, `city`, `salary` (the text) and `posted` (from the `datetime` attribute), then add the columns `salary_min`, `salary_max` (integers, with a regular expression) and `age_days` (days between `posted` and 2027-03-01). Print the three newest jobs.
+> Scrape the job board (page 1 only), build a DataFrame with `title`, `city`, `salary` (the text) and `posted` (from the `datetime` attribute), then add the columns `salary_min`, `salary_max` (integers, with a regular expression) and `age_days` (days between `posted` and 2027-03-01). Print the three newest jobs. Expected output:
 
-### What the question asks
+**What the question asks.** A table you can calculate with. The page shows salaries as text (`£75,000 – £89,000`) and dates as attributes; the exercise asks you to turn both into numbers, then use them to sort.
 
-A table you can calculate with. The page shows salaries as text (`£75,000 – £89,000`) and dates as attributes; the exercise asks you to turn both into numbers, then use them to sort.
-
-### The plan
+**The plan.**
 
 1. Download page 1 and parse it, as in Chapter 11.
 2. Build one dictionary per job, then a DataFrame.
 3. Add `salary_min` and `salary_max` with a regular expression applied to every row.
 4. Convert `posted` to dates and subtract from 1 March 2027.
 5. Sort by age, keep three rows, print.
-
-### The code
 
 ```python
 import re
@@ -187,7 +167,7 @@ Senior Credit Risk Analyst      Leeds       75000         0
           Senior QA Tester       Lyon       67000         0
 ```
 
-### Line by line
+**Line by line.**
 
 - `requests.get(..., timeout=10).text` downloads the page; `BeautifulSoup(..., "html.parser")` turns it into a tree.
 - The list comprehension `[{...} for li in soup.select("li.job")]` builds one dictionary per job card:
@@ -205,18 +185,16 @@ Senior Credit Risk Analyst      Leeds       75000         0
 - `pd.Timestamp("2027-03-01") - jobs["posted"]` subtracts every date from 1 March 2027 and gives *durations*; `.dt.days` turns each duration into a whole number of days.
 - `jobs.sort_values("age_days")` sorts from the newest (age 0) to the oldest; `[[...]]` keeps four columns; `.head(3)` keeps three rows; `.to_string(index=False)` prints without the row numbers on the left.
 
-### Reading the result
+**Reading the result.** Three jobs posted on 1 March 2027 itself (`age_days` 0). The salaries are plain integers: `75000`, not `£75,000`. That is what lets you sort, average or filter them.
 
-Three jobs posted on 1 March 2027 itself (`age_days` 0). The salaries are plain integers: `75000`, not `£75,000`. That is what lets you sort, average or filter them.
-
-### Checking the answer
+**Checking.**
 
 - `print(jobs.dtypes)` shows `int64` for `salary_min`, `salary_max` and `age_days`, and a `datetime64` type for `posted`.
 - `print((jobs["salary_min"] <= jobs["salary_max"]).all())` prints `True`: no range is upside down.
 - `print(len(jobs))` prints `15`: page 1 holds 15 offers.
 - Open the job board in the browser and compare the first row with the page.
 
-### Mistakes this exercise provokes
+**Mistakes this exercise provokes.**
 
 | What you wrote | What happens | Fix |
 |---|---|---|
@@ -228,13 +206,9 @@ Three jobs posted on 1 March 2027 itself (`age_days` 0). The salaries are plain 
 
 Several jobs share age 0, so which three appear depends on the order of the page. When the order must be the same every time, sort on two columns: `sort_values(["age_days", "title"])`.
 
-### The choice it makes
+**The choice it makes.** One regular expression returns both salaries in one pass. Splitting the text on `–` also works today, but breaks the day the site writes `to` or a plain hyphen. Matching the numbers themselves is more robust than matching the separator between them.
 
-One regular expression returns both salaries in one pass. Splitting the text on `–` also works today, but breaks the day the site writes `to` or a plain hyphen. Matching the numbers themselves is more robust than matching the separator between them.
-
-### Another way to solve it
-
-pandas can apply a regular expression with groups to a whole column at once, without `apply` and `lambda`:
+**Another way to solve it.** pandas can apply a regular expression with groups to a whole column at once, without `apply` and `lambda`:
 
 ```python
 parts = jobs["salary"].str.extract(r"£([\d,]+)\D+£([\d,]+)")
@@ -249,9 +223,7 @@ print(parts.head(2))
 
 `.str.extract` returns one column per group. `\D+` means *one or more characters that are not digits*: the space, the dash and the space between the two amounts. Then convert each column: `parts[0].str.replace(",", "").astype(int)`. This version is faster on large tables; the book's version is easier to follow step by step.
 
-### A variation to try
-
-Which city pays the highest minimum salary on average? Add three lines after `salary_min`:
+**A variation to try.** Which city pays the highest minimum salary on average? Add three lines after `salary_min`:
 
 ```python
 print(
@@ -267,7 +239,7 @@ Lyon     58400.0
 Leeds    57400.0
 ```
 
-### If your output differs
+**If your output differs.**
 
 1. **`TypeError: 'NoneType' object is not subscriptable`**: a selector found nothing. Print `soup.select_one("li.job")` to see the real structure of one card.
 2. **A different `age_days`**: you started the site with `--live` or `--date`; restart it with `python run_site.py`, which fixes the date to 1 March 2027.
@@ -275,21 +247,17 @@ Leeds    57400.0
 
 ---
 
-## Exercise 13.3 (medium) — a European CSV
+## Exercise 13.3 (medium)
 
-> Read `bank_capital_eu.csv` correctly and print, for each country, the lowest CET1 ratio under the adverse scenario, all years.
+> Read `bank_capital_eu.csv` correctly and print, for each country, the lowest CET1 ratio under the adverse scenario, all years. Expected output:
 
-### What the question asks
+**What the question asks.** The file uses European conventions: semicolons between columns, a comma as the decimal mark (`14,63`) and dots between thousands (`850.263,5`). "Correctly" means that every number column is read as a number. Then a filter and a group.
 
-The file uses European conventions: semicolons between columns, a comma as the decimal mark (`14,63`) and dots between thousands (`850.263,5`). "Correctly" means that every number column is read as a number. Then a filter and a group.
-
-### The plan
+**The plan.**
 
 1. Look at the first lines of the file before writing code (in the browser, or with `print(requests.get(url).text[:300])`).
 2. Tell `read_csv` the three conventions.
 3. Keep the adverse rows; group by country; take the minimum; sort.
-
-### The code
 
 ```python
 import pandas as pd
@@ -321,7 +289,7 @@ NL    12.46
 UK    12.64
 ```
 
-### Line by line
+**Line by line.**
 
 - `pd.read_csv(url, ...)` reads straight from the address; pandas downloads the file itself.
 - `sep=";"`: the column separator. The default is a comma.
@@ -331,20 +299,16 @@ UK    12.64
 - `.groupby("Country")["CET1 ratio (%)"]` splits the ratios by country; `.min()` keeps the lowest of each group.
 - `.sort_values()` sorts from lowest to highest; `.to_string()` prints every row.
 
-### Reading the result
+**Reading the result.** Six countries, one line each. Germany has the lowest ratio under stress, 10.09%; the United Kingdom the highest of the six, 12.64%. A CET1 ratio is a bank's core capital as a percentage of its risk-weighted assets: the lower, the less buffer against losses.
 
-Six countries, one line each. Germany has the lowest ratio under stress, 10.09%; the United Kingdom the highest of the six, 12.64%. A CET1 ratio is a bank's core capital as a percentage of its risk-weighted assets: the lower, the less buffer against losses.
-
-### Checking the answer
+**Checking.**
 
 - `print(banks.dtypes)` shows `float64` for `Total assets (EUR m)` and `CET1 ratio (%)`.
 - `print(len(banks))` prints `24`: six countries × two years (2024, 2025) × two scenarios.
 - `print(len(adverse))` prints `12`.
 - `print(adverse[adverse["Country"] == "DE"])` shows the two German rows; the smaller ratio is the one printed.
 
-### Mistakes this exercise provokes
-
-What happens when you leave the options out, run on the real file:
+**Mistakes this exercise provokes.** What happens when you leave the options out, run on the real file:
 
 ```python
 raw = pd.read_csv(url)
@@ -364,13 +328,9 @@ One column: without `sep=";"`, every line is a single piece of text. With `sep="
 | no `thousands` | total assets are text | `thousands="."` |
 | `"adverse"` in lower case | empty result, no error | copy the value from the file |
 
-### The choice it makes
+**The choice it makes.** Giving `read_csv` the conventions reads the file correctly once, for every column. Cleaning afterwards with `.str.replace(",", ".")` works too, but must be repeated for each column and is easy to forget for one.
 
-Giving `read_csv` the conventions reads the file correctly once, for every column. Cleaning afterwards with `.str.replace(",", ".")` works too, but must be repeated for each column and is easy to forget for one.
-
-### Another way to solve it
-
-Compare the two scenarios bank by bank: how much does the stress lower the ratio? `pivot_table` puts the scenarios side by side:
+**Another way to solve it.** Compare the two scenarios bank by bank: how much does the stress lower the ratio? `pivot_table` puts the scenarios side by side:
 
 ```python
 wide = banks.pivot_table(
@@ -388,11 +348,9 @@ IT      2024    10.93     16.46  5.53
 NL      2024    12.46     17.24  4.78
 ```
 
-### A variation to try
+**A variation to try.** Print the lowest adverse ratio **per year** rather than over both years: group by two columns, `adverse.groupby(["Country", "Year"])["CET1 ratio (%)"].min()`. You get 12 lines.
 
-Print the lowest adverse ratio **per year** rather than over both years: group by two columns, `adverse.groupby(["Country", "Year"])["CET1 ratio (%)"].min()`. You get 12 lines.
-
-### If your output differs
+**If your output differs.**
 
 1. **`KeyError: 'Scenario'`**: the separator is wrong, so the column names are wrong; print `banks.columns`.
 2. **Ratios such as `1463.0`**: you swapped `decimal` and `thousands`.
@@ -400,22 +358,18 @@ Print the lowest adverse ratio **per year** rather than over both years: group b
 
 ---
 
-## Exercise 13.4 (medium) — duplicates on purpose
+## Exercise 13.4 (medium)
 
-> Scrape pages 1 and 2 of the library twice each (four requests), build a DataFrame, and show that it has 80 rows but only 40 distinct books. Save the clean 40 to `output/ch13/books_p1_p2.csv`.
+> Scrape pages 1 and 2 of the library twice each (four requests), build a DataFrame, and show that it has 80 rows but only 40 distinct books. Save the clean 40 to `output/ch13/books_p1_p2.csv`. Expected output:
 
-### What the question asks
+**What the question asks.** To reproduce on purpose the most common accident of a scraper, reading the same pages twice (after a restart, or because two links lead to the same page), then to prove the duplicates exist with numbers, and to remove them.
 
-To reproduce on purpose the most common accident of a scraper, reading the same pages twice (after a restart, or because two links lead to the same page), then to prove the duplicates exist with numbers, and to remove them.
-
-### The plan
+**The plan.**
 
 1. Loop over the pages 1, 2, 1, 2.
 2. Collect one dictionary per book card, with the book's identifier.
 3. Build the DataFrame; count rows; drop duplicates on the identifier; count again.
 4. Save the clean table.
-
-### The code
 
 ```python
 from pathlib import Path
@@ -453,7 +407,7 @@ Output:
 80 rows, 40 distinct books
 ```
 
-### Line by line
+**Line by line.**
 
 - `requests.Session()` keeps one connection open for the four requests, which is faster and politer than four separate connections.
 - `for page in [1, 2, 1, 2]` is the duplication, written explicitly.
@@ -467,18 +421,16 @@ Output:
 - `Path("output/ch13").mkdir(parents=True, exist_ok=True)` creates the folders if needed, and does nothing if they exist.
 - `clean.to_csv(..., index=False)` writes the file without the row numbers.
 
-### Reading the result
+**Reading the result.** `80 rows, 40 distinct books`: four pages of 20 cards, and each of the 40 books twice. Exercise 13.5 reads the file this program saves.
 
-`80 rows, 40 distinct books`: four pages of 20 cards, and each of the 40 books twice. Exercise 13.5 reads the file this program saves.
-
-### Checking the answer
+**Checking.**
 
 - `print(books.duplicated(subset="id").sum())` prints `40`: the number of rows that repeat an earlier identifier.
 - `print(books.groupby("id").size().value_counts())` shows that all 40 identifiers appear exactly twice.
 - `print(clean["id"].is_unique)` prints `True`.
 - Open `output/ch13/books_p1_p2.csv`: 41 lines, the header and 40 books.
 
-### Mistakes this exercise provokes
+**Mistakes this exercise provokes.**
 
 | What you wrote | What happens | Fix |
 |---|---|---|
@@ -487,17 +439,11 @@ Output:
 | `to_csv(...)` without `index=False` | an extra unnamed column of 0, 1, 2… | `index=False` |
 | forgetting `mkdir` | `OSError: Cannot save file into a non-existent directory` | create the folder first |
 
-### The choice it makes
+**The choice it makes.** `subset="id"` trusts the site's identifier. It is the safest key when it exists. `keep="first"` (the default) keeps the oldest copy; `keep="last"` keeps the newest, which matters when the two reads differ, for example a price that changed between them.
 
-`subset="id"` trusts the site's identifier. It is the safest key when it exists. `keep="first"` (the default) keeps the oldest copy; `keep="last"` keeps the newest, which matters when the two reads differ, for example a price that changed between them.
+**Another way to solve it.** When a site gives no identifier, use the address of the detail page, which is unique for each item. Add `"url": card.select_one("h3 a")["href"]` to the dictionary and write `books.drop_duplicates(subset="url")`: it also gives 40 rows.
 
-### Another way to solve it
-
-When a site gives no identifier, use the address of the detail page, which is unique for each item. Add `"url": card.select_one("h3 a")["href"]` to the dictionary and write `books.drop_duplicates(subset="url")`: it also gives 40 rows.
-
-### A variation to try
-
-Do not create the duplicates at all: keep a set of the identifiers you have seen and skip a card whose identifier is already in it.
+**A variation to try.** Do not create the duplicates at all: keep a set of the identifiers you have seen and skip a card whose identifier is already in it.
 
 ```python
 seen = set()
@@ -510,7 +456,7 @@ seen = set()
 
 The DataFrame then has 40 rows from the start. This is the method of Chapter 23's crawler.
 
-### If your output differs
+**If your output differs.**
 
 1. **`40 rows, 40 distinct books`**: your loop reads each page once; check the list `[1, 2, 1, 2]`.
 2. **`80 rows, 80 distinct books`**: you deduplicated on a column that differs between reads, or forgot `subset`.
@@ -518,22 +464,18 @@ The DataFrame then has 40 rows from the start. This is the method of Chapter 23'
 
 ---
 
-## Exercise 13.5 (harder) — SQLite and one query
+## Exercise 13.5 (harder)
 
-> Save the clean books of exercise 13.4 to an SQLite table `books`, then use one SQL query to print the number of books and the average price per rating, highest rating first.
+> Save the clean books of exercise 13.4 to an SQLite table `books`, then use one SQL query to print the number of books and the average price per rating, highest rating first. Expected output:
 
-### What the question asks
+**What the question asks.** To move the data into a database and let the database answer a question: for each rating, how many books, and their average price. One query, not a loop.
 
-To move the data into a database and let the database answer a question: for each rating, how many books, and their average price. One query, not a loop.
-
-### The plan
+**The plan.**
 
 1. Read the CSV saved by exercise 13.4.
 2. Turn the rating words (`Three`) into numbers (3), so that they sort correctly.
 3. Write the table with `to_sql`.
 4. Write a `GROUP BY` query and run it with `pd.read_sql`.
-
-### The code
 
 ```python
 import sqlite3
@@ -563,7 +505,7 @@ Output:
       1      7      31.08
 ```
 
-### Line by line
+**Line by line.**
 
 - `pd.read_csv("output/ch13/books_p1_p2.csv")` reads the 40 books. Run exercise 13.4 first.
 - `words = {"One": 1, ...}` is the translation table.
@@ -577,11 +519,9 @@ Output:
   - `ORDER BY rating DESC`: highest rating first.
 - `pd.read_sql(query, db)` sends the query and returns the answer as a DataFrame.
 
-### Reading the result
+**Reading the result.** Five rows. Three-star books are the most frequent (14 of 40). Two-star books are the most expensive on average (£39.20) and three-star books the cheapest (£27.35): on these 40 books, a better rating does not mean a higher price.
 
-Five rows. Three-star books are the most frequent (14 of 40). Two-star books are the most expensive on average (£39.20) and three-star books the cheapest (£27.35): on these 40 books, a better rating does not mean a higher price.
-
-### Checking the answer
+**Checking.**
 
 - The `books` column adds up to 40: 9 + 4 + 14 + 6 + 7.
 - The same answer in pandas:
@@ -604,7 +544,7 @@ rating
 1           7      31.08
 ```
 
-### Mistakes this exercise provokes
+**Mistakes this exercise provokes.**
 
 | What you wrote | What happens | Fix |
 |---|---|---|
@@ -614,13 +554,9 @@ rating
 | `AVG(price)` without `ROUND` | `31.950000000000003`: floating-point noise | `ROUND(..., 2)` |
 | `SELECT rating, title, COUNT(*)` | SQLite returns one title per group, chosen without rule | select only grouped or aggregated columns |
 
-### The choice it makes
+**The choice it makes.** For 40 rows, pandas and SQL give the same answer and pandas needs no database. SQL is worth it when the data already lives in a database, when it is too large to load into memory, or when several programs share it, as in Chapters 22 and 24.
 
-For 40 rows, pandas and SQL give the same answer and pandas needs no database. SQL is worth it when the data already lives in a database, when it is too large to load into memory, or when several programs share it, as in Chapters 22 and 24.
-
-### Another way to solve it
-
-`HAVING` filters groups after they are counted, where `WHERE` filters rows before. Only the ratings with at least 7 books, most frequent first:
+**Another way to solve it.** `HAVING` filters groups after they are counted, where `WHERE` filters rows before. Only the ratings with at least 7 books, most frequent first:
 
 ```sql
 SELECT rating, COUNT(*) AS books
@@ -637,11 +573,9 @@ ORDER BY books DESC
       1      7
 ```
 
-### A variation to try
+**A variation to try.** Add the cheapest and most expensive price of each rating: `MIN(price)` and `MAX(price)` in the `SELECT`. Then answer: is the most expensive of the 40 books well rated?
 
-Add the cheapest and most expensive price of each rating: `MIN(price)` and `MAX(price)` in the `SELECT`. Then answer: is the most expensive of the 40 books well rated?
-
-### If your output differs
+**If your output differs.**
 
 1. **Counts of 18, 8, 28…**: the table holds two copies; you used `append`, or exercise 13.4's file kept duplicates.
 2. **`NaN` in `rating`**: a word is missing from `words` or spelt differently; print `books["rating"].unique()` before the `map`.

@@ -1,6 +1,6 @@
 # Chapter 24 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -58,9 +58,7 @@ Manchester     7
 
 **The choice it makes.** The query counts the jobs the tracker kept, not the jobs on the board. That is the right number for *where are my opportunities?*; for *where is the market?*, count the list pages without the city filter.
 
-### Another way to solve it
-
-Read the table and count with pandas:
+**Another way to solve it.** Read the table and count with pandas:
 
 ```python
 with sqlite3.connect("output/ch24/tracker.db") as db:
@@ -70,11 +68,9 @@ print(jobs["city"].value_counts())
 
 The same counts. `value_counts` sorts by count but leaves ties in an order of its own; the SQL version breaks ties by name.
 
-### A variation to try
+**A variation to try.** Add the average maximum salary per city: `SELECT city, COUNT(*) AS jobs, ROUND(AVG(salary_max)) AS avg_max FROM jobs GROUP BY city ORDER BY jobs DESC, city`. Then keep only the cities with at least five jobs, with `HAVING COUNT(*) >= 5`.
 
-Add the average maximum salary per city: `SELECT city, COUNT(*) AS jobs, ROUND(AVG(salary_max)) AS avg_max FROM jobs GROUP BY city ORDER BY jobs DESC, city`. Then keep only the cities with at least five jobs, with `HAVING COUNT(*) >= 5`.
-
-### If your output differs
+**If your output differs.**
 
 1. **`DatabaseError: no such table: jobs`**: the week has not run; run the chapter's `week.py` first.
 2. **Larger counts**: you opened Chapter 22's database.
@@ -138,9 +134,7 @@ Output:
 
 **The choice it makes.** `sum(...)` of `True` and `False` counts the `True` values. The search on the board matches the title and the skills, so *sql* finds jobs whose title says nothing about data. Each extra search word costs list pages every day (here one or two more requests) for one more job: measure before you add.
 
-### Another way to solve it
-
-Use sets of ids, which make the difference explicit:
+**Another way to solve it.** Use sets of ids, which make the difference explicit:
 
 ```python
 before = {i for q in config["searches"]
@@ -151,11 +145,9 @@ print(len(before), len(before | extra), extra - before)
 
 `before | extra` is the union, `extra - before` the jobs only *sql* brings: `{1323}`. It sends the same requests and also tells you **which** jobs are new.
 
-### A variation to try
+**A variation to try.** Try other words in place of *sql*, such as *excel* or *finance*, and print the number of extra matching jobs and extra list pages for each. Keep the words that bring at least one job a week.
 
-Try other words in place of *sql*, such as *excel* or *finance*, and print the number of extra matching jobs and extra list pages for each. Keep the words that bring at least one job a week.
-
-### If your output differs
+**If your output differs.**
 
 1. **25 on the first line**: `append` changed the configuration list before the first loop.
 2. **More than 25**: you counted every job instead of the matching ones; check `matches`.
@@ -215,9 +207,7 @@ Mid-level Structured Finance Analyst  Leeds 2027-02-17 2027-03-02    14
 
 **The choice it makes.** `julianday` turns a date into a decimal number of days, so SQLite can subtract dates; `CAST(... AS INTEGER)` keeps whole days. A daily tracker tells you within a day that a job you wanted is gone. Count from `posted`, not `first_seen`: the tracker only saw the end of their lives. The `+ 1` is a convention; state it next to the numbers.
 
-### Another way to solve it
-
-Do the date arithmetic in pandas:
+**Another way to solve it.** Do the date arithmetic in pandas:
 
 ```python
 with sqlite3.connect("output/ch24/tracker.db") as db:
@@ -230,11 +220,9 @@ print(closed.sort_values(["days", "title"]).to_string(index=False))
 
 The same four rows. pandas is easier to read; SQL works without loading the table.
 
-### A variation to try
+**A variation to try.** For the jobs still open on 7 March, compute how long they have been online so far: the same formula with `'2027-03-07'` in place of `last_seen`, and `WHERE last_seen = '2027-03-07'`. The oldest open job tells you how long a job can stay on this board.
 
-For the jobs still open on 7 March, compute how long they have been online so far: the same formula with `'2027-03-07'` in place of `last_seen`, and `WHERE last_seen = '2027-03-07'`. The oldest open job tells you how long a job can stay on this board.
-
-### If your output differs
+**If your output differs.**
 
 1. **`days` is 0 everywhere**: `julianday` is missing.
 2. **No rows**: the week has not run up to 7 March, so `last_seen` never reaches it; check `SELECT MAX(last_seen) FROM jobs`.
@@ -311,9 +299,7 @@ Output:
 
 **The choice it makes.** Replacing a function by a wrapper that counts and then calls the original is a quick way to measure a program without changing its code. A list page address contains `?q=`, a detail page `/?day=`. Fetching details only for new jobs is what keeps the detail count at 28 instead of one per job per day.
 
-### Another way to solve it
-
-Count the responses instead of the calls. `PoliteClient` sends its requests through a `requests.Session`, which accepts response hooks: functions called on every response.
+**Another way to solve it.** Count the responses instead of the calls. `PoliteClient` sends its requests through a `requests.Session`, which accepts response hooks: functions called on every response.
 
 ```python
 def count_response(response, *args, **kwargs):
@@ -325,11 +311,9 @@ tracker.client.session.hooks["response"].append(count_response)
 
 The hook sees the final address of every response, parameters included, so the test must exclude `q=`. It counts a retried request once per attempt, which measures the real load on the site; the wrapper counts what the tracker asks for. Neither sees `robots.txt`, which `RobotFileParser` downloads with its own connection.
 
-### A variation to try
+**A variation to try.** Estimate the cost of the details without the *new jobs only* rule: count the matching jobs per day (the first value `run_day` returns) and add them up over the week. That is the number of detail requests a naive tracker would send.
 
-Estimate the cost of the details without the *new jobs only* rule: count the matching jobs per day (the first value `run_day` returns) and add them up over the week. That is the number of detail requests a naive tracker would send.
-
-### If your output differs
+**If your output differs.**
 
 1. **0 detail pages**: the database was not deleted; check `tracker.DB` and the `unlink`.
 2. **Everything counted as list pages**: print one `url` inside the wrapper; your test string does not match.

@@ -1,6 +1,6 @@
 # Chapter 23 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -55,9 +55,7 @@ Self Help      36.50
 
 **The choice it makes.** Reading the summary trusts the numbers the project computed; recomputing from the catalogue checks them. In a report, read the summary; when a number looks surprising, recompute it from the rows.
 
-### Another way to solve it
-
-Recompute from the rows, as in the check:
+**Another way to solve it.** Recompute from the rows, as in the check:
 
 ```python
 books = pd.read_excel("output/ch23/catalogue.xlsx", sheet_name="Catalogue")
@@ -66,11 +64,9 @@ print(books.groupby("category")["price"].mean().nlargest(3).round(2))
 
 The same three categories. This version does not depend on how the summary was built, so it keeps working if someone edits the *Summary* sheet by hand.
 
-### A variation to try
+**A variation to try.** Averages hide spread. Add the cheapest and the most expensive book of each category: `books.groupby("category")["price"].agg(["mean", "min", "max"])`. Then look at the number of books per category (`books` column of the summary): an average over 47 books is more stable than one over 10.
 
-Averages hide spread. Add the cheapest and the most expensive book of each category: `books.groupby("category")["price"].agg(["mean", "min", "max"])`. Then look at the number of books per category (`books` column of the summary): an average over 47 books is more stable than one over 10.
-
-### If your output differs
+**If your output differs.**
 
 1. **`KeyError: 'avg_price'`**: you read the *Catalogue* sheet; pass `sheet_name="Summary"`.
 2. **`ImportError: Missing optional dependency 'openpyxl'`**: install the requirements of the repository.
@@ -124,9 +120,7 @@ Correlation: -0.032
 
 **The choice it makes.** A correlation near 0 means no linear link: in this invented catalogue, ratings and prices were drawn independently. On a real shop, a result like this tells you that price is not a signal of quality, which is worth knowing before you build anything on it. Show the group averages beside the single number: readers trust a table they can read more than a coefficient.
 
-### Another way to solve it
-
-Look before you compute: draw the average price per rating as a bar chart.
+**Another way to solve it.** Look before you compute: draw the average price per rating as a bar chart.
 
 ```python
 import matplotlib.pyplot as plt
@@ -138,11 +132,9 @@ plt.savefig("output/ch23/rating_price.png", dpi=150, bbox_inches="tight")
 
 Five bars of almost equal height. A chart makes *no link* obvious to a reader who does not know what a correlation is.
 
-### A variation to try
+**A variation to try.** Repeat the analysis with the number of pages instead of the rating: `books["price"].corr(books["pages"])`. Then group the pages into bands with `pd.cut(books["pages"], [0, 200, 400, 800])` and average the prices per band.
 
-Repeat the analysis with the number of pages instead of the rating: `books["price"].corr(books["pages"])`. Then group the pages into bands with `pd.cut(books["pages"], [0, 200, 400, 800])` and average the prices per band.
-
-### If your output differs
+**If your output differs.**
 
 1. **Ratings shown as text** (`'5'`): the column was stored as text; convert with `astype(int)`.
 2. **A correlation of `nan`**: one of the columns is empty or constant; print `books[["price", "rating"]].describe()`.
@@ -193,9 +185,7 @@ Output:
 
 **The choice it makes.** This is why the comparison in `compare.py` is safe only when titles are unique, and why identifiers (the address, the `data-id`, the UPC) are better keys than titles. Check uniqueness before you join on a column. The `if` makes the program correct for both answers, which is what an exercise with an unknown answer requires.
 
-### Another way to solve it
-
-Check uniqueness in one line, as an assertion inside a pipeline:
+**Another way to solve it.** Check uniqueness in one line, as an assertion inside a pipeline:
 
 ```python
 assert books["title"].is_unique, "titles are not unique: do not join on them"
@@ -203,11 +193,9 @@ assert books["title"].is_unique, "titles are not unique: do not join on them"
 
 `is_unique` is `True` here. Put such assertions before every join: when the site adds a second book with an existing title, the program stops with a clear message instead of silently doubling rows.
 
-### A variation to try
+**A variation to try.** See what a duplicated key does to a join. Add a copy of the first book with a different price, `extra = pd.concat([books, books.head(1).assign(price=1.0)])`, and merge it with the original on `title`: the merged table has 1,001 rows, and that title now has two prices. Then check `extra["url"].is_unique`: `False`, because the copy kept its address. The address, the key the site itself uses, reveals the duplicate.
 
-See what a duplicated key does to a join. Add a copy of the first book with a different price, `extra = pd.concat([books, books.head(1).assign(price=1.0)])`, and merge it with the original on `title`: the merged table has 1,001 rows, and that title now has two prices. Then check `extra["url"].is_unique`: `False`, because the copy kept its address. The address, the key the site itself uses, reveals the duplicate.
-
-### If your output differs
+**If your output differs.**
 
 1. **`IndexError: index 0 is out of bounds`**: the `if len(shared):` is missing.
 2. **A positive number**: you read another file, such as a method's CSV with fewer columns; check the path and the sheet.
@@ -236,9 +224,7 @@ See what a duplicated key does to a join. Add a copy of the first book with a di
 
 **The choice it makes.** Choose method 2 or 4 when you also need fields that only the detail pages have, such as the exact stock, and then Scrapy for its speed and robustness. Choose a browser only if the site starts drawing its prices with JavaScript, after looking for a hidden API. A middle path: list pages daily, detail pages once a week for the extra fields.
 
-### Another way to solve it
-
-Write the decision as a table before choosing, the way the chapter's plan does:
+**Another way to solve it.** Write the decision as a table before choosing, the way the chapter's plan does:
 
 | Need | Pages | Requests a day | Minimum time |
 |---|---|---|---|
@@ -247,10 +233,6 @@ Write the decision as a table before choosing, the way the chapter's plan does:
 
 The table makes the cost of each extra field visible: the exact stock costs 950 requests a day.
 
-### A variation to try
+**A variation to try.** Implement the daily collection with method 1 and Chapter 22's `save_day`, storing `title`, `price` and the day in `output/ch23/prices.db`. Run it twice on the same day and check that the table still has 1,000 rows for that day: the second run replaces the day's rows instead of adding them.
 
-Implement the daily collection with method 1 and Chapter 22's `save_day`, storing `title`, `price` and the day in `output/ch23/prices.db`. Run it twice on the same day and check that the table still has 1,000 rows for that day: the second run replaces the day's rows instead of adding them.
-
-### If your answer differs
-
-Another method is right when your question differs: if you need the stock every day, method 1 cannot answer it, and the choice is between methods 2 and 4. The reasoning, not the method, is the answer to give.
+**If your answer differs.** Another method is right when your question differs: if you need the stock every day, method 1 cannot answer it, and the choice is between methods 2 and 4. The reasoning, not the method, is the answer to give.

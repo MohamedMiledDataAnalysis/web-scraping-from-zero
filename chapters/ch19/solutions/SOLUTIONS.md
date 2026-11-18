@@ -1,6 +1,6 @@
 # Chapter 19 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -66,9 +66,7 @@ Output:
 
 **The choice it makes.** This file is 1,297 bytes, so streaming changes nothing here; it is the habit that matters for files of hundreds of megabytes. `assert condition, message` stops the program with the message when the condition is false: a one-line guard for a check that must never fail.
 
-### Another way to solve it
-
-For a small file, read it straight into pandas without saving it:
+**Another way to solve it.** For a small file, read it straight into pandas without saving it:
 
 ```python
 r = requests.get("http://localhost:8000/files/monthly_sales.csv", timeout=60)
@@ -78,9 +76,7 @@ sales = pd.read_csv(io.StringIO(r.text))
 
 It gives the same DataFrame. Save to disk when you want to keep the file or when it is large; read from memory for a quick look.
 
-### A variation to try
-
-The best month of **every** region in one step:
+**A variation to try.** The best month of **every** region in one step:
 
 ```python
 best = sales.loc[sales.groupby("region")["revenue_gbp"].idxmax(), ["region", "month", "revenue_gbp"]]
@@ -95,7 +91,7 @@ region   month  revenue_gbp
   West 2026-12      8121.01
 ```
 
-### If your output differs
+**If your output differs.**
 
 1. **`AssertionError: text/html; charset=utf-8`**: the server sent a page, not the file; check the address.
 2. **`TypeError: write() argument must be str, not bytes`**: open the file with `"wb"`.
@@ -148,9 +144,7 @@ Latest maturity: 2045-04-15
 
 **The choice it makes.** `parse_dates` converts the column at reading time, once. Run `download_all.py` first: this solution reads the downloaded copy in `output/ch19/files/`, so you can run it again without asking the site.
 
-### Another way to solve it
-
-Convert after reading, with `pd.to_datetime`:
+**Another way to solve it.** Convert after reading, with `pd.to_datetime`:
 
 ```python
 assets = pd.read_csv("output/ch19/files/eligible_assets.txt", encoding="utf-16", sep="\t")
@@ -159,9 +153,7 @@ assets["Maturity"] = pd.to_datetime(assets["Maturity"])
 
 The same result. Converting afterwards is useful when you must first clean the column, for example to remove notes such as `(p)`.
 
-### A variation to try
-
-Two more questions, each one line:
+**A variation to try.** Two more questions, each one line:
 
 ```python
 print(assets.groupby("Currency")["Haircut (%)"].mean().round(2).to_dict())
@@ -170,7 +162,7 @@ print(assets["Asset type"].value_counts().to_dict())
 
 The average haircut is 3.92% for euro assets and 2.33% for sterling ones; covered bonds are the most common asset type, with 16.
 
-### If your output differs
+**If your output differs.**
 
 1. **`FileNotFoundError`**: run `download_all.py` first.
 2. **`UnicodeDecodeError`**: add `encoding="utf-16"`.
@@ -221,9 +213,7 @@ Consumer ABS 170.1
 
 **The choice it makes.** This sheet is clean: header on the first row, no notes. Column names that look like numbers (`2025`) are text here because the workbook stores them as text; a numeric header cell gives an integer column name (`out[2025]`). Check with `list(out.columns)`.
 
-### Another way to solve it
-
-Rename the columns to avoid the text-or-number question altogether:
+**Another way to solve it.** Rename the columns to avoid the text-or-number question altogether:
 
 ```python
 out.columns = ["asset_class", "y2025", "y2026"]
@@ -232,11 +222,9 @@ out["growth"] = out["y2026"] - out["y2025"]
 
 Names that start with a letter and contain no spaces are easier to type and work with `query`.
 
-### A variation to try
+**A variation to try.** Compute the growth in per cent: `(out["2026"] / out["2025"] - 1) * 100`. Consumer ABS leads again, with 181.3%: its amount almost tripled.
 
-Compute the growth in per cent: `(out["2026"] / out["2025"] - 1) * 100`. Consumer ABS leads again, with 181.3%: its amount almost tripled.
-
-### If your output differs
+**If your output differs.**
 
 1. **`KeyError: '2025'`**: print `list(out.columns)`; your copy of the file may store the years as numbers.
 2. **`ValueError: Worksheet named 'Outstanding' not found`**: check the sheet name with `pd.ExcelFile(path).sheet_names`.
@@ -290,9 +278,7 @@ Total 2026    320.4
 
 **The choice it makes.** `dropna` removes the note, the blank row and here also the *Total* row (its formulas have no saved values); the label filter is a safety net for files where the totals were saved. Never keep a total row in your data, or every sum counts twice.
 
-### Another way to solve it
-
-Read only the six country rows with `nrows`:
+**Another way to solve it.** Read only the six country rows with `nrows`:
 
 ```python
 countries = pd.read_excel("output/ch19/files/market_report_q4_2026.xlsx",
@@ -302,13 +288,11 @@ print(countries.drop(columns="Country").sum().round(1).to_string())
 
 It prints the same totals. Shorter, but it depends on the exact number of countries: if a seventh is added, it is silently left out. The book's version adapts.
 
-### A variation to try
-
-Print each country's share of the year's issuance, in per cent, largest first: `(countries.set_index("Country")["Total 2026"] / 320.4 * 100).round(1).sort_values(ascending=False)`. The Netherlands leads with 69.4 of 320.4.
+**A variation to try.** Print each country's share of the year's issuance, in per cent, largest first: `(countries.set_index("Country")["Total 2026"] / 320.4 * 100).round(1).sort_values(ascending=False)`. The Netherlands leads with 69.4 of 320.4.
 
 Read the note under the table too: it says Spain's Q4 figure is provisional. A careful report repeats such notes next to the numbers they concern.
 
-### If your output differs
+**If your output differs.**
 
 1. **Totals of 0 or `NaN`**: the header row is wrong; print `issuance.head()`.
 2. **Doubled totals**: the *Total* row is included.
@@ -386,9 +370,7 @@ pool_c.xlsx Banque Lumière SFH (invented) 12450.6   61.4
 
 **The choice it makes.** `folder.glob("*.xlsx")` lists the files that match the pattern; `sorted` fixes their order. With real harmonised reports from three issuers, the same function gives a comparison table of their cover pools, one row per issuer and one column per field.
 
-### Another way to solve it
-
-Read the file once and split it in Python, instead of reading it twice:
+**Another way to solve it.** Read the file once and split it in Python, instead of reading it twice:
 
 ```python
 raw = pd.read_excel(path, header=None)
@@ -398,11 +380,9 @@ fields = dict(zip(table[0], table[2]))
 
 One read instead of two. It depends on positions (row 5, columns 0 and 2), which is fine for a fixed format and fragile for a changing one.
 
-### A variation to try
+**A variation to try.** Keep only the fields that have a value in every file, with `pools.dropna(axis=1)`, and transpose the table with `pools.set_index("file").T` so that the fields become rows and the files columns: the layout analysts usually compare.
 
-Keep only the fields that have a value in every file, with `pools.dropna(axis=1)`, and transpose the table with `pools.set_index("file").T` so that the fields become rows and the files columns: the layout analysts usually compare.
-
-### If your output differs
+**If your output differs.**
 
 1. **`KeyError: 'Field'`**: the header row is wrong; print `pd.read_excel(path, header=None).head(8)`.
 2. **`FileNotFoundError`**: run `download_all.py` first.

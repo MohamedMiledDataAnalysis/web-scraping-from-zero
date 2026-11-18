@@ -1,6 +1,6 @@
 # Chapter 20 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -77,9 +77,7 @@ Gave up after 3 tries: http://localhost:8000/trouble/status/500 (status 500)
 
 **The choice it makes.** A permanent 500 is requested three times (two retries), then the function gives up with a clear message instead of looping forever. Giving up is part of being polite: the server is broken, and hammering it will not fix it.
 
-### Another way to solve it
-
-`requests` can retry by itself through `urllib3`'s `Retry`, attached to a session:
+**Another way to solve it.** `requests` can retry by itself through `urllib3`'s `Retry`, attached to a session:
 
 ```python
 from requests.adapters import HTTPAdapter
@@ -96,11 +94,9 @@ except requests.exceptions.RetryError as error:
 
 `total=2` means two retries, so three requests, as above. It is less code, but the retries happen out of sight: no log line tells you they took place. The book's function, and `PoliteClient`, log each retry.
 
-### A variation to try
+**A variation to try.** Count the waits: add `print(f"attempt {attempt} failed ({reason})")` before the `sleep`. With `tries=5` you see the waits 0.2, 0.4, 0.8 and 1.6 seconds, and the call takes about 3 seconds.
 
-Count the waits: add `print(f"attempt {attempt} failed ({reason})")` before the `sleep`. With `tries=5` you see the waits 0.2, 0.4, 0.8 and 1.6 seconds, and the call takes about 3 seconds.
-
-### If your output differs
+**If your output differs.**
 
 1. **The program stops with a traceback**: the call is not inside `try`/`except RuntimeError`.
 2. **It waits much longer**: `base_wait` is still the default 0.5; pass `base_wait=0.2`.
@@ -163,9 +159,7 @@ Gave up on http://localhost:8000/trouble/slow?seconds=2 (ReadTimeout)
 
 **The choice it makes.** The client logs the retry and the final failure, then raises the error that the program prints. `stream=sys.stdout` sends the log to the same place as `print`; by default, logging writes to the error stream, which the terminal also shows. Configure logging in every real scraper.
 
-### Another way to solve it
-
-`requests` accepts two timeouts, one to connect and one to wait for the answer:
+**Another way to solve it.** `requests` accepts two timeouts, one to connect and one to wait for the answer:
 
 ```python
 requests.get("http://localhost:8000/trouble/slow?seconds=2", timeout=(3, 1))
@@ -173,11 +167,9 @@ requests.get("http://localhost:8000/trouble/slow?seconds=2", timeout=(3, 1))
 
 It raises `requests.ReadTimeout`: the connection was quick, the answer too slow. A short connect timeout catches a site that is down; a longer read timeout lets a slow page finish. `PoliteClient` passes one value for both.
 
-### A variation to try
+**A variation to try.** Show the difference between a refusal and a failure: request `/trouble/status/403` with the client. It raises `NotAllowed: status 403 for http://localhost:8000/trouble/status/403` at once, with no retry, because a refusal will not change. A 404 is simply returned: `client.get(".../trouble/status/404").status_code` is 404.
 
-Show the difference between a refusal and a failure: request `/trouble/status/403` with the client. It raises `NotAllowed: status 403 for http://localhost:8000/trouble/status/403` at once, with no retry, because a refusal will not change. A 404 is simply returned: `client.get(".../trouble/status/404").status_code` is 404.
-
-### If your output differs
+**If your output differs.**
 
 1. **Only the last line**: logging is not configured; check `basicConfig`.
 2. **`ModuleNotFoundError: No module named 'toolkit'`**: run from the repository folder.
@@ -257,9 +249,7 @@ Output:
 
 **The choice it makes.** With the wrong selector, the program produces 100 rows without any error; only the check reveals that every price is missing. A strict check (`expected_rows=100`) catches more problems but fails when the site legitimately changes; a loose one (more than 0 rows) never fails wrongly but misses partial losses. Use what the site announces (*1000 results*) when it announces something.
 
-### Another way to solve it
-
-Make the check fail loudly instead of returning a list, so that a nightly job stops:
+**Another way to solve it.** Make the check fail loudly instead of returning a list, so that a nightly job stops:
 
 ```python
 problems = check_books(df, expected_rows=100)
@@ -269,11 +259,9 @@ if problems:
 
 Returning a list lets you decide; raising guarantees nobody uses bad data by mistake. Chapter 22's unattended job raises.
 
-### A variation to try
+**A variation to try.** See the 5% threshold of `check_books` at work. A DataFrame of 100 books with 4 missing prices passes (`[]`); with 6 missing prices it fails with `['price: 6% missing']`. Then simulate a lost page: 80 rows gives `['80 rows instead of 100']`.
 
-See the 5% threshold of `check_books` at work. A DataFrame of 100 books with 4 missing prices passes (`[]`); with 6 missing prices it fails with `['price: 6% missing']`. Then simulate a lost page: 80 rows gives `['80 rows instead of 100']`.
-
-### If your output differs
+**If your output differs.**
 
 1. **`ModuleNotFoundError: No module named 'checks'`**: run from the repository folder, so that `chapters/ch20/examples` is found.
 2. **`[]` twice**: the second scrape still uses `p.price`.
@@ -356,9 +344,7 @@ WARNING status 503 on http://localhost:8000/trouble/flaky, retry 2 in 0.6 s
 
 **The choice it makes.** The format uses ` | ` between the parts, so each line splits cleanly into three. Choose a log format you can read back with code: you will want to count errors per night.
 
-### Another way to solve it
-
-Read the whole log into pandas. The separator ` | ` contains `|`, which means *or* in a regular expression, so escape it:
+**Another way to solve it.** Read the whole log into pandas. The separator ` | ` contains `|`, which means *or* in a regular expression, so escape it:
 
 ```python
 import pandas as pd
@@ -374,11 +360,9 @@ print(log["level"].value_counts().to_dict())
 
 With `sep=" | "` unescaped, pandas splits at every space and fails with `ParserError`.
 
-### A variation to try
+**A variation to try.** Count the warnings per address: extract the address from each warning message with `message.split(" on ")[1].split(",")[0]`, and count with `Counter`. On a long crawl, one address with many warnings is a page to look at.
 
-Count the warnings per address: extract the address from each warning message with `message.split(" on ")[1].split(",")[0]`, and count with `Counter`. On a long crawl, one address with many warnings is a page to look at.
-
-### If your output differs
+**If your output differs.**
 
 1. **No warnings**: the flaky page was not reset, so it answered at once; check the reset request.
 2. **`ValueError: too many values to unpack`**: a line has more than two ` | `; print it.

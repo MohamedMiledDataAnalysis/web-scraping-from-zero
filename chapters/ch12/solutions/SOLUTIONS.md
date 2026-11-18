@@ -1,6 +1,6 @@
 # Chapter 12 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -60,9 +60,7 @@ Output:
 
 **The choice it makes.** The quotes' *next* link is `/quotes/page/2/`, a link relative to the host; `urljoin` handles it like the library's `page-2.html`. One loop pattern, any kind of link: following the site's own links means you never guess how many pages there are.
 
-### Another way to solve it
-
-Count page numbers until a page has no quote:
+**Another way to solve it.** Count page numbers until a page has no quote:
 
 ```python
 n, total = 1, 0
@@ -78,11 +76,9 @@ print(n - 1, "pages,", total, "quotes")
 
 It prints `4 pages, 40 quotes` too, after one extra request to page 5, which answers 404. This works when addresses follow a pattern; following *next* links works whatever the addresses look like, and costs no extra request.
 
-### A variation to try
+**A variation to try.** Print the address of each page as you visit it, and check that the last line printed is `/quotes/page/4/`. Then follow the *previous* links back from page 4 (`li.previous a`) to page 1.
 
-Print the address of each page as you visit it, and check that the last line printed is `/quotes/page/4/`. Then follow the *previous* links back from page 4 (`li.previous a`) to page 1.
-
-### If your output differs
+**If your output differs.**
 
 1. **`1 pages`**: the *next* selector found nothing; print `soup.select_one("li.next")`.
 2. **The loop never ends**: `url` is not updated, or `urljoin` keeps returning the same address.
@@ -147,9 +143,7 @@ Output:
 
 **The choice it makes.** `Counter` (from the standard module `collections`) counts the items of a list; `.most_common(3)` gives the three most frequent with their counts. For more columns, a DataFrame and `value_counts()` do the same, as below.
 
-### Another way to solve it
-
-Collect whole job records, then use pandas:
+**Another way to solve it.** Collect whole job records, then use pandas:
 
 ```python
 import pandas as pd
@@ -169,11 +163,9 @@ print(df["city"].value_counts().head(3).to_dict())
 
 With the records, other questions cost one line: `df["company"].nunique()` gives 9 companies, and `df["company"].value_counts().head(2)` shows Harbour Analytics with 10 offers.
 
-### A variation to try
+**A variation to try.** Collect the jobs of 15 March 2027 instead: start from `http://localhost:8000/jobs/?day=2027-03-15`. The *next* links keep the `day` parameter, so the loop stays on that date and collects 55 jobs, the count of exercise 6.1.
 
-Collect the jobs of 15 March 2027 instead: start from `http://localhost:8000/jobs/?day=2027-03-15`. The *next* links keep the `day` parameter, so the loop stays on that date and collects 55 jobs, the count of exercise 6.1.
-
-### If your output differs
+**If your output differs.**
 
 1. **15 jobs**: only page 1 was read; the *next* selector found nothing.
 2. **More than 50 jobs**: you started the site with `--live` or `--date`; restart it with `python run_site.py`.
@@ -253,9 +245,7 @@ kindness 5
 
 **The choice it makes.** The sort key `(-kv[1], kv[0])` sorts by count, from the largest, then by name, so the order never depends on chance. The script makes 18 requests (the home page and 17 tag pages), all spaced by 0.2 seconds.
 
-### Another way to solve it
-
-Visit the four pages of quotes once and count the tags on the quotes themselves, with `Counter`:
+**Another way to solve it.** Visit the four pages of quotes once and count the tags on the quotes themselves, with `Counter`:
 
 ```python
 counts = Counter()
@@ -274,11 +264,9 @@ print(counts.most_common(5))
 
 Four requests instead of eighteen, and the same counts. But look at the last two: `questions` and `friendship` tie at 5 with `kindness`, and `most_common` breaks the tie by the order it met the tags, not alphabetically. That is why the book's version sorts with an explicit second key.
 
-### A variation to try
+**A variation to try.** Print the tags that have only one quote: `[t for t, n in counts.items() if n == 1]`. Then print how many tags have more than one page of quotes: only `work`.
 
-Print the tags that have only one quote: `[t for t, n in counts.items() if n == 1]`. Then print how many tags have more than one page of quotes: only `work`.
-
-### If your output differs
+**If your output differs.**
 
 1. **`work 10`**: the inner loop does not follow the tag's *next* link.
 2. **The fifth line differs** (`questions` instead of `kindness`): ties are broken differently; add the name as a second sort key.
@@ -354,9 +342,7 @@ Stations in the Map 693
 
 **The choice it makes.** The solution lives in `solutions/`, and `book_parser.py` in `examples/`; `sys.path.insert` connects them. In a real project, you put shared code in one package; Chapter 21 shows how Scrapy organises it.
 
-### Another way to solve it
-
-Build a DataFrame from the records and let pandas answer both questions:
+**Another way to solve it.** Build a DataFrame from the records and let pandas answer both questions:
 
 ```python
 import pandas as pd
@@ -368,11 +354,9 @@ print(round(books["rating"].mean(), 2))
 
 It prints `['Stations in the Map', 693]` and `3.27`. With a DataFrame, further questions are one line each: `books.sort_values("pages").head(3)` for the three shortest.
 
-### A variation to try
+**A variation to try.** Run the same crawler on the *History* category (`/library/category/history/`), which has three pages. Then print the average price of the category, from the `price` field of the records.
 
-Run the same crawler on the *History* category (`/library/category/history/`), which has three pages. Then print the average price of the category, from the `price` field of the records.
-
-### If your output differs
+**If your output differs.**
 
 1. **`ModuleNotFoundError: No module named 'book_parser'`**: run the script from the repository folder.
 2. **A different average**: one detail page failed to parse; print `len(records)` and compare it with the category's count.

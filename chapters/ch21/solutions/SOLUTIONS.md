@@ -1,6 +1,6 @@
 # Chapter 21 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -89,9 +89,7 @@ Output:
 
 **The choice it makes.** Scrapy's **duplicate filter** drops a request for an address it has already scheduled: the visited set of Chapter 12 is built in. Sending a request through `dont_filter=True` turns the filter off for that request, which you need only for pages that change between visits.
 
-### Another way to solve it
-
-Collect the author addresses yourself and request each once, without relying on the duplicate filter:
+**Another way to solve it.** Collect the author addresses yourself and request each once, without relying on the duplicate filter:
 
 ```python
     def parse(self, response):
@@ -101,11 +99,9 @@ Collect the author addresses yourself and request each once, without relying on 
 
 `set(...)` removes duplicates within one page only. Across pages, the same author still appears several times, and the filter still does the rest. Trust the filter; it is built for this.
 
-### A variation to try
+**A variation to try.** Add the author's description to the item, with `response.css(".author-description::text").get()`, and export to CSV instead of JSON: change the feed to `"output/ch21/authors.csv": {"format": "csv", "overwrite": True}`. Open the CSV in VS Code: the descriptions that contain commas are quoted, as in exercise 3.3.
 
-Add the author's description to the item, with `response.css(".author-description::text").get()`, and export to CSV instead of JSON: change the feed to `"output/ch21/authors.csv": {"format": "csv", "overwrite": True}`. Open the CSV in VS Code: the descriptions that contain commas are quoted, as in exercise 3.3.
-
-### If your output differs
+**If your output differs.**
 
 1. **`0 authors`** and an empty file: the selectors match nothing; test them in `scrapy shell http://localhost:8000/quotes/`.
 2. **`ReactorNotRestartable`**: `process.start()` ran twice in the same program.
@@ -198,15 +194,11 @@ category  books
 
 **The choice it makes.** `cb_kwargs` passes extra values to the callback: here the category's name, read on the page where you found the link. The count comes from the first page of each category, so the spider makes 21 requests instead of following every page.
 
-### Another way to solve it
+**Another way to solve it.** Read the name on the category page itself instead of passing it: if the page shows its category in the heading, `response.css("h1::text").get()` gives it, and `cb_kwargs` is no longer needed. Passing the value is safer when the target page does not repeat it, or writes it differently from the link.
 
-Read the name on the category page itself instead of passing it: if the page shows its category in the heading, `response.css("h1::text").get()` gives it, and `cb_kwargs` is no longer needed. Passing the value is safer when the target page does not repeat it, or writes it differently from the link.
+**A variation to try.** Yield the number of pages as well: the count paragraph's third `strong` holds it (`page 1 of 4`): `response.css("p.result-count strong::text").getall()[2]`. Then check that `books` divided by 20, rounded up, equals the number of pages for every category.
 
-### A variation to try
-
-Yield the number of pages as well: the count paragraph's third `strong` holds it (`page 1 of 4`): `response.css("p.result-count strong::text").getall()[2]`. Then check that `books` divided by 20, rounded up, equals the number of pages for every category.
-
-### If your output differs
+**If your output differs.**
 
 1. **`ValueError: invalid literal for int()`**: the selector returned text other than the number; print `response.css("p.result-count").get()`.
 2. **Fewer than 20 rows**: some requests failed; set `"LOG_LEVEL": "INFO"` to see why.
@@ -295,9 +287,7 @@ Output:
 
 **The choice it makes.** The counting pipeline comes **after** the filter (200 after 100), so it counts only the jobs that passed. Pipelines keep the spider about pages and the pipelines about data: cleaning, filtering and saving can change without touching the spider.
 
-### Another way to solve it
-
-Filter in the spider instead, by not yielding low salaries:
+**Another way to solve it.** Filter in the spider instead, by not yielding low salaries:
 
 ```python
             salary_max = int(high.strip(" £").replace(",", ""))
@@ -308,11 +298,9 @@ Filter in the spider instead, by not yielding low salaries:
 
 The same 46 jobs. Simpler for one rule; a pipeline is better when several spiders share the rule, or when you want the dropped count in the stats.
 
-### A variation to try
+**A variation to try.** Make the threshold a setting: in the pipeline, add `@classmethod def from_crawler(cls, crawler)` that reads `crawler.settings.getint("MIN_SALARY", 50000)` and stores it. Then run with `"MIN_SALARY": 70000` and compare the count.
 
-Make the threshold a setting: in the pipeline, add `@classmethod def from_crawler(cls, crawler)` that reads `crawler.settings.getint("MIN_SALARY", 50000)` and stores it. Then run with `"MIN_SALARY": 70000` and compare the count.
-
-### If your output differs
+**If your output differs.**
 
 1. **`50 jobs`**: the filter runs after the counter; check the numbers in `ITEM_PIPELINES`.
 2. **`ScrapyDeprecationWarning`** in the output: a pipeline method still has a `spider` parameter.
@@ -390,9 +378,7 @@ Run 2 - at least 30 items: True | from cache: True
 
 **The choice it makes.** The cache makes repeated development runs free for the site: you can change your parsing code and run again without sending a single request. Delete it when you want fresh data; never ship a scraper that silently reads old pages.
 
-### Another way to solve it
-
-Instead of `subprocess`, run the two crawls from the command line, which also gives each run its own process:
+**Another way to solve it.** Instead of `subprocess`, run the two crawls from the command line, which also gives each run its own process:
 
 ```text
 $ scrapy runspider chapters/ch21/examples/library_spider.py -s HTTPCACHE_ENABLED=True -s CLOSESPIDER_ITEMCOUNT=30 -O output/ch21/first30.json
@@ -400,11 +386,9 @@ $ scrapy runspider chapters/ch21/examples/library_spider.py -s HTTPCACHE_ENABLED
 
 Run it twice and compare the final statistics Scrapy prints: on the second run, `httpcache/hit` appears and `downloader/request_count` shows requests answered from the disk.
 
-### A variation to try
+**A variation to try.** Set `"HTTPCACHE_EXPIRATION_SECS": 60`: responses older than a minute are fetched again. Run twice within a minute (cache hits), then wait a minute and run again (no hits). This is how a scraper keeps a cache without serving stale data for ever.
 
-Set `"HTTPCACHE_EXPIRATION_SECS": 60`: responses older than a minute are fetched again. Run twice within a minute (cache hits), then wait a minute and run again (no hits). This is how a scraper keeps a cache without serving stale data for ever.
-
-### If your output differs
+**If your output differs.**
 
 1. **`from cache: False` on run 2**: the cache folder was deleted between runs, or `HTTPCACHE_DIR` differs; print it.
 2. **Empty output for a run**: the program in `code` raised an error; print `result.stderr`.

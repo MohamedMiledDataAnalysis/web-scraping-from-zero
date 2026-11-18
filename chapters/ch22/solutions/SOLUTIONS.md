@@ -1,6 +1,6 @@
 # Chapter 22 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -60,9 +60,7 @@ Output:
 
 **The choice it makes.** `compare` compares with the **previous stored** day, whatever the gap: here nine days, so the changes are larger than from one day to the next. A job that appeared on the 3rd and vanished on the 8th is invisible to this comparison. Collect every day when the in-between matters.
 
-### Another way to solve it
-
-Compare the two days with SQL instead of pandas: the new jobs are the ids of the 10th that are not among the ids of the 1st.
+**Another way to solve it.** Compare the two days with SQL instead of pandas: the new jobs are the ids of the 10th that are not among the ids of the 1st.
 
 ```python
 import sqlite3
@@ -76,11 +74,9 @@ print(new)
 
 It prints 22. Swap the two dates to count the removed jobs: 14. SQL does the work inside the database, which matters when the table grows to millions of rows.
 
-### A variation to try
+**A variation to try.** In `jobs.db` (the six consecutive days of the chapter), call `compare` for each day from the 2nd to the 6th. The daily changes are small: 4 new and 1 removed on the 2nd, 2 and 2 on the 3rd, none on the 4th, 3 and 1 on the 5th, 4 and 1 on the 6th.
 
-In `jobs.db` (the six consecutive days of the chapter), call `compare` for each day from the 2nd to the 6th. The daily changes are small: 4 new and 1 removed on the 2nd, 2 and 2 on the 3rd, none on the 4th, 3 and 1 on the 5th, 4 and 1 on the 6th.
-
-### If your output differs
+**If your output differs.**
 
 1. **`ModuleNotFoundError: No module named 'history'`**: run from the repository folder.
 2. **`50 new, 0 removed`**: only one day is stored; the first `save_day` failed or used another file name.
@@ -141,9 +137,7 @@ Output:
 
 **The choice it makes.** Sorting the dates works because they are stored as text in the `YYYY-MM-DD` format: alphabetical order equals date order. With `1/3/2027` the order would be wrong. Store dates in ISO format.
 
-### Another way to solve it
-
-Read the whole table into pandas and count there:
+**Another way to solve it.** Read the whole table into pandas and count there:
 
 ```python
 with sqlite3.connect("output/ch22/jobs.db") as db:
@@ -153,11 +147,9 @@ print(jobs["day"].value_counts().sort_index())
 
 The same counts. Fine for 322 rows; with a large history, let the database count and send back six rows instead of the whole table.
 
-### A variation to try
+**A variation to try.** Count the jobs per city and per day, in one query: `SELECT day, city, COUNT(*) AS jobs FROM jobs GROUP BY day, city ORDER BY day, city`. Then turn it into a table with one column per city: `.pivot(index="day", columns="city", values="jobs")`.
 
-Count the jobs per city and per day, in one query: `SELECT day, city, COUNT(*) AS jobs FROM jobs GROUP BY day, city ORDER BY day, city`. Then turn it into a table with one column per city: `.pivot(index="day", columns="city", values="jobs")`.
-
-### If your output differs
+**If your output differs.**
 
 1. **Only five rows**: `alert_new_jobs.py` has not run; it adds 6 March.
 2. **`DatabaseError: no such table: jobs`**: the database path is wrong; a wrong path creates a new, empty database.
@@ -213,9 +205,7 @@ Output:
 
 **The choice it makes.** Every column in `SELECT` is either in `GROUP BY` or computed by a function such as `COUNT`: SQLite tolerates other columns, but other databases refuse them. The tie-breaking rules turn *a* longest job into *the* longest job by a stated rule; tell the reader of your report which rule you used.
 
-### Another way to solve it
-
-Ask for every job that reaches the maximum, instead of one:
+**Another way to solve it.** Ask for every job that reaches the maximum, instead of one:
 
 ```python
 query = """
@@ -228,11 +218,9 @@ query = """
 
 It returns the 45 jobs online all six days. This is the honest answer when the question is *which jobs stayed longest*: a single row hides the tie.
 
-### A variation to try
+**A variation to try.** Find the jobs that lasted the **shortest** time: sort with `ORDER BY days, first_seen, id`. Then count how many jobs appeared after 1 March: `SELECT COUNT(*) FROM (SELECT id FROM jobs GROUP BY id HAVING MIN(day) > '2027-03-01')`.
 
-Find the jobs that lasted the **shortest** time: sort with `ORDER BY days, first_seen, id`. Then count how many jobs appeared after 1 March: `SELECT COUNT(*) FROM (SELECT id FROM jobs GROUP BY id HAVING MIN(day) > '2027-03-01')`.
-
-### If your output differs
+**If your output differs.**
 
 1. **Another job with 6 days**: the `ORDER BY` lacks `first_seen, id`.
 2. **`days` is 5**: the 6th is not stored; run `alert_new_jobs.py`.
@@ -315,9 +303,7 @@ Subject: Leeds: 1 well-paid new job(s)
 
 **The choice it makes.** `run` stores the days in the same `jobs.db` as `five_days.py`; because each day replaces its own rows, running it again does no harm. `_` is the conventional name for a value you do not use. A narrow alert (one city, one salary level) is sent rarely and read every time.
 
-### Another way to solve it
-
-Write the filter with `query`, which reads like a sentence:
+**Another way to solve it.** Write the filter with `query`, which reads like a sentence:
 
 ```python
 hits = new.query("city == 'Leeds' and salary_max >= 60000")
@@ -325,11 +311,9 @@ hits = new.query("city == 'Leeds' and salary_max >= 60000")
 
 The same row. Inside `query`, `and` is allowed, and brackets are not needed. Use the bracket form when the column names contain spaces or when the conditions are built by code.
 
-### A variation to try
+**A variation to try.** Put the conditions in a settings dictionary, `rules = {"city": "Leeds", "min_salary": 60000}`, and build the filter from it. Then add a second rule set for Manchester at £70,000, and send one email listing the hits of each rule: on the 6th, the Senior BI Developer in Manchester (up to £78,000) joins the Leeds job.
 
-Put the conditions in a settings dictionary, `rules = {"city": "Leeds", "min_salary": 60000}`, and build the filter from it. Then add a second rule set for Manchester at £70,000, and send one email listing the hits of each rule: on the 6th, the Senior BI Developer in Manchester (up to £78,000) joins the Leeds job.
-
-### If your output differs
+**If your output differs.**
 
 1. **`No alert`**: the 5th and 6th are compared with other days; check that `run` stores into `output/ch22/jobs.db` and that the 5th ran first.
 2. **`ConnectionRefusedError`**: the mailbox did not start, or port 1025 is used by another program.

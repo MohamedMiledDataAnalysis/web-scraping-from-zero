@@ -1,6 +1,6 @@
 # Chapter 8 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -57,9 +57,7 @@ http://localhost:8000/jobs/?q=python&city=London
 
 **The choice it makes.** `params` builds correct addresses for any value, with spaces, accents or `&` inside. Glue text by hand only for fixed addresses.
 
-### Another way to solve it
-
-The same request with the address written by hand works for these two simple values:
+**Another way to solve it.** The same request with the address written by hand works for these two simple values:
 
 ```python
 r = requests.get("http://localhost:8000/jobs/?q=python&city=London", timeout=10)
@@ -67,9 +65,7 @@ r = requests.get("http://localhost:8000/jobs/?q=python&city=London", timeout=10)
 
 It gives `1 job` too. Try it with `q=data analyst` written by hand, then with `params`: `requests` turns the space into `+` and the address it prints is `http://localhost:8000/jobs/?q=data+analyst&city=London`.
 
-### A variation to try
-
-Print the titles of the matching jobs, not only their number:
+**A variation to try.** Print the titles of the matching jobs, not only their number:
 
 ```python
 soup = BeautifulSoup(r.text, "html.parser")
@@ -82,7 +78,7 @@ print([a.text for a in soup.select("li.job h2 a")])
 
 Then search for `python` in every city by removing `city` from `params`: 12 jobs.
 
-### If your output differs
+**If your output differs.**
 
 1. **`0 jobs`**: check the spelling and the capital letter of the city.
 2. **An address with `%20`** instead of `+`: both encode a space; the site accepts either.
@@ -140,9 +136,7 @@ Output:
 
 **The choice it makes.** The message of an `HTTPError` says whether the error is on the client's side (4xx: your request) or the server's (5xx: the site). You will use that distinction in Chapter 20: retry 5xx, never retry 4xx except 429.
 
-### Another way to solve it
-
-Without exceptions, test the code yourself:
+**Another way to solve it.** Without exceptions, test the code yourself:
 
 ```python
 for code in [500, 200, 403]:
@@ -152,11 +146,9 @@ for code in [500, 200, 403]:
 
 It prints `500 500 INTERNAL SERVER ERROR`, `200 ok`, `403 403 FORBIDDEN`. Simpler for a loop like this one; `raise_for_status()` is better inside functions, where an error should travel up to the caller.
 
-### A variation to try
+**A variation to try.** Sort the codes into families: print `client error` for 400–499, `server error` for 500–599, and `ok` for the rest. `400 <= r.status_code < 500` tests the range in one expression.
 
-Sort the codes into families: print `client error` for 400–499, `server error` for 500–599, and `ok` for the rest. `400 <= r.status_code < 500` tests the range in one expression.
-
-### If your output differs
+**If your output differs.**
 
 1. **The loop stops after 500**: the `try` is outside the loop.
 2. **`ok` for every code**: `raise_for_status()` is missing.
@@ -208,9 +200,7 @@ Output:
 
 **The choice it makes.** The site announces the file as UTF-8, which is wrong: it is UTF-16. UTF-16 stores each character on two bytes; read as a one-byte encoding, every second byte appears as `\x00`. If you see `\x00` everywhere, think UTF-16. Chapter 19 reads this file with pandas.
 
-### Another way to solve it
-
-Tell `requests` the right encoding, then use `r.text` as usual:
+**Another way to solve it.** Tell `requests` the right encoding, then use `r.text` as usual:
 
 ```python
 r.encoding = "utf-16"
@@ -225,9 +215,7 @@ print(len(r.text.splitlines()), "lines")
 
 `r.apparent_encoding` guesses the encoding from the bytes themselves; here it returns `UTF-16`. Use it to find the right encoding, then set it explicitly: guesses can be wrong on short files.
 
-### A variation to try
-
-Read the file as a table with the `csv` module, giving it the tab as separator:
+**A variation to try.** Read the file as a table with the `csv` module, giving it the tab as separator:
 
 ```python
 import csv
@@ -241,7 +229,7 @@ print(rows[1][:3], len(rows) - 1, "assets")
 ['PG79806111821', 'Issuer B SA', 'ABS'] 40 assets
 ```
 
-### If your output differs
+**If your output differs.**
 
 1. **`UnicodeDecodeError`**: you decoded with `utf-8`; use `utf-16`.
 2. **A first line starting with `﻿`**: you decoded with `utf-16-le`, which keeps the byte-order mark as a character; `utf-16` removes it.
@@ -313,9 +301,7 @@ Error: 404 Client Error: NOT FOUND for url: http://localhost:8000/trouble/status
 
 **The choice it makes.** Two `except` blocks, one per error you expect, each with its own message. A `ConnectionError` (site down) is **not** caught: it should stop the program. Chapter 20 grows this function into `PoliteClient`, which also waits and retries.
 
-### Another way to solve it
-
-Return the error instead of printing it, so the caller decides what to do:
+**Another way to solve it.** Return the error instead of printing it, so the caller decides what to do:
 
 ```python
 def fetch(session, url, timeout=2):
@@ -329,13 +315,11 @@ def fetch(session, url, timeout=2):
 
 The caller writes `html, problem = fetch(session, url)` and can count timeouts and errors separately. A tuple in `except (A, B)` catches either error with one block.
 
-### A variation to try
-
-Record the failures: keep a list `failed = []`, and in the test loop append the path whenever `fetch` returns `None`. Print it at the end: `['/trouble/slow?seconds=5', '/trouble/status/404']`. A real scraper saves such a list and retries it later.
+**A variation to try.** Record the failures: keep a list `failed = []`, and in the test loop append the path whenever `fetch` returns `None`. Print it at the end: `['/trouble/slow?seconds=5', '/trouble/status/404']`. A real scraper saves such a list and retries it later.
 
 Note on exception types: the slow page raises `requests.ReadTimeout`, a kind of `requests.Timeout`, so `except requests.Timeout` catches it. A site that cannot be reached at all raises `requests.ConnectionError`, which is **not** a `Timeout`.
 
-### If your output differs
+**If your output differs.**
 
 1. **The program waits 5 seconds** on the slow page: the timeout is not passed to `session.get`.
 2. **`ConnectionError`** stops the program: the Practice Ground is not running.

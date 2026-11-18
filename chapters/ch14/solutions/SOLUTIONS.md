@@ -1,6 +1,6 @@
 # Chapter 14 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -50,9 +50,7 @@ Output:
 
 **The choice it makes.** Asking the API to filter (`country=UK`) means less data travels and no filtering code. Filter in Python only when the API offers no parameter for it.
 
-### Another way to solve it
-
-Ask for all stations and filter in Python:
+**Another way to solve it.** Ask for all stations and filter in Python:
 
 ```python
 r = requests.get("http://localhost:8000/api/v1/stations",
@@ -62,11 +60,9 @@ print([s["name"] for s in r.json()["stations"] if s["country"] == "UK"])
 
 The same three names. Fine for five stations; for thousands, let the API filter.
 
-### A variation to try
+**A variation to try.** Print each UK station with its coordinates: `f'{s["id"]} {s["name"]} ({s["lat"]}, {s["lon"]})'`. London is `LON London Riverside (51.5, -0.12)`. These identifiers, `LON`, `MAN` and `EDI`, are the `station` values of the next exercises.
 
-Print each UK station with its coordinates: `f'{s["id"]} {s["name"]} ({s["lat"]}, {s["lon"]})'`. London is `LON London Riverside (51.5, -0.12)`. These identifiers, `LON`, `MAN` and `EDI`, are the `station` values of the next exercises.
-
-### If your output differs
+**If your output differs.**
 
 1. **`requests.exceptions.HTTPError: 401`**: the key is missing or misspelt.
 2. **An empty list**: check the case of `UK`.
@@ -137,9 +133,7 @@ Output:
 
 **The choice it makes.** Following `next` lets the API decide how pages work. Building `page=2`, `page=3` yourself would also work here, but breaks the day the API changes its page size or its parameter names.
 
-### Another way to solve it
-
-Use the `pages` field to loop over page numbers:
+**Another way to solve it.** Use the `pages` field to loop over page numbers:
 
 ```python
 first = session.get(url, params=params, timeout=10).json()
@@ -150,11 +144,9 @@ for page in range(2, first["pages"] + 1):
 
 `{**params, "page": page}` copies the parameters and adds `page`. It makes the same three requests. Use it when an API gives the number of pages but no `next` link.
 
-### A variation to try
+**A variation to try.** Print the five rainiest days of February: `df.nlargest(5, "rain_mm")[["date", "rain_mm"]]`. Then the number of dry days: `(df["rain_mm"] == 0).sum()`.
 
-Print the five rainiest days of February: `df.nlargest(5, "rain_mm")[["date", "rain_mm"]]`. Then the number of dry days: `(df["rain_mm"] == 0).sum()`.
-
-### If your output differs
+**If your output differs.**
 
 1. **10 days**: the loop stops after the first page; check `url = urljoin(...)`.
 2. **Duplicated days**: `params` is sent with every page; set it to `None` after the first request.
@@ -208,9 +200,7 @@ Output:
 
 **The choice it makes.** A 400 means *your request is wrong*: fix the parameters, never retry the same request. A 429 or a 5xx is different: Chapter 20 retries those.
 
-### Another way to solve it
-
-Use `raise_for_status()`, but print the body when it raises:
+**Another way to solve it.** Use `raise_for_status()`, but print the body when it raises:
 
 ```python
 try:
@@ -221,11 +211,9 @@ except requests.HTTPError:
 
 This keeps the program's normal path strict and still shows the explanation. `.get("error", r.text)` falls back to the raw text if the body has no `error` field.
 
-### A variation to try
+**A variation to try.** Remove the key from `headers` and run one request: status 401 with `Missing API key. Send it in the X-API-Key header.` A 401 is a refusal too: never retry it without fixing the key.
 
-Remove the key from `headers` and run one request: status 401 with `Missing API key. Send it in the X-API-Key header.` A 401 is a refusal too: never retry it without fixing the key.
-
-### If your output differs
+**If your output differs.**
 
 1. **`json.decoder.JSONDecodeError`**: the answer is not JSON, often an HTML error page; print `r.text[:200]`.
 2. **`429`**: wait 10 seconds; you are over the limit.
@@ -277,9 +265,7 @@ Output:
 
 **The choice it makes.** `products["in_stock"]` is already a column of `True` and `False`, so it can select rows directly. Here every product is flat, so `pd.DataFrame(data["products"])` gives the same table; `json_normalize` matters when the JSON nests objects inside objects.
 
-### Another way to solve it
-
-`query` with a boolean column, and its opposite with `~`:
+**Another way to solve it.** `query` with a boolean column, and its opposite with `~`:
 
 ```python
 print(products.query("in_stock")["name"].tolist())
@@ -293,11 +279,9 @@ print(products.loc[~products["in_stock"], "name"].tolist())
 
 `~` reverses a boolean column: `True` becomes `False`.
 
-### A variation to try
+**A variation to try.** Ask for the second page of five products (`params={"per_page": 5, "page": 2}`) and print the cheapest product of the two pages together: `pd.concat([page1, page2]).nsmallest(1, "price")`.
 
-Ask for the second page of five products (`params={"per_page": 5, "page": 2}`) and print the cheapest product of the two pages together: `pd.concat([page1, page2]).nsmallest(1, "price")`.
-
-### If your output differs
+**If your output differs.**
 
 1. **One row**: you normalised the whole answer instead of `data["products"]`.
 2. **An empty list**: you compared `in_stock` with a string.
@@ -397,9 +381,7 @@ LON    209.9
 
 **The choice it makes.** With `time.sleep(1.1)` between calls, the program stays under the limit: 0 answers with status 429. Remove the `sleep` and run it again: it still finishes with the same totals, but the API refuses several requests on the way. Both work; the first is the polite one. `global` is fine for a counter in a short script; Chapter 20's `PoliteClient` keeps such counters inside an object instead.
 
-### Another way to solve it
-
-Return the counter instead of using `global`, by making `api_get` return the number of 429 answers with the data:
+**Another way to solve it.** Return the counter instead of using `global`, by making `api_get` return the number of 429 answers with the data:
 
 ```python
 def api_get(url, params=None):
@@ -415,11 +397,9 @@ def api_get(url, params=None):
 
 The caller writes `data, refused = api_get(url, params)` and adds `refused` to its total. No variable is changed from inside the function, which makes the code easier to test.
 
-### A variation to try
+**A variation to try.** Add the average maximum temperature per station to the table: `df.groupby("station").agg(rain=("rain_mm", "sum"), tmax=("temp_max_c", "mean")).round(1)`. Is the wettest station also the coldest?
 
-Add the average maximum temperature per station to the table: `df.groupby("station").agg(rain=("rain_mm", "sum"), tmax=("temp_max_c", "mean")).round(1)`. Is the wettest station also the coldest?
-
-### If your output differs
+**If your output differs.**
 
 1. **`429 answers` greater than 0**: another program used the API at the same time, or the pause is shorter than 1 second. The totals are still right.
 2. **Fewer than 450 observations**: one station's loop stopped early; print `len(rows)` after each station.

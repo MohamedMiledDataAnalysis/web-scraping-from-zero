@@ -1,6 +1,6 @@
 # Chapter 18 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -64,9 +64,7 @@ Output:
 
 **The choice it makes.** The Practice Ground answers a failed login with status 400. Many real sites answer 200 with the same form: never rely on the status code alone; look for an element that only a logged-in user sees, as exercise 18.2 does.
 
-### Another way to solve it
-
-Collect the form's fields from the page instead of writing their names yourself, so that hidden fields are never forgotten:
+**Another way to solve it.** Collect the form's fields from the page instead of writing their names yourself, so that hidden fields are never forgotten:
 
 ```python
 form = page.select_one("form")
@@ -77,11 +75,9 @@ r = session.post(f"{BASE}/account/login", data=data, timeout=10)
 
 `data` starts as `{'csrf_token': '...', 'username': '', 'password': ''}`, then receives your values. On forms with several hidden fields, this saves you from missing one.
 
-### A variation to try
+**A variation to try.** Post without the token (`data` without `csrf_token`) and print the message: `Security token missing or wrong. Load the login page first.` Then post with a token from **another** session: the same message, because a token is valid only for the session that received it.
 
-Post without the token (`data` without `csrf_token`) and print the message: `Security token missing or wrong. Load the login page first.` Then post with a token from **another** session: the same message, because a token is valid only for the session that received it.
-
-### If your output differs
+**If your output differs.**
 
 1. **`AttributeError: 'NoneType' object has no attribute 'text'`**: the login succeeded (no error paragraph); check the password value.
 2. **The token message instead of the password message**: the token was not sent, or not from the same session.
@@ -152,9 +148,7 @@ False
 
 **The choice it makes.** The check uses an element only a logged-in user sees, and also verifies the name in it. That is the most reliable sign of success, whatever status codes the site chooses.
 
-### Another way to solve it
-
-Judge success by where the site sends you: after a successful login, the final address is `/account/`; after a failure, you stay on the login page.
+**Another way to solve it.** Judge success by where the site sends you: after a successful login, the final address is `/account/`; after a failure, you stay on the login page.
 
 ```python
 return r.url.rstrip("/").endswith("/account")
@@ -162,11 +156,9 @@ return r.url.rstrip("/").endswith("/account")
 
 It also returns `True` and `False`. Addresses change less often than page layouts, but some sites redirect even on failure; the page-content test is the safer default.
 
-### A variation to try
+**A variation to try.** Add a `logout(session)` function that requests `/account/logout`, then check with `login`'s test: after logging out, `/account/` no longer shows `#user-name`. A long-running scraper should log out when it finishes.
 
-Add a `logout(session)` function that requests `/account/logout`, then check with `login`'s test: after logging out, `/account/` no longer shows `#user-name`. A long-running scraper should log out when it finishes.
-
-### If your output differs
+**If your output differs.**
 
 1. **`True` twice**: the password is the same in both calls, or the site kept you logged in; use a new session for each test.
 2. **`False` twice**: the token or the field names are wrong; print the form's inputs with `[i["name"] for i in page.select("form input")]`.
@@ -249,9 +241,7 @@ PG-20272   The Bright Meadow
 
 **The choice it makes.** When a site offers a download of your data, take it: it is cleaner than the table and it is the route the site meant for you. Check `r.headers["Content-Type"]` (here `text/csv`) before you save a download.
 
-### Another way to solve it
-
-Read the CSV from memory, without saving it, when you do not need the file:
+**Another way to solve it.** Read the CSV from memory, without saving it, when you do not need the file:
 
 ```python
 import io
@@ -261,9 +251,7 @@ orders = pd.read_csv(io.StringIO(r.text))
 
 The same 12 orders. Save the file when you want a record of what you downloaded; read from memory for a one-off analysis.
 
-### A variation to try
-
-Total per status, and the average order:
+**A variation to try.** Total per status, and the average order:
 
 ```python
 print(orders.groupby("status")["total"].sum().round(2))
@@ -272,7 +260,7 @@ print(round(orders["total"].mean(), 2))
 
 Delivered orders total £296.87 and those on their way £47.45; the average order is £28.69.
 
-### If your output differs
+**If your output differs.**
 
 1. **`pandas.errors.ParserError`** or strange columns: the file is HTML, not CSV. Print `r.url`: it ends with `/account/login?next=/account/orders.csv` when the login failed.
 2. **`KeyError: 'total'`**: same cause; print `orders.columns`.
@@ -345,9 +333,7 @@ Output:
 
 **The choice it makes.** The browser is used for 2 seconds, only to log in; everything else runs at `requests` speed. `cookies.set(name, value)` without a domain sends the cookie to every site the session visits: keep such a session for this one site.
 
-### Another way to solve it
-
-Read the orders table with pandas instead of counting rows:
+**Another way to solve it.** Read the orders table with pandas instead of counting rows:
 
 ```python
 import io
@@ -361,11 +347,9 @@ print(len(orders), "orders")
 
 It prints `12 orders`, and `orders` now holds every column of the table.
 
-### A variation to try
+**A variation to try.** Save the cookies to a JSON file with `json.dump(cookies, f)` and load them in a second program, so that it starts logged in without opening a browser. Delete the file when you are done: it is a key to your account. Never commit such a file to Git.
 
-Save the cookies to a JSON file with `json.dump(cookies, f)` and load them in a second program, so that it starts logged in without opening a browser. Delete the file when you are done: it is a key to your account. Never commit such a file to Git.
-
-### If your output differs
+**If your output differs.**
 
 1. **`0 orders`**: the cookies were not sent; check that you did not pass `domain=`, and that `wait_for_url` succeeded.
 2. **`TimeoutError` in `wait_for_url`**: the login failed in the browser; take a screenshot with `page.screenshot(path="login.png")` to see the page.

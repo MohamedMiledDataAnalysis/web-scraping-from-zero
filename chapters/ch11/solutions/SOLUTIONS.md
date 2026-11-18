@@ -1,6 +1,6 @@
 # Chapter 11 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -64,9 +64,7 @@ Output:
 
 **The choice it makes.** A quote without tags gives an empty list, `[]`, not `None`: for a list field, empty is the natural *nothing*. For a single value (text, author), `None` says *absent*, which an empty string would hide.
 
-### Another way to solve it
-
-A small helper keeps the `if ... else None` in one place, which helps when a parser has many fields:
+**Another way to solve it.** A small helper keeps the `if ... else None` in one place, which helps when a parser has many fields:
 
 ```python
 def text_of(parent, selector):
@@ -85,11 +83,9 @@ def parse_quote(div):
 
 Same results. Chapter 11's `parse_book_card` grows the same way.
 
-### A variation to try
+**A variation to try.** Parse all ten quotes of page 2 into a list, then print how many have the tag `work`: `sum("work" in q["tags"] for q in quotes)`. `True` counts as 1 when summed.
 
-Parse all ten quotes of page 2 into a list, then print how many have the tag `work`: `sum("work" in q["tags"] for q in quotes)`. `True` counts as 1 when summed.
-
-### If your output differs
+**If your output differs.**
 
 1. **`AttributeError: 'NoneType' ...`**: a field has no `if` guard.
 2. **Text still starting with `“`**: the characters in `strip` are straight quotes; copy the curly ones from the page or from the output of `repr()`.
@@ -159,9 +155,7 @@ Output:
 
 **The choice it makes.** The salary is written with an **en dash** (`–`), not a hyphen (`-`); copy the character from the page, or from the output of `repr()`. The date comes from the `datetime` attribute, a machine-readable ISO 8601 value whatever the visible text says.
 
-### Another way to solve it
-
-A regular expression finds the two amounts whatever the separator, as Chapter 13 shows:
+**Another way to solve it.** A regular expression finds the two amounts whatever the separator, as Chapter 13 shows:
 
 ```python
 import re
@@ -172,16 +166,14 @@ salary_min, salary_max = (int(a.replace(",", "")) for a in amounts)
 
 `re.findall` returns `['75,000', '89,000']`. This version keeps working if the site switches to a hyphen or to the word *to*.
 
-### A variation to try
-
-Parse every job of page 1 and print the titles of the new ones only:
+**A variation to try.** Parse every job of page 1 and print the titles of the new ones only:
 
 ```python
 jobs = [parse_job_item(li) for li in soup.select("li.job")]
 print([j["title"] for j in jobs if j["new"]])
 ```
 
-### If your output differs
+**If your output differs.**
 
 1. **`ValueError: not enough values to unpack`**: the dash in `split` is a hyphen; copy the en dash.
 2. **`KeyError: 'datetime'`**: you selected `p.posted` instead of the `time` inside it.
@@ -246,9 +238,7 @@ Beyond the Distant Kitchen 18.87 InStock
 
 **The choice it makes.** This is your first scraper that visits detail pages. Six requests are fine; for 1,000 books, Chapter 12 adds the delay and the checks that make it polite.
 
-### Another way to solve it
-
-The availability can also be shortened with `removeprefix`, which states exactly what is removed:
+**Another way to solve it.** The availability can also be shortened with `removeprefix`, which states exactly what is removed:
 
 ```python
 status = ld["offers"]["availability"].removeprefix("https://schema.org/")
@@ -256,9 +246,7 @@ status = ld["offers"]["availability"].removeprefix("https://schema.org/")
 
 It gives `InStock` too, and leaves the value unchanged if a site ever writes it without the prefix.
 
-### A variation to try
-
-Print the JSON-LD `offers` block of one book in full with `json.dumps(ld["offers"])`:
+**A variation to try.** Print the JSON-LD `offers` block of one book in full with `json.dumps(ld["offers"])`:
 
 ```text
 {"@type": "Offer", "price": "26.93", "priceCurrency": "GBP", "availability": "https://schema.org/InStock"}
@@ -266,7 +254,7 @@ Print the JSON-LD `offers` block of one book in full with `json.dumps(ld["offers
 
 The currency is there too, which the visible price only shows as `£`.
 
-### If your output differs
+**If your output differs.**
 
 1. **`AttributeError: 'NoneType' object has no attribute 'string'`**: the detail page has no JSON-LD block; print the address you requested.
 2. **`json.decoder.JSONDecodeError`**: you passed the tag instead of its `.string`.
@@ -324,9 +312,7 @@ Output:
 
 **The choice it makes.** No BeautifulSoup at all: when you know the pattern, you can search the raw HTML directly. The pattern depends on the variable's name, `data`; if the site renames it, the scraper breaks, which is the cost of reading code instead of a documented format.
 
-### Another way to solve it
-
-Find the script with BeautifulSoup first, then apply the regular expression to its text only:
+**Another way to solve it.** Find the script with BeautifulSoup first, then apply the regular expression to its text only:
 
 ```python
 soup = BeautifulSoup(html, "html.parser")
@@ -336,11 +322,9 @@ quotes = json.loads(re.search(r"var data = (\[.*?\]);", script, re.DOTALL).group
 
 Searching a smaller text reduces the chance of matching something elsewhere on the page.
 
-### A variation to try
+**A variation to try.** Which authors wrote more than one quote on page 2? `Counter(q["author"] for q in quotes).most_common(2)` gives `[('Walter Pike', 2), ('Rashid Noor', 2)]`.
 
-Which authors wrote more than one quote on page 2? `Counter(q["author"] for q in quotes).most_common(2)` gives `[('Walter Pike', 2), ('Rashid Noor', 2)]`.
-
-### If your output differs
+**If your output differs.**
 
 1. **`AttributeError: 'NoneType' object has no attribute 'group'`**: the pattern did not match; print the part of `html` around `var data` and compare the spaces.
 2. **`json.decoder.JSONDecodeError`**: the capture includes too much or too little; print `match.group(1)[-50:]`.
@@ -405,15 +389,11 @@ Output:
 
 **The choice it makes.** `abs(a - b) > 0.001` is the safe test for decimals. Cross-checking two sources of the same page is a good habit on real sites: a difference often reveals a promotion, a different currency, or a bug in your parser.
 
-### Another way to solve it
+**Another way to solve it.** Round both prices to pennies and compare: `round(visible, 2) != round(float(ld["offers"]["price"]), 2)`. For money with two decimals, rounding to 2 is equivalent to the tolerance test and reads more naturally.
 
-Round both prices to pennies and compare: `round(visible, 2) != round(float(ld["offers"]["price"]), 2)`. For money with two decimals, rounding to 2 is equivalent to the tolerance test and reads more naturally.
+**A variation to try.** Extend the check to the availability: the card says *In stock* or *Out of stock*, and the JSON-LD says `InStock` or `OutOfStock`. Count the books where they disagree.
 
-### A variation to try
-
-Extend the check to the availability: the card says *In stock* or *Out of stock*, and the JSON-LD says `InStock` or `OutOfStock`. Count the books where they disagree.
-
-### If your output differs
+**If your output differs.**
 
 1. **`20 differences`**: compare the two values for one book with `print(visible, ld["offers"]["price"])`; one of them is probably not cleaned.
 2. **`0 books checked`**: the card selector found nothing.

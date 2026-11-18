@@ -1,6 +1,6 @@
 # Chapter 7 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -53,9 +53,7 @@ Output:
 
 **The choice it makes.** The mask is the standard way to filter in pandas: it states the condition once and works on any number of rows.
 
-### Another way to solve it
-
-`.loc[rows, column]` filters and selects in one step:
+**Another way to solve it.** `.loc[rows, column]` filters and selects in one step:
 
 ```python
 print(planets.loc[planets["Orbital period (days)"] > 1000, "Planet"].tolist())
@@ -69,9 +67,7 @@ print(planets.query("`Orbital period (days)` > 1000")["Planet"].tolist())
 
 Both print `['Jupiter', 'Saturn', 'Uranus', 'Neptune']`. Use the form you read most easily.
 
-### A variation to try
-
-Print the two planets with the longest years, with their periods, from the longest:
+**A variation to try.** Print the two planets with the longest years, with their periods, from the longest:
 
 ```python
 top = planets.sort_values("Orbital period (days)", ascending=False).head(2)
@@ -84,7 +80,7 @@ Neptune                59800.0
  Uranus                30589.0
 ```
 
-### If your output differs
+**If your output differs.**
 
 1. **`KeyError`**: print `planets.columns` and copy the exact name.
 2. **An empty list**: you took another table; print `len(tables)` and `tables[0].head()`.
@@ -147,9 +143,7 @@ Output:
 
 **The choice it makes.** `match` relies on a word only one table contains. Check such guesses with `len()`: if `match` keeps more than one table, `[0]` silently takes the first one.
 
-### Another way to solve it
-
-`header=1` tells pandas to use only the second header row, which gives simple names at once:
+**Another way to solve it.** `header=1` tells pandas to use only the second header row, which gives simple names at once:
 
 ```python
 league = pd.read_html(StringIO(html), match="Points", header=1)[0]
@@ -162,11 +156,9 @@ print(league.columns.tolist())
 
 Shorter, but the word *Results* is lost. The book's version keeps it in the names, which matters when two groups of columns share sub-headings.
 
-### A variation to try
+**A variation to try.** Add a column of points per game (a win is 3 points): `league["Played"] = league["Results Won"] + league["Results Drawn"] + league["Results Lost"]`, then `league["Points"] / league["Played"]`. Sort by it: is the order the same as by points?
 
-Add a column of points per game (a win is 3 points): `league["Played"] = league["Results Won"] + league["Results Drawn"] + league["Results Lost"]`, then `league["Points"] / league["Played"]`. Sort by it: is the order the same as by points?
-
-### If your output differs
+**If your output differs.**
 
 1. **`[a]` still in a name**: the `regex=True` argument is missing, so the pattern was read as plain text.
 2. **`KeyError: 'Team'`** after renaming: print `league.columns` before and after the renaming line.
@@ -218,13 +210,9 @@ Output:
 
 **The choice it makes.** Compare with exercise 6.2: the same table, without a loop. When the data is a real HTML table, `read_html` is always shorter, and it converts the numbers for you.
 
-### Another way to solve it
+**Another way to solve it.** Without `attrs`: the Files page holds a single table, so `pd.read_html(StringIO(html))[0]` gives the same DataFrame. `attrs` protects you on the day the page gains a second table.
 
-Without `attrs`: the Files page holds a single table, so `pd.read_html(StringIO(html))[0]` gives the same DataFrame. `attrs` protects you on the day the page gains a second table.
-
-### A variation to try
-
-Answer three more questions with the same DataFrame:
+**A variation to try.** Answer three more questions with the same DataFrame:
 
 ```python
 print(files["Size (bytes)"].mean().round())                 # 3634.0
@@ -234,7 +222,7 @@ print(files[files["File"].str.endswith(".xlsx")]["Size (bytes)"].sum())  # 11919
 
 `idxmax()` gives the row label of the largest value; `.str.endswith(".xlsx")` keeps the Excel files.
 
-### If your output differs
+**If your output differs.**
 
 1. **`KeyError`**: print `files.columns`.
 2. **A total made of digits glued together**: the column is text; check `files.dtypes`.
@@ -293,9 +281,7 @@ Name: Rate, dtype: float64
 
 **The choice it makes.** Ignoring the missing rate is right for an average. For a count of accounts, you would keep it: `rates.groupby("Bank").size()` counts every row, `rates.groupby("Bank")["Rate"].count()` counts only the known rates. Decide which question you are answering.
 
-### Another way to solve it
-
-`agg` computes several statistics per group at once, which shows the missing rate clearly:
+**Another way to solve it.** `agg` computes several statistics per group at once, which shows the missing rate clearly:
 
 ```python
 print(rates.groupby("Bank")["Rate"].agg(["mean", "count", "size", "max"]))
@@ -311,11 +297,9 @@ Northbridge Bank          3.575      2     2  4.05
 
 Kestrel Direct has `size` 2 (two accounts) but `count` 1 (one known rate): that gap is the missing value.
 
-### A variation to try
+**A variation to try.** Remove `na_values=["n/a"]` and run again: the result is the same, because pandas already treats `n/a` as missing by default. Writing it anyway documents what the page uses for a gap, and protects you when a page uses a word pandas does not know, such as `none` or `–`.
 
-Remove `na_values=["n/a"]` and run again: the result is the same, because pandas already treats `n/a` as missing by default. Writing it anyway documents what the page uses for a gap, and protects you when a page uses a word pandas does not know, such as `none` or `–`.
-
-### If your output differs
+**If your output differs.**
 
 1. **`ValueError: could not convert string to float: '3.10%'`**: the `rstrip("%")` step is missing.
 2. **Kestrel Direct at 1.72**: the missing rate was replaced by 0; remove the `fillna`.

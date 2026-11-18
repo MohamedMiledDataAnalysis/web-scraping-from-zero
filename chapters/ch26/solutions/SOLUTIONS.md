@@ -1,6 +1,6 @@
 # Chapter 26 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -51,9 +51,7 @@ The Window and the Harbour  Mystery           118.46
 
 **The choice it makes.** The ratio favours long, cheap books: all three have over 600 pages and cost under £6. A ratio is a good first measure because it is simple to explain; state its blind spots in the data dictionary.
 
-### Another way to solve it
-
-Show the parts of the ratio beside it, so the reader sees why each book ranks high:
+**Another way to solve it.** Show the parts of the ratio beside it, so the reader sees why each book ranks high:
 
 ```python
 cols = ["title", "category", "pages", "price", "pages_per_pound"]
@@ -62,11 +60,9 @@ print(data.nlargest(3, "pages_per_pound")[cols].to_string(index=False))
 
 The fourth book, *Empty Station*, is close behind at 115.92: print `nlargest(5, ...)` before you call the first three *the best*.
 
-### A variation to try
+**A variation to try.** Find the best-value book **in each category**: `data.loc[data.groupby("category")["pages_per_pound"].idxmax(), ["category", "title", "pages_per_pound"]]`. A reader who only reads Poetry wants that list, not the overall top three.
 
-Find the best-value book **in each category**: `data.loc[data.groupby("category")["pages_per_pound"].idxmax(), ["category", "title", "pages_per_pound"]]`. A reader who only reads Poetry wants that list, not the overall top three.
-
-### If your output differs
+**If your output differs.**
 
 1. **`FileNotFoundError`**: the chapter's build step has not run; it writes `output/ch26/dataset/`.
 2. **Different titles**: you read a file built from another day or another method; check the README of the dataset for its date.
@@ -120,9 +116,7 @@ before 1990    468    12.8
 
 **The choice it makes.** `pd.cut` puts each year in a band: `bins` gives the limits (each band includes its upper limit), `labels` the band names. In this invented library, the period makes no clear difference; on real data, check whether the bands hold enough books before you compare their medians. Equal-width periods are easy to explain; `pd.qcut(data["year"], 3)` makes bands with equal numbers of books instead (311, 310 and 299 here), which compares like with like but gives odd limits.
 
-### Another way to solve it
-
-Skip the bands and measure the link directly:
+**Another way to solve it.** Skip the bands and measure the link directly:
 
 ```python
 print(round(data["year"].corr(data["pages_per_pound"]), 3))
@@ -131,11 +125,9 @@ print(round(data["year"].corr(data["pages_per_pound"], method="spearman"), 3))
 
 0.01 and 0.001: no link, linear or by rank. The bands make the result readable for anyone; the correlation is one number for a reader who knows what it means. Give the table in a report and the correlation in its notes.
 
-### A variation to try
+**A variation to try.** Cross the two questions: the median pages per pound per category **and** period, with `data.pivot_table(index="category", columns="period", values="pages_per_pound", aggfunc="median", observed=True)`. Look at the number of books per cell first: a median over three books says little.
 
-Cross the two questions: the median pages per pound per category **and** period, with `data.pivot_table(index="category", columns="period", values="pages_per_pound", aggfunc="median", observed=True)`. Look at the number of books per cell first: a median over three books says little.
-
-### If your output differs
+**If your output differs.**
 
 1. **Counts that add up to less than 920**: some years fall outside `bins`; the rows get `NaN` and drop out of the groups.
 2. **A band with a count of 0 and `NaN` as median**: `observed=False` keeps empty bands; with `observed=True` they disappear. Here every band has books, so both give the same table.
@@ -194,9 +186,7 @@ on 1 March 2027?
 
 **The choice it makes.** The plan takes ten minutes and saves the hours spent collecting fields you do not need. Rewrite section 1 until the reader's guess matches yours; everything else follows from it.
 
-### Another way to solve it
-
-Write the plan as a Python dictionary, as the chapter's `plan.py` does, instead of a Markdown file. The checks then become code you can run later:
+**Another way to solve it.** Write the plan as a Python dictionary, as the chapter's `plan.py` does, instead of a Markdown file. The checks then become code you can run later:
 
 ```python
 plan = {"question": "Which city has the highest median maximum salary on 2027-03-01?",
@@ -206,10 +196,6 @@ plan = {"question": "Which city has the highest median maximum salary on 2027-03
 
 The Markdown template is easier for another person to read; the dictionary is easier for your program to use. Many projects keep both: the plan for people, the checks in code.
 
-### A variation to try
+**A variation to try.** Swap the question for one that needs detail pages, such as *which skill appears most often in Leeds jobs?*. Redo sections 3 to 5: the skills are only on the detail pages, so the budget grows from 4 requests to 4 plus one per Leeds job, and the checks gain *skills never empty*.
 
-Swap the question for one that needs detail pages, such as *which skill appears most often in Leeds jobs?*. Redo sections 3 to 5: the skills are only on the detail pages, so the budget grows from 4 requests to 4 plus one per Leeds job, and the checks gain *skills never empty*.
-
-### If your answer differs
-
-Your plan will differ: it is your question. Test it with the reader's guess, and check that every field in section 4 is needed by section 1 and every check in section 5 can be run by code.
+**If your answer differs.** Your plan will differ: it is your question. Test it with the reader's guess, and check that every field in section 4 is needed by section 1 and every check in section 5 can be run by code.

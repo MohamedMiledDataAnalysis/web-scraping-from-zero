@@ -1,6 +1,6 @@
 # Chapter 17 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -61,9 +61,7 @@ Compact Notebook £124.17 In stock
 
 **The choice it makes.** Selenium waits only when you ask it to; Playwright's locators wait by default. That is the main practical difference between the two for pages like this one.
 
-### Another way to solve it
-
-`visibility_of_element_located` waits until the element is not only present but displayed, which is closer to what a person sees:
+**Another way to solve it.** `visibility_of_element_located` waits until the element is not only present but displayed, which is closer to what a person sees:
 
 ```python
 name = WebDriverWait(driver, 10).until(
@@ -73,11 +71,9 @@ name = WebDriverWait(driver, 10).until(
 
 For this page both conditions give `Compact Notebook`. Use visibility when a page builds elements hidden and shows them later.
 
-### A variation to try
+**A variation to try.** Open product 999, which does not exist, with a wait of 2 seconds: `WebDriverWait(driver, 2).until(...)` raises `TimeoutException`. Catch it with `from selenium.common.exceptions import TimeoutException` and print `No such product` instead of a traceback.
 
-Open product 999, which does not exist, with a wait of 2 seconds: `WebDriverWait(driver, 2).until(...)` raises `TimeoutException`. Catch it with `from selenium.common.exceptions import TimeoutException` and print `No such product` instead of a traceback.
-
-### If your output differs
+**If your output differs.**
 
 1. **`TimeoutException`**: the element never appeared; open the page in a browser and check the selector.
 2. **`SessionNotCreatedException`** at start-up: Chrome and its driver versions do not match; see Chapter 0's Selenium setup.
@@ -154,9 +150,7 @@ Output:
 
 **The choice it makes.** The page sets the status to *Loading products...* as soon as a menu changes, and writes *of 30* only when the final list is drawn. Waiting for that text is the Selenium equivalent of Playwright's `expect_response`: wait for a sign that the final state is reached, not for time to pass.
 
-### Another way to solve it
-
-Choose by the visible label instead of the value, as a person would read the menu:
+**Another way to solve it.** Choose by the visible label instead of the value, as a person would read the menu:
 
 ```python
 Select(driver.find_element(By.ID, "category")).select_by_visible_text("Kitchen")
@@ -165,11 +159,9 @@ Select(driver.find_element(By.ID, "sort")).select_by_visible_text("Rating")
 
 The menu labels are `Newest`, `Price` and `Rating`; the values behind them are what the API receives. Use values when they are stable codes, labels when the page is translated or the values are opaque numbers.
 
-### A variation to try
+**A variation to try.** Wait with a condition that fails, to see what a timeout looks like: `WebDriverWait(driver, 2).until(EC.text_to_be_present_in_element((By.ID, "status"), "of 31"))` raises `TimeoutException` after 2 seconds, with an almost empty message. Selenium does not tell you what it was waiting for: name your waits in comments or in your own error messages.
 
-Wait with a condition that fails, to see what a timeout looks like: `WebDriverWait(driver, 2).until(EC.text_to_be_present_in_element((By.ID, "status"), "of 31"))` raises `TimeoutException` after 2 seconds, with an almost empty message. Selenium does not tell you what it was waiting for: name your waits in comments or in your own error messages.
-
-### If your output differs
+**If your output differs.**
 
 1. **Products of another category**: the wait condition is too weak; it must include `of 30`.
 2. **`NoSuchElementException: Cannot locate option`**: check the value's spelling and case.
@@ -261,13 +253,9 @@ Output:
 
 **The choice it makes.** A Python `lambda` as a wait condition makes any test possible, at the cost of readability. Here, *more products than before* is the clearest sign that a scroll worked.
 
-### Another way to solve it
+**Another way to solve it.** As with exercise 16.4, the hidden API gives the same answer in one request, without a browser: `requests.get("http://localhost:8000/shop/api/products", params={"category": "Office", "per_page": 50})` returns the 30 products, whose prices average £111.58.
 
-As with exercise 16.4, the hidden API gives the same answer in one request, without a browser: `requests.get("http://localhost:8000/shop/api/products", params={"category": "Office", "per_page": 50})` returns the 30 products, whose prices average £111.58.
-
-### A variation to try
-
-Write the wait as a named function instead of a `lambda`, which reads better and can be reused:
+**A variation to try.** Write the wait as a named function instead of a `lambda`, which reads better and can be reused:
 
 ```python
 def more_products_than(n):
@@ -276,7 +264,7 @@ def more_products_than(n):
 WebDriverWait(driver, 5).until(more_products_than(before))
 ```
 
-### If your output differs
+**If your output differs.**
 
 1. **`24 products`**: the loop stopped one scroll early; print the status at the end.
 2. **`TimeoutException`** during the scroll loop: no new products arrived within 5 seconds; scroll the shop by hand in a browser to check that it still loads.
@@ -309,10 +297,6 @@ Each adds setup, ties you to one browser, or adds a package to maintain.
 
 **The choice it makes.** Choose the tool by the data, not by habit: Playwright when you must catch what a page receives, the hidden API when you can call it, Selenium when a project already uses it.
 
-### A variation to try
+**A variation to try.** Write down, for each of the six methods of the book, how it would get the Office products: requests and BeautifulSoup (no: the products are not in the HTML), pandas `read_html` (no table), the hidden API (yes, one request), Playwright (scroll, or catch the answers), Selenium (scroll), Scrapy (request the API's JSON pages, as a spider can request any address). Compare your table with the decision chart of Chapter 7.
 
-Write down, for each of the six methods of the book, how it would get the Office products: requests and BeautifulSoup (no: the products are not in the HTML), pandas `read_html` (no table), the hidden API (yes, one request), Playwright (scroll, or catch the answers), Selenium (scroll), Scrapy (request the API's JSON pages, as a spider can request any address). Compare your table with the decision chart of Chapter 7.
-
-### If your answer differs
-
-Compare the reasons, not only the conclusion: the key point is that the data comes from an API, and an API you can call yourself makes the browser unnecessary.
+**If your answer differs.** Compare the reasons, not only the conclusion: the key point is that the data comes from an API, and an API you can call yourself makes the browser unnecessary.

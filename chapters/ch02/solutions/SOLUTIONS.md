@@ -1,6 +1,6 @@
 # Chapter 2 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -48,9 +48,7 @@ True
 
 **The choice it makes.** Here the order of `strip()` and `lower()` does not matter: either gives the same result. With `replace` and `float`, order matters, as exercise 2.3 shows.
 
-### Another way to solve it
-
-`casefold()` is a stronger version of `lower()`, made for comparing text in any language (it turns the German `ß` into `ss`, for example):
+**Another way to solve it.** `casefold()` is a stronger version of `lower()`, made for comparing text in any language (it turns the German `ß` into `ss`, for example):
 
 ```python
 print(raw.strip().casefold())
@@ -62,11 +60,9 @@ out of stock
 
 For English text, `lower()` and `casefold()` give the same result. Use `casefold()` when you compare words from international sites.
 
-### A variation to try
+**A variation to try.** Test a word that is in the text with the original case: `"stock" in raw` gives `True` even without `lower()`, because `stock` is already in lower case. Then test `clean == "out of stock"`: `True`, an exact comparison of the whole text, stricter than `in`.
 
-Test a word that is in the text with the original case: `"stock" in raw` gives `True` even without `lower()`, because `stock` is already in lower case. Then test `clean == "out of stock"`: `True`, an exact comparison of the whole text, stricter than `in`.
-
-### If your output differs
+**If your output differs.**
 
 1. **An empty line after `out of stock`**: you printed `raw.lower()` without `strip()`, so the `\n` is still there.
 2. **`False` on the second line**: you searched `raw` instead of `clean`.
@@ -112,9 +108,7 @@ Output:
 
 **The choice it makes.** `ratings[-1]` keeps working when the list grows; `ratings[3]` breaks as soon as the list has a different length. On scraped data, where you rarely know the length in advance, prefer `-1`.
 
-### Another way to solve it
-
-An f-string controls the text around each value:
+**Another way to solve it.** An f-string controls the text around each value:
 
 ```python
 print(f"{len(ratings)} ratings, first {ratings[0]}, last {ratings[-1]}")
@@ -126,11 +120,9 @@ print(f"{len(ratings)} ratings, first {ratings[0]}, last {ratings[-1]}")
 
 Inside an f-string, any expression between `{ }` is calculated and its value inserted.
 
-### A variation to try
+**A variation to try.** Try these and predict each result before you run it: `ratings[1:3]` gives `['One', 'Five']` (positions 1 and 2, not 3); `ratings[::-1]` gives the list reversed; `sorted(ratings)` sorts alphabetically, `['Five', 'One', 'Three', 'Two']`, which is **not** the order of the ratings. Chapter 13 turns the words into numbers to sort them properly.
 
-Try these and predict each result before you run it: `ratings[1:3]` gives `['One', 'Five']` (positions 1 and 2, not 3); `ratings[::-1]` gives the list reversed; `sorted(ratings)` sorts alphabetically, `['Five', 'One', 'Three', 'Two']`, which is **not** the order of the ratings. Chapter 13 turns the words into numbers to sort them properly.
-
-### If your output differs
+**If your output differs.**
 
 1. **`IndexError: list index out of range`**: a position is too large; the last valid position is `len(ratings) - 1`.
 2. **Brackets and quotes printed**: you printed the list itself, not its items.
@@ -192,9 +184,7 @@ numbers = [float(p.strip().replace("£", "").replace(",", ""))
 
 Both are correct. The loop is easier to read and to debug, because you can add `print(clean)` inside it; the comprehension is shorter. Choose the loop while you learn.
 
-### Another way to solve it
-
-`float()` accepts spaces around a number: `float(" 6.56 ")` gives `6.56`. So `strip()` is not even needed here: removing the `£` and the comma from `" £1,049.00"` leaves `" 1049.00"`, which `float` reads as `1049.0`:
+**Another way to solve it.** `float()` accepts spaces around a number: `float(" 6.56 ")` gives `6.56`. So `strip()` is not even needed here: removing the `£` and the comma from `" £1,049.00"` leaves `" 1049.00"`, which `float` reads as `1049.0`:
 
 ```python
 numbers = [float(p.replace("£", "").replace(",", "")) for p in prices]
@@ -202,9 +192,7 @@ numbers = [float(p.replace("£", "").replace(",", "")) for p in prices]
 
 It gives the same list. Keep `strip()` anyway: it costs nothing and protects you against the line breaks that real pages add.
 
-### A variation to try
-
-The average is pulled up by one expensive book. Print the average of the prices below £100 only:
+**A variation to try.** The average is pulled up by one expensive book. Print the average of the prices below £100 only:
 
 ```python
 cheap = [n for n in numbers if n < 100]
@@ -217,7 +205,7 @@ print(round(sum(cheap) / len(cheap), 2))
 
 Then print the cheapest price with `min(numbers)` (6.56) and the list sorted with `sorted(numbers)`.
 
-### If your output differs
+**If your output differs.**
 
 1. **`ValueError: could not convert string to float`**: print each `clean` inside the loop to see which price still contains a character other than digits and a dot.
 2. **`275.4225`**: you forgot `round(..., 2)`.
@@ -271,9 +259,7 @@ page-2.html page-4.html page-6.html page-8.html page-10.html
 
 **The choice it makes.** Building addresses from a number is how every scraper in Part 3 walks through pages. `range` makes the first and last page explicit, which is what you check first when a scraper misses data.
 
-### Another way to solve it
-
-Count down from page 50 with a negative step:
+**Another way to solve it.** Count down from page 50 with a negative step:
 
 ```python
 for page in range(50, 47, -1):
@@ -282,9 +268,7 @@ for page in range(50, 47, -1):
 
 The pages come out as 50, 49, 48. With a negative step, the stop number must be **smaller** than the start.
 
-### A variation to try
-
-Join with a comma and a space instead of a space:
+**A variation to try.** Join with a comma and a space instead of a space:
 
 ```python
 print(", ".join(f"page-{n}.html" for n in range(1, 4)))
@@ -296,7 +280,7 @@ page-1.html, page-2.html, page-3.html
 
 The text before `.join` is the separator; it can be anything, including `"\n"`, which puts each item on its own line.
 
-### If your output differs
+**If your output differs.**
 
 1. **One page missing at the end**: the stop number of `range` is excluded; add 1.
 2. **`TypeError: sequence item 0: expected str instance, int found`**: you joined numbers; turn them into text with an f-string or `str(n)`.

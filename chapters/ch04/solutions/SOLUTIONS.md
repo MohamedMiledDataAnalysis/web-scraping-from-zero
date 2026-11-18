@@ -1,6 +1,6 @@
 # Chapter 4 — detailed solutions
 
-These are the long versions of the solutions printed in the book. Each has the same parts as the book, with more detail, plus parts the book has no room for: another way to solve the exercise, a variation to try, and what to do if your output differs.
+These are the solutions printed in the book, word for word: what the question asks, the plan, the code, line by line, reading the result, checking, the mistakes the exercise provokes, the choice it makes, another way to solve it, a variation to try, and what to do if your output differs. Here, each program is followed by its exact output.
 
 Start the Practice Ground first (`python run_site.py`) and run every program from the repository folder, as in the book. Every output below was produced by running the code.
 
@@ -53,9 +53,7 @@ python
 
 **The choice it makes.** The standard library already parses addresses correctly, including the cases you have not met yet. Use it rather than cutting text by hand.
 
-### Another way to solve it
-
-`parse_qsl` returns pairs instead of lists, and `dict()` turns them into a simple dictionary:
+**Another way to solve it.** `parse_qsl` returns pairs instead of lists, and `dict()` turns them into a simple dictionary:
 
 ```python
 from urllib.parse import parse_qsl
@@ -70,9 +68,7 @@ print(params)
 
 Simpler to read, but if a name appears twice only the last value is kept. Use `parse_qs` when a parameter can repeat.
 
-### A variation to try
-
-Build a new address with other parameters: `urlencode` turns a dictionary into a query string, and `_replace` swaps one part of the parsed address:
+**A variation to try.** Build a new address with other parameters: `urlencode` turns a dictionary into a query string, and `_replace` swaps one part of the parsed address:
 
 ```python
 from urllib.parse import urlencode
@@ -87,7 +83,7 @@ http://localhost:8000/jobs/?q=sql&city=Leeds
 
 Chapter 8 shows the shorter way when you request a page: `requests.get(url, params={...})`.
 
-### If your output differs
+**If your output differs.**
 
 1. **`localhost:8000`**: you printed `netloc`, not `hostname`.
 2. **`['python']`**: add `[0]`.
@@ -144,9 +140,7 @@ http://localhost:8000/library/book/salt-kingdom-2.html
 
 **The choice it makes.** `urljoin` follows the same rules as the browser, so your scraper reaches the page a reader would reach by clicking. Chapter 12 uses it on every link it follows.
 
-### Another way to solve it
-
-For a link in the same folder, cutting the base at its last `/` gives the folder:
+**Another way to solve it.** For a link in the same folder, cutting the base at its last `/` gives the folder:
 
 ```python
 folder = base.rsplit("/", 1)[0]
@@ -155,15 +149,13 @@ print(folder + "/page-2.html")
 
 It prints the first address correctly, but this method fails for `../fiction/` and for `/library/...`. That is why `urljoin` exists: it handles every form.
 
-### A variation to try
-
-Predict, then check, the result of these three links from the same base:
+**A variation to try.** Predict, then check, the result of these three links from the same base:
 
 - `https://example.com/x`: a complete address, returned unchanged;
 - `?page=4`: only the query changes, `.../history/page-3.html?page=4`;
 - `#top`: only the fragment is added, `.../history/page-3.html#top`; the browser stays on the same page.
 
-### If your output differs
+**If your output differs.**
 
 1. **One folder too high or too low**: print `base`; it must end with the file name or with `/`.
 2. **`page-3.htmlpage-2.html`**: you used `+` instead of `urljoin`.
@@ -215,9 +207,7 @@ Output:
 
 **The choice it makes.** Look at the code, not only at the content: an error page is a valid HTML page. From Chapter 8, `r.raise_for_status()` turns a bad code into an error that stops the program at the right place.
 
-### Another way to solve it
-
-`raise_for_status()` raises an `HTTPError` when the code is 400 or more, so the failure cannot go unnoticed:
+**Another way to solve it.** `raise_for_status()` raises an `HTTPError` when the code is 400 or more, so the failure cannot go unnoticed:
 
 ```python
 try:
@@ -232,11 +222,9 @@ HTTPError 404 Client Error: NOT FOUND for url: http://localhost:8000/library/pag
 
 `r.reason` holds the words that go with the code, here `NOT FOUND`.
 
-### A variation to try
+**A variation to try.** Request three addresses and print each status: `/library/` (200), `/nothing` (404), and `/private/` (200). The last one exists: the Practice Ground answers it. Whether you may **scrape** it is another question, answered by `robots.txt` in Chapter 5, not by the status code.
 
-Request three addresses and print each status: `/library/` (200), `/nothing` (404), and `/private/` (200). The last one exists: the Practice Ground answers it. Whether you may **scrape** it is another question, answered by `robots.txt` in Chapter 5, not by the status code.
-
-### If your output differs
+**If your output differs.**
 
 1. **`200 True`**: you requested an existing page; check the page number, 51.
 2. **`AttributeError: 'NoneType' object has no attribute 'text'`**: the answer has no `h1`; print `r.text[:300]` to see what the server sent.
@@ -286,9 +274,7 @@ application/ld+json
 
 **The choice it makes.** JSON-LD is often the cleanest data on a page: named fields, written for machines. Before scraping visible text, check whether the page already offers it. Chapter 11 extracts it.
 
-### Another way to solve it
-
-Find the JSON-LD script directly by its type, and read its content with the `json` module:
+**Another way to solve it.** Find the JSON-LD script directly by its type, and read its content with the `json` module:
 
 ```python
 import json
@@ -306,11 +292,9 @@ Salt Kingdom
 
 `block.string` is the text inside the tag; `json.loads` turns it into a Python dictionary. Chapter 11 does this for every book.
 
-### A variation to try
+**A variation to try.** Run the same loop on `http://localhost:8000/quotes/js/`. It prints `None`: that page has one script with no `type` attribute, which means ordinary JavaScript. That script builds the quotes in the browser, which is why Chapter 15 needs other methods for that page.
 
-Run the same loop on `http://localhost:8000/quotes/js/`. It prints `None`: that page has one script with no `type` attribute, which means ordinary JavaScript. That script builds the quotes in the browser, which is why Chapter 15 needs other methods for that page.
-
-### If your output differs
+**If your output differs.**
 
 1. **`KeyError: 'type'`**: use `script.get("type")`.
 2. **Nothing printed**: the page has no script; check the address of the book.
