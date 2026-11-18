@@ -41,7 +41,7 @@ Chapter 0 of the book walks through every step with what you should see and the 
 | `toolkit/` | `PoliteClient` (Chapter 20) and the test mailbox |
 | `chapters/chNN/examples/` | every program printed in chapter NN |
 | `chapters/chNN/exercises/` | starter files for the exercises |
-| `chapters/chNN/solutions/` | full solutions |
+| `chapters/chNN/solutions/` | full solutions, and `SOLUTIONS.md`: every exercise explained step by step, with another way to solve it, a variation to try and what to check if your output differs |
 | `chapters/chNN/expected/` | the exact output of every program, as printed in the book |
 | `chapters/ch23` to `ch26` | the four projects |
 | `chapters/ch26/PLAN_TEMPLATE.md` | the plan template for your own project |

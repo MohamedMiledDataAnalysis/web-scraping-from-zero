@@ -8,5 +8,5 @@ robots.read()
 sitemap_url = robots.site_maps()[0]
 print(sitemap_url)
 xml = requests.get(sitemap_url, timeout=10).text
-soup = BeautifulSoup(xml, "html.parser")
+soup = BeautifulSoup(xml, "xml")
 print(len(soup.find_all("loc")), "addresses")

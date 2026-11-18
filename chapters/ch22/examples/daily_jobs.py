@@ -38,7 +38,7 @@ def collect(day):
                 }
             )
         nxt = soup.select_one("ul.pager li.next a")
-        url = urljoin(url, nxt["href"]) + f"&day={day}" if nxt else None
+        url = urljoin(url, nxt["href"]) if nxt else None
     return jobs
 
 

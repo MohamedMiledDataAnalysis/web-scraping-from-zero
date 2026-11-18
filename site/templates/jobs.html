@@ -21,7 +21,7 @@
 {% endfor %}
 </ul>
 <ul class="pager">
-  {% if page > 1 %}<li class="previous"><a href="?q={{ q|urlencode }}&city={{ city|urlencode }}&page={{ page - 1 }}">previous</a></li>{% endif %}
-  {% if page < pages %}<li class="next"><a href="?q={{ q|urlencode }}&city={{ city|urlencode }}&page={{ page + 1 }}">next</a></li>{% endif %}
+  {% if page > 1 %}<li class="previous"><a href="?q={{ q|urlencode }}&city={{ city|urlencode }}&page={{ page - 1 }}{% if request.args.get('day') %}&day={{ request.args.get('day')|urlencode }}{% endif %}">previous</a></li>{% endif %}
+  {% if page < pages %}<li class="next"><a href="?q={{ q|urlencode }}&city={{ city|urlencode }}&page={{ page + 1 }}{% if request.args.get('day') %}&day={{ request.args.get('day')|urlencode }}{% endif %}">next</a></li>{% endif %}
 </ul>
 {% endblock %}
